@@ -1,5 +1,5 @@
 body {
-	background: lightgreen;
+	background: lightgray;
 }
 
 img.displayed {
@@ -9,5 +9,33 @@ img.displayed {
 }
 
 p.picture_title{
-text-align: center;	
+	text-align: center;	
+}
+
+table.points {
+	background: gray;
+	width: 30%;
+
+}
+
+table.assists {
+	background: gray;
+	width: 30%;
+}
+
+table.rebounds {
+	background: gray;
+	width: 30%;
+}
+
+#external_links nav {
+  list-style-type: none;
+  padding-left: 50px;
+  width: 20%;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: lightgray;
+  }
 }
