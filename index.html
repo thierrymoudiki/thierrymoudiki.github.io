@@ -2,6 +2,7 @@
 <html>
   <head>
     <title> Bball wiki</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <h1> Main information</h1>
@@ -27,7 +28,7 @@
 
 	<h2>Points (cumulated)</h2>
 
-	<table border="1">
+	<table class="points" border="1">
 	  <tr>
 	    <th>Name</th>
 	    <th>Points per game</th>
@@ -48,7 +49,7 @@
 
 	<h2>Assists leaders (average)</h2>
 
-	<table border="1">
+	<table class="assists" border="1">
 	  <tr>
 	    <th>Name</th>
 	    <th>Number of assists</th>
@@ -69,7 +70,7 @@
 
 	<h2>Rebounds leaders (average)</h2>
 
-	<table border="1">
+	<table class="rebounds" border="1">
 	  <tr>
 	    <th>Name</th>
 	    <th>Number of rebounds</th>
@@ -88,13 +89,15 @@
 	  </tr>
 	</table>
 
-	<p> Here is a picture of Jessica Jones, the best player ever (right in the middle)</p>
+	<p class="picture_title"> Here is a picture of Jessica Jones, the best player ever (right in the middle)</p>
 
-	<img src="img/space_jam.png" alt="Jessica Jones and teammates" height="612" width="380">
+	<img class="displayed" src="img/space_jam.png" alt="Jessica Jones and teammates" height="500" width="500">
 
-	<h1>Additional information</h1>
+<h1>Additional information</h1>
 
-	    <p>Information about playing regulations and equipment can be found by using the following links:</p>
+<footer>
+	<nav id="external_links">
+		<p>Information about playing regulations and equipment can be found by using the following links:</p>
 
 		<ol>
 	    	<li>
@@ -104,6 +107,8 @@
 	    		<a href="https://en.wikipedia.org/wiki/Basketball#Equipment">Equipment</a>
 	    	</li>
 	    </ol>
+	</nav>
+</footer>	    
 
   </body>
 </html>
