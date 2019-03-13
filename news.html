@@ -1,72 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
+    <title>Thierry Moudiki - Webpage</title>
+    <meta name="description" content="Personal webpage of Thierry Moudiki.">
+    <meta name="author" content="Thierry Moudiki">
+    <meta name="keywords" content="Thierry, Thierry Moudiki, webpage, nnetsauce, crossval">
+
+    <!-- <meta property="og:image" content="http://thierry.me/images/thierry.jpg"> -->
+    <meta property="og:url" content="http://thierrymoudiki.github.io">
     
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
+    <meta property="og:title" content="Thierry Moudiki">
+    <meta property="og:type" content="profile">
+    <meta property="og:description" content="Personal webpage of Thierry Moudiki.">
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-    }
-  </style>
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/Logo.png">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 </head>
-<body>
 
-<div class="container-fluid">
-  <div class="row content">
-	
-    <h2>Blog</h2>
-    <a href="index.html">home</a>
-    <hr>
+  <body>
+  <div class="container-fluid">
+    <div class="row content">
+  	
+      <h2>Packages news</h2> 
 
-    <div class="col-sm-9">
-      <h2>I Love Food</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Sep 27, 2015.</h5>
-      <br>
-      <p>Food is my passion. Lorem <b>ipsum</b> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      
-      <br>
-      <br>
-      
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      
-      <br>
-      <hr>
-      
-      <h2>Officially Blogging</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Sep 24, 2015.</h5>
-<br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      
-      <br>
-      <br>
-      
-      Excepteur sint occaecat <b>cupidatat</b> non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <a href="index.html">Back to homepage</a>
+
       <hr>
 
-</body>
+<!-- Blog posts container -->
+
+
+      <div class="col-sm-9">
+        
+
+        <div class="container" id="post3">
+
+          <h2>nnetsauce</h2>
+          <h5><span class="glyphicon glyphicon-time"></span> Mar 13, 2019. | <a href="#">Top</a></h5>
+          
+          <br>
+          <p>
+
+          <a href="https://github.com/thierrymoudiki/nnetsauce">nnetsauce</a> is a Python package for Statistical/Machine learning built on top of Numpy, Scipy, and scikit-learn under the BSD license. In nnetsauce, pattern recognition is achieved by combining single-layer networks (SLNN). These SLNN building blocks constitute the basis of many custom models that can be built by the user, including models with <b>deeper learning architectures</b>.
+          
+          <br>
+          <br>
+
+          <b>Using more simple terms to illustrate: </b> nnetsauce can for example be trained to distinguish between malignant or benign tumors, depending on their characteristics, <b>with a certain <u>degree of confidence</u></b> (see examples on <a href="https://github.com/thierrymoudiki/nnetsauce">Github</a>). Or, by using your historical data of income and expenditures, it can be trained to forecast your savings in the next months.  
+
+          <br>
+          <br>
+          
+          The package is very new. For those who want to try it, test it, give feedback, make it available in R, or contribute to the development on <a href="https://github.com/thierrymoudiki/nnetsauce">Github</a>, feel free to jump in.</p>
+        
+        </div>
+
+
+        <hr>
+
+        <div class="container" id="post2">
+
+          <h2>crossval</h2>
+          <h5><span class="glyphicon glyphicon-time"></span> Mar 13, 2019. | <a href="#">Top</a></h5>
+          
+          <br>
+          <p>
+            Statistical/Machine learning models often depend on many <i>hyperparameters</i>, that define and control their learning capabilities. <a href="https://github.com/thierrymoudiki/crossval">crossval</a> is an R package that calculates these models' learning performances on given datasets, as a function of their hyperparameters. 
+
+            <br>
+            <br>
+
+            For those who want to contribute to the package development or improve it on <a href="https://github.com/thierrymoudiki/crossval">Github</a>, feel free to jump in.
+          </p>
+        
+        </div>
+
+
+        <hr>
+        
+        <div class="container" id="post1">
+
+          <h2>loren ipsum blogging</h2>        
+          <h5><span class="glyphicon glyphicon-time"></span> Sep 24, 2015. | <a href="#">Top</a></h5>
+
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          
+          <br>
+          <br>
+          
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        </div>
+
+
+      <hr>
+
+  </body>
+
 </html>
