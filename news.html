@@ -24,33 +24,230 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" title="Tomorrow Night Blue" href="css/tomorrow-night-blue.css">
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/Logo.png">
+    <!-- <link rel="icon" type="image/png" href="images/Logo.png"> -->
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
 </head>
 
   <body>
   <div class="container-fluid">
-    <div class="row content">
+    <div class="row content" padding-right="30px">
   	
-      <h2>Packages news</h2> 
-
-      <a href="index.html">Back to homepage</a>
-
-      <hr>
-
+      
 <!-- Blog posts container -->
 
 
       <div class="col-sm-9">
         
+        <div class="container" id="post4-more-nnetsauce">
 
-        <div class="container" id="post3">
+          <h1>Packages news</h1> 
+
+          <a href="index.html">Back to homepage</a>
+
+          <hr>
+
+          <h2>More nnetsauce (with examples)</h2>
+          <h5><span class="glyphicon glyphicon-time"></span> May 09, 2019. | <a href="#">Top</a></h5>
+          
+          <br>
+
+          <p>
+            As mentioned in a <a href="#post3-nnetsauce">previous</a> post, <a href="https://github.com/thierrymoudiki/nnetsauce">nnetsauce</a> is a Python package for Statistical/Machine learning and deep learning, based on combinations of <i>neural</i> networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of <code>nnetsauce</code>, with a few examples based on classification and deep learning. 
+          </p>
+
+        
+          <h3>Installing the package</h3>        
+        
+          <p> Currently, <code>nnetsauce</code> can be installed through <a href="https://github.com/thierrymoudiki/nnetsauce">Github</a> (but it will be available on PyPi in a few weeks). 
+          </p>
+
+          <p>
+          Here is how: 
+          </p>
+        
+            <div class="common">
+              <pre>
+                <code class="bash">
+                  
+                  git clone https://github.com/thierrymoudiki/nnetsauce.git
+                  cd nnetsauce
+                  python setup.py install
+
+                </code>
+              </pre>
+            </div>
+                
+          <h3>Examples of use of <code>nnetsauce</code></h3>                       
+
+        <p>
+          Below, are two examples of use of <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. A <a href="#classifex">classification</a> example based on breast cancer data, and an illustrative <a href="#deeplearningex">deep learning</a> example. In the classification example, we show how a logistic regression model can be enhanced, for a higher accuracy, by using <code>nnetsauce</code>. The deep learning example shows how custom building blocks of <code>nnetsauce</code> objects can be combined together, to form a - perfectible - deeper learning architecture. 
+        </p>
+        
+        <p>
+          <code>scikit-learn</code> models are heavily used in these examples, but <code>nnetsauce</code> <b>will work with any learning model possessing methods <code>fit()</code> and <code>predict()</code></b> (plus, <code>predict_proba()</code> for a classifier). That is, it could be used in conjunction with <a href="https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py">xgboost</a> or <a href="https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/sklearn_example.py">LightGBM</a> for example. For the purpose of <b>model validation</b>, <code>sklearn</code>'s  cross-validation functions such as <code>GridSearchCV</code> and <code>cross_val_score</code> can be employed (on <code>nnetsauce</code> models), as it will be shown in the classification example.
+        </p> 
+
+        <br>
+
+        <h4 id="classifex">classification example</h3>
+        
+        <p>For this first example, we start by <b>fitting a logistic regression model to breast cancer data</b> on a training set, and measure its accuracy on a validation set: </p>
+
+        <div class="common">
+        <pre>
+          <code class="python">
+            
+            # 0 - Packages ----- 
+
+            # Importing the packages that will be used in the demo
+            import nnetsauce as ns
+            from sklearn import datasets, linear_model
+            from sklearn.model_selection import train_test_split
+            
+
+            # 1 - Datasets -----
+
+            # Loading breast cancer data
+            breast_cancer = datasets.load_breast_cancer()
+            Z = breast_cancer.data
+            t = breast_cancer.target
+
+            
+            # 2 - Data splitting -----            
+
+            # Separating the data into training/testing set, and 
+            # a validation set
+            Z_train, Z_test, t_train, t_test = train_test_split(
+                Z, t, test_size=0.2, random_state=42)
+
+
+            # 3 - Logistic regression -----
+
+            # Fitting the Logistic regression model on 
+            # training set
+            regr = linear_model.LogisticRegression()                        
+            regr.fit(Z_train, t_train)
+
+            # predictive accuracy of the model on test set
+            regr.score(Z_test, t_test)  
+
+          </code>
+          </pre>
+        </div>
+
+      <p>The accuracy of this model is equal to <code>0.9561</code>. The <b>logistic regression is now augmented of <code>n_hidden_features</code> additional features</b> with <code>nnetsauce</code>. We use <code>GridSearchCV</code> to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (<code>row_sample</code>) and <code>dropout</code> are included and reseached:</p>. 
+
+      <div class="common">
+        <pre>
+          <code class="python">
+            # Defining nnetsauce model
+            # based on the logistic regression model
+            # defined previously
+            fit_obj = ns.CustomClassifier(
+            obj=regr,
+            n_hidden_features=10,
+            direct_link=True,
+            bias=True,
+            nodes_sim="sobol",
+            activation_name="relu", 
+            seed = 123)
+            
+            # Grid search ---
+            from sklearn.model_selection import GridSearchCV
+            # grid search for finding better hyperparameters
+            np.random.seed(123)
+            clf = GridSearchCV(cv = 3, estimator = fit_obj,
+                               param_grid={'n_hidden_features': range(5, 25), 
+                                           'row_sample': [0.7,0.8, 0.9], 
+                                           'dropout': [0.7, 0.8, 0.9], 
+                                           'n_clusters': [0, 2, 3, 4]}, 
+                                           verbose=2)
+            
+            # fitting the model
+            clf.fit(Z_train, t_train)
+
+            # 'best' hyperparameters found 
+            print(clf.best_params_)
+            print(clf.best_score_)
+
+            # predictive accuracy on test set
+            clf.best_estimator_.score(Z_test, t_test)
+
+          </code>
+          </pre>
+        </div>
+
+      <p>After using <code>nnetsauce</code>, the accuracy is now equal to <code>0.9692</code>.</p>
+
+      <h4 id="deeplearningex">deep learning example</h3>
+
+      <p>
+        This second example, is an <b>illustrative</b> example of deep learning with <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. Many, <b>more advanced things could be tried</b>. In this example, predictive accuracy of the model <b>increases as new layers are added</b> to the stack. 
+      </p>
+
+      <p>
+        The <b>first layer</b> is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to <code>63.56</code>. The <b>second layer</b> notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is <code>61.76</code>. To finish, the <b>third layer</b> uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: <code>61.68</code>.
+      </p>
+        
+
+      <div class="common">
+        <pre>
+          <code class="python">
+
+            import nnetsauce as ns
+            from sklearn import datasets, metrics
+
+            diabetes = datasets.load_diabetes()
+            X = diabetes.data 
+            y = diabetes.target
+            
+            # layer 1 (base layer) ----
+            layer1_regr = linear_model.BayesianRidge()
+            layer1_regr.fit(X[0:100,:], y[0:100])
+            # RMSE score
+            np.sqrt(metrics.mean_squared_error(y[100:125], layer1_regr.predict(X[100:125,:])))
+
+
+            # layer 2 using layer 1 ----
+            layer2_regr = ns.CustomRegressor(obj = layer1_regr, n_hidden_features=3, 
+                                    direct_link=True, bias=True, 
+                                    nodes_sim='sobol', activation_name='tanh', 
+                                    n_clusters=2)
+            layer2_regr.fit(X[0:100,:], y[0:100])
+
+
+            # RMSE score
+            np.sqrt(layer2_regr.score(X[100:125,:], y[100:125]))
+
+            # layer 3 using layer 2 ----
+            layer3_regr = ns.CustomRegressor(obj = layer2_regr, n_hidden_features=5, 
+                        direct_link=True, bias=True, 
+                        nodes_sim='hammersley', activation_name='sigmoid', 
+                        n_clusters=2)
+            layer3_regr.fit(X[0:100,:], y[0:100])
+
+            # RMSE score
+            np.sqrt(layer3_regr.score(X[100:125,:], y[100:125]))
+
+          </code>
+          </pre>
+        </div>
+
+        <a href="#post4-more-nnetsauce">Back to the top of this blog</a>
+
+        </div>
+
+        <hr>
+
+        <div class="container" id="post3-nnetsauce">
 
           <h2>nnetsauce</h2>
           <h5><span class="glyphicon glyphicon-time"></span> Mar 13, 2019. | <a href="#">Top</a></h5>
@@ -75,7 +272,7 @@
 
         <hr>
 
-        <div class="container" id="post2">
+        <div class="container" id="post2-crossval">
 
           <h2>crossval</h2>
           <h5><span class="glyphicon glyphicon-time"></span> Mar 13, 2019. | <a href="#">Top</a></h5>
@@ -95,7 +292,7 @@
 
         <hr>
         
-        <div class="container" id="post1">
+        <div class="container" id="post1-loren-ipsum">
 
           <h2>loren ipsum blogging</h2>        
           <h5><span class="glyphicon glyphicon-time"></span> Sep 24, 2015. | <a href="#">Top</a></h5>
@@ -113,6 +310,9 @@
 
       <hr>
 
-  </body>
+  <script src="static/js/highlight.pack.js"></script> 
 
+  <script>hljs.initHighlightingOnLoad();</script> 
+
+</body>
 </html>
