@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146345113-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146345113-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Thierry Moudiki - nnetsauce</title>
+    <meta name="description" content="Personal webpage of Thierry Moudiki.">
+    <meta name="author" content="Thierry Moudiki">
+    <meta name="keywords" content="Thierry, Thierry Moudiki, webpage, nnetsauce, crossval">
+
+ 
+    <meta property="og:url" content="http://thierrymoudiki.github.io">   
+    <meta property="og:title" content="Thierry Moudiki">
+    <meta property="og:type" content="profile">
+    <meta property="og:description" content="Personal webpage of Thierry Moudiki.">
+    
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/skeleton.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" title="Tomorrow Night Blue" href="../../css/tomorrow-night-blue.css">
+  
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link rel="icon" type="image/png" href="images/Logo.png"> -->
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  </head>
+
+<body>
+
+
+
+<!-- header section (with links) -->
+  <div class="container">
+    <div class="row nav">   
+      
+      <!-- <div class="one column logo">
+        <a href="#"><img src="#" /></a>
+      </div> -->
+
+      <div class="eleven columns" id="top">
+        <ul>
+          <li><a href="#about" onclick="scrollViewAbout();return false;">About</a></li>
+          <li><a href="#install" onclick="scrollViewInstall();return false;">Install</a></li>
+          <li><a href="#example" onclick="scrollViewExample();return false;">Examples</a></li>
+          <li><a href="#source" onclick="scrollViewSource();return false;">Source</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">   
+    <div class="row hero">     
+      
+      <!-- <div class="four columns hero-profile">
+        <img src="images/profile-hero.png" />
+      </div>
+       -->
+
+      <div class="eight columns hero-text">
+        <div class="wrapper">
+
+          <h1>nnetsauce.</h1>
+
+          <h3> Combinations of <a href="https://github.com/thierrymoudiki/nnetsauce"> <i>neural </i> networks</a>. </h3> 
+
+          <div>
+            <div>
+        <a href="#about" onclick="scrollViewAbout();return false;">Learn More</a>
+      </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div
+  
+
+<!-- About section -->
+
+<div class="container" id="about">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2>About | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+        
+        <p> <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> is a Python package for Statistical/Machine learning. In <code>nnetsauce</code>, pattern recognition is achieved by combining layers of <i>neural</i> networks.
+        </p> 
+
+        <p>
+          These building blocks constitute the basis of <b>many custom models</b>, including models with <b>deeper learning architectures</b>; for regression, classification, and multivariate time series forecasting. 
+        </p>
+
+        <p>
+          <a href="#install">Here</a>, are informations on package installation. Examples of use of <code>nnetsauce</code> can be found <a href="#example" onclick="scrollViewExample();return false;">below</a>.
+        </p>
+        
+
+      </div>
+    </div>
+  </div>
+
+
+<!-- Install section -->
+
+<div class="container" id="install">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2>Install | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+        
+        <p> Currently, <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> can be installed through Github (but it will be available on PyPi in a few weeks). Here is how: </p>
+        
+        <div class="common">
+        <pre>
+          <code class="bash">
+            
+            git clone https://github.com/thierrymoudiki/nnetsauce.git
+            cd nnetsauce
+            python setup.py install
+
+          </code>
+          </pre>
+        </div>
+
+      </div>
+
+      <a href="#top" onclick="scrollViewTop();return false;">Top of the page</a>
+
+    </div>
+
+    
+
+  </div>
+
+
+
+<!-- Example section -->
+
+<div class="container" id="example">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2>Examples | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>                       
+
+        <p>
+          Here, are two examples of use of <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. A <a href="#classifex">classification</a> example on breast cancer data, and an illustrative example of <a href="#deeplearningex">deep learning</a>. 
+        
+          <code>scikit-learn</code> models are widely used in these examples, but <code>nnetsauce</code> <b>will work with any learning model possessing methods <code>fit()</code> and <code>predict()</code></b> such as <a href="https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py">xgboost</a>, <a href="https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/sklearn_example.py">LightGBM</a>, or <a href="https://github.com/catboost">CatBoost</a>.
+        </p>
+
+        <p>
+          It is also worth mentioning that <code>sklearn</code>'s  cross-validation functions, such as <code>GridSearchCV</code> and <code>cross_val_score</code> can be used on <code>nnetsauce</code> models.
+        </p> 
+
+        <br>
+        <br>
+
+        <h3 id="classifex">classification example</h3>
+        
+        <p>We start by <b>fitting a logistic regression to breast cancer data</b>: </p>
+
+        <div class="common">
+        <pre>
+          <code class="python">
+            
+            # Packages ----- 
+
+            import nnetsauce as ns
+            from sklearn import datasets, linear_model
+            from sklearn.model_selection import train_test_split
+            
+
+            # Datasets -----
+
+            breast_cancer = datasets.load_breast_cancer()
+            Z = breast_cancer.data
+            t = breast_cancer.target
+
+            
+            # Data splitting -----            
+
+            Z_train, Z_test, t_train, t_test = train_test_split(
+                Z, t, test_size=0.2, random_state=42)
+
+
+            # Logistic regression -----
+
+            regr = linear_model.LogisticRegression()            
+            # fitting model on training set
+            regr.fit(Z_train, t_train)
+
+            # predictive accuracy on test set
+            regr.score(Z_test, t_test)  
+
+          </code>
+          </pre>
+        </div>
+
+      <p>The <b>logistic regression model is now augmented with ten additional features</b> with <code>nnetsauce</code>. Doing that, increases the classifier's accuracy (accuracy is used here for simplicity): </p>
+
+      <div class="common">
+        <pre>
+          <code class="python">
+            
+            # Custom ns - Logistic regression -----
+
+            fit_obj = ns.CustomClassifier(
+            obj=regr,
+            n_hidden_features=10,
+            direct_link=True,
+            bias=True,
+            nodes_sim="sobol",
+            activation_name="relu")            
+            fit_obj.fit(Z_train, t_train)
+
+            # predictive accuracy on test set
+            fit_obj.score(Z_test, t_test) 
+
+          </code>
+          </pre>
+        </div>
+
+      <h3 id="deeplearningex">deep learning example</h3>
+
+      <p>
+        This, is an <b>illustrative</b> example of deep learning with <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. Many, more advanced things could be tried. In this example, predictive accuracy of the model <b>increases as new layers are added</b> to the stack.
+      </p>
+        
+
+      <div class="common">
+        <pre>
+          <code class="python">
+
+            import nnetsauce as ns
+            from sklearn import datasets, metrics
+
+            diabetes = datasets.load_diabetes()
+            X = diabetes.data 
+            y = diabetes.target
+            
+            # layer 1 (base layer) ----
+            layer1_regr = linear_model.BayesianRidge()
+            layer1_regr.fit(X[0:100,:], y[0:100])
+            # RMSE score
+            np.sqrt(metrics.mean_squared_error(y[100:125], layer1_regr.predict(X[100:125,:])))
+
+
+            # layer 2 using layer 1 ----
+            layer2_regr = ns.CustomRegressor(obj = layer1_regr, n_hidden_features=3, 
+                                    direct_link=True, bias=True, 
+                                    nodes_sim='sobol', activation_name='tanh', 
+                                    n_clusters=2)
+            layer2_regr.fit(X[0:100,:], y[0:100])
+
+
+            # RMSE score
+            np.sqrt(layer2_regr.score(X[100:125,:], y[100:125]))
+
+            # layer 3 using layer 2 ----
+            layer3_regr = ns.CustomRegressor(obj = layer2_regr, n_hidden_features=5, 
+                        direct_link=True, bias=True, 
+                        nodes_sim='hammersley', activation_name='sigmoid', 
+                        n_clusters=2)
+            layer3_regr.fit(X[0:100,:], y[0:100])
+
+            # RMSE score
+            np.sqrt(layer3_regr.score(X[100:125,:], y[100:125]))
+
+          </code>
+          </pre>
+        </div>
+
+        <a href="#top" onclick="scrollViewTop();return false;">Top of the page</a>
+
+      </div>
+    </div>
+  </div>
+
+
+<!-- Source section -->
+
+  <div class="container" id="source">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2>Source | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+        
+        <p> Want to <b>contribute to <code>nnetsauce</code>'s development</b>? The package is available on Github <i>via</i> the link below: 
+
+        <br>
+        <br>
+
+          <a href="https://github.com/thierrymoudiki/nnetsauce">github.com/thierrymoudiki/nnetsauce</a>
+
+        </p>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    
+    function scrollViewTop(){
+      document.querySelector('#top').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewAbout(){
+      document.querySelector('#about').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewInstall(){
+      document.querySelector('#install').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewExample(){
+      document.querySelector('#example').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewSource(){
+      document.querySelector('#source').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewContact(){
+      document.querySelector('#contact').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+  </script>
+
+  <script src="../../static/js/highlight.pack.js"></script> 
+
+  <script>hljs.initHighlightingOnLoad();</script> 
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

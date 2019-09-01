@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  
+  <head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146345113-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146345113-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <title>Thierry Moudiki - Webpage</title>
+    <meta name="description" content="Personal webpage of Thierry Moudiki.">
+    <meta name="author" content="Thierry Moudiki">
+    <meta name="keywords" content="Thierry, Thierry Moudiki, webpage, nnetsauce, crossval">
+
+ 
+    <meta property="og:url" content="http://thierrymoudiki.github.io">   
+    <meta property="og:title" content="Thierry Moudiki">
+    <meta property="og:type" content="profile">
+    <meta property="og:description" content="Personal webpage of Thierry Moudiki.">
+    
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link rel="stylesheet" href="css/normalize.css">    
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/main.css"> -->
+
+    <style>
+        {% include normalize.css %}
+        {% include skeleton.css %}
+        {% include main.css %}
+    </style>
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link rel="icon" type="image/png" href="images/Logo.png"> -->
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+    <!-- MailerLite Universal -->
+    <script>
+    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+    var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+    f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+    var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+    _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+    var ml_account = ml('accounts', '1645632', 'e9k2y0f6a0', 'load');
+    </script>
+    <!-- End MailerLite Universal -->
+
+  </head>
+
+    <div class="container col-sm-9">                
+
+        <body>
+            {{content}}
+        </body>
+    
+    </div>
+
+</html>

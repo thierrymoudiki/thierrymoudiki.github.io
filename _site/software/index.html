@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146345113-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146345113-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Thierry Moudiki - Webpage</title>
+    <meta name="description" content="Personal webpage of Thierry Moudiki.">
+    <meta name="author" content="Thierry Moudiki">
+    <meta name="keywords" content="Thierry, Thierry Moudiki, webpage, nnetsauce, crossval">
+
+ 
+    <meta property="og:url" content="http://thierrymoudiki.github.io">   
+    <meta property="og:title" content="Thierry Moudiki">
+    <meta property="og:type" content="profile">
+    <meta property="og:description" content="Personal webpage of Thierry Moudiki.">
+    
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link rel="icon" type="image/png" href="images/Logo.png"> -->
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  </head>
+
+<body>
+
+<!-- header section (with links) -->
+  <div class="container">
+    <div class="row nav">   
+      
+      <!-- <div class="one column logo">
+        <a href="#"><img src="#" /></a>
+      </div> -->
+
+      <div class="eleven columns" id="top">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#contact" onclick="scrollViewContact();return false;">Contact</a></li>          
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">   
+    <div class="row hero">     
+      
+      <!-- <div class="four columns hero-profile">
+        <img src="images/profile-hero.png" />
+      </div>
+       -->
+
+      <div class="eight columns hero-text">
+        <div class="wrapper">
+
+          <h1>Software.</h1>
+
+          <h3> Stuff that I <a href="https://github.com/thierrymoudiki/">create</a>. </h3> 
+
+          <div>
+            <div>
+        <a href="#about" onclick="scrollViewAbout();return false;">Learn More</a>
+      </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+<!-- About Me section -->
+
+  <div class="container" id="about">
+    <div class="row contact-title">
+      <div class="twelve columns">
+
+        <h2>Packages | <a href="#top" onclick="scrollViewTop();return false;">Back</a></h2>
+
+        <p>
+         Here, some of the  <b>software packages</b> that I developed. Interested? Learn more about them by <b>clicking on the link</b>: 
+        </p>
+        
+        
+          <p> - <a href="nnetsauce/index.html">nnetsauce</a> is a Python package for Statistical/Machine learning and deep learning. It is suitable for solving <b>regression, classification, and multivariate time series</b> problems. </p>
+
+          <p> - <a href="crossval/soon.html">crossval</a> is an R package offering generic cross-validation functions for multiple models including <code>xgboost</code>, <code>randomForest</code>, <code>glmnet</code>, etc. </p>
+        
+
+        </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+
+  <div class="container" id="contact">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2>Let's Talk ! | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+        
+        <p> Want to talk about anything Tech/Statistics/Machine Learning? Email me at: </p>
+        
+        <p>
+          <b>thierry  DOT  moudiki  AT  pm  DOT  me</b>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    
+    function scrollViewTop(){
+      document.querySelector('#top').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewAbout(){
+      document.querySelector('#about').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewContact(){
+      document.querySelector('#contact').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+  </script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+---
+layout: default
+title: blog
+---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6715738890677216",
+    enable_page_level_ads: true
+  });
+</script>
+
+<h1>{{page.title}}</h1>
+
+<hr>
+
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+  <!-- Post's content -->
+  <div class="post">	
+    {{content}}
+  </div>
+
+  <!-- Mailer lite -->
+  <div class="ml-form-embed"
+        data-account="1645632:e9k2y0f6a0"
+        data-form="1465116:b1o3c8">
+  </div> 
+
+<br>
+
+<p><b>Previous publications</b></p>
+
+<ul class="myposts">
+	{% for post in site.posts %}
+	    <li><a href="{{ post.url }}">{{ post.title}}</a>
+	    <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+	    </li>
+	{% endfor %}
+</ul>

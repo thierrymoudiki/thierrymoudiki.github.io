@@ -1,0 +1,3 @@
+name: moudiki
+markdown: CommonMark
+permalink: /blog/:year/:month/:day/:title
