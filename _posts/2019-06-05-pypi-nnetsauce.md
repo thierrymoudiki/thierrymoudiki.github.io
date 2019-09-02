@@ -4,7 +4,6 @@ title: "nnetsauce on Pypi"
 date: 2019-06-05
 ---
           
-{% include base.html %}
 
 Machine Learning and Deep Learning package [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce) (introduced [here]({% post_url 2019-03-13-nnetsauce %}) ) is now available on [Pypi](https://pypi.org/) -- and I'm so proud of it ;). Which means, you can install it by using the command line: 
 

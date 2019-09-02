@@ -3,8 +3,9 @@ layout: default
 title: blog
 ---
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-</script>
+<!-- template for posts -->
+
+{% include base.html %}
 
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
@@ -13,17 +14,50 @@ title: blog
   });
 </script>
 
-<h1>{{page.title}}</h1>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+<link rel="stylesheet" href="{{base}}/css/sharing-buttons.css">
+
+<h2>{{page.title}}</h2>
+
+<div id="page-id-{{page.id | remove_first: '/' | replace: '/', '-'}}" style="display: none;">
+  {{page.id}}
+</div>
 
 <hr>
 
-{% include base.html %}
-<p class="meta">{{ page.date | date_to_string }} | <a href="{{base}}/blog/index.html">Back to list of posts</a></p>
-
   <!-- Post's content -->
   <div class="post">	
+
+    <p class="meta">{{ page.date | date_to_string }} | <a href="{{base}}/blog/index.html">Back to list of posts</a> 
+    <div class="container">
+    <div class="row">        
+    
+      <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
+      <div class="col-md-12">      
+
+        <a href="mailto:contact@example.com" target="_blank" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
+
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
+
+        <a href="http://www.facebook.com/sharer.php?u=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>
+      
+        <a href="http://twitter.com/share?url=https://thierrymoudiki.github.io{{page.url}}&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
+
+      </div>
+
+    </p>    
+
+    <br>
+
+  </div>
     {{content}}
   </div>
+
+  <br>
 
   <!-- Mailer lite -->
   <div class="ml-form-embed"

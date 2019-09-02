@@ -156,4 +156,4 @@ The **first layer** is a Bayesian ridge regression. Model accuracy (Root Mean Sq
 
     # RMSE score
     np.sqrt(layer3_regr.score(X[100:125,:], y[100:125]))
-``
+```
