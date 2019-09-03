@@ -16,7 +16,7 @@ title: blog
   <!-- Post's content -->
   <div class="post">	
 
-    <p class="meta">{{ page.date | date_to_string }} | <a href="{{base}}/blog/index.html">Back to list of posts</a> 
+    <p class="meta">{{ page.date | date_to_string }} | <a href="{{site.url}}/feed.xml">RSS</a> | <a href="{{base}}/blog/index.html">Back to list of posts</a> 
     <div class="container">
     <div class="row">        
     
@@ -24,11 +24,11 @@ title: blog
       <div class="col-md-12">      
         <a id="increase-mailto" href="mailto:contact@example.com" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
 
-        <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
+        <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{site.url}}{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
 
-        <a id="increase-twitter" href="http://twitter.com/share?url=https://thierrymoudiki.github.io{{page.url}}&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
+        <a id="increase-twitter" href="http://twitter.com/share?url={{site.url}}{{page.url}}&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
 
-        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>              
+        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>              
       </div>
 
       <!-- add backend logic -->
