@@ -5,3 +5,4 @@ title: Thierry Moudiki's webpage
 url: https://thierrymoudiki.github.io
 plugins: 
   - jekyll-feed
+  - jekyll-sitemap
