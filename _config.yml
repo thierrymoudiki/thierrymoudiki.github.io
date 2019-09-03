@@ -3,3 +3,5 @@ markdown: CommonMark
 permalink: /blog/:year/:month/:day/:title
 title: Thierry Moudiki's webpage
 url: https://thierrymoudiki.github.io
+plugins: 
+  - jekyll-feed

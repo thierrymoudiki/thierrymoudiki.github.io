@@ -1222,6 +1222,8 @@ a.email {
 
 
 
+<br>
+
 <link rel="stylesheet" href="/css/sharing-buttons.css">
 
 <h2>More nnetsauce (examples of use)</h2>
@@ -1307,7 +1309,7 @@ python setup.py install
     # predictive accuracy of the model on test set
     regr.score(Z_test, t_test)  
 </code></pre>
-<p>The accuracy of this model is equal to <code>0.9561</code>. The <strong>logistic regression is now augmented of <code>n_hidden_features</code> additional features</strong> with <code>nnetsauce</code>. We use <code>GridSearchCV</code> to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (<code>row_sample</code>) and <code>dropout</code> are included and reseached:<!-- raw HTML omitted -->.</p>
+<p>The accuracy of this model is equal to <code>0.9561</code>. The <strong>logistic regression is now augmented of <code>n_hidden_features</code> additional features</strong> with <code>nnetsauce</code>. We use <code>GridSearchCV</code> to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (<code>row_sample</code>) and <code>dropout</code> are included and reseached:</p>
 <pre><code class="language-python">    # Defining nnetsauce model
     # based on the logistic regression model
     # defined previously
@@ -1341,7 +1343,7 @@ python setup.py install
     # predictive accuracy on test set
     clf.best_estimator_.score(Z_test, t_test)
 </code></pre>
-<p>After using <code>nnetsauce</code>, the accuracy is now equal to <code>0.9692</code>.<!-- raw HTML omitted --></p>
+<p>After using <code>nnetsauce</code>, the accuracy is now equal to <code>0.9692</code>.</p>
 <h2>deep learning example</h2>
 <p>This second example, is an <strong>illustrative</strong> example of deep learning with <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. Many, <strong>more advanced things could be tried</strong>. In this example, predictive accuracy of the model <strong>increases as new layers are added</strong> to the stack.</p>
 <!-- raw HTML omitted -->
