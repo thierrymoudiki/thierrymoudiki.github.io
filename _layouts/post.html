@@ -7,25 +7,9 @@ title: blog
 
 {% include base.html %}
 
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-6715738890677216",
-    enable_page_level_ads: true
-  });
-</script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-</script>
-
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-
 <link rel="stylesheet" href="{{base}}/css/sharing-buttons.css">
 
 <h2>{{page.title}}</h2>
-
-<div id="page-id-{{page.id | remove_first: '/' | replace: '/', '-'}}" style="display: none;">
-  {{page.id}}
-</div>
 
 <hr>
 
@@ -38,21 +22,28 @@ title: blog
     
       <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
       <div class="col-md-12">      
+        <a id="increase-mailto" href="mailto:contact@example.com" target="_blank" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
 
-        <a href="mailto:contact@example.com" target="_blank" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
+        <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
 
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
+        <a id="increase-twitter" href="http://twitter.com/share?url=https://thierrymoudiki.github.io{{page.url}}&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
 
-        <a href="http://www.facebook.com/sharer.php?u=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>
-      
-        <a href="http://twitter.com/share?url=https://thierrymoudiki.github.io{{page.url}}&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
-
+        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u=https://thierrymoudiki.github.io{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>              
       </div>
+
+      <!-- add backend logic -->
+      <!-- add backend logic -->
+      <!-- add backend logic -->
+      <div id="content-mailto" style="display: none;">1</div>
+      <div id="content-linkedin" style="display: none;">1</div>
+      <div id="content-twitter" style="display: none;">1</div>
+      <div id="content-facebook" style="display: none;">1</div>
 
     </p>    
 
     <br>
 
+  <!-- Post's content -->
   </div>
     {{content}}
   </div>
@@ -76,3 +67,52 @@ title: blog
 	    </li>
 	{% endfor %}
 </ul>
+
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6715738890677216",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+
+<!-- add backend logic -->
+<!-- add backend logic -->
+<!-- add backend logic -->
+<script type="text/javascript">    
+$(document).ready(function() {
+
+  var size_ini_mailto = $("#content-mailto").val();
+  var size_ini_linkedin = $("#content-linkedin").val();
+  var size_ini_twitter = $("#content-twitter").val();
+  var size_ini_facebook = $("#content-twitter").val();
+
+  $("#increase-mailto").on("click", function(event) {      
+      var size_increase = size_ini_mailto++;
+      $("#content-mailto").html(size_increase);
+  })
+
+  $("#increase-linkedin").on("click", function(event) {    
+      var size_increase = size_ini_linkedin++;
+      $("#content-linkedin").html(size_increase);
+  })
+
+  $("#increase-twitter").on("click", function(event) {      
+      var size_increase = size_ini_twitter++;
+      $("#content-twitter").html(size_increase);
+  })
+
+  $("#increase-facebook").on("click", function(event) {  
+      var size_increase = size_ini_facebook++;
+      $("#content-facebook").html(size_increase);
+  })
+
+})
+</script>
+
+<span></span>
