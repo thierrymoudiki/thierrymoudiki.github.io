@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "More nnetsauce (examples of use)"
+description: Examples of use of Python package nnetsauce
 date: 2019-05-09
 ---
 
