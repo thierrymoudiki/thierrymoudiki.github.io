@@ -111,15 +111,13 @@ The accuracy of this model is equal to `0.9561`. The **logistic regression is no
 
 After using `nnetsauce`, the accuracy is now equal to `0.9692`.
 
-## deep learning example
+## Deep learning example
 
 
-This second example, is an **illustrative** example of deep learning with [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce). Many, **more advanced things could be tried**. In this example, predictive accuracy of the model **increases as new layers are added** to the stack. 
-</p>
+This second example, is an **illustrative** example of deep learning with [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce). Many, **more advanced things could be tried**. In this example, predictive accuracy of the model **increases as new layers are added** to the stack.
 
 
 The **first layer** is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to `63.56`. The **second layer** notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is `61.76`. To finish, the **third layer** uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: `61.68`.
-</p>
 
 
 ```python

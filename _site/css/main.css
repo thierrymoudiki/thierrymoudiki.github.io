@@ -140,7 +140,7 @@ img{
     margin: 10px auto;
     width: 100%;
     height: 23px;
-    background: url("../images/yellow zigzag.png") no-repeat;
+/*    background: url("../images/yellow zigzag.png") no-repeat; */
     background-size: cover;
     transition: 0.4s;
 }
@@ -256,7 +256,7 @@ a.email {
 .contact-title{
 	margin-top: 150px;
 	margin-bottom: 200px;
-    background: url(../images/map.png) no-repeat;
+/*    background: url(../images/map.png) no-repeat; */
     background-size: contain;
     background-position-x: right;
 }

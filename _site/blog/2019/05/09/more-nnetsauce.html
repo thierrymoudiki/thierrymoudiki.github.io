@@ -1030,7 +1030,7 @@ img{
     margin: 10px auto;
     width: 100%;
     height: 23px;
-    background: url("../images/yellow zigzag.png") no-repeat;
+    /* background: url("../images/yellow zigzag.png") no-repeat; */
     background-size: cover;
     transition: 0.4s;
 }
@@ -1146,7 +1146,7 @@ a.email {
 .contact-title{
 	margin-top: 150px;
 	margin-bottom: 200px;
-    background: url(../images/map.png) no-repeat;
+    /* background: url(../images/map.png) no-repeat; */
     background-size: contain;
     background-position-x: right;
 }
@@ -1193,6 +1193,9 @@ a.email {
 
     <!-- RSS feed -->
     <link rel="alternate" type="application/atom+xml" href="http://localhost:4000/feed.xml"></li>
+
+    <!-- Use canonical links -->
+    <link rel="canonical" href="http://localhost:4000/blog/2019/05/09/more-nnetsauce">
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -1344,11 +1347,9 @@ python setup.py install
     clf.best_estimator_.score(Z_test, t_test)
 </code></pre>
 <p>After using <code>nnetsauce</code>, the accuracy is now equal to <code>0.9692</code>.</p>
-<h2>deep learning example</h2>
+<h2>Deep learning example</h2>
 <p>This second example, is an <strong>illustrative</strong> example of deep learning with <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. Many, <strong>more advanced things could be tried</strong>. In this example, predictive accuracy of the model <strong>increases as new layers are added</strong> to the stack.</p>
-<!-- raw HTML omitted -->
 <p>The <strong>first layer</strong> is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to <code>63.56</code>. The <strong>second layer</strong> notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is <code>61.76</code>. To finish, the <strong>third layer</strong> uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: <code>61.68</code>.</p>
-<!-- raw HTML omitted -->
 <pre><code class="language-python">    import nnetsauce as ns
     from sklearn import datasets, metrics
 
