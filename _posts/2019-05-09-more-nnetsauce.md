@@ -71,7 +71,7 @@ For this first example, we start by **fitting a logistic regression model to bre
     regr.score(Z_test, t_test)  
 ```
 
-The accuracy of this model is equal to `0.9561`. The **logistic regression is now augmented of `n_hidden_features` additional features** with `nnetsauce`. We use `GridSearchCV` to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (`row_sample`) and `dropout` are included and reseached:</p>. 
+The accuracy of this model is equal to `0.9561`. The **logistic regression is now augmented of `n_hidden_features` additional features** with `nnetsauce`. We use `GridSearchCV` to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (`row_sample`) and `dropout` are included and reseached: 
 
 ```python
     # Defining nnetsauce model
@@ -109,7 +109,7 @@ The accuracy of this model is equal to `0.9561`. The **logistic regression is no
 ```
 
 
-After using `nnetsauce`, the accuracy is now equal to `0.9692`.</p>
+After using `nnetsauce`, the accuracy is now equal to `0.9692`.
 
 ## deep learning example
 
