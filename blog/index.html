@@ -1,18 +1,32 @@
 ---
 layout: default
 title: Packages' news
+description: Thierry Moudiki's blog
 ---
 
-<h1>Packages' news</h1>
+<h2>Packages' news</h2>
 
 <hr>        
 
-          I will publish some <b>human-readable content</b> here. Want to get notified (no spam, <b>guaranteed</b>)? Then use the subscription box below!</a>. 
+I will publish some <b>human-readable content</b> here. Want to get notified (no spam, <b>guaranteed</b>)? Then use the <b>subscription box below</b>, or subscribe via <a href="{{site.url}}/feed.xml">RSS</a>.  
 
-          <br>
-          <br>
+<br>
+<br>
 
-          Having any other inquiry related to the content published here? Easiest/safest way is to <u>email me</u> at: <b>thierry dot moudiki at pm dot me</b>.
+Having any other inquiry related to the content published here? Easiest/safest way is to <u>email me</u> at: <b>thierry dot moudiki at pm dot me</b>.
+
+<br>
+<br>
+
+<h5>List of posts:</h5>
+
+<ul class="myposts">
+	{% for post in site.posts %}
+	    <li><a href="{{ post.url }}">{{ post.title}}</a>
+	    <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+	    </li>
+	{% endfor %}
+</ul>
 
 <br>
 <br>
@@ -23,12 +37,4 @@ title: Packages' news
         data-form="1465116:b1o3c8">
   </div> 
 
-<p><b>Previous publications</b></p>
 
-<ul class="myposts">
-	{% for post in site.posts %}
-	    <li><a href="{{ post.url }}">{{ post.title}}</a>
-	    <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
-	    </li>
-	{% endfor %}
-</ul>

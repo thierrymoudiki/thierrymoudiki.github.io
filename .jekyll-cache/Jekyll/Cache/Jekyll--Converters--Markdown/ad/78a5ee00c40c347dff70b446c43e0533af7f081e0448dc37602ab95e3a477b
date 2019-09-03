@@ -1,0 +1,2 @@
+I"j<p>Statistical/Machine learning models often depend on many <em>hyperparameters</em>, that define and control their learning capabilities. <a href="https://github.com/thierrymoudiki/crossval"><code>crossval</code></a> is an <code>R</code> package that calculates these models' learning performances on given datasets, as a function of their hyperparameters.</p>
+:ET

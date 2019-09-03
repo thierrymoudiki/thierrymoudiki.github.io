@@ -1,0 +1,2 @@
+I"<p>As mentioned in a <a href="/blog/2019/03/13/nnetsauce">previous</a> post, <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> is a Python package for Statistical/Machine learning and deep learning, based on combinations of <em>neural</em> networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of <code>nnetsauce</code>, with a few examples based on classification and deep learning.</p>
+:ET

@@ -17,8 +17,14 @@
 
 
     <meta charset="utf-8">
-    <title>Thierry Moudiki - Webpage</title>
-    <meta name="description" content="Personal webpage of Thierry Moudiki.">
+    <title>
+       
+           nnetsauce
+       
+    </title>
+    
+    <meta itemprop="description" name="description" content="nnetsauce, a Python package for Machine Learning and Deep Learning" />
+
     <meta name="author" content="Thierry Moudiki">
     <meta name="keywords" content="Thierry, Thierry Moudiki, webpage, nnetsauce, crossval">
 
@@ -34,9 +40,6 @@
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <link rel="stylesheet" href="css/normalize.css">    
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/main.css"> -->
 
     <style>
         /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -1181,12 +1184,15 @@ a.email {
 		padding-left: 0px;
 	}
 }
-
+        
     </style>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- <link rel="icon" type="image/png" href="images/Logo.png"> -->
+
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://localhost:4000/feed.xml"></li>
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -1209,32 +1215,58 @@ a.email {
     <div class="container col-sm-9">                
 
         <body>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-</script>
+            <!-- template for posts -->
 
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-6715738890677216",
-    enable_page_level_ads: true
-  });
-</script>
+<!-- From: https://ricostacruz.com/til/relative-paths-in-jekyll -->
 
-<h1>First attempt</h1>
+
+
+
+<link rel="stylesheet" href="/css/sharing-buttons.css">
+
+<h2>nnetsauce</h2>
 
 <hr>
 
-<p class="meta">01 Sep 2019</p>
-
   <!-- Post's content -->
   <div class="post">	
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<pre><code class="language-python">    # ...python code
-    def foo(x):
-    	return 3*x+2**x
-</code></pre>
-<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <p class="meta">13 Mar 2019 | <a href="http://localhost:4000/feed.xml">RSS</a> | <a href="/blog/index.html">Back to list of posts</a> 
+    <div class="container">
+    <div class="row">        
+    
+      <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
+      <div class="col-md-12">      
+        <a id="increase-mailto" href="mailto:contact@example.com" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
+
+        <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:4000/blog/2019/03/13/nnetsauce" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
+
+        <a id="increase-twitter" href="http://twitter.com/share?url=http://localhost:4000/blog/2019/03/13/nnetsauce&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
+
+        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u=http://localhost:4000/blog/2019/03/13/nnetsauce" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>              
+      </div>
+
+      <!-- add backend logic -->
+      <!-- add backend logic -->
+      <!-- add backend logic -->
+      <div id="content-mailto" style="display: none;">1</div>
+      <div id="content-linkedin" style="display: none;">1</div>
+      <div id="content-twitter" style="display: none;">1</div>
+      <div id="content-facebook" style="display: none;">1</div>
+
+    </p>    
+
+    <br>
+
+  <!-- Post's content -->
+  </div>
+    <p><a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> is a Python package for Statistical/Machine learning built on top of Numpy, Scipy, and scikit-learn under the BSD license. In nnetsauce, pattern recognition is achieved by combining single-layer networks (SLNN). These SLNN building blocks constitute the basis of many custom models that can be built by the user, including models with <strong>deeper learning architectures</strong>.</p>
+<p><strong>Examples of use, for illustration:</strong> nnetsauce can (for example) be trained to distinguish between malignant or benign tumors, depending on their characteristics (see examples on <a href="https://github.com/thierrymoudiki/nnetsauce">Github</a>), <strong>with a certain <!-- raw HTML omitted -->degree of confidence<!-- raw HTML omitted --></strong> . Or, by using your historical data of income and expenditures, it can be trained to forecast your savings in the next months.</p>
+<p>The package is very new. For those who want to try it, give feedback, make it available in R, contribute to the development on <a href="https://github.com/thierrymoudiki/nnetsauce">Github</a>, feel free to jump in.</p>
 
   </div>
+
+  <br>
 
   <!-- Mailer lite -->
   <div class="ml-form-embed"
@@ -1248,14 +1280,74 @@ a.email {
 
 <ul class="myposts">
 	
-	    <li><a href="/blog/2019/09/01/first-attempt">First attempt</a>
-	    <span class="postDate">Sep 1, 2019</span>
+	    <li><a href="/blog/2019/06/05/pypi-nnetsauce">nnetsauce on Pypi</a>
+	    <span class="postDate">Jun 5, 2019</span>
+	    </li>
+	
+	    <li><a href="/blog/2019/05/09/more-nnetsauce">More nnetsauce (examples of use)</a>
+	    <span class="postDate">May 9, 2019</span>
+	    </li>
+	
+	    <li><a href="/blog/2019/03/13/nnetsauce">nnetsauce</a>
+	    <span class="postDate">Mar 13, 2019</span>
+	    </li>
+	
+	    <li><a href="/blog/2019/03/13/crossval">crossval</a>
+	    <span class="postDate">Mar 13, 2019</span>
 	    </li>
 	
 </ul>
 
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6715738890677216",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+
+<!-- add backend logic -->
+<!-- add backend logic -->
+<!-- add backend logic -->
+<script type="text/javascript">    
+$(document).ready(function() {
+
+  var size_ini_mailto = $("#content-mailto").val();
+  var size_ini_linkedin = $("#content-linkedin").val();
+  var size_ini_twitter = $("#content-twitter").val();
+  var size_ini_facebook = $("#content-twitter").val();
+
+  $("#increase-mailto").on("click", function(event) {      
+      var size_increase = size_ini_mailto++;
+      $("#content-mailto").html(size_increase);
+  })
+
+  $("#increase-linkedin").on("click", function(event) {    
+      var size_increase = size_ini_linkedin++;
+      $("#content-linkedin").html(size_increase);
+  })
+
+  $("#increase-twitter").on("click", function(event) {      
+      var size_increase = size_ini_twitter++;
+      $("#content-twitter").html(size_increase);
+  })
+
+  $("#increase-facebook").on("click", function(event) {  
+      var size_increase = size_ini_facebook++;
+      $("#content-facebook").html(size_increase);
+  })
+
+})
+</script>
+
+<span></span>
         </body>
-    
+
     </div>
 
 </html>

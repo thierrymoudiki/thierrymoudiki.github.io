@@ -19,11 +19,11 @@
     <meta charset="utf-8">
     <title>
        
-           Packages' news
+           nnetsauce on Pypi
        
     </title>
     
-    <meta itemprop="description" name="description" content="Thierry Moudiki's blog" />
+    <meta itemprop="description" name="description" content="Installing nnetsauce from Pypi" />
 
     <meta name="author" content="Thierry Moudiki">
     <meta name="keywords" content="Thierry, Thierry Moudiki, webpage, nnetsauce, crossval">
@@ -1215,21 +1215,69 @@ a.email {
     <div class="container col-sm-9">                
 
         <body>
-            <h2>Packages' news</h2>
+            <!-- template for posts -->
 
-<hr>        
+<!-- From: https://ricostacruz.com/til/relative-paths-in-jekyll -->
 
-I will publish some <b>human-readable content</b> here. Want to get notified (no spam, <b>guaranteed</b>)? Then use the <b>subscription box below</b>, or subscribe via <a href="http://localhost:4000/feed.xml">RSS</a>.  
+
+
+
+<link rel="stylesheet" href="/css/sharing-buttons.css">
+
+<h2>nnetsauce on Pypi</h2>
+
+<hr>
+
+  <!-- Post's content -->
+  <div class="post">	
+
+    <p class="meta">05 Jun 2019 | <a href="http://localhost:4000/feed.xml">RSS</a> | <a href="/blog/index.html">Back to list of posts</a> 
+    <div class="container">
+    <div class="row">        
+    
+      <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
+      <div class="col-md-12">      
+        <a id="increase-mailto" href="mailto:contact@example.com" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
+
+        <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:4000/blog/2019/06/05/pypi-nnetsauce" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
+
+        <a id="increase-twitter" href="http://twitter.com/share?url=http://localhost:4000/blog/2019/06/05/pypi-nnetsauce&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
+
+        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u=http://localhost:4000/blog/2019/06/05/pypi-nnetsauce" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>              
+      </div>
+
+      <!-- add backend logic -->
+      <!-- add backend logic -->
+      <!-- add backend logic -->
+      <div id="content-mailto" style="display: none;">1</div>
+      <div id="content-linkedin" style="display: none;">1</div>
+      <div id="content-twitter" style="display: none;">1</div>
+      <div id="content-facebook" style="display: none;">1</div>
+
+    </p>    
+
+    <br>
+
+  <!-- Post's content -->
+  </div>
+    <p>Machine Learning and Deep Learning package <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> (introduced <a href="/blog/2019/03/13/nnetsauce">here</a> ) is now available on <a href="https://pypi.org/">Pypi</a> -- and I'm so proud of it ;). Which means, you can install it by using the command line:</p>
+<pre><code class="language-bash">pip install nnetsauce
+</code></pre>
+<p>For more <strong>examples of use of this package</strong>, you can consult <a href="/blog/2019/05/09/more-nnetsauce">this post</a>, or the <a href="https://github.com/thierrymoudiki/nnetsauce">package's Github repo</a> README.</p>
+
+  </div>
+
+  <br>
+
+  <!-- Mailer lite -->
+  <div class="ml-form-embed"
+        data-account="1645632:e9k2y0f6a0"
+        data-form="1465116:b1o3c8">
+  </div> 
 
 <br>
-<br>
 
-Having any other inquiry related to the content published here? Easiest/safest way is to <u>email me</u> at: <b>thierry dot moudiki at pm dot me</b>.
-
-<br>
-<br>
-
-<h5>List of posts:</h5>
+<p><b>Previous publications</b></p>
 
 <ul class="myposts">
 	
@@ -1251,17 +1299,54 @@ Having any other inquiry related to the content published here? Easiest/safest w
 	
 </ul>
 
-<br>
-<br>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6715738890677216",
+    enable_page_level_ads: true
+  });
+</script>
 
-<!-- Mailer lite -->
-  <div class="ml-form-embed"
-        data-account="1645632:e9k2y0f6a0"
-        data-form="1465116:b1o3c8">
-  </div> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
 
+<!-- add backend logic -->
+<!-- add backend logic -->
+<!-- add backend logic -->
+<script type="text/javascript">    
+$(document).ready(function() {
 
+  var size_ini_mailto = $("#content-mailto").val();
+  var size_ini_linkedin = $("#content-linkedin").val();
+  var size_ini_twitter = $("#content-twitter").val();
+  var size_ini_facebook = $("#content-twitter").val();
+
+  $("#increase-mailto").on("click", function(event) {      
+      var size_increase = size_ini_mailto++;
+      $("#content-mailto").html(size_increase);
+  })
+
+  $("#increase-linkedin").on("click", function(event) {    
+      var size_increase = size_ini_linkedin++;
+      $("#content-linkedin").html(size_increase);
+  })
+
+  $("#increase-twitter").on("click", function(event) {      
+      var size_increase = size_ini_twitter++;
+      $("#content-twitter").html(size_increase);
+  })
+
+  $("#increase-facebook").on("click", function(event) {  
+      var size_increase = size_ini_facebook++;
+      $("#content-facebook").html(size_increase);
+  })
+
+})
+</script>
+
+<span></span>
         </body>
 
     </div>
