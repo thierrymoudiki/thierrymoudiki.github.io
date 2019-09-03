@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
   
   <head>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146345113-1"></script>
     <script>
@@ -14,7 +13,6 @@
 
       gtag('config', 'UA-146345113-1');
     </script>
-
 
     <meta charset="utf-8">
     <title>Thierry Moudiki - Webpage</title>
@@ -34,9 +32,9 @@
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -60,10 +58,8 @@
 
       <div class="eleven columns" id="top">
         <ul>
-          <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="#contact" onclick="scrollViewContact();return false;">Contact</a></li>
-          <li><a href="software/index.html">Software</a></li>
-          <li><a href="cv/thierry-moudiki.pdf">Résumé</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#contact" onclick="scrollViewContact();return false;">Contact</a></li>          
         </ul>
       </div>
 
@@ -83,20 +79,15 @@
       <div class="eight columns hero-text">
         <div class="wrapper">
 
-          <h1>Thierry Moudiki.</h1>
+          <h1>Software.</h1>
 
-          <h3>I am a brother, a son, a <a href="https://github.com/thierrymoudiki/">programmer</a> , and I like cheesecakes (among other things). </h3> 
+          <h3> Stuff that I <a href="https://github.com/thierrymoudiki/">create</a>. </h3> 
 
           <div>
             <div>
- 				<a href="#aboutme" onclick="scrollViewAbout();return false;">Learn More</a>
- 			</div>
+        <a href="#about" onclick="scrollViewAbout();return false;">Learn More</a>
+      </div>
 
-            <div class="social">
-              <a href="https://github.com/thierrymoudiki/"><img src="images/github.svg" alt="github"></a>
-              <a href="https://www.linkedin.com/in/thierry-moudiki/"><img src="images/linkedin.svg" alt="linkedin"></a>
-              <a href="https://www.researchgate.net/profile/Thierry_Moudiki3"><img src="images/researchgate.png" alt="researchgate"></a>
-            </div>
           </div>
         </div>
 
@@ -107,40 +98,27 @@
 
 <!-- About Me section -->
 
-  <div class="container" id="aboutme">
+  <div class="container" id="about">
     <div class="row contact-title">
       <div class="twelve columns">
 
-        <h2>About Me | <a href="#top" onclick="scrollViewTop();return false;">Back</a></h2>
-
-        <p> 
-
-          I am currently working as a Postdoctoral fellow on <a href="https://en.wikipedia.org/wiki/Survival_analysis">survival analysis</a> at University Lyon 1. 
-
-        </p>
+        <h2>Packages | <a href="#top" onclick="scrollViewTop();return false;">Back</a></h2>
 
         <p>
-
-          I have created for example   
-
-              <a href="https://github.com/thierrymoudiki/nnetsauce">nnetsauce</a>, a general-purpose Python package for Statistical/Machine Learning and               
-              <a href="https://github.com/thierrymoudiki/crossval">crossval</a>, an R package offering generic validation functions for predictive models (oh, and this webpage, with a little bit of HTML and Javascript). For more details on nnetsauce and crossval, see <a href="news.html#post3">here</a> and <a href="news.html#post2">here</a>.
-            
+         Here, some of the  <b>software packages</b> that I developed. Interested? Learn more about them by <b>clicking on the link</b>: 
         </p>
         
-        <p>
+        
+          <p> - <a href="nnetsauce/index.html">nnetsauce</a> is a Python package for Statistical/Machine learning and deep learning. It is suitable for solving <b>regression, classification, and multivariate time series</b> problems. </p>
 
-      		If you enjoy using these packages, or find any of my different contents useful, feel free to 
-          <a href="#contact" onclick="scrollViewContact();return false;">contact me</a>, <a href="https://paypal.me/thierryme">Paypal me</a>, or <a href="https://buymeacoff.ee/MCgG6hYHZ">buy me a coffee</a>. 
+          <p> - <a href="crossval/soon.html">crossval</a> is an R package offering generic cross-validation functions for multiple models including <code>xgboost</code>, <code>randomForest</code>, <code>glmnet</code>, etc. </p>
+        
 
-      	</p>
-
-      	</div>
+        </div>
     </div>
   </div>
 
-
-<!-- Contact section -->
+  <!-- Contact section -->
 
   <div class="container" id="contact">   
     <div class="row contact-title">
@@ -151,12 +129,11 @@
         
         <p>
           <b>thierry  DOT  moudiki  AT  pm  DOT  me</b>
-      	</p>
+        </p>
 
       </div>
     </div>
   </div>
-
 
   <script type="text/javascript">
     
@@ -167,7 +144,7 @@
     }
 
     function scrollViewAbout(){
-      document.querySelector('#aboutme').scrollIntoView({ 
+      document.querySelector('#about').scrollIntoView({ 
         behavior: 'smooth' 
       });
     }
@@ -183,5 +160,4 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-
 </html>

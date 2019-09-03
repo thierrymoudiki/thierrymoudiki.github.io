@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-03T22:11:20+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Thierry Moudiki’s webpage</title><entry><title type="html">nnetsauce on Pypi</title><link href="http://localhost:4000/blog/2019/06/05/pypi-nnetsauce" rel="alternate" type="text/html" title="nnetsauce on Pypi" /><published>2019-06-05T00:00:00+02:00</published><updated>2019-06-05T00:00:00+02:00</updated><id>http://localhost:4000/blog/2019/06/05/pypi-nnetsauce</id><content type="html" xml:base="http://localhost:4000/blog/2019/06/05/pypi-nnetsauce">&lt;p&gt;Machine Learning and Deep Learning package &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;&lt;code&gt;nnetsauce&lt;/code&gt;&lt;/a&gt; (introduced &lt;a href=&quot;/blog/2019/03/13/nnetsauce&quot;&gt;here&lt;/a&gt; ) is now available on &lt;a href=&quot;https://pypi.org/&quot;&gt;Pypi&lt;/a&gt; -- and I'm so proud of it ;). Which means, you can install it by using the command line:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pip install nnetsauce
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For more &lt;strong&gt;examples of use of this package&lt;/strong&gt;, you can consult &lt;a href=&quot;/blog/2019/05/09/more-nnetsauce&quot;&gt;this post&lt;/a&gt;, or the &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;package's Github repo&lt;/a&gt; README.&lt;/p&gt;</content><author><name></name></author><summary type="html">Machine Learning and Deep Learning package nnetsauce (introduced here ) is now available on Pypi -- and I'm so proud of it ;). Which means, you can install it by using the command line:</summary></entry><entry><title type="html">More nnetsauce (examples of use)</title><link href="http://localhost:4000/blog/2019/05/09/more-nnetsauce" rel="alternate" type="text/html" title="More nnetsauce (examples of use)" /><published>2019-05-09T00:00:00+02:00</published><updated>2019-05-09T00:00:00+02:00</updated><id>http://localhost:4000/blog/2019/05/09/more-nnetsauce</id><content type="html" xml:base="http://localhost:4000/blog/2019/05/09/more-nnetsauce">&lt;p&gt;As mentioned in a &lt;a href=&quot;/blog/2019/03/13/nnetsauce&quot;&gt;previous&lt;/a&gt; post, &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;&lt;code&gt;nnetsauce&lt;/code&gt;&lt;/a&gt; is a Python package for Statistical/Machine learning and deep learning, based on combinations of &lt;em&gt;neural&lt;/em&gt; networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of &lt;code&gt;nnetsauce&lt;/code&gt;, with a few examples based on classification and deep learning.&lt;/p&gt;
+&lt;h2&gt;Installing the package&lt;/h2&gt;
+&lt;p&gt;Currently, &lt;code&gt;nnetsauce&lt;/code&gt; can be installed through &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;Github&lt;/a&gt; (but it will be available on PyPi in a few weeks).&lt;/p&gt;
+&lt;p&gt;Here is how:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;git clone https://github.com/thierrymoudiki/nnetsauce.git
+cd nnetsauce
+python setup.py install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Examples of use of &lt;code&gt;nnetsauce&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Below, are two examples of use of &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;&lt;code&gt;nnetsauce&lt;/code&gt;&lt;/a&gt;. A &lt;strong&gt;classification&lt;/strong&gt; example based on breast cancer data, and an illustrative &lt;strong&gt;deep learning&lt;/strong&gt; example. In the classification example, we show how a logistic regression model can be enhanced, for a higher accuracy (accuracy is used here for simplicity), by using &lt;code&gt;nnetsauce&lt;/code&gt;. The deep learning example shows how custom building blocks of &lt;code&gt;nnetsauce&lt;/code&gt; objects can be combined together, to form a - perfectible - deeper learning architecture.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;scikit-learn&lt;/code&gt; models are heavily used in these examples, but &lt;code&gt;nnetsauce&lt;/code&gt; &lt;strong&gt;will work with any learning model possessing methods &lt;code&gt;fit()&lt;/code&gt; and &lt;code&gt;predict()&lt;/code&gt;&lt;/strong&gt; (plus, &lt;code&gt;predict_proba()&lt;/code&gt; for a classifier). That is, it could be used in conjunction with &lt;a href=&quot;https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py&quot;&gt;xgboost&lt;/a&gt;, &lt;a href=&quot;https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/sklearn_example.py&quot;&gt;LightGBM&lt;/a&gt;, or &lt;a href=&quot;https://github.com/catboost&quot;&gt;CatBoost&lt;/a&gt; for example. For the purpose of &lt;strong&gt;model validation&lt;/strong&gt;, &lt;code&gt;sklearn&lt;/code&gt;'s  cross-validation functions such as &lt;code&gt;GridSearchCV&lt;/code&gt; and &lt;code&gt;cross_val_score&lt;/code&gt; can be employed (on &lt;code&gt;nnetsauce&lt;/code&gt; models), as it will be shown in the classification example.&lt;/p&gt;
+&lt;h2&gt;Classification example&lt;/h2&gt;
+&lt;p&gt;For this first example, we start by &lt;strong&gt;fitting a logistic regression model to breast cancer data&lt;/strong&gt; on a training set, and measure its accuracy on a validation set:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    # 0 - Packages ----- 
+
+    # Importing the packages that will be used in the demo
+    import nnetsauce as ns
+    from sklearn import datasets, linear_model
+    from sklearn.model_selection import train_test_split
+    
+
+    # 1 - Datasets -----
+
+    # Loading breast cancer data
+    breast_cancer = datasets.load_breast_cancer()
+    Z = breast_cancer.data
+    t = breast_cancer.target
+
+    
+    # 2 - Data splitting -----            
+
+    # Separating the data into training/testing set, and 
+    # a validation set
+    Z_train, Z_test, t_train, t_test = train_test_split(
+        Z, t, test_size=0.2, random_state=42)
+
+
+    # 3 - Logistic regression -----
+
+    # Fitting the Logistic regression model on 
+    # training set
+    regr = linear_model.LogisticRegression()                        
+    regr.fit(Z_train, t_train)
+
+    # predictive accuracy of the model on test set
+    regr.score(Z_test, t_test)  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The accuracy of this model is equal to &lt;code&gt;0.9561&lt;/code&gt;. The &lt;strong&gt;logistic regression is now augmented of &lt;code&gt;n_hidden_features&lt;/code&gt; additional features&lt;/strong&gt; with &lt;code&gt;nnetsauce&lt;/code&gt;. We use &lt;code&gt;GridSearchCV&lt;/code&gt; to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (&lt;code&gt;row_sample&lt;/code&gt;) and &lt;code&gt;dropout&lt;/code&gt; are included and reseached:&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    # Defining nnetsauce model
+    # based on the logistic regression model
+    # defined previously
+    fit_obj = ns.CustomClassifier(
+    obj=regr,
+    n_hidden_features=10,
+    direct_link=True,
+    bias=True,
+    nodes_sim=&amp;quot;sobol&amp;quot;,
+    activation_name=&amp;quot;relu&amp;quot;, 
+    seed = 123)
+    
+    # Grid search ---
+    from sklearn.model_selection import GridSearchCV
+    # grid search for finding better hyperparameters
+    np.random.seed(123)
+    clf = GridSearchCV(cv = 3, estimator = fit_obj,
+                       param_grid={'n_hidden_features': range(5, 25), 
+                                   'row_sample': [0.7,0.8, 0.9], 
+                                   'dropout': [0.7, 0.8, 0.9], 
+                                   'n_clusters': [0, 2, 3, 4]}, 
+                                   verbose=2)
+    
+    # fitting the model
+    clf.fit(Z_train, t_train)
+
+    # 'best' hyperparameters found 
+    print(clf.best_params_)
+    print(clf.best_score_)
+
+    # predictive accuracy on test set
+    clf.best_estimator_.score(Z_test, t_test)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After using &lt;code&gt;nnetsauce&lt;/code&gt;, the accuracy is now equal to &lt;code&gt;0.9692&lt;/code&gt;.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2&gt;deep learning example&lt;/h2&gt;
+&lt;p&gt;This second example, is an &lt;strong&gt;illustrative&lt;/strong&gt; example of deep learning with &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;&lt;code&gt;nnetsauce&lt;/code&gt;&lt;/a&gt;. Many, &lt;strong&gt;more advanced things could be tried&lt;/strong&gt;. In this example, predictive accuracy of the model &lt;strong&gt;increases as new layers are added&lt;/strong&gt; to the stack.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The &lt;strong&gt;first layer&lt;/strong&gt; is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to &lt;code&gt;63.56&lt;/code&gt;. The &lt;strong&gt;second layer&lt;/strong&gt; notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is &lt;code&gt;61.76&lt;/code&gt;. To finish, the &lt;strong&gt;third layer&lt;/strong&gt; uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: &lt;code&gt;61.68&lt;/code&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    import nnetsauce as ns
+    from sklearn import datasets, metrics
+
+    diabetes = datasets.load_diabetes()
+    X = diabetes.data 
+    y = diabetes.target
+    
+    # layer 1 (base layer) ----
+    layer1_regr = linear_model.BayesianRidge()
+    layer1_regr.fit(X[0:100,:], y[0:100])
+    # RMSE score
+    np.sqrt(metrics.mean_squared_error(y[100:125], layer1_regr.predict(X[100:125,:])))
+
+
+    # layer 2 using layer 1 ----
+    layer2_regr = ns.CustomRegressor(obj = layer1_regr, n_hidden_features=3, 
+                            direct_link=True, bias=True, 
+                            nodes_sim='sobol', activation_name='tanh', 
+                            n_clusters=2)
+    layer2_regr.fit(X[0:100,:], y[0:100])
+
+
+    # RMSE score
+    np.sqrt(layer2_regr.score(X[100:125,:], y[100:125]))
+
+    # layer 3 using layer 2 ----
+    layer3_regr = ns.CustomRegressor(obj = layer2_regr, n_hidden_features=5, 
+                direct_link=True, bias=True, 
+                nodes_sim='hammersley', activation_name='sigmoid', 
+                n_clusters=2)
+    layer3_regr.fit(X[0:100,:], y[0:100])
+
+    # RMSE score
+    np.sqrt(layer3_regr.score(X[100:125,:], y[100:125]))
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">As mentioned in a previous post, nnetsauce is a Python package for Statistical/Machine learning and deep learning, based on combinations of neural networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of nnetsauce, with a few examples based on classification and deep learning.</summary></entry><entry><title type="html">crossval</title><link href="http://localhost:4000/blog/2019/03/13/crossval" rel="alternate" type="text/html" title="crossval" /><published>2019-03-13T00:00:00+01:00</published><updated>2019-03-13T00:00:00+01:00</updated><id>http://localhost:4000/blog/2019/03/13/crossval</id><content type="html" xml:base="http://localhost:4000/blog/2019/03/13/crossval">&lt;p&gt;Statistical/Machine learning models often depend on many &lt;em&gt;hyperparameters&lt;/em&gt;, that define and control their learning capabilities. &lt;a href=&quot;https://github.com/thierrymoudiki/crossval&quot;&gt;&lt;code&gt;crossval&lt;/code&gt;&lt;/a&gt; is an &lt;code&gt;R&lt;/code&gt; package that calculates these models' learning performances on given datasets, as a function of their hyperparameters.&lt;/p&gt;
+&lt;p&gt;For those who want to contribute to the package development or improve it on &lt;a href=&quot;https://github.com/thierrymoudiki/crossval&quot;&gt;&lt;code&gt;Github&lt;/code&gt;&lt;/a&gt;, feel free to jump in.&lt;/p&gt;</content><author><name></name></author><summary type="html">Statistical/Machine learning models often depend on many hyperparameters, that define and control their learning capabilities. crossval is an R package that calculates these models' learning performances on given datasets, as a function of their hyperparameters.</summary></entry><entry><title type="html">nnetsauce</title><link href="http://localhost:4000/blog/2019/03/13/nnetsauce" rel="alternate" type="text/html" title="nnetsauce" /><published>2019-03-13T00:00:00+01:00</published><updated>2019-03-13T00:00:00+01:00</updated><id>http://localhost:4000/blog/2019/03/13/nnetsauce</id><content type="html" xml:base="http://localhost:4000/blog/2019/03/13/nnetsauce">&lt;p&gt;&lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;&lt;code&gt;nnetsauce&lt;/code&gt;&lt;/a&gt; is a Python package for Statistical/Machine learning built on top of Numpy, Scipy, and scikit-learn under the BSD license. In nnetsauce, pattern recognition is achieved by combining single-layer networks (SLNN). These SLNN building blocks constitute the basis of many custom models that can be built by the user, including models with &lt;strong&gt;deeper learning architectures&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Examples of use, for illustration:&lt;/strong&gt; nnetsauce can (for example) be trained to distinguish between malignant or benign tumors, depending on their characteristics (see examples on &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;Github&lt;/a&gt;), &lt;strong&gt;with a certain &lt;!-- raw HTML omitted --&gt;degree of confidence&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; . Or, by using your historical data of income and expenditures, it can be trained to forecast your savings in the next months.&lt;/p&gt;
+&lt;p&gt;The package is very new. For those who want to try it, give feedback, make it available in R, contribute to the development on &lt;a href=&quot;https://github.com/thierrymoudiki/nnetsauce&quot;&gt;Github&lt;/a&gt;, feel free to jump in.&lt;/p&gt;</content><author><name></name></author><summary type="html">nnetsauce is a Python package for Statistical/Machine learning built on top of Numpy, Scipy, and scikit-learn under the BSD license. In nnetsauce, pattern recognition is achieved by combining single-layer networks (SLNN). These SLNN building blocks constitute the basis of many custom models that can be built by the user, including models with deeper learning architectures.</summary></entry></feed>
