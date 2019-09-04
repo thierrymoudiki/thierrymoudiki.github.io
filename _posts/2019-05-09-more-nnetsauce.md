@@ -16,11 +16,11 @@ As mentioned in a [previous]({% post_url 2019-03-13-nnetsauce %}) post, [`nnetsa
 
 Here is how: 
 
-```python        
+~~~python        
 git clone https://github.com/thierrymoudiki/nnetsauce.git
 cd nnetsauce
 python setup.py install
-```
+~~~
                 
 ## Examples of use of `nnetsauce`
 
@@ -35,7 +35,7 @@ python setup.py install
 
 For this first example, we start by **fitting a logistic regression model to breast cancer data** on a training set, and measure its accuracy on a validation set: 
 
-```python
+~~~python
     # 0 - Packages ----- 
 
     # Importing the packages that will be used in the demo
@@ -69,11 +69,11 @@ For this first example, we start by **fitting a logistic regression model to bre
 
     # predictive accuracy of the model on test set
     regr.score(Z_test, t_test)  
-```
+~~~
 
 The accuracy of this model is equal to `0.9561`. The **logistic regression is now augmented of `n_hidden_features` additional features** with `nnetsauce`. We use `GridSearchCV` to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (`row_sample`) and `dropout` are included and reseached: 
 
-```python
+~~~python
     # Defining nnetsauce model
     # based on the logistic regression model
     # defined previously
@@ -106,7 +106,7 @@ The accuracy of this model is equal to `0.9561`. The **logistic regression is no
 
     # predictive accuracy on test set
     clf.best_estimator_.score(Z_test, t_test)
-```
+~~~
 
 
 After using `nnetsauce`, the accuracy is now equal to `0.9692`.
@@ -120,7 +120,7 @@ This second example, is an **illustrative** example of deep learning with [`nnet
 The **first layer** is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to `63.56`. The **second layer** notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is `61.76`. To finish, the **third layer** uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: `61.68`.
 
 
-```python
+~~~python
     import nnetsauce as ns
     from sklearn import datasets, metrics
 
@@ -155,4 +155,4 @@ The **first layer** is a Bayesian ridge regression. Model accuracy (Root Mean Sq
 
     # RMSE score
     np.sqrt(layer3_regr.score(X[100:125,:], y[100:125]))
-```
+~~~
