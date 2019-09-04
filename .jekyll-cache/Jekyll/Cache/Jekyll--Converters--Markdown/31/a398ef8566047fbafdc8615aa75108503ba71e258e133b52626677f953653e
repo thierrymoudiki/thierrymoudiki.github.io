@@ -1,5 +1,7 @@
-I"�<p>Machine Learning and Deep Learning package <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> (introduced <a href="/blog/2019/03/13/nnetsauce">here</a> ) is now available on <a href="https://pypi.org/">Pypi</a> -- and I'm so proud of it ;). Which means, you can install it by using the command line:</p>
-<pre><code class="language-bash">pip install nnetsauce
-</code></pre>
-<p>For more <strong>examples of use of this package</strong>, you can consult <a href="/blog/2019/05/09/more-nnetsauce">this post</a>, or the <a href="https://github.com/thierrymoudiki/nnetsauce">package's Github repo</a> README.</p>
+I"<p>Machine Learning and Deep Learning package <a href="https://github.com/thierrymoudiki/nnetsauce"><code class="highlighter-rouge">nnetsauce</code></a> (introduced <a href="/blog/2019/03/13/nnetsauce">here</a> ) is now available on <a href="https://pypi.org/">Pypi</a> – and I’m so proud of it ;). Which means, you can install it by using the command line:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>nnetsauce
+</code></pre></div></div>
+
+<p>For more <strong>examples of use of this package</strong>, you can consult <a href="/blog/2019/05/09/more-nnetsauce">this post</a>, or the <a href="https://github.com/thierrymoudiki/nnetsauce">package’s Github repo</a> README.</p>
 :ET

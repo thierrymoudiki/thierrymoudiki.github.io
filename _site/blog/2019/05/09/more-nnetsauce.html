@@ -1265,126 +1265,143 @@ a.email {
 
   <!-- Post's content -->
   </div>
-    <p>As mentioned in a <a href="/blog/2019/03/13/nnetsauce">previous</a> post, <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> is a Python package for Statistical/Machine learning and deep learning, based on combinations of <em>neural</em> networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of <code>nnetsauce</code>, with a few examples based on classification and deep learning.</p>
-<h2>Installing the package</h2>
-<p>Currently, <code>nnetsauce</code> can be installed through <a href="https://github.com/thierrymoudiki/nnetsauce">Github</a> (but it will be available on PyPi in a few weeks).</p>
+    <p>As mentioned in a <a href="/blog/2019/03/13/nnetsauce">previous</a> post, <a href="https://github.com/thierrymoudiki/nnetsauce"><code class="highlighter-rouge">nnetsauce</code></a> is a Python package for Statistical/Machine learning and deep learning, based on combinations of <em>neural</em> networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of <code class="highlighter-rouge">nnetsauce</code>, with a few examples based on classification and deep learning.</p>
+
+<h2 id="installing-the-package">Installing the package</h2>
+
+<p>Currently, <code class="highlighter-rouge">nnetsauce</code> can be installed through <a href="https://github.com/thierrymoudiki/nnetsauce">Github</a> (but it will be available on PyPi in a few weeks).</p>
+
 <p>Here is how:</p>
-<pre><code class="language-python">git clone https://github.com/thierrymoudiki/nnetsauce.git
-cd nnetsauce
-python setup.py install
-</code></pre>
-<h2>Examples of use of <code>nnetsauce</code></h2>
-<p>Below, are two examples of use of <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. A <strong>classification</strong> example based on breast cancer data, and an illustrative <strong>deep learning</strong> example. In the classification example, we show how a logistic regression model can be enhanced, for a higher accuracy (accuracy is used here for simplicity), by using <code>nnetsauce</code>. The deep learning example shows how custom building blocks of <code>nnetsauce</code> objects can be combined together, to form a - perfectible - deeper learning architecture.</p>
-<p><code>scikit-learn</code> models are heavily used in these examples, but <code>nnetsauce</code> <strong>will work with any learning model possessing methods <code>fit()</code> and <code>predict()</code></strong> (plus, <code>predict_proba()</code> for a classifier). That is, it could be used in conjunction with <a href="https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py">xgboost</a>, <a href="https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/sklearn_example.py">LightGBM</a>, or <a href="https://github.com/catboost">CatBoost</a> for example. For the purpose of <strong>model validation</strong>, <code>sklearn</code>'s  cross-validation functions such as <code>GridSearchCV</code> and <code>cross_val_score</code> can be employed (on <code>nnetsauce</code> models), as it will be shown in the classification example.</p>
-<h2>Classification example</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">thierrymoudiki</span><span class="o">/</span><span class="n">nnetsauce</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">nnetsauce</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<h2 id="examples-of-use-of-nnetsauce">Examples of use of <code class="highlighter-rouge">nnetsauce</code></h2>
+
+<p>Below, are two examples of use of <a href="https://github.com/thierrymoudiki/nnetsauce"><code class="highlighter-rouge">nnetsauce</code></a>. A <strong>classification</strong> example based on breast cancer data, and an illustrative <strong>deep learning</strong> example. In the classification example, we show how a logistic regression model can be enhanced, for a higher accuracy (accuracy is used here for simplicity), by using <code class="highlighter-rouge">nnetsauce</code>. The deep learning example shows how custom building blocks of <code class="highlighter-rouge">nnetsauce</code> objects can be combined together, to form a - perfectible - deeper learning architecture.</p>
+
+<p><code class="highlighter-rouge">scikit-learn</code> models are heavily used in these examples, but <code class="highlighter-rouge">nnetsauce</code> <strong>will work with any learning model possessing methods <code class="highlighter-rouge">fit()</code> and <code class="highlighter-rouge">predict()</code></strong> (plus, <code class="highlighter-rouge">predict_proba()</code> for a classifier). That is, it could be used in conjunction with <a href="https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py">xgboost</a>, <a href="https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/sklearn_example.py">LightGBM</a>, or <a href="https://github.com/catboost">CatBoost</a> for example. For the purpose of <strong>model validation</strong>, <code class="highlighter-rouge">sklearn</code>’s  cross-validation functions such as <code class="highlighter-rouge">GridSearchCV</code> and <code class="highlighter-rouge">cross_val_score</code> can be employed (on <code class="highlighter-rouge">nnetsauce</code> models), as it will be shown in the classification example.</p>
+
+<h2 id="classification-example">Classification example</h2>
+
 <p>For this first example, we start by <strong>fitting a logistic regression model to breast cancer data</strong> on a training set, and measure its accuracy on a validation set:</p>
-<pre><code class="language-python">    # 0 - Packages ----- 
 
-    # Importing the packages that will be used in the demo
-    import nnetsauce as ns
-    from sklearn import datasets, linear_model
-    from sklearn.model_selection import train_test_split
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># 0 - Packages ----- 
+</span>
+    <span class="c1"># Importing the packages that will be used in the demo
+</span>    <span class="kn">import</span> <span class="nn">nnetsauce</span> <span class="k">as</span> <span class="n">ns</span>
+    <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">linear_model</span>
+    <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
     
 
-    # 1 - Datasets -----
-
-    # Loading breast cancer data
-    breast_cancer = datasets.load_breast_cancer()
-    Z = breast_cancer.data
-    t = breast_cancer.target
+    <span class="c1"># 1 - Datasets -----
+</span>
+    <span class="c1"># Loading breast cancer data
+</span>    <span class="n">breast_cancer</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_breast_cancer</span><span class="p">()</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">target</span>
 
     
-    # 2 - Data splitting -----            
+    <span class="c1"># 2 - Data splitting -----            
+</span>
+    <span class="c1"># Separating the data into training/testing set, and 
+</span>    <span class="c1"># a validation set
+</span>    <span class="n">Z_train</span><span class="p">,</span> <span class="n">Z_test</span><span class="p">,</span> <span class="n">t_train</span><span class="p">,</span> <span class="n">t_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">Z</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
-    # Separating the data into training/testing set, and 
-    # a validation set
-    Z_train, Z_test, t_train, t_test = train_test_split(
-        Z, t, test_size=0.2, random_state=42)
 
+    <span class="c1"># 3 - Logistic regression -----
+</span>
+    <span class="c1"># Fitting the Logistic regression model on 
+</span>    <span class="c1"># training set
+</span>    <span class="n">regr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LogisticRegression</span><span class="p">()</span>                        
+    <span class="n">regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Z_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">)</span>
 
-    # 3 - Logistic regression -----
+    <span class="c1"># predictive accuracy of the model on test set
+</span>    <span class="n">regr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">Z_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span>  
+</code></pre></div></div>
 
-    # Fitting the Logistic regression model on 
-    # training set
-    regr = linear_model.LogisticRegression()                        
-    regr.fit(Z_train, t_train)
+<p>The accuracy of this model is equal to <code class="highlighter-rouge">0.9561</code>. The <strong>logistic regression is now augmented of <code class="highlighter-rouge">n_hidden_features</code> additional features</strong> with <code class="highlighter-rouge">nnetsauce</code>. We use <code class="highlighter-rouge">GridSearchCV</code> to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (<code class="highlighter-rouge">row_sample</code>) and <code class="highlighter-rouge">dropout</code> are included and reseached:</p>
 
-    # predictive accuracy of the model on test set
-    regr.score(Z_test, t_test)  
-</code></pre>
-<p>The accuracy of this model is equal to <code>0.9561</code>. The <strong>logistic regression is now augmented of <code>n_hidden_features</code> additional features</strong> with <code>nnetsauce</code>. We use <code>GridSearchCV</code> to find a better combination of hyperparameters;  additional hyperparameters such as row subsampling (<code>row_sample</code>) and <code>dropout</code> are included and reseached:</p>
-<pre><code class="language-python">    # Defining nnetsauce model
-    # based on the logistic regression model
-    # defined previously
-    fit_obj = ns.CustomClassifier(
-    obj=regr,
-    n_hidden_features=10,
-    direct_link=True,
-    bias=True,
-    nodes_sim=&quot;sobol&quot;,
-    activation_name=&quot;relu&quot;, 
-    seed = 123)
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># Defining nnetsauce model
+</span>    <span class="c1"># based on the logistic regression model
+</span>    <span class="c1"># defined previously
+</span>    <span class="n">fit_obj</span> <span class="o">=</span> <span class="n">ns</span><span class="o">.</span><span class="n">CustomClassifier</span><span class="p">(</span>
+    <span class="n">obj</span><span class="o">=</span><span class="n">regr</span><span class="p">,</span>
+    <span class="n">n_hidden_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">direct_link</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">bias</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">nodes_sim</span><span class="o">=</span><span class="s">"sobol"</span><span class="p">,</span>
+    <span class="n">activation_name</span><span class="o">=</span><span class="s">"relu"</span><span class="p">,</span> 
+    <span class="n">seed</span> <span class="o">=</span> <span class="mi">123</span><span class="p">)</span>
     
-    # Grid search ---
-    from sklearn.model_selection import GridSearchCV
-    # grid search for finding better hyperparameters
-    np.random.seed(123)
-    clf = GridSearchCV(cv = 3, estimator = fit_obj,
-                       param_grid={'n_hidden_features': range(5, 25), 
-                                   'row_sample': [0.7,0.8, 0.9], 
-                                   'dropout': [0.7, 0.8, 0.9], 
-                                   'n_clusters': [0, 2, 3, 4]}, 
-                                   verbose=2)
+    <span class="c1"># Grid search ---
+</span>    <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+    <span class="c1"># grid search for finding better hyperparameters
+</span>    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">cv</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">estimator</span> <span class="o">=</span> <span class="n">fit_obj</span><span class="p">,</span>
+                       <span class="n">param_grid</span><span class="o">=</span><span class="p">{</span><span class="s">'n_hidden_features'</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> 
+                                   <span class="s">'row_sample'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">],</span> 
+                                   <span class="s">'dropout'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">],</span> 
+                                   <span class="s">'n_clusters'</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]},</span> 
+                                   <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     
-    # fitting the model
-    clf.fit(Z_train, t_train)
+    <span class="c1"># fitting the model
+</span>    <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Z_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">)</span>
 
-    # 'best' hyperparameters found 
-    print(clf.best_params_)
-    print(clf.best_score_)
+    <span class="c1"># 'best' hyperparameters found 
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">best_score_</span><span class="p">)</span>
 
-    # predictive accuracy on test set
-    clf.best_estimator_.score(Z_test, t_test)
-</code></pre>
-<p>After using <code>nnetsauce</code>, the accuracy is now equal to <code>0.9692</code>.</p>
-<h2>Deep learning example</h2>
-<p>This second example, is an <strong>illustrative</strong> example of deep learning with <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. Many, <strong>more advanced things could be tried</strong>. In this example, predictive accuracy of the model <strong>increases as new layers are added</strong> to the stack.</p>
-<p>The <strong>first layer</strong> is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to <code>63.56</code>. The <strong>second layer</strong> notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is <code>61.76</code>. To finish, the <strong>third layer</strong> uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: <code>61.68</code>.</p>
-<pre><code class="language-python">    import nnetsauce as ns
-    from sklearn import datasets, metrics
+    <span class="c1"># predictive accuracy on test set
+</span>    <span class="n">clf</span><span class="o">.</span><span class="n">best_estimator_</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">Z_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span>
+</code></pre></div></div>
 
-    diabetes = datasets.load_diabetes()
-    X = diabetes.data 
-    y = diabetes.target
+<p>After using <code class="highlighter-rouge">nnetsauce</code>, the accuracy is now equal to <code class="highlighter-rouge">0.9692</code>.</p>
+
+<h2 id="deep-learning-example">Deep learning example</h2>
+
+<p>This second example, is an <strong>illustrative</strong> example of deep learning with <a href="https://github.com/thierrymoudiki/nnetsauce"><code class="highlighter-rouge">nnetsauce</code></a>. Many, <strong>more advanced things could be tried</strong>. In this example, predictive accuracy of the model <strong>increases as new layers are added</strong> to the stack.</p>
+
+<p>The <strong>first layer</strong> is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to <code class="highlighter-rouge">63.56</code>. The <strong>second layer</strong> notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is <code class="highlighter-rouge">61.76</code>. To finish, the <strong>third layer</strong> uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: <code class="highlighter-rouge">61.68</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">nnetsauce</span> <span class="k">as</span> <span class="n">ns</span>
+    <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">metrics</span>
+
+    <span class="n">diabetes</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_diabetes</span><span class="p">()</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">diabetes</span><span class="o">.</span><span class="n">data</span> 
+    <span class="n">y</span> <span class="o">=</span> <span class="n">diabetes</span><span class="o">.</span><span class="n">target</span>
     
-    # layer 1 (base layer) ----
-    layer1_regr = linear_model.BayesianRidge()
-    layer1_regr.fit(X[0:100,:], y[0:100])
-    # RMSE score
-    np.sqrt(metrics.mean_squared_error(y[100:125], layer1_regr.predict(X[100:125,:])))
+    <span class="c1"># layer 1 (base layer) ----
+</span>    <span class="n">layer1_regr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">BayesianRidge</span><span class="p">()</span>
+    <span class="n">layer1_regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">,:],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">])</span>
+    <span class="c1"># RMSE score
+</span>    <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">125</span><span class="p">],</span> <span class="n">layer1_regr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">125</span><span class="p">,:])))</span>
 
 
-    # layer 2 using layer 1 ----
-    layer2_regr = ns.CustomRegressor(obj = layer1_regr, n_hidden_features=3, 
-                            direct_link=True, bias=True, 
-                            nodes_sim='sobol', activation_name='tanh', 
-                            n_clusters=2)
-    layer2_regr.fit(X[0:100,:], y[0:100])
+    <span class="c1"># layer 2 using layer 1 ----
+</span>    <span class="n">layer2_regr</span> <span class="o">=</span> <span class="n">ns</span><span class="o">.</span><span class="n">CustomRegressor</span><span class="p">(</span><span class="n">obj</span> <span class="o">=</span> <span class="n">layer1_regr</span><span class="p">,</span> <span class="n">n_hidden_features</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> 
+                            <span class="n">direct_link</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> 
+                            <span class="n">nodes_sim</span><span class="o">=</span><span class="s">'sobol'</span><span class="p">,</span> <span class="n">activation_name</span><span class="o">=</span><span class="s">'tanh'</span><span class="p">,</span> 
+                            <span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">layer2_regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">,:],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">])</span>
 
 
-    # RMSE score
-    np.sqrt(layer2_regr.score(X[100:125,:], y[100:125]))
+    <span class="c1"># RMSE score
+</span>    <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">layer2_regr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">125</span><span class="p">,:],</span> <span class="n">y</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">125</span><span class="p">]))</span>
 
-    # layer 3 using layer 2 ----
-    layer3_regr = ns.CustomRegressor(obj = layer2_regr, n_hidden_features=5, 
-                direct_link=True, bias=True, 
-                nodes_sim='hammersley', activation_name='sigmoid', 
-                n_clusters=2)
-    layer3_regr.fit(X[0:100,:], y[0:100])
+    <span class="c1"># layer 3 using layer 2 ----
+</span>    <span class="n">layer3_regr</span> <span class="o">=</span> <span class="n">ns</span><span class="o">.</span><span class="n">CustomRegressor</span><span class="p">(</span><span class="n">obj</span> <span class="o">=</span> <span class="n">layer2_regr</span><span class="p">,</span> <span class="n">n_hidden_features</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
+                <span class="n">direct_link</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> 
+                <span class="n">nodes_sim</span><span class="o">=</span><span class="s">'hammersley'</span><span class="p">,</span> <span class="n">activation_name</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">,</span> 
+                <span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">layer3_regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">,:],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">])</span>
 
-    # RMSE score
-    np.sqrt(layer3_regr.score(X[100:125,:], y[100:125]))
-</code></pre>
+    <span class="c1"># RMSE score
+</span>    <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">layer3_regr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">125</span><span class="p">,:],</span> <span class="n">y</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">125</span><span class="p">]))</span>
+</code></pre></div></div>
 
   </div>
 
