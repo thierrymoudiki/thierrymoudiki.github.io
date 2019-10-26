@@ -6,7 +6,7 @@ date: 2019-10-25
 ---
 
 
-Data Frames are a way to represent tabular data, that is widely used and useful for Statistical Learning. Basically, a Data Frame = Tabular data + Named columns__, and there are different implementations of this data structure, notably in R, Python and Apache Spark. The [querier](https://github.com/thierrymoudiki/querier) exposes a query language to retrieve data from Python `pandas` Data Frames, inspired from [SQL](https://en.wikipedia.org/wiki/SQL)'s relational databases querying. Currently, the `querier` can be installed from Github as:
+Data Frames are a way to represent tabular data, that is widely used and useful for Statistical Learning. Basically, a Data Frame = Tabular data + Named columns, and there are different implementations of this data structure, notably in R, Python and Apache Spark. The [querier](https://github.com/thierrymoudiki/querier) exposes a query language to retrieve data from Python `pandas` Data Frames, inspired from [SQL](https://en.wikipedia.org/wiki/SQL)'s relational databases querying. Currently, the `querier` can be installed from Github as:
 
 ```bash
 pip install git+https://github.com/thierrymoudiki/querier.git
