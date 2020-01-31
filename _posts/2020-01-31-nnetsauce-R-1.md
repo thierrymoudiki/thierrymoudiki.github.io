@@ -8,6 +8,8 @@ date: 2020-01-31
 
 [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce) is now available to R users (currently, a development version). As a reminder, for those who are interested, the [following page](https://thierrymoudiki.github.io/software/nnetsauce/index.html) illustrates different use-cases for the nnetsauce, including deep learning application examples. This [post from September 18]({% post_url 2019-09-18-nnetsauce-adaboost-1 %}) is about an [Adaptive Boosting](https://en.wikipedia.org/wiki/AdaBoost) (boosting) algorithm variant available in the nnetsauce. This other [post from September 25]({% post_url 2019-09-25-nnetsauce-randombag-1 %}) presents a [Bootstrap aggregating](https://en.wikipedia.org/wiki/Bootstrap_aggregating) (bagging) algorithm variant also available in the nnetsauce, and is about recognizing tomatoes and apples.
 
+![image-title-here]({{base}}/images/2020-01-31/2020-01-31-image1.png){:class="img-responsive"}
+
 Not all Python functions are available in R so far, but the majority of them are. R implementation is catching up fast though. The general rule for invoking methods on objects in R as we'll see in the [example](#Example) below, is to __mirror the Python way, but replacing `.`'s by `$`'s__. Contributions/remarks are welcome as usual, and you can submit a pull request [on Github](https://github.com/thierrymoudiki/nnetsauce/R-package).
 
 
