@@ -28,7 +28,7 @@ devtools::install_github("thierrymoudiki/nnetsauce/R-package")
 library(nnetsauce)
 ```
 
-Having installed and loaded `nnetsauce`, we can now showcase a simple classification example based on `iris` dataset (flowers classification) and `Ridge2Classifier` model. With the `iris` dataset, we'd like to classify flowers as setosa, versicolor or virginica species, based on the following characteristics: sepal lengths, sepal widths, petal lengths and petal widths. 
+Having installed and loaded `nnetsauce`, we can now showcase a simple classification example based on `iris` dataset and `Ridge2Classifier` model (cf. [this paper](https://www.researchgate.net/publication/334706878_Multinomial_logistic_regression_using_quasi-randomized_networks)). With the `iris` dataset, we'd like to classify flowers as setosa, versicolor or virginica species, based on the following characteristics: sepal lengths, sepal widths, petal lengths and petal widths. 
 
 
 ## Example 
