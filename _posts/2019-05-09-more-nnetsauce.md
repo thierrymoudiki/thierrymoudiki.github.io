@@ -3,6 +3,7 @@ layout: post
 title: "More nnetsauce (examples of use)"
 description: Examples of use of Python package nnetsauce
 date: 2019-05-09
+categories: QuasiRandomizedNN
 ---
 
 As mentioned in a [previous]({% post_url 2019-03-13-nnetsauce %}) post, [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce) is a Python package for Statistical/Machine learning and deep learning, based on combinations of *neural* networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of `nnetsauce`, with a few examples based on classification and deep learning.          

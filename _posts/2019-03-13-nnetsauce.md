@@ -3,6 +3,7 @@ layout: post
 title: "nnetsauce"
 description: nnetsauce, a Python package for Machine Learning and Deep Learning
 date: 2019-03-13
+categories: QuasiRandomizedNN
 ---
 
 

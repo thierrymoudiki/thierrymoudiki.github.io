@@ -3,6 +3,7 @@ layout: post
 title: "Adaboost learning with nnetsauce"
 description: Examples of use of Adaboost in Python package nnetsauce
 date: 2019-09-18
+categories: QuasiRandomizedNN
 ---
 
 {% include base.html %}

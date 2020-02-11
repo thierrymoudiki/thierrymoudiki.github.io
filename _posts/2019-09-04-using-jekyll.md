@@ -3,6 +3,7 @@ layout: post
 title: "Change in blog's presentation"
 description: Using jekyll for blogging
 date: 2019-09-04
+categories: Misc
 ---
 
 I used to have a monolithic html page for blog posts at [/blog]({{site.url}}/blog), but it was neither practical nor sustainable. 

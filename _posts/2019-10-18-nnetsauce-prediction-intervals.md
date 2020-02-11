@@ -3,6 +3,7 @@ layout: post
 title: "Prediction intervals for nnetsauce models"
 description: Prediction intervals for nnetsauce models 
 date: 2019-10-18
+categories: QuasiRandomizedNN
 ---
 
 

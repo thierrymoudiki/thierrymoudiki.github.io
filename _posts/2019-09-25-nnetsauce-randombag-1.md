@@ -3,6 +3,7 @@ layout: post
 title: "Bagging in the nnetsauce"
 description: Examples of use of Bagging in Python package nnetsauce
 date: 2019-09-25
+categories: QuasiRandomizedNN
 ---
 
 In this post, I will show you how to use a _bootstrap aggregating_  classification algorithm (do not leave yet, I will explain it with apples and tomatoes!). This algorithm is implemented in the new version of [nnetsauce](https://github.com/thierrymoudiki/nnetsauce) (v0.2.0) and is called `randomBag`. The complete list of changes included in this new version can be found [here](https://github.com/thierrymoudiki/nnetsauce/blob/master/CHANGES.md). 
