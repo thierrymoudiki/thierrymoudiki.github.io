@@ -3,6 +3,7 @@ layout: post
 title: "Composing the querier's verbs for data wrangling"
 description: Data wrangling by composing operations with Python package querier
 date: 2019-11-22
+categories: DataBases
 ---
 
 

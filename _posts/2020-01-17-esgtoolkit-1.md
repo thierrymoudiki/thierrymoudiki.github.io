@@ -3,6 +3,7 @@ layout: post
 title: "ESGtoolkit, a tool for Monte Carlo simulation (v0.2.0)"
 description: ESGtoolkit, a tool for Monte Carlo simulation (v0.2.0)
 date: 2020-01-17
+categories: R
 ---
 
 

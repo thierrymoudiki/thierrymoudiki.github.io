@@ -3,6 +3,7 @@ layout: post
 title: "Introducing the querier"
 description: the querier, a query language for pandas Data Frames
 date: 2019-10-25
+categories: DataBases
 ---
 
 

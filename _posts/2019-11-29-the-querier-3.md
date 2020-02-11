@@ -3,6 +3,7 @@ layout: post
 title: "Benchmarking the querier's verbs"
 description: Benchmarking the verbs from Python package querier
 date: 2019-11-29
+categories: DataBases
 ---
 
 The [querier]({% post_url 2019-10-25-the-querier-1 %}) is a query language for Python pandas Data Frames, inspired by relational databases querying. There are also new ways of using pandas Data Frames for optimizing performance, such as `Dask` or `modin`. I'm considering an  integration of the `querier`with them, and the first step in this direction, was for me to understand the `querier`'s perfomance itself.

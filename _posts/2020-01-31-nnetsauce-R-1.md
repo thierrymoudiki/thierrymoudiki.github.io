@@ -3,6 +3,7 @@ layout: post
 title: "nnetsauce for R"
 description: nnetsauce for R
 date: 2020-01-31
+categories: R
 ---
 
 
