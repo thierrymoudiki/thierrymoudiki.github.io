@@ -18,7 +18,7 @@ If you want to contribute to a __repository__ (_repo_), you'll first need to [in
 
 ![image-title-here]({{base}}/images/2020-02-14/2020-02-14-image1.png){:class="img-responsive"}
 
-To finish, I found [this resource](https://d2l.ai/chapter_appendix-tools-for-deep-learning/contributing.html) to be very informative in describing the process __fork__ + __clone__ + __submit a pull request__. You can replace all references to _the book_ by references to [nnetsauce](https://github.com/thierrymoudiki/nnetsauce), [teller](https://github.com/thierrymoudiki/teller), [querier](https://github.com/thierrymoudiki/querier), [ESGtoolkit](https://github.com/thierrymoudiki/ESGtoolkit) or [crossval](https://github.com/thierrymoudiki/crossval). 
+To finish, I found [this resource](https://d2l.ai/chapter_appendix-tools-for-deep-learning/contributing.html) to be very informative in describing the process __fork__ + __clone__ + __submit a pull request__. You can replace all references to _the book_ in there, by references to [nnetsauce](https://github.com/thierrymoudiki/nnetsauce), [teller](https://github.com/thierrymoudiki/teller), [querier](https://github.com/thierrymoudiki/querier), [ESGtoolkit](https://github.com/thierrymoudiki/ESGtoolkit) or [crossval](https://github.com/thierrymoudiki/crossval). 
 
 __Note:__ I am currently looking for a _gig_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!
 
