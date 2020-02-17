@@ -1,15 +1,19 @@
 ---
-layout: none
+layout: feed
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>T. Moudiki's Webpage - R</title>
-    <description>Posts related to R on T. Moudiki's Webpage</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/feed_R.xml" rel="self" type="application/rss+xml" />
+<feed version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator>
+    
+    <link href="{{ site.url }}/feed_R.xml" rel="self" type="application/atom+xml" />
 
+    <link href="{{ site.url }}" rel="alternate" type="text/html" />
+
+    <id>{{ site.url }}/feed_R.xml</id>
+    <title type="html">T. Moudiki's Webpage - R</title>
+    <description>Posts related to R on T. Moudiki's Webpage</description>
+   
         {% assign sorted_cats = site.categories | sort %}
           {% for category in sorted_cats %}
             {% capture category_name %}{{ category | first }}{% endcapture %}
@@ -18,11 +22,11 @@ layout: none
                     <entry>  
 
                       <title>{{ post.title | xml_escape }}</title>
+
+                      <link href="{{ site.url }}/{{ post.url }}" rel="alternate" type="text/html" title="{{post.title}}" />
                       
-                      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-
-                      <link>{{ site.url }}/{{ post.url }}</link>
-
+                      <published>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</published>
+                      
                       <content>{{ post.content | xml_escape }}</content>
 
                       <summary type="html">{{ post.description | xml_escape }}</summary>                                                            
@@ -32,5 +36,4 @@ layout: none
               {% endif %}
           {% endfor %}   
 
-  </channel>
-</rss>
+</feed>
