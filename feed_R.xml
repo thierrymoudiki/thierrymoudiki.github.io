@@ -3,6 +3,7 @@ layout: none
 author: tm
 ---
 
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator>
     
@@ -14,8 +15,7 @@ author: tm
     <id>{{ site.url }}/feed_R.xml</id>
     <title type="html">T. Moudiki's Webpage - R</title>
     <subtitle>Posts related to R on T. Moudiki's Webpage</subtitle>
-
-        {% assign author = site.data.authors[page.author] %}   
+   
         {% assign sorted_cats = site.categories | sort %}
           {% for category in sorted_cats %}
             {% capture category_name %}{{ category | first }}{% endcapture %}
