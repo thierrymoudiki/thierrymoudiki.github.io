@@ -1,5 +1,6 @@
 ---
 layout: none
+author: tm
 ---
 
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -13,7 +14,8 @@ layout: none
     <id>{{ site.url }}/feed_R.xml</id>
     <title type="html">T. Moudiki's Webpage - R</title>
     <subtitle>Posts related to R on T. Moudiki's Webpage</subtitle>
-   
+
+        {% assign author = site.data.authors[page.author] %}   
         {% assign sorted_cats = site.categories | sort %}
           {% for category in sorted_cats %}
             {% capture category_name %}{{ category | first }}{% endcapture %}
@@ -33,6 +35,8 @@ layout: none
                       
                       <content type="html" xml:base="{{ site.url }}/{{ post.url }}">{{ post.content | xml_escape }}</content>
                      
+                      <author>{{ author.name }}</author>
+
                       <summary type="html">{{ post.description | xml_escape }}</summary>                                                            
                     </entry>               
                 {% endfor %}             
