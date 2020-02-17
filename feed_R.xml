@@ -19,11 +19,9 @@ layout: none
 
                       <title>{{ post.title | xml_escape }}</title>
                       
-                      <link href="http://localhost:4000/blog/2020/02/14/misc/git-github" rel="alternate" type="text/html" title="Git/Github for contributing to package development"/>
-                      
                       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 
-                      <id>{{ site.url }}/{{ post.url }}</id>
+                      <link>{{ site.url }}/{{ post.url }}</link>
 
                       <content>{{ post.content | xml_escape }}</content>
 
