@@ -34,7 +34,7 @@ layout: none
                       
                       <content type="html" xml:base="{{ site.url }}/{{ post.url }}">{{ post.content | xml_escape }}</content>
                      
-                      <author>T Moudiki</author>
+                      <author><name></name></author>
 
                       <summary type="html">{{ post.description | xml_escape }}</summary>                                                            
                     </entry>               
