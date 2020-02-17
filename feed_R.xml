@@ -1,0 +1,38 @@
+---
+layout: none
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>T. Moudiki's Webpage - R</title>
+    <description>Posts related to R on T. Moudiki's Webpage</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/feed_R.xml" rel="self" type="application/rss+xml" />
+
+        {% assign sorted_cats = site.categories | sort %}
+          {% for category in sorted_cats %}
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+              {% if category_name == "R" %}
+                {% for post in site.categories[category_name] %}              
+                    <entry>  
+
+                      <title>{{ post.title | xml_escape }}</title>
+                      
+                      <link href="http://localhost:4000/blog/2020/02/14/misc/git-github" rel="alternate" type="text/html" title="Git/Github for contributing to package development"/>
+                      
+                      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+
+                      <id>{{ site.url }}/{{ post.url }}</id>
+
+                      <content>{{ post.content | xml_escape }}</content>
+
+                      <summary type="html">{{ post.description | xml_escape }}</summary>                                                            
+                    </entry>               
+                {% endfor %}             
+                {% break %}             
+              {% endif %}
+          {% endfor %}   
+
+  </channel>
+</rss>
