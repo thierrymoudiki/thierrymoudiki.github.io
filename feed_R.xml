@@ -1,6 +1,5 @@
 ---
 layout: none
-author: tm
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -35,7 +34,7 @@ author: tm
                       
                       <content type="html" xml:base="{{ site.url }}/{{ post.url }}">{{ post.content | xml_escape }}</content>
                      
-                      <author>{{ author.name }}</author>
+                      <author>T Moudiki</author>
 
                       <summary type="html">{{ post.description | xml_escape }}</summary>                                                            
                     </entry>               
