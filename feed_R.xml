@@ -19,7 +19,7 @@ layout: none
           {% for category in sorted_cats %}
             {% capture category_name %}{{ category | first }}{% endcapture %}
               {% if category_name == "R" %}
-                {% for post in site.categories[category_name] %}              
+                {% for post in site.categories[category_name] limit: 5 %}              
 
                     {% capture date_published %}{{ post.date | date_to_xmlschema}}{% endcapture %}
 
