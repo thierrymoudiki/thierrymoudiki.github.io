@@ -20,15 +20,17 @@ layout: none
             {% capture category_name %}{{ category | first }}{% endcapture %}
               {% if category_name == "R" %}
                 {% for post in site.categories[category_name] %}              
+
+                    {% capture date_published %}{{ post.date | date_to_xmlschema}}{% endcapture %}
+
+                    {% capture site_post_url %}{{ site.url }}/{{ post.url }}{% endcapture %}
+
                     <entry>  
 
                       <title type="html">{{ post.title | xml_escape }}</title>
 
-                      <link href="{{ site.url }}/{{ post.url }}" rel="alternate" type="text/html" title="{{post.title}}" />
-                      
-                      {% capture date_published %}{{ post.date | date_to_xmlschema}}{% endcapture %}
-
-                      {% capture site_post_url %}{{ site.url }}/{{ post.url }}{% endcapture %}
+                      <link href="{{ site_post_url }}" rel="alternate" type="text/html" title="{{post.title}}" />
+                                            
 
                       <published>{{ date_published }}</published>
 
