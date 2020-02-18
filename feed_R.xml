@@ -26,13 +26,17 @@ layout: none
 
                       <link href="{{ site.url }}/{{ post.url }}" rel="alternate" type="text/html" title="{{post.title}}" />
                       
-                      <published>{{ post.date | date_to_xmlschema}}</published>
+                      {% capture date_published %}{{ post.date | date_to_xmlschema}}{% endcapture %}
 
-                      <updated>{{ post.date | date_to_xmlschema}}</updated>
+                      {% capture site_post_url %}{{ site.url }}/{{ post.url }}{% endcapture %}
 
-                      <id>{{ site.url }}/{{ post.url }}</id>
+                      <published>{{ date_published }}</published>
+
+                      <updated>{{ date_published }}</updated>
+
+                      <id>{{ site_post_url }}</id>
                       
-                      <content type="html" xml:base="{{ site.url }}/{{ post.url }}">{{ post.content | xml_escape }}</content>
+                      <content type="html" xml:base="{{ site_post_url }}">{{ post.content | xml_escape }}</content>
                      
                       <author><name>T. Moudiki</name></author>
 
