@@ -36,6 +36,19 @@ description: Thierry Moudiki's blog
 
 <hr>
 
+<h2 id="list-posts">List of posts by date of publication | <a href="#">Top</a> </h2>
+ <div class="content">
+  <ul class="myposts">
+    {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title}}</a>
+        <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </li>
+    {% endfor %}
+  </ul> 
+ </div>  
+
+<hr>
+
 <h2 id="categs-posts">Categories | <a href="#">Top</a></h2>
   <div class="content">
   {% assign sorted_cats = site.categories | sort %}
@@ -54,17 +67,3 @@ description: Thierry Moudiki's blog
     </div>
   {% endfor %}
   </div>
-
-<hr>
-
-<h2 id="list-posts">List of posts by date of publication | <a href="#">Top</a> </h2>
- <div class="content">
-  <ul class="myposts">
-    {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title}}</a>
-        <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
-        </li>
-    {% endfor %}
-  </ul> 
- </div>
-  
