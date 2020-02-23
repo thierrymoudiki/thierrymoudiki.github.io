@@ -63,9 +63,10 @@
       <div class="eleven columns" id="top">
         <ul>
           <li><a href="#about" onclick="scrollViewAbout();return false;">About</a></li>
-          <li><a href="#install" onclick="scrollViewInstall();return false;">Install</a></li>
-          <li><a href="#example" onclick="scrollViewExample();return false;">Examples</a></li>
-          <li><a href="#source" onclick="scrollViewSource();return false;">Source</a></li>
+          <li><a href="#docs" onclick="scrollViewDocs();return false;">Documentation</a></li>
+          <li><a href="#source" onclick="scrollViewSource();return false;">Contributing</a></li>
+          <li><a href="#blog" onclick="scrollViewBlog();return false;">Blog</a></li>
+          <li><a href="#contact" onclick="scrollViewContact();return false;">Contact</a></li>
         </ul>
       </div>
 
@@ -106,222 +107,104 @@
 <!-- About section -->
 
 <div class="container" id="about">   
-    <div class="row contact-title">
-      <div class="twelve columns">
-        <h2>About | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
-        
-        <p> <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> is a Python package for Statistical/Machine learning. In <code>nnetsauce</code>, pattern recognition is achieved by combining layers of <i>neural</i> networks.
-        </p> 
+  <div class="row contact-title">
+    <div class="twelve columns">
+      <h2>About | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+      
+      <p> <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> is a tool for Statistical/Machine learning, in which <b>pattern recognition</b> is achieved by combining layers of randomized and quasi-randomized <i>neural</i> networks. These building blocks layers constitute the basis of <b>many custom models</b>, including models with <b>deeper learning architectures</b>; for regression, classification, and multivariate time series forecasting. 
 
-        <p>
-          These building blocks constitute the basis of <b>many custom models</b>, including models with <b>deeper learning architectures</b>; for regression, classification, and multivariate time series forecasting. 
-        </p>
+      <br>
+      <br>
 
-        <p>
-          <a href="#install">Here</a>, are informations on package installation. Examples of use of <code>nnetsauce</code> can be found <a href="#example" onclick="scrollViewExample();return false;">below</a>.
-        </p>
-        
+      Information on package <b>installation</b>, <b>use</b>, <b>documentation</b> and <b>source code</b> (for contributing to its development) can be found through the following links: 
 
-      </div>
-    </div>
-  </div>
+      <br>
+      <br>
+      
+      - <a href="#docs" onclick="scrollViewDocs()();return false;">Read package/API documentation</a>                             
 
+      <br>
+      <br>
 
-<!-- Install section -->
+      - <a href="#source" onclick="scrollViewSource()();return false;">Contribute to package development/Read the source code</a>         
 
-<div class="container" id="install">   
-    <div class="row contact-title">
-      <div class="twelve columns">
-        <h2>Install | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
-        
-        <p> Currently, <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a> can be installed through Github (but it will be available on PyPi in a few weeks). Here is how: </p>
-        
-        <div class="common">
-        <pre>
-          <code class="bash">
-            
-            git clone https://github.com/thierrymoudiki/nnetsauce.git
-            cd nnetsauce
-            python setup.py install
+      <br>
+      <br>
 
-          </code>
-          </pre>
-        </div>
+      - <a href="#blog" onclick="scrollViewBlog()();return false;">See <code>nnetsauce</code> in action</a>               
 
-      </div>
+      <br>
+      <br>
 
-      <a href="#top" onclick="scrollViewTop();return false;">Top of the page</a>
+      Any <b>question</b> related to <code>nnetsauce</code>? <a href="#contact" onclick="scrollViewContact();return false;">Contact me</a>.
 
-    </div>
-
-    
-
-  </div>
-
-
-
-<!-- Example section -->
-
-<div class="container" id="example">   
-    <div class="row contact-title">
-      <div class="twelve columns">
-        <h2>Examples | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>                       
-
-        <p>
-          Here, are two examples of use of <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. A <a href="#classifex">classification</a> example on breast cancer data, and an illustrative example of <a href="#deeplearningex">deep learning</a>. 
-        
-          <code>scikit-learn</code> models are widely used in these examples, but <code>nnetsauce</code> <b>will work with any learning model possessing methods <code>fit()</code> and <code>predict()</code></b> such as <a href="https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py">xgboost</a>, <a href="https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/sklearn_example.py">LightGBM</a>, or <a href="https://github.com/catboost">CatBoost</a>.
-        </p>
-
-        <p>
-          It is also worth mentioning that <code>sklearn</code>'s  cross-validation functions, such as <code>GridSearchCV</code> and <code>cross_val_score</code> can be used on <code>nnetsauce</code> models.
-        </p> 
-
-        <br>
-        <br>
-
-        <h3 id="classifex">classification example</h3>
-        
-        <p>We start by <b>fitting a logistic regression to breast cancer data</b>: </p>
-
-        <div class="common">
-        <pre>
-          <code class="python">
-            
-            # Packages ----- 
-
-            import nnetsauce as ns
-            from sklearn import datasets, linear_model
-            from sklearn.model_selection import train_test_split
-            
-
-            # Datasets -----
-
-            breast_cancer = datasets.load_breast_cancer()
-            Z = breast_cancer.data
-            t = breast_cancer.target
-
-            
-            # Data splitting -----            
-
-            Z_train, Z_test, t_train, t_test = train_test_split(
-                Z, t, test_size=0.2, random_state=42)
-
-
-            # Logistic regression -----
-
-            regr = linear_model.LogisticRegression()            
-            # fitting model on training set
-            regr.fit(Z_train, t_train)
-
-            # predictive accuracy on test set
-            regr.score(Z_test, t_test)  
-
-          </code>
-          </pre>
-        </div>
-
-      <p>The <b>logistic regression model is now augmented with ten additional features</b> with <code>nnetsauce</code>. Doing that, increases the classifier's accuracy (accuracy is used here for simplicity): </p>
-
-      <div class="common">
-        <pre>
-          <code class="python">
-            
-            # Custom ns - Logistic regression -----
-
-            fit_obj = ns.CustomClassifier(
-            obj=regr,
-            n_hidden_features=10,
-            direct_link=True,
-            bias=True,
-            nodes_sim="sobol",
-            activation_name="relu")            
-            fit_obj.fit(Z_train, t_train)
-
-            # predictive accuracy on test set
-            fit_obj.score(Z_test, t_test) 
-
-          </code>
-          </pre>
-        </div>
-
-      <h3 id="deeplearningex">deep learning example</h3>
-
-      <p>
-        This, is an <b>illustrative</b> example of deep learning with <a href="https://github.com/thierrymoudiki/nnetsauce"><code>nnetsauce</code></a>. Many, more advanced things could be tried. In this example, predictive accuracy of the model <b>increases as new layers are added</b> to the stack.
       </p>
+
+    </div>
+  </div>
+</div>
+
+<div id="codefund"></div>
+
+<!-- Docs section -->
+  
+  <div class="container" id="docs">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2>Documentation | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
         
-
-      <div class="common">
-        <pre>
-          <code class="python">
-
-            import nnetsauce as ns
-            from sklearn import datasets, metrics
-
-            diabetes = datasets.load_diabetes()
-            X = diabetes.data 
-            y = diabetes.target
-            
-            # layer 1 (base layer) ----
-            layer1_regr = linear_model.BayesianRidge()
-            layer1_regr.fit(X[0:100,:], y[0:100])
-            # RMSE score
-            np.sqrt(metrics.mean_squared_error(y[100:125], layer1_regr.predict(X[100:125,:])))
-
-
-            # layer 2 using layer 1 ----
-            layer2_regr = ns.CustomRegressor(obj = layer1_regr, n_hidden_features=3, 
-                                    direct_link=True, bias=True, 
-                                    nodes_sim='sobol', activation_name='tanh', 
-                                    n_clusters=2)
-            layer2_regr.fit(X[0:100,:], y[0:100])
-
-
-            # RMSE score
-            np.sqrt(layer2_regr.score(X[100:125,:], y[100:125]))
-
-            # layer 3 using layer 2 ----
-            layer3_regr = ns.CustomRegressor(obj = layer2_regr, n_hidden_features=5, 
-                        direct_link=True, bias=True, 
-                        nodes_sim='hammersley', activation_name='sigmoid', 
-                        n_clusters=2)
-            layer3_regr.fit(X[0:100,:], y[0:100])
-
-            # RMSE score
-            np.sqrt(layer3_regr.score(X[100:125,:], y[100:125]))
-
-          </code>
-          </pre>
-        </div>
-
-        <a href="#top" onclick="scrollViewTop();return false;">Top of the page</a>
-
+        <p> 
+          If you want to <b>install</b> <code>nnetsauce</code> or read its <b>documentation</b>, <a href="https://nnetsauce.readthedocs.io/en/latest/">readthedocs</a> is the place.
+        </p>
+        
       </div>
     </div>
   </div>
-
 
 <!-- Source section -->
 
   <div class="container" id="source">   
     <div class="row contact-title">
       <div class="twelve columns">
-        <h2>Source | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+        <h2>Contributing/Source code | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
         
-        <p> Want to <b>contribute to <code>nnetsauce</code>'s development</b>? The package is available on Github <i>via</i> the link below: 
-
-        <br>
-        <br>
-
-          <a href="https://github.com/thierrymoudiki/nnetsauce">github.com/thierrymoudiki/nnetsauce</a>
-
+        <p> 
+          If you want to <b>contribute</b> to <code>nnetsauce</code>'s development or read its source code, package's source is available <a href="https://github.com/thierrymoudiki/nnetsauce">on GitHub</a>                  
         </p>
         
       </div>
     </div>
   </div>
 
+<!-- Blog section -->
+  <div class="container" id="blog">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2> See nnetsauce in action | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+        
+        <p> 
+          If you want to see how <code>nnetsauce</code> works on some many examples, and be informed about its recent developments, you can read these <a href="https://thierrymoudiki.github.io/blog/#QuasiRandomizedNN">blog posts</a>, and/or subscribe to this <a href="/feed_nnetsauce.xml">RSS feed</a>.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Contact section -->
+  <div class="container" id="contact">   
+    <div class="row contact-title">
+      <div class="twelve columns">
+        <h2>Let's Talk ! | <a href="#top" onclick="scrollViewTop();return false;">Back</a> </h2>        
+        
+        <p> Want to talk about <code>nnetsauce</code>? Email me at: </p>
+        
+        <p>
+          <b>thierry  DOT  moudiki  AT  pm  DOT  me</b>
+        </p>
+
+      </div>
+    </div>
+  </div>
 
   <script type="text/javascript">
     
@@ -337,20 +220,20 @@
       });
     }
 
-    function scrollViewInstall(){
-      document.querySelector('#install').scrollIntoView({ 
-        behavior: 'smooth' 
-      });
-    }
-
-    function scrollViewExample(){
-      document.querySelector('#example').scrollIntoView({ 
+    function scrollViewDocs(){
+      document.querySelector('#docs').scrollIntoView({ 
         behavior: 'smooth' 
       });
     }
 
     function scrollViewSource(){
       document.querySelector('#source').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+
+    function scrollViewBlog(){
+      document.querySelector('#blog').scrollIntoView({ 
         behavior: 'smooth' 
       });
     }
@@ -367,6 +250,10 @@
 
   <script>hljs.initHighlightingOnLoad();</script> 
 
+  <script
+      src="https://app.codefund.io/properties/717/funder.js"
+      async
+></script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
