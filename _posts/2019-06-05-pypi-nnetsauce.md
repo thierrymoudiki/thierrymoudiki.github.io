@@ -3,7 +3,7 @@ layout: post
 title: "nnetsauce on Pypi"
 description: Installing nnetsauce from Pypi
 date: 2019-06-05
-categories: QuasiRandomizedNN
+categories: [Python, QuasiRandomizedNN]
 ---
           
 
