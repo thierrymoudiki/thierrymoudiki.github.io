@@ -28,13 +28,16 @@ If it's a jupyter notebook in __R__, then just add `_R` to the suffix.
 
 ![image-title-here]({{base}}/images/2020-03-06/2020-03-06-image1.png){:class="img-responsive"} 
 
+__Note:__ I am currently looking for a _gig_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!
+
+
 <hr>
 
 # French version
 
-[nnetsauce](https://thierrymoudiki.github.io/software/nnetsauce/) est un outil d'apprentissage statistique/machine basé sur des [réseaux de neurones aléatoires ou quasi-aléatoires](https://www.researchgate.net/project/Quasi-randomized-neural-networks). Cet outil est actuellement disponible pour __Python__ et __R__, et pour suivre les actualités qui y sont liées, vous pouvez souscrire à un [flux RSS spécifique](https://thierrymoudiki.github.io/feed_nnetsauce.xml).
+[nnetsauce](https://thierrymoudiki.github.io/software/nnetsauce/) est un outil d'apprentissage statistique/machine basé sur des [réseaux de neurones aléatoires ou quasi-aléatoires](https://www.researchgate.net/project/Quasi-randomized-neural-networks). Cet outil est actuellement disponible pour __Python__ et __R__, et pour suivre les actualités qui y sont liées, vous pouvez souscrire à ce [flux RSS spécifique](https://thierrymoudiki.github.io/feed_nnetsauce.xml).
 
-De nouveaux _notebooks_ écrits en langage __R__ sont maintenant disponibles dans le répertoire GitHub de nnetsauce. Les _notebooks_ constituent un excellent moyen de réaliser des analyses statistiques reproductibles, mêlant du code, du texte et des graphiques. Les choix les plus populaires incluent: les [_notebooks_ jupyter](https://jupyter.org/) et les _notebooks_ [R Markdown](https://rmarkdown.rstudio.com).
+De nouveaux _notebooks_ écrits en langage __R__ sont maintenant disponibles dans le répertoire GitHub. Les _notebooks_ constituent un excellent moyen de réaliser des analyses statistiques reproductibles, mêlant du code, du texte et des graphiques. Les choix les plus populaires incluent: les [_notebooks_ jupyter](https://jupyter.org/) et les _notebooks_ [R Markdown](https://rmarkdown.rstudio.com).
 
 1) Notebook __R__ lié à `Ridge2Classifier`: [thierrymoudiki_060320_Ridge2Classifier.Rmd](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_Ridge2Classifier.Rmd)
 
