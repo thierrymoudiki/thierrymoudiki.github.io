@@ -15,12 +15,7 @@ The querier is now __available on Pypi__, and can be installed from the command 
 pip install querier
 ```
 
-We now show how to import data from csv and SQL databases: 
-
-# Import data into the querier (Part 1)
-
-
-First, in [example 1](#example-1), we import data __from csv__. Then in [example 2](#example-2) we import data __from a [relational database](https://en.wikipedia.org/wiki/Relational_database)__ (sqlite3).
+We now show how to import data from csv and SQL databases. In [example 1](#example-1), we import data __from csv__. Then in [example 2](#example-2) we import data __from a [relational database](https://en.wikipedia.org/wiki/Relational_database)__ (sqlite3).
 
 ## Example 1
 
