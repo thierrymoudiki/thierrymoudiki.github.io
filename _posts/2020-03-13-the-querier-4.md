@@ -20,12 +20,7 @@ We now show how to import data from csv and SQL databases:
 # Import data into the querier (Part 1)
 
 
-First, in [example 1](#example-1), we import data __from csv__. Then in [example 2](#example-2) we import data __from a [relational database](https://en.wikipedia.org/wiki/Relational_database)__ (sqlite3). We start by installing the package from GitHub (command line):
-
-
-```
-!pip install git+https://github.com/thierrymoudiki/querier.git
-```
+First, in [example 1](#example-1), we import data __from csv__. Then in [example 2](#example-2) we import data __from a [relational database](https://en.wikipedia.org/wiki/Relational_database)__ (sqlite3).
 
 ## Example 1
 
