@@ -250,7 +250,7 @@ print(tail(X_Cholesky))
 
 Notice that `X_Cholesky` has 4 covariates, that `X_onehot` had 14 covariates, and imagine a situation with a higher cardinality for each factor. 
 
-## Fit a model to one-hot encoded and target based 
+## Fit a model to one-hot encoded and target based covariates
 
 In this section, we compare both types of encoding using [cross-validation]({% post_url 2020-04-17-crossval-3 %}) with Root Mean Squared Errors (RMSE). 
 
