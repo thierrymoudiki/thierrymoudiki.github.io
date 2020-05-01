@@ -9,3 +9,4 @@ plugins:
   - jekyll-jupyter-notebook
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jemoji
