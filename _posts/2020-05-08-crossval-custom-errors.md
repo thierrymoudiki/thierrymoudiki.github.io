@@ -6,12 +6,12 @@ date: 2020-05-08
 categories: [R, Misc]
 ---
 
-This post is about __using custom error measures__ in [`crossval`](https://github.com/thierrymoudiki/crossval), a tool offering generic functions for the cross-validation of Statistical/Machine Learning models. More information about cross-validation of regression models using `crossval` can be found in [this post]({% post_url 2020-04-10-grid-search-crossval %}), or [this other one]({% post_url 2020-04-17-crossval-3 %}). The default error measure for regression in [`crossval`](https://github.com/thierrymoudiki/crossval) is Root Mean Squared Error (RMSE). Here, I'll show you how to obtain two other error measures:
+This post is about __using custom error metrics__ in [`crossval`](https://github.com/thierrymoudiki/crossval), a tool offering generic functions for the cross-validation of Statistical/Machine Learning models. More information about cross-validation of regression models using `crossval` can be found in [this post]({% post_url 2020-04-10-grid-search-crossval %}), or [this other one]({% post_url 2020-04-17-crossval-3 %}). The default error measure for regression in [`crossval`](https://github.com/thierrymoudiki/crossval) is Root Mean Squared Error (RMSE). Here, I'll show you how to obtain two other error metrics:
 
 - Mean Absolute Percentage Error (__MAPE__)
 - Mean Absolute Error (__MAE__)  
 
-The __same principles can be extended to any other error measure__ of your choice. 
+The __same principles can be extended to any other error metric__ of your choice. 
 
 ![image-title-here]({{base}}/images/2020-04-17/2020-04-17-image1.png){:class="img-responsive"}
 
