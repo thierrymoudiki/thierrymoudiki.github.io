@@ -7,7 +7,7 @@ categories: [Python, Misc]
 ---
 
 
-`AdaOpt` is a _probabilistic_ classifier based on a mix of multivariable optimization and a _nearest neighbors_ algorithm. More details about it are found in [this paper](https://www.researchgate.net/publication/341409169_AdaOpt_Multivariable_optimization_for_classification). When reading the paper, keep in mind that the algorithm is still very new; only __time will allow to fully appreciate all its features__. Plus, its performance on this dataset is not an indicator of its future performance, on other datasets. 
+`AdaOpt` is a _probabilistic_ classifier based on a mix of multivariable optimization and a _nearest neighbors_ algorithm. More details about it are found in [this paper](https://www.researchgate.net/publication/341409169_AdaOpt_Multivariable_optimization_for_classification). When reading the paper, keep in mind that the algorithm is still very new; only __time will allow to fully appreciate all of its features__. Plus, its performance on this dataset is not an indicator of its future performance, on other datasets. 
 
 Currently, the package containing `AdaOpt`, [`mlsauce`](https://github.com/thierrymoudiki/mlsauce), can be installed from the command line as: 
 
