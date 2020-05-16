@@ -113,7 +113,7 @@ At test time, `AdaOpt` uses a nearest neighbors algorithm. Which means, a task w
 
 ![image-title-here]({{base}}/images/2020-05-15/2020-05-15-image2.png){:class="img-responsive"}
 
-We also have the following __timings__ in seconds (current, could be faster in the future), as a function of `row_sample`:
+We also have the following __timings__ in seconds (current, could be faster in the future) for training+prediction, as a function of `row_sample`:
 
 ![image-title-here]({{base}}/images/2020-05-15/2020-05-15-image3.png){:class="img-responsive"}
 
