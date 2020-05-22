@@ -11,6 +11,9 @@ categories: [R, Misc]
 
 The tool is fast due to [Cython](https://cython.org/), and to the ubiquitous (and mighty) numpy, which both help in bringing C/C++ -like performances to Python. There are also a few _tricks_ available in `AdaOpt`, that allow to make it faster to train on _bigger_ datasets. More details about the algorithm can be found in [this (short) paper](https://www.researchgate.net/publication/341409169_AdaOpt_Multivariable_optimization_for_classification).
 
+![image-title-here]({{base}}/images/2020-05-22/2020-05-22-image1.png){:class="img-responsive"}
+
+
 `AdaOpt` is now __available to R users__, and I used [reticulate](https://rstudio.github.io/reticulate/) for porting it (as I did for [nnetsauce]({% post_url 2020-03-06-nnetsauce-R-notebooks %})). An R documentation for the package can be found [in this repo](https://github.com/thierrymoudiki/mlsauce/blob/master/R-package.Rcheck/mlsauce-manual.pdf).
 
 Here is an __example of use__:
