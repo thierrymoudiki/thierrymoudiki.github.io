@@ -137,6 +137,6 @@ print(obj$score(X_test, y_test))
 ## [1] 0.9701493
 ``` 
 
-Lastly, no this package is not going to end up on [CRAN](https://cran.r-project.org/). None of my packages will, starting from now. If you're planning to submit your package to this website, well, there's be more to it than being proud of having it accepted. If I may: think about it longer. In particular: [read this document about licenses choices](https://choosealicense.com/), and know your rights regarding __your__ intellectual property...
+Lastly, no this package is not going to end up on [CRAN](https://cran.r-project.org/). None of my packages will, starting from now. If you're planning to submit your package to this website, well, there's more to it than being proud of having it accepted. If I may: think about it longer. In particular: [read this document about licenses choices](https://choosealicense.com/), and know your rights regarding __your__ intellectual property...
 
 __Note:__ I am currently looking for a _gig_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!
