@@ -11,6 +11,7 @@ categories: [R, Misc]
 
 The tool is fast due to [Cython](https://cython.org/), and to the ubiquitous (and mighty) numpy, which both help in bringing C/C++ -like performances to Python. There are also a few _tricks_ available in `AdaOpt`, that allow to make it faster to train on _bigger_ datasets. More details about the algorithm can be found in [this (short) paper](https://www.researchgate.net/publication/341409169_AdaOpt_Multivariable_optimization_for_classification).
 
+
 ![image-title-here]({{base}}/images/2020-05-22/2020-05-22-image1.png){:class="img-responsive"}
 
 
