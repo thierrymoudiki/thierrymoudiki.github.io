@@ -30,7 +30,7 @@ from sklearn.datasets import fetch_openml
 ```
 
 
-**Get MNIST** handwritten digits data:
+**Get MNIST** handwritten digits data (notice that here, `AdaOpt` is trained on 5000 digits, and evaluated on 10000):
 
 ```python
 Z, t = fetch_openml('mnist_784', version=1, return_X_y=True)
