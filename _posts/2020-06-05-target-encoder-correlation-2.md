@@ -19,7 +19,7 @@ x <- c("apple", "tomato", "banana", "apple", "pineapple", "bic mac",
 new_x <- c(0, 1, 2, 0, 3, 4, 2, ...)
 ```
 
- This week, I use the `tips` dataset (available [here](https://raw.github.com/pandas-dev/pandas/master/pandas/tests/data/tips.csv)). Imagine that __you work in a restaurant__, and also have access to the following billing information: 
+ This week, I use the `tips` dataset (available [here](https://github.com/pandas-dev/pandas/blob/master/doc/data/tips.csv)). Imagine that __you work in a restaurant__, and also have access to the following billing information: 
 
 ```
     total_bill   tip     sex smoker   day    time  size
