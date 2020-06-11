@@ -20,7 +20,7 @@ In general regarding the tools described here, which are downloaded thousands of
 
 __1) Forms__
 
-- the <a href="https://github.com/thierrymoudiki/nnetsauce">nnetsauce</a>, a general-purpose tool for Statistical/Machine Learning: [__feedback form__](https://forms.gle/HQVbrUsvZE7o8xco8).
+- the <a href="https://github.com/thierrymoudiki/nnetsauce">nnetsauce</a>, a general-purpose tool for Statistical/Machine Learning, based on randomized/quasi-randomized networks: [__feedback form__](https://forms.gle/HQVbrUsvZE7o8xco8).
 - the <a href="https://github.com/thierrymoudiki/mlsauce">mlsauce</a>, Miscellaneous Machine Learning stuff: [__feedback form__](https://forms.gle/tm7dxP1jSc75puAb9).
 - the <a href="https://github.com/thierrymoudiki/querier">querier</a>, an SQL-like query language for tabular data: [__feedback form__](https://forms.gle/uStfcXJjtGki2R3s6). 
 - the <a href="https://github.com/thierrymoudiki/teller">teller</a>, a model-agnostic tool for Machine Learning explainability: [__feedback form__](https://forms.gle/Y18xaEHL78Fvci7r8).
