@@ -15,7 +15,7 @@ A __comments section__ is now available on this blog, at the bottom of each post
 
 This could be the occasion for you to __re-read__ or __discover__ my previous [posts about nnetsauce](https://thierrymoudiki.github.io/blog/#QuasiRandomizedNN)! 
 
-In general regarding the tools described here, which are downloaded thousands of times each month: there are still __other ways to interact__ with this blog's content, as listed in points 1), 2), and 3) below: 
+In general regarding the tools described here, which are downloaded thousands of times each month: there are still __other ways to interact__, as listed in points 1), 2), and 3) below: 
 
 
 __1) Forms__
