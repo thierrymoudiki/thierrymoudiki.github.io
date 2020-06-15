@@ -38,3 +38,4 @@ __3) Reaching out directly _via_ email__
 Using the following address: thierry __dot__ moudiki __at__ pm __dot__ me
 
 
+To those who are contacting me on LinkedIn: __Please, add a short message to your request__. 
