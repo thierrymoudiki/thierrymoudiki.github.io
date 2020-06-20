@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Parallel AdaOpt classification on MNIST handwritten digits (without preprocessing)"
-description: Parallel AdaOpt classification on MNIST handwritten digits (without preprocessing)
+title: "Parallel AdaOpt classification"
+description: Parallel AdaOpt classification
 date: 2020-06-19
 categories: [Python]
 ---
