@@ -21,6 +21,6 @@ pip install git+https://github.com/thierrymoudiki/mlsauce.git --upgrade
 And in order to use parallel processing, create the `AdaOpt` object (see previous post) with:
 
 ```bash
-n_jobs = 2 # or 4, or -1
+n_jobs = 2 # or 4, or -1 or 13
 ```
 
