@@ -18,7 +18,7 @@ I've been putting work in this new version like... __crazy__. Because it contain
 
 - [Clone the `refactor` branch](https://stackoverflow.com/questions/1911109/how-do-i-clone-a-specific-git-branch)
 - When cloned, run `make install` into the repo
-- Play with the examples stored in `/examples` (tune the parameters)
+- Play with the examples stored in [`/examples`](https://github.com/thierrymoudiki/mlsauce/tree/master/examples) (tune the hyperparameters)
 
 Check [the repo](https://github.com/thierrymoudiki/mlsauce) next week, and you'll see the new changes merged (at least in Python for now, and hopefully for R). More insights on the Gradient Boosting algorithm will be unveiled in a few weeks. I will also talk about the stump decision trees in more details.
 
