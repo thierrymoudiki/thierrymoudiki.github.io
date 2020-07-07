@@ -6,6 +6,21 @@ date: 2020-07-03
 categories: [Misc]
 ---
 
+__UPDATE:__ 
+
+`mlsauce` 0.4.0 is now available on Pypi: 
+
+```bash
+pip install mlsauce
+```
+
+and in R:
+
+```bash
+devtools::install_github("thierrymoudiki/mlsauce/R-package")
+```
+
+__END UPDATE:__ 
 
 Last week, I announced a new version of [mlsauce](https://github.com/thierrymoudiki/mlsauce) (see [AdaOpt classification on MNIST handwritten digits (without preprocessing)]({% post_url 2020-05-29-adaopt-classifier-3 %}), [AdaOpt (a probabilistic classifier based on a mix of multivariable optimization and nearest neighbors) for R]({% post_url 2020-05-22-adaopt-classifier-2 %}), and [AdaOpt]({% post_url 2020-05-15-adaopt-classifier-1 %})), with new features. Well... We are still next week! 
 
