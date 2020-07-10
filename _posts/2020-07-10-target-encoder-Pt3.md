@@ -24,7 +24,7 @@ Another interesting information is the __amount of total bills__, which is compr
 
 ![image-title-here]({{base}}/images/2020-07-10/2020-07-10-image3.png){:class="img-responsive"}
 
-Both distributions -- of tips and total bill amounts -- are __left-skewed__. We could fit a probability distribution to each one of them, such as lognormal or Weibull, but this would not be extremely informative. We would be able to obtain confidence intervals or things like the __probability of having a total bill higher than 40€__ though. Generally, in addition to `tip` and `total_bill`, we have the following raw information on the __marginal distributions of  other variables__:
+Both distributions -- of tips and total bill amounts -- are __left-skewed__. We could fit a probability distribution to each one of them, such as lognormal or Weibull, but this would not be extremely informative. We would be to derive some confidence intervals or things like the __probability of having a total bill higher than 40€__ though. Generally, in addition to `tip` and `total_bill`, we have the following raw information on the __marginal distributions of  other variables__:
 
 ![image-title-here]({{base}}/images/2020-07-10/2020-07-10-image3.5.png){:class="img-responsive"}
 
@@ -50,7 +50,7 @@ __Class 0__, __low tip__ contains 78 observations. __Class 1__, __medium tip__ c
 
 According to this figure, the fact that the table is reserved for smokers or not, doesn't highly affect the __median tip__. The same remark holds for the __waiter's sex__ and the __time of the day__ when the meals are served (dinner or lunch), which both don't seem to have a substantial effect on  median amounts of tips. 
 
-Conversely, __Sunday seems to be the best day for you to work__ if you want to maximize your tip. The __number of people dining at a table, and total bills amounts are other influential explanatory variables for the tip__: the higher, the better. But unless you can choose the table you'll serve (you're the boss, or his friend!), or are great at embellishing and advertising the menu, your influence on these variables -- **size** and **total_bill** -- will be limited.
+Conversely, __Sunday seems to be the best day for you to work__ if you want to maximize your tip. The __number of people dining at a table, and total bills amounts are other influential explanatory variables for the tip__: the higher, the better. But unless you can choose the table you'll be assigned to (you're the boss, or his friend!), or are great at embellishing and advertising the menu, your influence on these variables -- **size** and **total_bill** -- will be limited.
 
 In section 2 of this post, we'll study these effects more systematically by using a statistical learning procedure; a procedure designed for accurately classifying tips within the four classes we've just defined (low, medium, high, very high), given our explanatory variables. More precisely, we'll study the effects of the [numerical target encoder]({% post_url 2020-06-05-target-encoder-correlation-2 %}) on a Random Forest's accuracy.
 
@@ -134,8 +134,8 @@ __Quite low accuracies... Why is that?__ With that said, the best scores are sti
 
 - Compare the correlation-based encoder with one-hot's accuracy
 - Further decorrelate the numerically encoded variables by using a new *trick* (summing different, independent pseudo targets instead of one currently)
-- Consider the use a different dataset if classification results remain poor on `tips`
-- Use the [teller](https://github.com/thierrymoudiki/teller) to understand what drives the probability of a given class higher (well, that's definitely the last, last step)
+- Consider the use a different dataset if classification results remain poor on `tips`. Maybe `tips` is just random?
+- Use the [teller](https://github.com/thierrymoudiki/teller) to understand what drives the probability of a given class higher (well, that's definitely the laaaaast, last step)
 
 
 Your remarks are welcome as usual, **stay tuned!**
