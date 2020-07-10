@@ -24,7 +24,7 @@ Another interesting information is the __amount of total bills__, which is compr
 
 ![image-title-here]({{base}}/images/2020-07-10/2020-07-10-image3.png){:class="img-responsive"}
 
-Both distributions -- of tips and total bill amounts -- are __left-skewed__. We could fit a probability distribution to each one of them, such as lognormal or Weibull, but this would not be extremely informative. We would be to derive some confidence intervals or things like the __probability of having a total bill higher than 40€__ though. Generally, in addition to `tip` and `total_bill`, we have the following raw information on the __marginal distributions of  other variables__:
+Both distributions -- of tips and total bill amounts -- are __left-skewed__. We could fit a probability distribution to each one of them, such as lognormal or Weibull, but this would not be extremely informative. We would be able to derive some confidence intervals or things like the __probability of having a total bill higher than 40€__ though. Generally, in addition to `tip` and `total_bill`, we have the following raw information on the __marginal distributions of  other variables__:
 
 ![image-title-here]({{base}}/images/2020-07-10/2020-07-10-image3.5.png){:class="img-responsive"}
 
