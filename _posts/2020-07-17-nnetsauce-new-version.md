@@ -6,7 +6,7 @@ date: 2020-07-17
 categories: [Python, R, QuasiRandomizedNN]
 ---
 
-
+**Disclaimer:** I have no affiliation with Google (cf. JAX).
 
 [nnetsauce](https://thierrymoudiki.github.io/software/nnetsauce/) is a general purpose tool for Statistical/Machine Learning, in which __pattern recognition__ is achieved by using [quasi-randomized networks](https://www.researchgate.net/project/Quasi-randomized-neural-networks). A new version, `0.5.0`, is out on [Pypi](https://pypi.org/project/nnetsauce/0.5.0/) and for R:
 

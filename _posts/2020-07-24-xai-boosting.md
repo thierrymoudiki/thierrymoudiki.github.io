@@ -6,6 +6,8 @@ date: 2020-07-24
 categories: [Python, Misc, R]
 ---
 
+**Disclaimer:** I have no affiliation with The Next Web (cf. online article)
+
 A few weeks ago I read this [interesting and accessible article](https://thenextweb.com/neural/2020/06/19/the-advantages-of-self-explainable-ai-over-interpretable-ai/) about explainable AI, discussing more specifically __self-explainable AI__ issues. I'm not sure -- anymore -- if there's a mandatory need for AI models that explain themselves, as there are model-agnostic tools such as the [teller](https://github.com/thierrymoudiki/teller) -- among many others -- for helping them in doing just that. 
 
 With that being said, **the new `LSBoost`** algorithm implemented in [mlsauce](https://github.com/thierrymoudiki/mlsauce) does, **explain itself**. `LSBoost` is __a cousin of the `LS_Boost` algorithm__ introduced in 
