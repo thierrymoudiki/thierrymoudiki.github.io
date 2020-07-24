@@ -27,7 +27,7 @@ So, __what makes the *new* `LSBoost` different?__ Would you be legitimately enti
 - An __early stopping criterion__ is implemented, and is based on the magnitude of successive residuals.
 
 
-Besides this, we can also remark that `LSBoost` is __explainable as a linear model, while being a highly nonlinear one__. Indeed by using some calculus, it's possible to compute derivatives of F (still referring to Algorithm 2 outlined before) relative to __x__, wherever function the h does admit a derivative.
+Besides this, we can also remark that `LSBoost` is __explainable as a linear model, while being a highly nonlinear one__. Indeed by using some calculus, it's possible to compute derivatives of F (still referring to Algorithm 2 outlined before) relative to __x__, wherever the function h does admit a derivative.
 
 
 In the following Python+R examples appearing **after the short survey** (both tested on Linux and macOS so far), we'll use `LSBoost` with **default hyperparameters**, for solving regression and classification problems. There's still some room for improvement of models performance.
