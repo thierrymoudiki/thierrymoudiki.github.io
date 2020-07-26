@@ -31,37 +31,30 @@ title: blog
   <!-- Post's content -->
   <div class="post">	
 
-    <p class="meta">{{ page.date | date_to_string }} | <a href="{{site.url}}/feed.xml">RSS</a> | <a href="{{base}}/blog/index.html#list-posts">Back to list of posts</a> 
-    <div class="container">
-    <div class="row">        
+    <p class="meta">{{ page.date | date_to_string }} | <a href="{{site.url}}/feed.xml">RSS</a> | <a href="{{base}}/blog/index.html#list-posts">Back to list of posts</a>    
     
       <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
-      <div class="col-md-12">      
+      <div class="col-md-12"> 
         <a id="increase-mailto" href="mailto:contact@example.com" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
 
         <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{site.url}}{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
 
         <a id="increase-twitter" href="http://twitter.com/share?url={{site.url}}{{page.url}}&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
 
-        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>              
+        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>                      
       </div>
-
       <!-- add backend logic -->
       <!-- add backend logic -->
       <!-- add backend logic -->
-      <div style="width: 100%; overflow: hidden;">
-        
+      <div style="width: 100%; overflow: hidden;">        
         <div style="width: 600px; float: left;"> 
           <div id="content-mailto" style="display: none;">1</div>
           <div id="content-linkedin" style="display: none;">1</div>
           <div id="content-twitter" style="display: none;">1</div>
           <div id="content-facebook" style="display: none;">1</div>
         </div>
-
-        <div style="margin-left: 620px;"> 
-          
-        </div>
-        
+        <div style="margin-left: 620px;">           
+        </div>        
       </div>      
 
     <br>
@@ -107,7 +100,7 @@ title: blog
 <!-- add backend logic -->
 <!-- add backend logic -->
 <!-- add backend logic -->
-<script type="text/javascript">    
+<script>    
 $(document).ready(function() {
 
   var size_ini_mailto = $("#content-mailto").val();
@@ -137,6 +130,3 @@ $(document).ready(function() {
 
 })
 </script>
-
-
-<span></span>
