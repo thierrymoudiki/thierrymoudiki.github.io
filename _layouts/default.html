@@ -25,8 +25,7 @@
        {% endif %}
     </title>
     
-    <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
-
+    <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
     <meta name="author" content="Thierry Moudiki">
     <meta name="keywords" content="T., T. Moudiki, Data Science, Statistics, Machine Learning, Deep Learning, Thierry Moudiki, nnetsauce, querier, teller">
 
