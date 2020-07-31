@@ -3,7 +3,7 @@ layout: post
 title: "Explainable 'AI' using Gradient Boosted randomized networks  Pt2 (the Lasso)"
 description: Explainable 'AI' using Gradient Boosted randomized networks  Pt2 (the Lasso).
 date: 2020-07-31
-categories: Misc
+categories: [Pytho, R, Misc]
 ---
 
 This post is about `LSBoost`, an Explainable 'AI' algorithm which uses Gradient Boosted randomized networks for pattern recognition. As we've discussed it [last week]({% post_url 2020-07-24-xai-boosting %}) `LSBoost` is a cousin of [GFAGBM](https://projecteuclid.org/download/pdf_1/euclid.aos/1013203451)'s `LS_Boost`. In `LSBoost`, more specifically, the so called *weak* learners  from `LS_Boost` are based on randomized *neural* networks' components and variants of Least Squares regression models. 
