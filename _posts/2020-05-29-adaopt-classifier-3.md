@@ -3,7 +3,7 @@ layout: post
 title: "AdaOpt classification on MNIST handwritten digits (without preprocessing)"
 description: AdaOpt classification on MNIST handwritten digits (without preprocessing)
 date: 2020-05-29
-categories: [Python, R]
+categories: [Python, R, AdaOpt]
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title: "LSBoost: Explainable 'AI' using Gradient Boosted randomized networks (with examples in R and Python)"
 description: Explainable 'AI' with Gradient Boosted randomized networks.
 date: 2020-07-24
-categories: [Python, Misc, R]
+categories: [Python, R, LSBoost, ExplainableML]
 ---
 
 **Disclaimer:** I have no affiliation with The Next Web (cf. online article)
