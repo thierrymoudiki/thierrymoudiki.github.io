@@ -15,7 +15,7 @@ _Figure: [New Techtonique Website](https://techtonique.github.io/)_
 
 In addition, a new version of `nnetsauce`  including nonlinear [Generalized Linear Models](https://en.wikipedia.org/wiki/Generalized_linear_model) (GLM) has been released, both on [Pypi](https://pypi.org/project/nnetsauce/) and GitHub.  
 
-- __Installing__ by using `pip`:
+- __Installing__ by using Pypi:
 
 ```bash
 pip install nnetsauce
