@@ -7,7 +7,7 @@ categories: [Misc, Python, QuasiRandomizedNN]
 ---
 
 
-As a reminder `nnetsauce`, `mlsauce`, the `querier` and the `teller` are now stored under [Techtonique](https://github.com/Techtonique). A new [Techtonique website](https://techtonique.github.io/) is also out know; it contains  **documentation + examples** for `nnetsauce`, `mlsauce`, the `querier` and the `teller`, and is a __work in progress__. 
+As a reminder `nnetsauce`, `mlsauce`, the `querier` and the `teller` are now stored under [Techtonique](https://github.com/Techtonique) -- for those who have already starred, you can report your stars there! A new [Techtonique website](https://techtonique.github.io/) is also out know; it contains  **documentation + examples** for `nnetsauce`, `mlsauce`, the `querier` and the `teller`, and is a __work in progress__. 
 
 ![new-techtonique-website]({{base}}/images/2020-09-11/2020-09-11-image1.png){:class="img-responsive"}
 _Figure: [New Techtonique Website](https://techtonique.github.io/)_
