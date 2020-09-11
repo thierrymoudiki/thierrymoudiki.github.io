@@ -29,7 +29,7 @@ pip install git+https://github.com/thierrymoudiki/nnetsauce.git
 ```
 
 
-I've been experiencing some issues when installing from Pypi lately. Please, feel free to report any issue to me, if you're experiencing some, or use the GitHub version instead. You can still execute the following jupyter notebook -- at the bottom for __nonlinear GLMs__ in particular`-- to see what's changed:
+I've been experiencing some issues when installing from Pypi lately. Please, feel free to report any issue to me, if you're experiencing some, __or use the GitHub version instead__. You can still execute the following jupyter notebook -- at the bottom for __nonlinear GLMs__ in particular`-- to see what's changed:
 
 [https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_040920_examples.ipynb](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_040920_examples.ipynb)
 
@@ -41,7 +41,7 @@ __How do these nonlinear GLMs work?__ Let's say (a highly simplified example) th
 
 ![nnetsauce-input-transformation]({{base}}/images/2020-09-11/2019-10-18-image1.png){:class="img-responsive"}
 
-2 -  A loss function, a function measuring the quality of adjustment of the model to the observed data, is optimized as represented in the __figure below__. Currently, two optimization methods are used: __Stochastic [gradient descent](https://en.wikipedia.org/wiki/Gradient_descent)__ and __Stochastic [coordinate descent](https://en.wikipedia.org/wiki/Coordinate_descent)__. With, notably and amongst other hyperparameters, [early stopping](https://en.wikipedia.org/wiki/Early_stopping) criteria and regularization to prevent [overfitting](): 
+2 -  A loss function, a function measuring the quality of adjustment of the model to the observed data, is optimized as represented in the __figure below__. Currently, two optimization methods are used: __Stochastic [gradient descent](https://en.wikipedia.org/wiki/Gradient_descent)__ and __Stochastic [coordinate descent](https://en.wikipedia.org/wiki/Coordinate_descent)__. With, notably and amongst other hyperparameters, [early stopping](https://en.wikipedia.org/wiki/Early_stopping) criteria and regularization to prevent [overfitting](https://en.wikipedia.org/wiki/Overfitting).
 
 ![glm-loss-function]({{base}}/images/2020-09-04/2020-09-04-image1.png){:class="img-responsive"}
 _Figure: GLM loss function (from notebook)_
