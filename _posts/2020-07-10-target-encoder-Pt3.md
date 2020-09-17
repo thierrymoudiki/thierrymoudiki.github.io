@@ -3,7 +3,7 @@ layout: post
 title: "Maximizing your tip as a waiter (Part 2)"
 description: A target-based categorical encoder for Statistical/Machine Learning (based on correlations) Part 3.
 date: 2020-07-10
-categories: [Python, R, Misc]
+categories: [Python, R, Misc, mlsauce]
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title: "New version of mlsauce, with Gradient Boosted randomized networks and stump decision trees"
 description: Announcements.
 date: 2020-07-03
-categories: [Misc]
+categories: [Misc, mlsauce]
 ---
 
 __UPDATE:__ 

@@ -3,7 +3,7 @@ layout: post
 title: "AdaOpt (a probabilistic classifier based on a mix of multivariable optimization and nearest neighbors) for R"
 description: AdaOpt (a probabilistic classifier based on a mix of multivariable optimization and nearest neighbors) for R
 date: 2020-05-22
-categories: [R, AdaOpt]
+categories: [R, AdaOpt, mlsauce]
 ---
 
 

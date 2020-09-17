@@ -3,7 +3,7 @@ layout: post
 title: "Parallel AdaOpt classification"
 description: Parallel AdaOpt classification
 date: 2020-06-19
-categories: [Python, AdaOpt]
+categories: [Python, AdaOpt, mlsauce]
 ---
 
 In these previous posts:

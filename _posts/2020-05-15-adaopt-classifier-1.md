@@ -3,7 +3,7 @@ layout: post
 title: "AdaOpt"
 description: AdaOpt, recognizing handwritten digits
 date: 2020-05-15
-categories: [Python, AdaOpt]
+categories: [Python, AdaOpt, mlsauce]
 ---
 
 
