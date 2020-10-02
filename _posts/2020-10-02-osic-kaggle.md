@@ -18,7 +18,7 @@ In addition, we have the following information about these people:
 - Their __sex__
 - Their __smoking status__: currently smokes, ex-smoker, never smoked 
 
-The challenge is to __assess the lung function by forecasting the FVC__ (I'm not asking myself here, if it's the good or bad way to do that). What I like about this competition, is that there are __many ways to approach it__. Here's a non-exhaustive list:  
+The challenge is to __assess the lung function's health by forecasting the FVC__ (I'm not asking myself here, if it's the good or bad way to do that). What I like about this competition, is that there are __many ways to approach it__. Here's a non-exhaustive list:  
 
 1.One way could be to __construct a Statistical/Machine Learning (ML) model on the whole dataset__, and study the (conditional) distribution of the FVC, knowing the scan, age, 
 sex, and smoking status. In this first approach we consider that disease evolution can be generalized 
