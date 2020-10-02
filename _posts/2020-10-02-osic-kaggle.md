@@ -7,7 +7,7 @@ categories: [Misc, R]
 ---
 
 
-In the [OSIC Pulmonary Fibrosis Progression competition](https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression)
+In [OSIC Pulmonary Fibrosis Progression competition](https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression)
 on Kaggle, participants are tasked to determine the likelihood of recovery (**prognosis**) of several 
 patients affected by a lung disease. For each patient, the maximum volume of air they can exhale after a maximum inhalation (**FVC**, Forced Vital Capacity) is measured over the weeks, for approximately 1-2 years of time. 
 
