@@ -27,7 +27,7 @@ could use a more or less sophisticated [bootstrapping](https://en.wikipedia.org/
 
 
 2.Another way, the _quick and dirty_ one I'll present here, __considers each patient's case individually__. Age, sex, smoking status and 
-the chest scan are not used, but the of measurement is. If we are only interested in forecasting the **FVC**, the approach will be fine. But if we want to understand how 
+the chest scan are not used, but the measurement week is. If we are only interested in forecasting the **FVC**, the approach will be fine. But if we want to understand how 
 each one of the factors we previously described [influence the FVC](https://techtonique.github.io/teller/index.html), either individually or in conjunction, then the first approach is better. 
 
 # 0 - Functions
