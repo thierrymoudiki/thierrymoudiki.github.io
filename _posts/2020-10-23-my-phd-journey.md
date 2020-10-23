@@ -24,5 +24,8 @@ A glimpse into my epic PhD journey from 2015 to 2018; on **statistical/machine l
 
 - A TeX template for creating a manuscript: [Link to TeX template](https://github.com/thierrymoudiki/phd-thesis)
 
+- The full text: 
+[Link to full text](https://www.researchgate.net/publication/328954526_Interest_rates_modeling_for_insurance_interpolation_extrapolation_and_forecasting)
+
 
 ![pres-image]({{base}}/images/2020-10-23/2020-10-23-image1.png){:class="img-responsive"}
