@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Explainable Statistical/Machine Learning explainability using Kernel Ridge Regression surrogates"
+title: "Statistical/Machine Learning explainability using Kernel Ridge Regression surrogates"
 description: Explainable Stat, ML, AI.
 date: 2020-11-06
 categories: [ExplainableML, R, Misc]
