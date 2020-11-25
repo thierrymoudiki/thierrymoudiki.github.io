@@ -8,7 +8,7 @@ categories: [Python, R, Misc, mlsauce]
 
 
 
-In [Part 1]({% post_url 2020-06-05-target-encoder-correlation-2 %}) of "Maximizing your tip as a waiter", I talked about a __target-based categorical encoder__ for Statistical/Machine Learning, firstly introduced [in this post]({% post_url 2020-04-24-target-encoder-correlation %}). An example dataset of [`tips`](https://github.com/thierrymoudiki/querier/tree/master/querier/tests/data/tips.csv) was used for the purpose, and we'll use the __same dataset__ today. Here is a snippet of `tips`:
+In [Part 1]({% post_url 2020-06-05-target-encoder-correlation-2 %}) of "Maximizing your tip as a waiter", I talked about a __target-based categorical encoder__ for Statistical/Machine Learning, firstly introduced [in this post]({% post_url 2020-04-24-target-encoder-correlation %}). An example dataset of [`tips`](https://github.com/Techtonique/querier/tree/master/querier/tests/data/tips.csv) was used for the purpose, and we'll use the __same dataset__ today. Here is a snippet of `tips`:
 
 ![image-title-here]({{base}}/images/2020-07-10/2020-07-10-image0.png){:class="img-responsive"}
 
@@ -56,7 +56,7 @@ In section 2 of this post, we'll study these effects more systematically by usin
 
 ![image-title-here]({{base}}/images/2020-07-10/2020-07-10-image6.png){:class="img-responsive"}
 
-# 2 - Encoding using [mlsauce](https://github.com/thierrymoudiki/mlsauce); cross-validation
+# 2 - Encoding using [mlsauce](https://github.com/Techtonique/mlsauce); cross-validation
 
 **Import Python packages**
 
@@ -75,7 +75,7 @@ from tqdm import tqdm
 **Import `tips`**
 
 ```python
-url = 'https://github.com/thierrymoudiki/querier/tree/master/querier/tests/data/tips.csv'
+url = 'https://github.com/Techtonique/querier/tree/master/querier/tests/data/tips.csv'
 
 f = requests.get(url)
 
@@ -101,7 +101,7 @@ y_int = np.asarray([0, 0, 2, 2, 2, 3, 0, 2, 0, 2, 0, 3, 0, 1, 2, 2, 0, 2, 2, 2, 
 
 **Obtain a distribution of scores, using encoding**
 
-Here, we use `corrtarget_encoder` from the [mlsauce](https://github.com/thierrymoudiki/mlsauce) to __convert categorical variables (containing character strings) to numerical variables__: 
+Here, we use `corrtarget_encoder` from the [mlsauce](https://github.com/Techtonique/mlsauce) to __convert categorical variables (containing character strings) to numerical variables__: 
 
 ```python
 n_cors = 15
@@ -135,7 +135,7 @@ __Quite low accuracies... Why is that?__ With that said, the best scores are sti
 - Compare the correlation-based encoder with one-hot's accuracy
 - Further decorrelate the numerically encoded variables by using a new *trick* (summing different, independent pseudo targets instead of one currently)
 - Consider the use a different dataset if classification results remain poor on `tips`. Maybe `tips` is just random?
-- Use the [teller](https://github.com/thierrymoudiki/teller) to understand what drives the probability of a given class higher (well, that's definitely the laaaaast, last step)
+- Use the [teller](https://github.com/Techtonique/teller) to understand what drives the probability of a given class higher (well, that's definitely the laaaaast, last step)
 
 
 Your remarks are welcome as usual, **stay tuned!**

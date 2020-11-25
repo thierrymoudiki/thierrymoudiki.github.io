@@ -10,15 +10,15 @@ categories: DataBases
 
 The [querier]({% post_url 2019-10-25-the-querier-1 %}) is a query language for Python pandas Data Frames, inspired by relational databases querying. If you like SQL, Structured Query Language, you'll like the `querier`. If you haven't had a taste of SQL yet, no problem: the `querier`'s language is __intuitive, and contains 9 verbs__ in its current form. You can see how these verbs work individually  in the following notebooks: 
 
-- [`concat`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_251019_concat.ipynb): __concatenates two Data Frames__, either horizontally or vertically
-- [`delete`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_241019_delete.ipynb): __deletes rows__ from a Data Frame based on given criteria
-- [`drop`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_241019_drop.ipynb): __drops columns__ from a Data Frame
-- [`filtr`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb): __filters rows__ of the Data Frame based on given criteria
-- [`join`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_join.ipynb): __joins two Data Frames__ based on given criteria 
-- [`select`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb): __selects columns__ from the Data Frame
-- [`summarize`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb): obtains __summaries of data__ based on grouping columns
-- [`update`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_251019_update.ipynb): __updates a column__, using an operation given by the user
-- [`request`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_request.ipynb): for operations more complex than the previous 8 ones, makes it possible to use a __SQL query on the Data Frame__
+- [`concat`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_251019_concat.ipynb): __concatenates two Data Frames__, either horizontally or vertically
+- [`delete`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_241019_delete.ipynb): __deletes rows__ from a Data Frame based on given criteria
+- [`drop`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_241019_drop.ipynb): __drops columns__ from a Data Frame
+- [`filtr`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb): __filters rows__ of the Data Frame based on given criteria
+- [`join`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_join.ipynb): __joins two Data Frames__ based on given criteria 
+- [`select`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb): __selects columns__ from the Data Frame
+- [`summarize`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb): obtains __summaries of data__ based on grouping columns
+- [`update`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_251019_update.ipynb): __updates a column__, using an operation given by the user
+- [`request`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_request.ipynb): for operations more complex than the previous 8 ones, makes it possible to use a __SQL query on the Data Frame__
 
 
 It is now possible to __compose the `querier`'s verbs__, to construct  more powerful queries for your Data Frames. Here is how to do it: 
@@ -28,7 +28,7 @@ It is now possible to __compose the `querier`'s verbs__, to construct  more powe
 From command line: 
 
 ```bash
-!pip install git+https://github.com/thierrymoudiki/querier.git
+!pip install git+https://github.com/Techtonique/querier.git
 ```
 
 ### Import packages and dataset
@@ -111,7 +111,7 @@ print(df2)
 ```
 
 
-A notebook containing these results can be found [here](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_221119_chaining.ipynb). Contributions/remarks are welcome as usual, you can submit a pull request [on Github](https://github.com/thierrymoudiki/querier).
+A notebook containing these results can be found [here](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_221119_chaining.ipynb). Contributions/remarks are welcome as usual, you can submit a pull request [on Github](https://github.com/Techtonique/querier).
 
 
 __Note:__ I am currently looking for a _gig_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!

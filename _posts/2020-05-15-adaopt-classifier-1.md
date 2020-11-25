@@ -9,14 +9,14 @@ categories: [Python, AdaOpt, mlsauce]
 
 `AdaOpt` is a _probabilistic_ classifier based on a mix of multivariable optimization and a _nearest neighbors_ algorithm. More details about it are found in [this paper](https://www.researchgate.net/publication/341409169_AdaOpt_Multivariable_optimization_for_classification). When reading the paper, keep in mind that the algorithm is still very new; only __time will allow to fully appreciate all of its features__. Plus, its performance on this dataset is not an indicator of its future performance, on other datasets. 
 
-Currently, the package containing `AdaOpt`, [`mlsauce`](https://github.com/thierrymoudiki/mlsauce), can be installed from the command line as: 
+Currently, the package containing `AdaOpt`, [`mlsauce`](https://github.com/Techtonique/mlsauce), can be installed from the command line as: 
 
 ```bash
-pip install git+https://github.com/thierrymoudiki/mlsauce.git
+pip install git+https://github.com/Techtonique/mlsauce.git
 
 ```
 
-In this post, we'll use [`mlsauce`](https://github.com/thierrymoudiki/mlsauce)'s `AdaOpt` on a handwritten digits dataset from [UCI Machine Learning repository](https://archive.ics.uci.edu/ml/datasets/Optical+Recognition+of+Handwritten+Digits). 
+In this post, we'll use [`mlsauce`](https://github.com/Techtonique/mlsauce)'s `AdaOpt` on a handwritten digits dataset from [UCI Machine Learning repository](https://archive.ics.uci.edu/ml/datasets/Optical+Recognition+of+Handwritten+Digits). 
 
 ![image-title-here]({{base}}/images/2020-05-15/2020-05-15-image0.png){:class="img-responsive"}
 
@@ -107,7 +107,7 @@ Ad here is a __confusion matrix__:
 
 ![image-title-here]({{base}}/images/2020-05-15/2020-05-15-image1.png){:class="img-responsive"}
 
-At test time, `AdaOpt` uses a nearest neighbors algorithm. Which means, a task with quadratic complexity (a large number of operations). But there are __a few tricks__ implemented in [`mlsauce`](https://github.com/thierrymoudiki/mlsauce)'s `AdaOpt` to alleviate the potential burden on very large datasets, such as: instead of comparing the testing set to the whole training set, __comparing it to a stratified subsample of the training set__.  
+At test time, `AdaOpt` uses a nearest neighbors algorithm. Which means, a task with quadratic complexity (a large number of operations). But there are __a few tricks__ implemented in [`mlsauce`](https://github.com/Techtonique/mlsauce)'s `AdaOpt` to alleviate the potential burden on very large datasets, such as: instead of comparing the testing set to the whole training set, __comparing it to a stratified subsample of the training set__.  
 
 `row_sample == 0.1` for example in the next figure, means that 1/10 of the training set is used in the nearest neighbors procedure at test time. The figure represents a __distribution of test set accuracy__: 
 

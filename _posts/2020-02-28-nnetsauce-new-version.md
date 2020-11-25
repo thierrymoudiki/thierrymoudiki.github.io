@@ -12,7 +12,7 @@ categories: [Python, QuasiRandomizedNN, R]
 
 # English version
 
-A new version of [nnetsauce](https://github.com/thierrymoudiki/nnetsauce), version `0.4.0`, is now available on Pypi and for __R__. As usual, you can install it on __Python__ by using the following commands (command line):
+A new version of [nnetsauce](https://github.com/Techtonique/nnetsauce), version `0.4.0`, is now available on Pypi and for __R__. As usual, you can install it on __Python__ by using the following commands (command line):
 
 {% highlight bash %}
 pip install nnetsauce
@@ -28,7 +28,7 @@ library(nnetsauce)
 
 The __R__ version may be slightly lagging behind on some features; feel free to signal it on GitHub or [contact me](https://thierrymoudiki.github.io/#contact) directly. This new release is accompanied by a few goodies: 
 
-1) __New features__, detailed in the [changelog](https://github.com/thierrymoudiki/nnetsauce/blob/master/CHANGES.md).
+1) __New features__, detailed in the [changelog](https://github.com/Techtonique/nnetsauce/blob/master/CHANGES.md).
 
 2) A refreshed [__web page__](https://thierrymoudiki.github.io/software/nnetsauce/) containing all the information about package installation, use, interface's work-in-progress documentation, and contribution to package development. 
 
@@ -88,7 +88,7 @@ print(fit_obj.score(X_test, y_test))
 print(fit_obj.score(X_test, y_test, scoring="roc_auc"))
 {% endhighlight %}
 
-These results can be found in [nnetsauce/demo/](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_200220_multitask_classification.ipynb). `MultitaskClassifier`'s  accuracy on this dataset is 99.1%, and other indicators such as precision are equal to 99% on this dataset too. Let's visualize the __missclassification results__, as we did in a [previous post]({% post_url 2019-09-18-nnetsauce-adaboost-1 %}), on the same dataset. 
+These results can be found in [nnetsauce/demo/](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_200220_multitask_classification.ipynb). `MultitaskClassifier`'s  accuracy on this dataset is 99.1%, and other indicators such as precision are equal to 99% on this dataset too. Let's visualize the __missclassification results__, as we did in a [previous post]({% post_url 2019-09-18-nnetsauce-adaboost-1 %}), on the same dataset. 
 
 ![image-title-here]({{base}}/images/2020-02-28/2020-02-28-image2.png){:class="img-responsive"} 
 
@@ -119,7 +119,7 @@ library(nnetsauce)
 
 La version R peut être légèrement en retard sur certaines fonctionnalités; n'hésitez pas à le signaler sur GitHub ou à me [contacter](https://thierrymoudiki.github.io/#contact) directement en cas de problème. Cette nouvelle version s'accompagne de quelques _goodies_:
 
-1) Nouvelles fonctionnalités, détaillées dans le fichier [changelog](https://github.com/thierrymoudiki/nnetsauce/blob/master/CHANGES.md).
+1) Nouvelles fonctionnalités, détaillées dans le fichier [changelog](https://github.com/Techtonique/nnetsauce/blob/master/CHANGES.md).
 
 2) Une [__page Web__](https://thierrymoudiki.github.io/software/nnetsauce/)  actualisée contenant toutes les informations sur l'installation, l'utilisation, la documentation de travail en cours, et la contribution au développement de l'outil.
 
@@ -180,7 +180,7 @@ print(fit_obj.score(X_test, y_test))
 print(fit_obj.score(X_test, y_test, scoring="roc_auc"))
 {% endhighlight %}
 
-Les résultats de ce traitement se trouvent dans [ce notebook](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_200220_multitask_classification.ipynb). La précision du MultitaskClassifier sur cet ensemble de données est de 99,1%, et d'autres indicateurs sont également de l'ordre de 99% sur ces données. Visualisons maintenant comment les observations sont bien ou mal classées en fonction de leur classe réelle, comme nous l'avions fait dans un [_post_]({% post_url 2019-09-18-nnetsauce-adaboost-1 %}) précédent, sur le même ensemble de données.
+Les résultats de ce traitement se trouvent dans [ce notebook](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_200220_multitask_classification.ipynb). La précision du MultitaskClassifier sur cet ensemble de données est de 99,1%, et d'autres indicateurs sont également de l'ordre de 99% sur ces données. Visualisons maintenant comment les observations sont bien ou mal classées en fonction de leur classe réelle, comme nous l'avions fait dans un [_post_]({% post_url 2019-09-18-nnetsauce-adaboost-1 %}) précédent, sur le même ensemble de données.
 
 ![image-title-here]({{base}}/images/2020-02-28/2020-02-28-image2.png){:class="img-responsive"} 
 

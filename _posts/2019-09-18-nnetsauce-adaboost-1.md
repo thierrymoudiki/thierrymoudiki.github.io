@@ -8,12 +8,12 @@ categories: QuasiRandomizedNN
 
 {% include base.html %}
 
-Two variants of __Adaboost__ (Adaptive boosting) algorithms are now included in the development version of `nnetsauce`, available on [`Github`](https://github.com/thierrymoudiki/nnetsauce). My `nnetsauce` implementation of Adaboost has __some specificities__, as it will be shown in the sequel of this post. It is also worth noting that the __current implementation is 100% Python__ (neither underlying C, nor C++). 
+Two variants of __Adaboost__ (Adaptive boosting) algorithms are now included in the development version of `nnetsauce`, available on [`Github`](https://github.com/Techtonique/nnetsauce). My `nnetsauce` implementation of Adaboost has __some specificities__, as it will be shown in the sequel of this post. It is also worth noting that the __current implementation is 100% Python__ (neither underlying C, nor C++). 
 
 The package can be imported from Github, by doing:
 
 ```bash
-pip install git+https://github.com/thierrymoudiki/nnetsauce.git
+pip install git+https://github.com/Techtonique/nnetsauce.git
 ```
 
 I'll show you how to use these Adaboost classifiers on two popular datasets. 
@@ -51,7 +51,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
                                                     random_state=123)
 ```
 
-The first version of Adaboost that we apply is __`SAMME.R`__, also known as Real Adaboost. The acronym `SAMME` stands for Stagewise Additive Modeling using a Multi-class Exponential loss function, and  [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce)'s implementation of `SAMME` has some __specificities__:
+The first version of Adaboost that we apply is __`SAMME.R`__, also known as Real Adaboost. The acronym `SAMME` stands for Stagewise Additive Modeling using a Multi-class Exponential loss function, and  [`nnetsauce`](https://github.com/Techtonique/nnetsauce)'s implementation of `SAMME` has some __specificities__:
 
 -The base learners (individual models in the ensemble) are quasi-randomized (__deterministic__) networks.
 
@@ -152,7 +152,7 @@ preds = fit_obj.predict(Z_test)
 print(metrics.classification_report(preds, y_test))    
 ```
 
-A Jupyter notebook for this post can be found [here](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_180919_adaboost_classification.ipynb). More examples of use of `nnetsauce`'s Adaboost [here](https://github.com/thierrymoudiki/nnetsauce/blob/master/examples/adaboost_classification.py). 
+A Jupyter notebook for this post can be found [here](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_180919_adaboost_classification.ipynb). More examples of use of `nnetsauce`'s Adaboost [here](https://github.com/Techtonique/nnetsauce/blob/master/examples/adaboost_classification.py). 
 
 __Note:__ I am currently looking for a _side hustle_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!
 

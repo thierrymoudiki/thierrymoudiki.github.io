@@ -19,7 +19,7 @@ pip install nnetsauce --upgrade
 - Install from Github (development version):
 
 ```bash
-pip install git+https://github.com/thierrymoudiki/nnetsauce.git --upgrade
+pip install git+https://github.com/Techtonique/nnetsauce.git --upgrade
 ```
 
 - Install from Github, in R console:
@@ -32,7 +32,7 @@ library(nnetsauce)
 
 
 
-This could be the occasion for you to __re-read__ all the previous [posts about nnetsauce](https://thierrymoudiki.github.io/blog/#QuasiRandomizedNN), or to play with various examples in [Python](https://github.com/thierrymoudiki/nnetsauce/tree/master/examples) or [R](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo). Here are a few __other ways to interact__ with the nnetsauce: 
+This could be the occasion for you to __re-read__ all the previous [posts about nnetsauce](https://thierrymoudiki.github.io/blog/#QuasiRandomizedNN), or to play with various examples in [Python](https://github.com/Techtonique/nnetsauce/tree/master/examples) or [R](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo). Here are a few __other ways to interact__ with the nnetsauce: 
 
 __1) Forms__
 
@@ -40,7 +40,7 @@ __1) Forms__
 
 __2) Submit Pull Requests on GitHub__
 
-- As detailed [in this post]({% post_url 2020-02-14-git-github %}). [Raising issues](https://guides.github.com/features/issues/) is another constructive way to interact. You can also contribute examples to this [demo repo](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo), using the following naming convention: 
+- As detailed [in this post]({% post_url 2020-02-14-git-github %}). [Raising issues](https://guides.github.com/features/issues/) is another constructive way to interact. You can also contribute examples to this [demo repo](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo), using the following naming convention: 
 
 `yourgithubname_ddmmyy_shortdescriptionofdemo.[ipynb|Rmd]`
 
@@ -55,7 +55,7 @@ To those who are contacting me through LinkedIn: no, I'm not declining, __please
 ![image-title-here]({{base}}/images/2020-07-17/2020-07-17-image1.png){:class="img-responsive"}
 
 This **new version**, `0.5.0`:
-- contains a refactorized code for the [`Base`](https://github.com/thierrymoudiki/nnetsauce/nnetsauce/base/base.py) class, and for many other utilities.
+- contains a refactorized code for the [`Base`](https://github.com/Techtonique/nnetsauce/nnetsauce/base/base.py) class, and for many other utilities.
 - makes use of [randtoolbox](https://cran.r-project.org/web/packages/randtoolbox/index.html) for a faster, more scalable generation of quasi-random numbers.
 - contains __a (work in progress) implementation of most algorithms on GPUs__, using [JAX](https://github.com/google/jax). Most of the nnetsauce's changes related to GPUs are currently made on potentially time consuming operations such as matrices multiplications and matrices inversions. Though, to see a _GPU effect_, __you need to have loads of data__ at hand, and a relatively high `n_hidden_features` parameter. __How do you try it out?__ By instantiating a class with the option:
 
@@ -69,6 +69,6 @@ or
 backend = "tpu"
 ```
 
-An __example__ can be found in [this notebook, on GitHub](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_170720_nnetsauce_gpu.ipynb). 
+An __example__ can be found in [this notebook, on GitHub](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_170720_nnetsauce_gpu.ipynb). 
 
-[nnetsauce](https://github.com/thierrymoudiki/nnetsauce)'s future release is planned to be much faster on CPU, due the use of [Cython](https://cython.org/), as with [mlsauce](https://github.com/thierrymoudiki/mlsauce). There are indeed a lot of nnetsauce's parts which can be *cythonized*. If you've ever considered joining the project, now is the right time. For example, among other things, I'm looking for a volunteer to do some testing in R+Python on Microsoft Windows. __Envisage a smooth onboarding, even if you don't have a lot of experience__.
+[nnetsauce](https://github.com/Techtonique/nnetsauce)'s future release is planned to be much faster on CPU, due the use of [Cython](https://cython.org/), as with [mlsauce](https://github.com/Techtonique/mlsauce). There are indeed a lot of nnetsauce's parts which can be *cythonized*. If you've ever considered joining the project, now is the right time. For example, among other things, I'm looking for a volunteer to do some testing in R+Python on Microsoft Windows. __Envisage a smooth onboarding, even if you don't have a lot of experience__.

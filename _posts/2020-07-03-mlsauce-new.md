@@ -22,7 +22,7 @@ devtools::install_github("thierrymoudiki/mlsauce/R-package")
 
 __END UPDATE:__ 
 
-Last week, I announced a new version of [mlsauce](https://github.com/thierrymoudiki/mlsauce) (see [AdaOpt classification on MNIST handwritten digits (without preprocessing)]({% post_url 2020-05-29-adaopt-classifier-3 %}), [AdaOpt (a probabilistic classifier based on a mix of multivariable optimization and nearest neighbors) for R]({% post_url 2020-05-22-adaopt-classifier-2 %}), and [AdaOpt]({% post_url 2020-05-15-adaopt-classifier-1 %})), with new features. Well... We are still next week! 
+Last week, I announced a new version of [mlsauce](https://github.com/Techtonique/mlsauce) (see [AdaOpt classification on MNIST handwritten digits (without preprocessing)]({% post_url 2020-05-29-adaopt-classifier-3 %}), [AdaOpt (a probabilistic classifier based on a mix of multivariable optimization and nearest neighbors) for R]({% post_url 2020-05-22-adaopt-classifier-2 %}), and [AdaOpt]({% post_url 2020-05-15-adaopt-classifier-1 %})), with new features. Well... We are still next week! 
 
 This __new version contains__:
 
@@ -33,9 +33,9 @@ I've been putting work in this new version like... __crazy__. Because it contain
 
 - [Clone the `refactor` branch](https://stackoverflow.com/questions/1911109/how-do-i-clone-a-specific-git-branch)
 - When cloned, run `make install` into the repo
-- Play with the examples stored in [`/examples`](https://github.com/thierrymoudiki/mlsauce/tree/master/examples) (tune the hyperparameters)
+- Play with the examples stored in [`/examples`](https://github.com/Techtonique/mlsauce/tree/master/examples) (tune the hyperparameters)
 
-Check [the repo](https://github.com/thierrymoudiki/mlsauce) next week, and you'll see the new changes merged (at least in Python for now, and hopefully for R). More insights on the Gradient Boosting algorithm will be unveiled in a few weeks. I will also talk about the stump decision trees in more details.
+Check [the repo](https://github.com/Techtonique/mlsauce) next week, and you'll see the new changes merged (at least in Python for now, and hopefully for R). More insights on the Gradient Boosting algorithm will be unveiled in a few weeks. I will also talk about the stump decision trees in more details.
 
 __Stay tuned!__
 

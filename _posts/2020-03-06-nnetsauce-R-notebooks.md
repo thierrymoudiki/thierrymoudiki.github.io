@@ -16,13 +16,13 @@ categories: [QuasiRandomizedNN, R]
 
 New notebooks for __R__ are now available in the package's repository, along with multiple other __Python__ notebooks. Notebooks are a great way to create reproducible data analyses, with a mix of code, text and graphs. Popular types of notebooks include [jupyter notebooks](https://jupyter.org/) and [R Markdown](https://rmarkdown.rstudio.com) notebooks.  
 
-1) Ridge2Classifier's __R__ notebook: [thierrymoudiki_060320_Ridge2Classifier.Rmd](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_Ridge2Classifier.Rmd)
+1) Ridge2Classifier's __R__ notebook: [thierrymoudiki_060320_Ridge2Classifier.Rmd](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_Ridge2Classifier.Rmd)
 
 
-2) RandomBagClassifier's __R__ notebook: [thierrymoudiki_060320_RandomBagClassifier.Rmd](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_RandomBagClassifier.Rmd)
+2) RandomBagClassifier's __R__ notebook: [thierrymoudiki_060320_RandomBagClassifier.Rmd](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_RandomBagClassifier.Rmd)
 
 
-You can contribute to this [repo](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo), by using the following naming convention: `yourgithubname_ddmmyy_shortdescriptionofdemo.[ipynb|Rmd]`. 
+You can contribute to this [repo](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo), by using the following naming convention: `yourgithubname_ddmmyy_shortdescriptionofdemo.[ipynb|Rmd]`. 
 
 If it's a jupyter notebook in __R__, then just add `_R` to the suffix. 
 
@@ -39,11 +39,11 @@ __Note:__ I am currently looking for a _gig_. You can hire me on [Malt](https://
 
 De nouveaux _notebooks_ écrits en langage __R__ sont maintenant disponibles dans le répertoire GitHub. Les _notebooks_ constituent un excellent moyen de réaliser des analyses statistiques reproductibles, mêlant du code, du texte et des graphiques. Les choix les plus populaires incluent: les [_notebooks_ jupyter](https://jupyter.org/) et les _notebooks_ [R Markdown](https://rmarkdown.rstudio.com).
 
-1) Notebook __R__ lié à Ridge2Classifier: [thierrymoudiki_060320_Ridge2Classifier.Rmd](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_Ridge2Classifier.Rmd)
+1) Notebook __R__ lié à Ridge2Classifier: [thierrymoudiki_060320_Ridge2Classifier.Rmd](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_Ridge2Classifier.Rmd)
 
-2) Notebook __R__ lié à RandomBagClassifier: [thierrymoudiki_060320_RandomBagClassifier.Rmd](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_RandomBagClassifier.Rmd)
+2) Notebook __R__ lié à RandomBagClassifier: [thierrymoudiki_060320_RandomBagClassifier.Rmd](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_060320_RandomBagClassifier.Rmd)
 
-Pour contribuer à ce [répertoire](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo), la règle de nommage est la suivante: `yourgithubname_ddmmyy_shortdescriptionofdemo.[ipynb|Rmd]`. 
+Pour contribuer à ce [répertoire](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo), la règle de nommage est la suivante: `yourgithubname_ddmmyy_shortdescriptionofdemo.[ipynb|Rmd]`. 
 
 Si le contenu d'un _jupyter notebook_ est écrit en __R__, ajoutez un `_R` au  suffixe de la description. 
 

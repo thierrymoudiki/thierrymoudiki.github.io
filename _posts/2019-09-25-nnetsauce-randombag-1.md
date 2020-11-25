@@ -6,7 +6,7 @@ date: 2019-09-25
 categories: QuasiRandomizedNN
 ---
 
-In this post, I will show you how to use a _bootstrap aggregating_  classification algorithm (do not leave yet, I will explain it with apples and tomatoes!). This algorithm is implemented in the new version of [nnetsauce](https://github.com/thierrymoudiki/nnetsauce) (v0.2.0) and is called `randomBag`. The complete list of changes included in this new version can be found [here](https://github.com/thierrymoudiki/nnetsauce/blob/master/CHANGES.md). 
+In this post, I will show you how to use a _bootstrap aggregating_  classification algorithm (do not leave yet, I will explain it with apples and tomatoes!). This algorithm is implemented in the new version of [nnetsauce](https://github.com/Techtonique/nnetsauce) (v0.2.0) and is called `randomBag`. The complete list of changes included in this new version can be found [here](https://github.com/Techtonique/nnetsauce/blob/master/CHANGES.md). 
 
 nnetsauce (v0.2.0) can be installed (using the command line) from [Pypi](https://pypi.org/project/nnetsauce/) as: 
 
@@ -17,7 +17,7 @@ pip install nnetsauce
 The development/cutting-edge version can still be installed from Github, by using: 
 
 ```bash
-pip install git+https://github.com/thierrymoudiki/nnetsauce.git
+pip install git+https://github.com/Techtonique/nnetsauce.git
 ```
 
 Let's start with an introduction on how `randomBag` works, with apple and tomatoes. Like we've seen for [Adaboost]({{base}}/blog/2019/09/18/nnetsauce-adaboost-1), `randomBag` is an ensemble learning method. It __combines multiple individual statistical/machine learning (ML) models into one__, with the hope of achieving a greater performance. We consider the following dataset, containing 2 apples, 3 tomatoes, and a few characteristics describing them: __shape__, __color__, __size of the leaves__. 
@@ -107,7 +107,7 @@ preds = fit_obj.predict(Z_test)
 print(metrics.classification_report(preds, y_test))
 ```
 
-The `randomBag` is ridiculously accurate on this dataset. So, you might have some fun trying [these other examples](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_250919_randombag_classification.ipynb), or any other real world example of your choice! If you happen to create a notebook, it will find its home [here](https://github.com/thierrymoudiki/nnetsauce/blob/master/nnetsauce/demo/) (naming convention: yourgithubname_ddmmyy_shortdescriptionofdemo.ipynb).
+The `randomBag` is ridiculously accurate on this dataset. So, you might have some fun trying [these other examples](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_250919_randombag_classification.ipynb), or any other real world example of your choice! If you happen to create a notebook, it will find its home [here](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/) (naming convention: yourgithubname_ddmmyy_shortdescriptionofdemo.ipynb).
 
 __Note:__ I am currently looking for a _side hustle_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!
 

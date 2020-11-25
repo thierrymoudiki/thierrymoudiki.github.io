@@ -25,7 +25,7 @@ __The full code for these benchmarks is:__
 From Terminal, install the package:
 
 ```bash
-pip install git+https://github.com/thierrymoudiki/querier.git
+pip install git+https://github.com/Techtonique/querier.git
 ```
 
 In Python: 

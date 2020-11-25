@@ -7,10 +7,10 @@ categories: DataBases
 ---
 
 
-Data Frames are a way to represent tabular data, that is widely used and useful for Statistical Learning. Basically, a Data Frame = Tabular data + Named columns, and there are different implementations of this data structure, notably in R, Python and Apache Spark. The [querier](https://github.com/thierrymoudiki/querier) exposes a query language to retrieve data from Python `pandas` Data Frames, inspired from [SQL](https://en.wikipedia.org/wiki/SQL)'s relational databases querying. Currently, the `querier` can be installed from Github as:
+Data Frames are a way to represent tabular data, that is widely used and useful for Statistical Learning. Basically, a Data Frame = Tabular data + Named columns, and there are different implementations of this data structure, notably in R, Python and Apache Spark. The [querier](https://github.com/Techtonique/querier) exposes a query language to retrieve data from Python `pandas` Data Frames, inspired from [SQL](https://en.wikipedia.org/wiki/SQL)'s relational databases querying. Currently, the `querier` can be installed from Github as:
 
 ```bash
-pip install git+https://github.com/thierrymoudiki/querier.git
+pip install git+https://github.com/Techtonique/querier.git
 ```
 
 There are __9 types of operations__ available in the `querier`, with no plan to extend that list much further (to maintain a relatively simple mental model). These verbs will look familiar to `dplyr` users, but the implementation (`numpy`, `pandas` and `SQLite3` are used) and functions' signatures are different: 
@@ -65,18 +65,18 @@ There are __9 types of operations__ available in the `querier`, with no plan to 
 
 The following notebooks present multiple __examples of use__ of the `querier`: 
 
-- [`concat` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_251019_concat.ipynb)
-- [`delete` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_241019_delete.ipynb)
-- [`drop` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_241019_drop.ipynb)
-- [`filtr` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_filtr.ipynb)
-- [`join` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_join.ipynb)
-- [`select` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_select.ipynb)
-- [`summarize` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_summarize.ipynb)
-- [`update` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_251019_update.ipynb)
-- [`request` example](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_request.ipynb)
+- [`concat` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_251019_concat.ipynb)
+- [`delete` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_241019_delete.ipynb)
+- [`drop` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_241019_drop.ipynb)
+- [`filtr` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_filtr.ipynb)
+- [`join` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_join.ipynb)
+- [`select` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_select.ipynb)
+- [`summarize` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_summarize.ipynb)
+- [`update` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_251019_update.ipynb)
+- [`request` example](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_request.ipynb)
 
 
-Contributions/remarks are welcome as usual, you can submit a pull request [on Github](https://github.com/thierrymoudiki/querier).
+Contributions/remarks are welcome as usual, you can submit a pull request [on Github](https://github.com/Techtonique/querier).
 
 
 __Note:__ I am currently looking for a _gig_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!

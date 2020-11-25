@@ -10,10 +10,10 @@ categories: [Python, R, AdaOpt, mlsauce]
 [Last week]({% post_url 2020-05-22-adaopt-classifier-2 %}) on this blog, I presented `AdaOpt` for R, applied to `iris` dataset classification. And [the week before]({% post_url 2020-05-15-adaopt-classifier-1 %}) that, I introduced `AdaOpt` for Python. `AdaOpt` is a novel _probabilistic_ classifier, based on a mix of multivariable optimization and a _nearest neighbors_ algorithm. More details about the algorithm can be found in [this (short) paper](https://www.researchgate.net/publication/341409169_AdaOpt_Multivariable_optimization_for_classification). This week, we are going to train `AdaOpt` on the popular [MNIST handwritten digits](https://en.wikipedia.org/wiki/MNIST_database) dataset without preprocessing, a.k.a neither [convolution](https://en.wikipedia.org/wiki/Convolutional_neural_network#Convolutional) nor [pooling](https://en.wikipedia.org/wiki/Convolutional_neural_network#Pooling).
 
 
-Install [`mlsauce`](https://github.com/thierrymoudiki/mlsauce)'s `AdaOpt` from the command line (for R, cf. below): 
+Install [`mlsauce`](https://github.com/Techtonique/mlsauce)'s `AdaOpt` from the command line (for R, cf. below): 
 
 ```bash
-!pip install git+https://github.com/thierrymoudiki/mlsauce.git --upgrade
+!pip install git+https://github.com/Techtonique/mlsauce.git --upgrade
 ```
 
 

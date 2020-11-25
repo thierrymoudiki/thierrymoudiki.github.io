@@ -25,7 +25,7 @@ pip install nnetsauce
 - __Installing__ from Github: 
 
 ```bash
-pip install git+https://github.com/thierrymoudiki/nnetsauce.git
+pip install git+https://github.com/Techtonique/nnetsauce.git
 ```
 
 

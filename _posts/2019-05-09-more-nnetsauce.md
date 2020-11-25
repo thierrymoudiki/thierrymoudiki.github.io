@@ -6,19 +6,19 @@ date: 2019-05-09
 categories: QuasiRandomizedNN
 ---
 
-As mentioned in a [previous]({% post_url 2019-03-13-nnetsauce %}) post, [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce) is a Python package for Statistical/Machine learning and deep learning, based on combinations of *neural* networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of `nnetsauce`, with a few examples based on classification and deep learning.          
+As mentioned in a [previous]({% post_url 2019-03-13-nnetsauce %}) post, [`nnetsauce`](https://github.com/Techtonique/nnetsauce) is a Python package for Statistical/Machine learning and deep learning, based on combinations of *neural* networks layers. It could be used for solving regression, classification and multivariate time series forecasting problems. This post makes a more detailed introduction of `nnetsauce`, with a few examples based on classification and deep learning.          
 
         
 ## Installing the package
 
 
- Currently, `nnetsauce` can be installed through [Github](https://github.com/thierrymoudiki/nnetsauce) (but it will be available on PyPi in a few weeks).
+ Currently, `nnetsauce` can be installed through [Github](https://github.com/Techtonique/nnetsauce) (but it will be available on PyPi in a few weeks).
 
 
 Here is how: 
 
 ~~~python        
-git clone https://github.com/thierrymoudiki/nnetsauce.git
+git clone https://github.com/Techtonique/nnetsauce.git
 cd nnetsauce
 python setup.py install
 ~~~
@@ -26,7 +26,7 @@ python setup.py install
 ## Examples of use of `nnetsauce`
 
 
-  Below, are two examples of use of [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce). A **classification** example based on breast cancer data, and an illustrative **deep learning** example. In the classification example, we show how a logistic regression model can be enhanced, for a higher accuracy (accuracy is used here for simplicity), by using `nnetsauce`. The deep learning example shows how custom building blocks of `nnetsauce` objects can be combined together, to form a - perfectible - deeper learning architecture. 
+  Below, are two examples of use of [`nnetsauce`](https://github.com/Techtonique/nnetsauce). A **classification** example based on breast cancer data, and an illustrative **deep learning** example. In the classification example, we show how a logistic regression model can be enhanced, for a higher accuracy (accuracy is used here for simplicity), by using `nnetsauce`. The deep learning example shows how custom building blocks of `nnetsauce` objects can be combined together, to form a - perfectible - deeper learning architecture. 
 
 
   `scikit-learn` models are heavily used in these examples, but `nnetsauce` **will work with any learning model possessing methods `fit()` and `predict()`** (plus, `predict_proba()` for a classifier). That is, it could be used in conjunction with [xgboost](https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py), [LightGBM](https://github.com/Microsoft/LightGBM/blob/master/examples/python-guide/sklearn_example.py), or [CatBoost](https://github.com/catboost) for example. For the purpose of **model validation**, `sklearn`'s  cross-validation functions such as `GridSearchCV` and `cross_val_score` can be employed (on `nnetsauce` models), as it will be shown in the classification example.
@@ -115,7 +115,7 @@ After using `nnetsauce`, the accuracy is now equal to `0.9692`.
 ## Deep learning example
 
 
-This second example, is an **illustrative** example of deep learning with [`nnetsauce`](https://github.com/thierrymoudiki/nnetsauce). Many, **more advanced things could be tried**. In this example, predictive accuracy of the model **increases as new layers are added** to the stack.
+This second example, is an **illustrative** example of deep learning with [`nnetsauce`](https://github.com/Techtonique/nnetsauce). Many, **more advanced things could be tried**. In this example, predictive accuracy of the model **increases as new layers are added** to the stack.
 
 
 The **first layer** is a Bayesian ridge regression. Model accuracy (Root Mean Squared Error, RMSE) is equal to `63.56`. The **second layer** notably uses 3 additional features, an hyperbolic tangent activation function and the first layer; accuracy is `61.76`. To finish, the **third layer** uses 5 additional features, a sigmoid activation function and the second layer. The final accuracy, after adding this third layer is equal to: `61.68`.

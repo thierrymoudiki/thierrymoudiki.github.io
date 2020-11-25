@@ -15,13 +15,13 @@ The tool is fast due to [Cython](https://cython.org/), and to the ubiquitous (an
 ![image-title-here]({{base}}/images/2020-05-22/2020-05-22-image1.png){:class="img-responsive"}
 
 
-`AdaOpt` is now __available to R users__, and I used [reticulate](https://rstudio.github.io/reticulate/) for porting it (as I did for [nnetsauce]({% post_url 2020-03-06-nnetsauce-R-notebooks %})). An R documentation for the package can be found [in this repo](https://github.com/thierrymoudiki/mlsauce/blob/master/R-package.Rcheck/mlsauce-manual.pdf).
+`AdaOpt` is now __available to R users__, and I used [reticulate](https://rstudio.github.io/reticulate/) for porting it (as I did for [nnetsauce]({% post_url 2020-03-06-nnetsauce-R-notebooks %})). An R documentation for the package can be found [in this repo](https://github.com/Techtonique/mlsauce/blob/master/R-package.Rcheck/mlsauce-manual.pdf).
 
 Here is an __example of use__:
 
 ## 1 - Install packages 
 
-`AdaOpt`'s development code is [available on GitHub](https://github.com/thierrymoudiki/mlsauce), and the package can be installed by using `devtools` in R console:
+`AdaOpt`'s development code is [available on GitHub](https://github.com/Techtonique/mlsauce), and the package can be installed by using `devtools` in R console:
 
 ```{r}
 library(devtools)

@@ -6,7 +6,7 @@ date: 2020-03-13
 categories: [DataBases, Python]
 ---
 
-The [querier](https://github.com/thierrymoudiki/querier) is a __query language__ that helps you to retrieve data from Python Data Frames. In this [post from October 25]({% post_url 2019-10-25-the-querier-1 %}), we presented the querier and different verbs constituting its grammar for wrangling data: [`concat`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_251019_concat.ipynb), [`delete`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_241019_delete.ipynb), [`drop`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_241019_drop.ipynb), [`filtr`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`join`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_join.ipynb), [`select`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`summarize`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_summarize.ipynb), [`update`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_251019_update.ipynb), [`request`](https://github.com/thierrymoudiki/querier/tree/master/querier/demo/thierrymoudiki_231019_request.ipynb). In this other [post from November 22]({% post_url 2019-11-22-the-querier-2 %}), we showed how our querier verbs can be __composed__ to form __data wrangling pipelines__. 
+The [querier](https://github.com/Techtonique/querier) is a __query language__ that helps you to retrieve data from Python Data Frames. In this [post from October 25]({% post_url 2019-10-25-the-querier-1 %}), we presented the querier and different verbs constituting its grammar for wrangling data: [`concat`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_251019_concat.ipynb), [`delete`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_241019_delete.ipynb), [`drop`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_241019_drop.ipynb), [`filtr`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`join`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_join.ipynb), [`select`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`summarize`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_summarize.ipynb), [`update`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_251019_update.ipynb), [`request`](https://github.com/Techtonique/querier/tree/master/querier/demo/thierrymoudiki_231019_request.ipynb). In this other [post from November 22]({% post_url 2019-11-22-the-querier-2 %}), we showed how our querier verbs can be __composed__ to form __data wrangling pipelines__. 
 
 
 The querier is now __available on Pypi__, and can be installed from the command line as:
@@ -19,7 +19,7 @@ We now show how to import data from csv and SQL databases. In [example 1](#examp
 
 ## Example 1
 
-Import data __from csv__, and chain the querier's operations [`select`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filtr`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
+Import data __from csv__, and chain the querier's operations [`select`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filtr`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
 
 
 ```
@@ -57,7 +57,7 @@ print(df1)
 
 ## Example 2
 
-Import data __from an sqlite3 database__, and chain the querier's operations [`select`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filter`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
+Import data __from an sqlite3 database__, and chain the querier's operations [`select`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filter`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
 
 
 ```

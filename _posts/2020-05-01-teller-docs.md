@@ -26,11 +26,11 @@ The code is also documented on readthedocs (it's a work in progress):
 
 For those who haven't had a taste of the teller yet, these notebooks will constitute a good (and fun) introduction:
 
-- [Heterogeneity of marginal effects](https://github.com/thierrymoudiki/teller/blob/master/teller/demo/thierrymoudiki_011119_boston_housing.ipynb)
-- [Significance of marginal effects](https://github.com/thierrymoudiki/teller/blob/master/teller/demo/thierrymoudiki_081119_boston_housing.ipynb)
-- [Model comparison](https://github.com/thierrymoudiki/teller/blob/master/teller/demo/thierrymoudiki_151119_boston_housing.ipynb)
-- [Classification](https://github.com/thierrymoudiki/teller/blob/master/teller/demo/thierrymoudiki_041219_breast_cancer_classif.ipynb)
-- [Interactions](https://github.com/thierrymoudiki/teller/blob/master/teller/demo/thierrymoudiki_041219_boston_housing_interactions.ipynb)
+- [Heterogeneity of marginal effects](https://github.com/Techtonique/teller/blob/master/teller/demo/thierrymoudiki_011119_boston_housing.ipynb)
+- [Significance of marginal effects](https://github.com/Techtonique/teller/blob/master/teller/demo/thierrymoudiki_081119_boston_housing.ipynb)
+- [Model comparison](https://github.com/Techtonique/teller/blob/master/teller/demo/thierrymoudiki_151119_boston_housing.ipynb)
+- [Classification](https://github.com/Techtonique/teller/blob/master/teller/demo/thierrymoudiki_041219_breast_cancer_classif.ipynb)
+- [Interactions](https://github.com/Techtonique/teller/blob/master/teller/demo/thierrymoudiki_041219_boston_housing_interactions.ipynb)
 
 
 __Note:__ I am currently looking for a _gig_. You can hire me on [Malt](https://www.malt.fr/profile/thierrymoudiki) or send me an email: __thierry dot moudiki at pm dot me__. I can do descriptive statistics, data preparation, feature engineering, model calibration, training and validation, and model outputs' interpretation. I am fluent in Python, R, SQL, Microsoft Excel, Visual Basic (among others) and French. My résumé? [Here]({{base}}/cv/thierry-moudiki.pdf)!

@@ -9,7 +9,7 @@ categories: QuasiRandomizedNN
 
 
 There is always some uncertainty attached to Statistical/Machine Learning (ML) model's predictions. 
-In this post, we examine a few ways to obtain [prediction intervals](https://en.wikipedia.org/wiki/Prediction_interval) for [nnetsauce](https://github.com/thierrymoudiki/nnetsauce)'s ML models. As a reminder, every model in the nnetsauce is based on a component __g(XW+b)__ where:
+In this post, we examine a few ways to obtain [prediction intervals](https://en.wikipedia.org/wiki/Prediction_interval) for [nnetsauce](https://github.com/Techtonique/nnetsauce)'s ML models. As a reminder, every model in the nnetsauce is based on a component __g(XW+b)__ where:
 
 - __X__ is a matrix containing some explanatory variables and optional clustering information (taking into account input data's heterogeneity).
 - __W__ creates additional explanatory variables from __X__ and is drawn from various random and quasirandom sequences.

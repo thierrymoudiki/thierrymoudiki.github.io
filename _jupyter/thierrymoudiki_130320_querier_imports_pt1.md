@@ -1,6 +1,6 @@
 # Import data into the querier (Part 1)
 
-We illustrate how to import data into [the querier](https://github.com/thierrymoudiki/querier), a query language for Data Frames
+We illustrate how to import data into [the querier](https://github.com/Techtonique/querier), a query language for Data Frames
 . 
 
 First, in [example 1](#example-1), we import data __from csv__. Then in [example 2](#example-2) we import data __from a [relational database](https://en.wikipedia.org/wiki/Relational_database)__ (sqlite3). 
@@ -9,12 +9,12 @@ We start by installing the package from GitHub (command line):
 
 
 ```
-!pip install git+https://github.com/thierrymoudiki/querier.git
+!pip install git+https://github.com/Techtonique/querier.git
 ```
 
 ## Example 1
 
-Import data __from csv__, and chain the querier's operations [`select`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filtr`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
+Import data __from csv__, and chain the querier's operations [`select`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filtr`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
 
 
 ```
@@ -52,7 +52,7 @@ print(df1)
 
 ## Example 2
 
-Import data __from an sqlite3 database__, and chain the querier's operations [`select`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filter`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/thierrymoudiki/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
+Import data __from an sqlite3 database__, and chain the querier's operations [`select`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_select.ipynb), [`filter`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_filtr.ipynb), [`summarize`](https://github.com/Techtonique/querier/blob/master/querier/demo/thierrymoudiki_231019_summarize.ipynb).
 
 
 ```

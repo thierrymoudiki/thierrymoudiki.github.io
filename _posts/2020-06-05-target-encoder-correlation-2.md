@@ -40,7 +40,7 @@ new_x <- c(0, 1, 2, 0, 3, 4, 2, ...)
 
 Based on this information, you'd like to __understand how to maximize your tip__ ^^. In a Statistical/Machine Learning model, [nnetsauce](https://thierrymoudiki.github.io/software/nnetsauce/)'s [Ridge2Regressor](https://nnetsauce.readthedocs.io/en/latest/APIDocumentation/Regression%20models.html#module-nnetsauce.ridge2.ridge2Regressor) in this post, the response to be understood is the numerical variable `tip`. The explanatory variables are `total_bill`, `sex`, `smoker`, `day`, `time`, `size`. However, `sex`, `smoker`, `day`, `time` are not digestible as is; they need to be numerically encoded. 
 
-So, if we let `df` be a data frame containing all the previous information on tips, and `pseudo_tip` be the pseudo target created as explained in [this previous post]({% post_url 2020-04-24-target-encoder-correlation %}) using R, then by using the [querier](https://github.com/thierrymoudiki/querier), a numerical data frame `df_numeric`can be obtained from `df` as: 
+So, if we let `df` be a data frame containing all the previous information on tips, and `pseudo_tip` be the pseudo target created as explained in [this previous post]({% post_url 2020-04-24-target-encoder-correlation %}) using R, then by using the [querier](https://github.com/Techtonique/querier), a numerical data frame `df_numeric`can be obtained from `df` as: 
 
 ```
 import numpy as np
