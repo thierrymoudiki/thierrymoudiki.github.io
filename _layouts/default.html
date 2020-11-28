@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  
+
   <head>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146345113-1"></script>
     <script>
@@ -24,20 +24,20 @@
            {{ site.title }}
        {% endif %}
     </title>
-    
-    <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />    
+
+    <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
     <meta name="author" content="Thierry Moudiki">
     <meta name="keywords" content="T., T. Moudiki, Data Science, Statistics, Machine Learning, Deep Learning, Thierry Moudiki, nnetsauce, querier, teller">
 
- 
-    <meta property="og:url" content="http://thierrymoudiki.github.io">   
+
+    <meta property="og:url" content="http://thierrymoudiki.github.io">
     <meta property="og:title" content="Thierry Moudiki's webpage">
     <meta property="og:type" content="profile">
     <meta property="og:description" content="Thierry Moudiki's personal webpage, Data Science, Statistics, Machine Learning, Deep Learning, Simulation, Optimization.">
-    
+
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS
@@ -46,12 +46,12 @@
     <style>
         {% include normalize.css %}
         {% include skeleton.css %}
-        {% include main.css %}                
+        {% include main.css %}
     </style>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="{{base}}/images/t-logo.png"> 
+    <link rel="icon" type="image/png" href="{{base}}/images/t-logo.png">
 
     <!-- RSS feed -->
     <link rel="alternate" type="application/atom+xml" href="{{site.url}}/feed.xml">
@@ -75,10 +75,15 @@
     </script>
     <!-- End MailerLite Universal -->
 
+    <!-- Mathjax Support -->
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
   </head>
 
     <div class="container col-sm-9">
-            {{content}}                 
+            {{content}}
     </div>
 
 </html>
