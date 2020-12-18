@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Deeper learning architecture in nnetsauce"
-description: Deeper learning architecture in nnetsauce
+title: "A deeper learning architecture in nnetsauce"
+description: Deeper learning architectures in nnetsauce
 date: 2020-12-18
 categories: [Python, QuasiRandomizedNN]
 ---
