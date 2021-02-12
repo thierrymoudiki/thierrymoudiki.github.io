@@ -372,7 +372,7 @@ dataset 5 -- diabetes -----
 <code class="r">
 
 library(devtools)
-devtools::install_github("thierrymoudiki/mlsauce/R-package")
+devtools::install_github("Techtonique/mlsauce/R-package")
 library(mlsauce)	
 
 </code>
