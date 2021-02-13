@@ -10,9 +10,9 @@ In [previous posts](https://thierrymoudiki.github.io/blog/#LSBoost), I introduce
 LSBoost; a gradient boosting machine that uses randomized and  penalized least squares 
  as a basis -- instead of decision trees which are frequently used as base learners.   [mlsauce](https://techtonique.github.io/mlsauce/index.html)'s LSBoost takes into account a problem's nonlinearity by including new, engineered explanatory variables $$g(XW+b)$$ with:
  
- - g: an **activation function** (tanh, ReLU, sigmoid, ...) 
- - X: input data (covariates, explanatory variables)
- - W: a matrix containing numbers drawn from a multivariate uniform distribution on $$[0, 1]$$
+ - $$g$$: an **activation function** (tanh, ReLU, sigmoid, ...) 
+ - $$X$$: input data (covariates, explanatory variables)
+ - $$W$$: a matrix containing numbers drawn from a multivariate uniform distribution on $$[0, 1]$$
 
 **New activation functions were added to version 0.8.0** of mlsauce: ReLU6, tanh, sigmoid. These changes are available both in R and in the Python implementation of mlsauce. 
 
