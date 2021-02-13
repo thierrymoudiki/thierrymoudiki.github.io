@@ -12,11 +12,11 @@ LSBoost; a gradient boosting machine that uses randomized and  penalized least s
  
  - g: an **activation function** (tanh, ReLU, sigmoid, ...) 
  - X: input data (covariates, explanatory variables)
- - W: a matrix containing numbers drawn from a multivariate uniform distribution on  $[0, 1]$
+ - W: a matrix containing numbers drawn from a multivariate uniform distribution on $$[0, 1]$$
 
 **New activation functions were added to version 0.8.0** of mlsauce: ReLU6, tanh, sigmoid. These changes are available both in R and in the Python implementation of mlsauce. 
 
-The following R example illustrates the differences between out-of-sample errors, when $g$ = sigmoid or  $g$ = tanh. Of course, **LSBoost can be tuned further** than what's demonstrated here. 
+The following R example illustrates the differences between out-of-sample errors, when $$g$$ = sigmoid or  $$g$$ = tanh. Of course, **LSBoost can be tuned further** than what's demonstrated here. 
 
 ```r
 # Input data
