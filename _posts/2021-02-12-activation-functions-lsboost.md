@@ -2,7 +2,7 @@
 layout: post
 title: "New activation functions in mlsauce's LSBoost"
 description: "activation functions in package mlsauce's new version"
-date: 2020-02-12
+date: 2021-02-12
 categories: [R, LSBoost, ExplainableML, mlsauce]
 ---
 
