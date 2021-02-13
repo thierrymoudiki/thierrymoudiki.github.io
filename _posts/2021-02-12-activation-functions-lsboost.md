@@ -8,7 +8,7 @@ categories: [R, LSBoost, ExplainableML, mlsauce]
 
 In [previous posts](https://thierrymoudiki.github.io/blog/#LSBoost), I introduced 
 LSBoost; a gradient boosting machine that uses randomized and  penalized least squares 
- as a basis -- instead of decision trees which are frequently used as base learners.   [mlsauce](https://techtonique.github.io/mlsauce/index.html)'s LSBoost takes into account a problem's nonlinearity by including new, engineered explanatory variables $g(XW+b)$ with:
+ as a basis -- instead of decision trees which are frequently used as base learners.   [mlsauce](https://techtonique.github.io/mlsauce/index.html)'s LSBoost takes into account a problem's nonlinearity by including new, engineered explanatory variables $$g(XW+b)$$ with:
  
  - g: an **activation function** (tanh, ReLU, sigmoid, ...) 
  - X: input data (covariates, explanatory variables)
