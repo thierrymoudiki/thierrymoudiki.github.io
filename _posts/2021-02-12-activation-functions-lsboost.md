@@ -18,6 +18,12 @@ LSBoost; a gradient boosting machine that uses randomized and  penalized least s
 
 The following R example illustrates the differences between out-of-sample errors, when $$g$$ = sigmoid or  $$g$$ = tanh. Of course, **LSBoost can be tuned further** than what's demonstrated here. 
 
+````r
+library(devtools)
+devtools::install_github("Techtonique/mlsauce/R-package")
+library(mlsauce)	
+```
+
 ```r
 # Input data
 X <- as.matrix(MASS::Boston[, -1])
