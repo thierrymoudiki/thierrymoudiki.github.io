@@ -8,14 +8,14 @@ categories: [Python, R, QuasiRandomizedNN]
 
 I was selected and invited to present this family of univariate/multivariate time series models at [R/Finance 2020](https://www.rinfinance.com/) (in Chicago, IL). However, the COVID-19 pandemics decided differently. It's still a work in progress; comments, remarks, pull requests are welcome as usual (in [nnetsauce](https://techtonique.github.io/nnetsauce/index.html)). But the general philosophy of model construction in this framework is already set and will be explained in this post. An R example, with less details about the implementation (so, R users read on) can also be found in this post: [Bayesian forecasting for uni/multivariate time series](https://thierrymoudiki.github.io/blog/2020/12/04/r/quasirandomizednn/bayesian-forecasting). 
 
-How does this family of time series model work? 
+How does this family of time series models work? 
 
 ![image-title-here]({{base}}/images/2021-03-06/2021-03-06-image1.png){:class="img-responsive"}
 
 By doing what's shown on the graph before, I make some relatively strong hypotheses: 
 
 - I assume that there's a bidirectional relationship between the series, as in Vector Autoregressive ([VAR](https://en.wikipedia.org/wiki/Vector_autoregression)) models, i.e each series is influencing -- and is influenced by -- the others. 
-- I assume that all the successive time series sub-models share the same architecture, the same ML model ,hence the same hyperparameters, for learning from the lags.
+- I assume that all the successive time series sub-models share the same architecture, the same ML model, hence the same hyperparameters, for learning from the lags.
 
 At testing time, for ML prediction, [recursive forecasts](https://www.r-bloggers.com/2018/01/direct-forecast-x-recursive-forecast/) are implemented so far. One improvement could be to obtain direct forecasts too, in the future.
 
