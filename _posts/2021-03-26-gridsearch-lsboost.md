@@ -6,6 +6,8 @@ date: 2021-03-26
 categories: [Python, LSBoost]
 ---
 
+_Disclaimer:_ I have no affiliation with the scikit-learn team.
+
 Thanks to [inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)),   [nnetsauce](https://techtonique.github.io/nnetsauce/) and [mlsauce](https://techtonique.github.io/mlsauce/) models share a lot of properties with scikit-learn's Statistical/Machine learning (ML) models. That's to say: **if you're already familiar with scikit-learn, you won't have to spend a lot of time figuring out** how do nnetsauce and mlsauce work.  
 
 nnetsauce and mlsauce notably possess methods `fit` (for training the model) and `predict` (for model testing on unseen data). And as a result, they share with scikit-learn ML models the ability to be calibrated through existing scikit-learn  [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) functions. nnetsauce and mlsauce aren't reinventing the wheel. 
