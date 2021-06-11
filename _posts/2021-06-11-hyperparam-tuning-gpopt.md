@@ -93,6 +93,8 @@ print(res)
 {'parameters': (array([ 0.30017694, 33.57635498,  5.50315857,  0.47113037,  0.05940552]), -0.993103448275862), 'opt_object': <GPopt.GPOpt.GPOpt.GPOpt object at 0x7f0373030ad0>}
 ```
 
+Cross-validation average accuracy is equal to 99.31%. 
+
 __Test set accuracy__
 
 ```python 
@@ -120,6 +122,6 @@ print(f"\n Elapsed: {time() - start}")
 
 ```
 
-Due to `LSBoostClassifier`'s `tolerance` hyperparameter, the learning 
+Due to `LSBoostClassifier`'s `tolerance` hyperparameter (equal to 0.05940552 here), the learning 
 procedure is stopped early, and only 8 iterations of the classifier are necessary 
 to obtain a high accuracy. 
