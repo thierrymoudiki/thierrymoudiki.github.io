@@ -85,6 +85,8 @@ scores <- parallel::mclapply(1:n_points,
 scores <- unlist(scores)
 ```
 
+For Windows, `future.apply::future_lapply` can be used instead of `parallel::mclapply`.
+
 ## 'best' hyperparameters and associated training set score
 
 ```R
