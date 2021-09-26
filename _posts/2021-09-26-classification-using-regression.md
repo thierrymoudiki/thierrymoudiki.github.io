@@ -10,9 +10,9 @@ In this post, I illustrate _classification using linear regression_, as implemen
 
 # Model description
 
-Chapter 4 of [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) (ESL), at section _4.2 Linear Regression of an Indicator Matrix_, describes _classification using linear regression_ pretty well. Let $$ K \in \mathbb{N} $$ be the number of classes and $y \in \mathbb{N}^n$ with values in $\lbrace 1, \ldots, K \rbrace$ be the variable to be explained. An __indicator response__ matrix $\textbf{Y} \in \mathbb{N}^{n \times K }$, containing only 0’s and 1’s, can be obtained from $y$. Each row  of $\textbf{Y}$ shall contain a single 1 -- in the column corresponding to the class where the example belongs, and 0's elsewhere.
+Chapter 4 of [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) (ESL), at section _4.2 Linear Regression of an Indicator Matrix_, describes _classification using linear regression_ pretty well. Let $$ K \in \mathbb{N} $$ be the number of classes and $$y \in \mathbb{N}^n$$ with values in $$\lbrace 1, \ldots, K \rbrace$$ be the variable to be explained. An __indicator response__ matrix $$\textbf{Y} \in \mathbb{N}^{n \times K }$$, containing only 0’s and 1’s, can be obtained from $$y$$. Each row  of $$\textbf{Y}$$ shall contain a single 1 -- in the column corresponding to the class where the example belongs, and 0's elsewhere.
 
-Now, let $\textbf{X} \in \mathbb{R}^{n \times p }$ be the set of explanatory variables for $y$ and $\textbf{Y}$, with examples in rows, and characteristics in columns. ESL applies $K$ least squares  models to $\textbf{X}$, for each column of $\textbf{Y}$. The regression's predicted values can be interpreted as _raw_ estimates of probabilities, because the least squares' solution is a conditional expectation. And for $G$, a random variable describing the class, we have: 
+Now, let $$\textbf{X} \in \mathbb{R}^{n \times p }$$ be the set of explanatory variables for $$y$$ and $$\textbf{Y}$$, with examples in rows, and characteristics in columns. ESL applies $$K$$ least squares  models to $$\textbf{X}$$, for each column of $$\textbf{Y}$$. The regression's predicted values can be interpreted as _raw_ estimates of probabilities, because the least squares' solution is a conditional expectation. And for $$G$$, a random variable describing the class, we have: 
 
 $$
 \mathbb{E} \left[ \mathbb{1}_{ G = k } \vert X = x \right] = \mathbb{P} \left[ G = k \vert X = x \right]
@@ -20,16 +20,16 @@ $$
 
 The difference between `nnetsauce`'s `MultitaskClassifier` and the model described in ESL is:
 
-- Any model possessing methods `fit` and `predict` can be used in lieu of a linear regression of $\textbf{Y}$ on $\textbf{X}$
-- the set of covariates include the original covariates, $\textbf{X}$, __plus nonlinear transformations__ of  $\textbf{X}$, $h(\textbf{X})$, as done in [Quasi-Randomized Networks](https://thierrymoudiki.github.io/blog/index.html#QuasiRandomizedNN). Having $h(\textbf{X})$ as additional explanatory variables  enhances the models' flexibility; the __model is no longer linear__. 
+- Any model possessing methods `fit` and `predict` can be used in lieu of a linear regression of $$\textbf{Y}$$ on $$\textbf{X}$$
+- the set of covariates include the original covariates, $$\textbf{X}$$, __plus nonlinear transformations__ of  $$\textbf{X}$$, $$h(\textbf{X})$$, as done in [Quasi-Randomized Networks](https://thierrymoudiki.github.io/blog/index.html#QuasiRandomizedNN). Having $$h(\textbf{X})$$ as additional explanatory variables  enhances the models' flexibility; the __model is no longer linear__. 
 
-- If for each $k \in \lbrace 1, \ldots, K \rbrace$, $\hat{f}_k(x)$ is the regression's predicted value for class $k$ and an observation characterized by $x$, `nnetsauce`'s `MultitaskClassifier`  obtains _probabilities_ that an observation characterized by $x$ belongs to class $k$ as: 
+- If for each $$k \in \lbrace 1, \ldots, K \rbrace$$, $$\hat{f}_k(x)$$ is the regression's predicted value for class $$k$$ and an observation characterized by $$x$$, `nnetsauce`'s `MultitaskClassifier`  obtains _probabilities_ that an observation characterized by $$x$$ belongs to class $$k$$ as: 
 
 $$
 \hat{p}_k(x) := \frac{expit \left( \hat{f}_k(x) \right)}{\sum_{i=1}^K expit \left( \hat{f}_k(x) \right)}
 $$
 
-Where we have $expit := \frac{1}{1 + exp(-x)}$. $x \mapsto expit(x)$ is strictly increasing, hence it preserves the ordering of _linear_ regression's predictions. $x \mapsto expit(x)$ is also  bounded in $[0, 1]$, which helps in avoiding overflows. I divide $expit \left( \hat{f}_k(x) \right)$ by $\sum_{i=1}^K expit \left( \hat{f}_k(x) \right)$, so that the _probabilities_ add up to 1. And to finish, the class predicted for an example characterized by $x$ is: 
+Where we have $$expit := \frac{1}{1 + exp(-x)}$$. $$x \mapsto expit(x)$$ is strictly increasing, hence it preserves the ordering of _linear_ regression's predictions. $$x \mapsto expit(x)$$ is also  bounded in $$[0, 1]$$, which helps in avoiding overflows. I divide $$expit \left( \hat{f}_k(x) \right)$$ by $$\sum_{i=1}^K expit \left( \hat{f}_k(x) \right)$$, so that the _probabilities_ add up to 1. And to finish, the class predicted for an example characterized by $$x$$ is: 
 
 $$
 argmax_{k \in \lbrace 1, \ldots, K \rbrace} \hat{p}_k(x)
