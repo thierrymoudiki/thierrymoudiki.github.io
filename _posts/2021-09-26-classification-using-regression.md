@@ -3,7 +3,7 @@ layout: post
 title: "Classification using linear regression"
 description: Classification as linear regression of an Indicator Matrix, using nnetsauce.
 date: 2021-09-26
-categories: Python, QuasiRandomizedNN
+categories: [Python, QuasiRandomizedNN]
 ---
 
 In this post, I illustrate _classification using linear regression_, as implemented in Python/R package `nnetsauce`, and more precisely, in `nnetsauce`'s  `MultitaskClassifier`. If you're not interested in reading about the model description, you can jump directly to the 2nd section, "Two examples in Python". In addition, the [source code](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/multitask/multitaskClassifier.py) is relatively self-explanatory.
