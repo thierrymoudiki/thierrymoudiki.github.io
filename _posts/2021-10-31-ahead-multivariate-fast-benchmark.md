@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Fast and scalable forecasting with `ahead::ridge2f`"
-description: Fast and scalable multivariate time series forecasting with `ahead::ridge2f`.
+title: "Fast and scalable forecasting with ahead::ridge2f"
+description: Fast and scalable multivariate time series forecasting with ahead::ridge2f.
 date: 2021-10-31
 categories: [R, Misc]
 ---
