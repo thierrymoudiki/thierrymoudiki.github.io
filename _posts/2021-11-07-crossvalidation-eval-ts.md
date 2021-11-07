@@ -127,5 +127,3 @@ print(median(res_eval_linear))
 [1] 86.47903
 ```
 
-The same evaluation can be made for `kernel = "radial"`, but it shouldn't. Otherwise, it would mean 
-that we are trying to overfit the unseen data... 
