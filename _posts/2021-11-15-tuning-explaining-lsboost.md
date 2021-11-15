@@ -3,7 +3,7 @@ layout: post
 title: "Tuning and interpreting LSBoost"
 description: Hyperparameter tuning and interpretation of LSBoost output.
 date: 2021-11-15
-categories: [Python, QuasiRandomizedNN]
+categories: [Python, QuasiRandomizedNN, mlsauce]
 ---
 
 There is a plethora of [Automated Machine Learning](https://en.wikipedia.org/wiki/Automated_machine_learning) 
