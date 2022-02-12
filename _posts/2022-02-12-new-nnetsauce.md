@@ -46,7 +46,7 @@ obj$fit(X_train, y_train)
 print(obj$score(X_test, y_test)) # accuracy
 ```
 
-**R session info: **
+**R session info:**
 
 ```R
 > sessionInfo()
