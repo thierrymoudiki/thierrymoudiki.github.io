@@ -66,23 +66,23 @@ from scikeras.wrappers import KerasRegressor
 
 The dataset used for this demo, the California housing dataset (imported by sklearn's `fetch_california_housing`), has the following description: 
 
-  - __Response__ / __target__ to be explained: median __house value for California districts__, in hundreds of thousands of dollars ($100,000)
-  
-  - __MedInc__: median income in block group
-  
-  - __HouseAge__: median house age in block group
-  
-  - __AveRooms__: average number of rooms per household
-  
-  - __AveBedrms__: average number of bedrooms per household
-  
-  - __Population__: block group population
-  
-  - __AveOccup__: average number of household members
-  
-  - __Latitude__: block group latitude
-  
-  - __Longitude__: block group longitude
+    - __Response__ / __target__ to be explained: median __house value for California districts__, in hundreds of thousands of dollars ($100,000)
+    
+    - __MedInc__: median income in block group
+    
+    - __HouseAge__: median house age in block group
+    
+    - __AveRooms__: average number of rooms per household
+    
+    - __AveBedrms__: average number of bedrooms per household
+    
+    - __Population__: block group population
+    
+    - __AveOccup__: average number of household members
+    
+    - __Latitude__: block group latitude
+    
+    - __Longitude__: block group longitude
   
 
 ```python
