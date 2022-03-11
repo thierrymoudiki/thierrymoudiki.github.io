@@ -20,7 +20,7 @@ We start by __installing the following tools__:
   pip install autokeras
   ```
   
-  It's worth mentioning that I'm not using `autokeras` here to obtain a _perfect_ model (try a Random Forest on the 
+  It's worth mentioning that I'm not using `autokeras` here to obtain a _perfect_ model (try a Random Forest in the 
   same setting as the one described below ;) ). Rather, 
   I'm using it to obtain a relatively _good_ Keras model without much manual tuning. 
   
