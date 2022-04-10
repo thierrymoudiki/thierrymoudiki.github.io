@@ -138,11 +138,7 @@ In **version 0.11.3**:
 - Implementation of a `RandomBagRegressor`; an ensemble of [CustomRegressors](https://techtonique.github.io/nnetsauce/documentation/regressors/#customregressor) 
   in which diversity is achieved by sampling the columns and rows of an input dataset. A Python example can be found [here on GitHub](https://github.com/Techtonique/nnetsauce/blob/master/examples/randombag_regression.py). 
   
-- In `MTS` class (univariate and multivariate time series forecasting), no more lower and upper bounds 
-  of prediction intervals. Only standard deviation is returned when `return_std` is set to `True` (see Python 
-  example below for more details). 
-  
-- Use of pandas DataFrames in Python, for `MTS` (see Python example below for details)
+- Use of pandas DataFrames in Python, for `MTS` (**a work in progress!**) (see Python example below for details)
 
 ```python
 # Using a data frame input for forecasting with `MTS`
