@@ -30,7 +30,7 @@ The future for [R package `bcn`](https://github.com/Techtonique/bcn) (in no part
 | Dataset      | BCN test set Accuracy | Random Forest test set accuracy |
 |--------------|:-----:|-----------:|
 | iris |  **100%** |        93.33% |
-| Wine |  **97.22%** |      94.44% |
+| Wine |  **97.22%** |      **97.22%** |
 | Ionosphere |  90.14% |      **95.77%** |
 | Breast cancer |  **99.12%** |        94.73% |
 | Digits |  97.5% |        **98.61%** |
@@ -79,7 +79,7 @@ help(package = 'bcn')
 Loading packages: 
 
 ```R
-library(bcn) # Boosted Configuration networks (only for classification, for now)
+library(bcn) # Boosted Configuration networks 
 library(mlbench) # Machine Learning Benchmark Problems
 library(caret)
 library(randomForest)
@@ -110,7 +110,7 @@ y_test <- iris$Species[-train_idx]
 ptm <- proc.time()
 fit_obj <- bcn::bcn(x = X_train, y = y_train, B = 10L, nu = 0.335855,
                     lam = 10**0.7837525, r = 1 - 10**(-5.470031), tol = 10**-7,
-                    activation = "tanh", type_optim = "nlminb", show_progress = FALSE)
+                    activation = "tanh", type_optim = "nlminb", show_progress = TRUE)
 cat("Elapsed: ", (proc.time() - ptm)[3])
 ```
 
@@ -127,6 +127,7 @@ table(y_test, preds)
 ```
 
 ```R
+set.seed(1234)
 rf <- randomForest::randomForest(x = X_train, y = y_train)
 mean(predict(rf, newdata=as.matrix(X_test)) == y_test)
 ```
@@ -161,7 +162,7 @@ y_test <- as.factor(wine$target[-train_idx])
 ptm <- proc.time()
 fit_obj <- bcn::bcn(x = X_train, y = y_train, B = 6L, nu = 0.8715725,
                     lam = 10**0.2143678, r = 1 - 10**(-6.1072786),
-                    tol = 10**-4.9605713, show_progress = FALSE)
+                    tol = 10**-4.9605713, show_progress = TRUE)
 cat("Elapsed: ", (proc.time() - ptm)[3])
 ```
 
@@ -179,6 +180,7 @@ table(y_test, preds)
 ```
 
 ```R
+set.seed(1234)
 rf <- randomForest::randomForest(x = X_train, y = y_train)
 mean(predict(rf, newdata=as.matrix(X_test)) == y_test)
 ```
@@ -219,7 +221,7 @@ fit_obj <- bcn::bcn(x = X_train,
                      col_sample = 0.7956659,
                      tol = 10**-7,
                      verbose=FALSE,
-                     show_progress = FALSE)
+                     show_progress = TRUE)
 cat("Elapsed: ", (proc.time() - ptm)[3])
 ```
 
@@ -237,6 +239,7 @@ table(y_test, preds)
 ```
 
 ```R
+set.seed(1234)
 rf <- randomForest::randomForest(x = X_train, y = y_train)
 mean(predict(rf, newdata=as.matrix(X_test)) == y_test)
 ```
@@ -280,7 +283,7 @@ y_test <- as.factor(breast_cancer$target[-train_idx])
 ```R
 ptm <- proc.time()
 fit_obj <- bcn::bcn(x = X_train, y = y_train, B = 31L, nu = 0.4412851,
-                    lam = 10**-0.2439358, r = 1 - 10**(-7), col_sample = 0.5, tol = 10**-2, show_progress = FALSE)
+                    lam = 10**-0.2439358, r = 1 - 10**(-7), col_sample = 0.5, tol = 10**-2, show_progress = TRUE)
 cat("Elapsed: ", (proc.time() - ptm)[3])
 ```
 
@@ -298,6 +301,7 @@ table(y_test, preds)
 ```
 
 ```R
+set.seed(1234)
 rf <- randomForest::randomForest(x = X_train, y = y_train)
 mean(predict(rf, newdata=as.matrix(X_test)) == y_test)
 ```
@@ -348,7 +352,7 @@ fit_obj <- bcn::bcn(x = X_train,
                     col_sample = 0.8928518,
                     tol = 10**-5.483609,
                     verbose=FALSE,
-                    show_progress = FALSE)
+                    show_progress = TRUE)
 cat("Elapsed: ", (proc.time() - ptm)[3])
 ```
 
@@ -366,6 +370,7 @@ table(y_test, preds)
 ```
 
 ```R
+set.seed(1234)
 rf <- randomForest::randomForest(x = X_train, y = y_train)
 mean(predict(rf, newdata=as.matrix(X_test)) == y_test)
 ```
@@ -429,7 +434,7 @@ y_test <- factor(y[-index_train])
 ptm <- proc.time()
 fit_obj <- bcn::bcn(x = X_train, y = y_train, B = 23, nu = 0.470043,
                     lam = 10**-0.05766029, r = 1 - 10**(-7.905866), tol = 10**-7, 
-                    show_progress = FALSE)
+                    show_progress = TRUE)
 cat("Elapsed: ", (proc.time() - ptm)[3])
 ```
 
@@ -447,6 +452,7 @@ table(y_test, preds)
 ```
 
 ```R
+set.seed(1234)
 rf <- randomForest::randomForest(x = X_train, y = y_train)
 mean(predict(rf, newdata=as.matrix(X_test)) == y_test)
 ```
