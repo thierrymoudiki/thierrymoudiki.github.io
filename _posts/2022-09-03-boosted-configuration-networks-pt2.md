@@ -15,7 +15,7 @@ One important point that I touched upon in [BCNs introductory  post](https://thi
 
 After publishing [the post](https://thierrymoudiki.github.io/blog/2022/07/21/r/misc/boosted-configuration-networks), I was curious to see **how `stats::nlminb` could behave on _difficult_ problems**, versus derivative-free optimizers. For this purpose: 
 
-  - I've used **8 of the 23 benchmark functions** extensively described in references [1] and [2] below:  $f_1, f_2, f_3, f_4, f_6, f_9, f_{10}, f_{11}$. For the results to be relatively comparable, only functions with inputs of dimension 30, and minimum equal to 0 at (0, 0, ..., 0) were considered. It's worth mentioning that the Genetic Algorithm (GA) presented in [2] -- actually, any GA -- can't be used for  obtaining SLFNNs' weights and biases **in the BCN loop**. GAs aren't fast enough in this particular context.
+  - I've used **8 of the 23 benchmark functions** extensively described in references [1] and [2] below:  $$f_1, f_2, f_3, f_4, f_6, f_9, f_{10}, f_{11}$$. For the results to be relatively comparable, only functions with inputs of dimension 30, and minimum equal to 0 at (0, 0, ..., 0) were considered. It's worth mentioning that the Genetic Algorithm (GA) presented in [2] -- actually, any GA -- can't be used for  obtaining SLFNNs' weights and biases **in the BCN loop**. GAs aren't fast enough in this particular context.
   - The **derivative-free optimization methods** (used in `bcn::bcn`) that I benchmarked alongside `stats::nlminb` (default method) are: 
     - `dfoptim::hjkb`: Hooke-Jeeves derivative-free minimization algorithm
     - `minqa::bobyqa`: minimizes a function of many variables by a trust region method that forms quadratic models by interpolation
@@ -235,35 +235,35 @@ results %>%
 
 **Detailed summary (boxplots) for each objective function**
 
-Summary for $f_{1}$
+Summary for $$f_{1}$$
   
   ![f1]({{base}}/images/2022-09-03/f1-results-1.png){:class="img-responsive"}
 
-Summary for $f_{2}$
+Summary for $$f_{2}$$
   
   ![f2]({{base}}/images/2022-09-03/f2-results-1.png){:class="img-responsive"}
 
-Summary for $f_{3}$
+Summary for $$f_{3}$$
   
   ![f3]({{base}}/images/2022-09-03/f3-results-1.png){:class="img-responsive"}
 
-Summary for $f_{4}$
+Summary for $$f_{4}$$
   
   ![f4]({{base}}/images/2022-09-03/f4-results-1.png){:class="img-responsive"}
 
-Summary for $f_{6}$
+Summary for $$f_{6}$$
   
   ![f6]({{base}}/images/2022-09-03/f6-results-1.png){:class="img-responsive"}
 
-Summary for $f_{9}$
+Summary for $$f_{9}$$
   
   ![f9]({{base}}/images/2022-09-03/f9-results-1.png){:class="img-responsive"}
 
-Summary for $f_{10}$
+Summary for $$f_{10}$$
   
   ![f10]({{base}}/images/2022-09-03/f10-results-1.png){:class="img-responsive"}
 
-Summary for $f_{11}$
+Summary for $$f_{11}$$
   
   ![f11]({{base}}/images/2022-09-03/f11-results-1.png){:class="img-responsive"}
 
