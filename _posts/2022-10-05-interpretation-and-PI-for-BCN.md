@@ -8,10 +8,10 @@ categories: [Python, ExplainableML]
 
 In this post, I use the following Python packages: 
 
-- [`BCN`](https://github.com/Techtonique/bcn_python): for **adjusting Boosted Configuration Networks** regression (see [post 1](https://thierrymoudiki.github.io/blog/2022/07/21/r/misc/boosted-configuration-networks) and [post 2](https://thierrymoudiki.github.io/blog/2022/09/03/r/boosted-configuration-networks-pt2) for more 
-details on BCNs, and [this notebook](https://github.com/Techtonique/bcn_python/blob/main/BCN/demo/thierrymoudiki_051022_bcn_classification.ipynb) for classification examples) to `sklearn`'s [`diabetes` dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset).
-
-- [`the-teller`](https://github.com/Techtonique/teller): for **interpreting BCNs**, and obtaining **prediction intervals**. So far, as of  october 2022, `the-teller` contains two methods for constructing prediction intervals: **split conformal** and **local conformal**. For more details on both of these methods, the interested reader can consult [1]. Despite their potential drawbacks (listed in [1]), they're **model-agnostic**, i.e they do not require in particular for the user to adjust a quantile regression model.
+  - [`BCN`](https://github.com/Techtonique/bcn_python): for **adjusting Boosted Configuration Networks** regression (see [post 1](https://thierrymoudiki.github.io/blog/2022/07/21/r/misc/boosted-configuration-networks) and [post 2](https://thierrymoudiki.github.io/blog/2022/09/03/r/boosted-configuration-networks-pt2) for more 
+  details on BCNs, and [this notebook](https://github.com/Techtonique/bcn_python/blob/main/BCN/demo/thierrymoudiki_051022_bcn_classification.ipynb) for classification examples) to `sklearn`'s [`diabetes` dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset).
+  
+  - [`the-teller`](https://github.com/Techtonique/teller): for **interpreting BCNs**, and obtaining **prediction intervals**. So far, as of  october 2022, `the-teller` contains two methods for constructing prediction intervals: **split conformal** and **local conformal**. For more details on both of these methods, the interested reader can consult [1]. Despite their potential drawbacks (listed in [1]), they're **model-agnostic**, i.e they do not require in particular for the user to adjust a quantile regression model.
 
 **Content**
 
