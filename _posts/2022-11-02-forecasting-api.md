@@ -149,7 +149,7 @@ will be used here for authentication. You should read [the API's  documentation]
 
 **Using  `curl`**
 
-```curl
+```bash
 curl -u eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpOCsOC8-I:x -F 'file=@/Users/t/Documents/datasets/time_series/univariate/USAccDeaths.csv' "https://techtonique2.herokuapp.com/api/theta?h=10&level=95"
 ```
 If you want to translate these commands from `curl` to your favorite programming language (Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest), you can simply use the following website: https://curlconverter.com/.  
