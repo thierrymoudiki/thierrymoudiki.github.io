@@ -21,12 +21,12 @@ categories: [Python, R, Forecasting, Misc]
 In this post, I'll describe an (work-in-progress) Application Programming Interface (API) for time series forecasting. An API is a system that can receive requests from your computer, to carry out given tasks on given resources, and return a response. This type of system is programming-language-agnostic. That means: it can be used with Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Java, MATLAB, Julia, and any other programming language speaking http. And therefore, it could be relatively easily integrated into existing workflows for uncertainty forecasting. I've used the following tools for building it: 
 
 <ul>
-  <li> Python's [Flask](https://flask.palletsprojects.com/en/2.2.x/) for backend development </li>
-  <li> [Bootswatch](https://bootswatch.com/) for the HTML/CSS theme </li>
-  <li> Python's [Plotly](https://plotly.com/python/) for interactive graphs </li>
-  <li> [SQLAlchemy](https://www.sqlalchemy.org/)/[PostgreSQL](https://www.postgresql.org/) for database management </li>
-  <li> [Swagger](https://swagger.io/) for API documentation </li>
-  <li> Salesforce's [Heroku](https://www.heroku.com/) (Cloud Application Platform) for deploying the application </li>
+  <li> Python's <a href="https://flask.palletsprojects.com/en/2.2.x/">Flask</a> for backend development </li>
+  <li>  <a href="https://bootswatch.com/">Bootswatch</a> for the HTML/CSS theme </li>
+  <li>  <a href="https://plotly.com/python/">Plotly</a> for interactive graphs </li>
+  <li>  <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>| <a href="https://www.postgresql.org/">PostgreSQL</a>  for database management </li>
+  <li>  <a href="https://swagger.io/">Swagger</a> for API documentation </li>
+  <li>  Salesforce's <a href="https://www.heroku.com/">Heroku</a> (Cloud Application Platform) for deploying the application </li>
 </ul>
 
 
@@ -36,7 +36,7 @@ In this post, I'll describe an (work-in-progress) Application Programming Interf
 
 ![app's homepage]({{base}}/images/2022-11-02/2022-11-02-image1.png){:class="img-responsive"}
 
-In the homepage ("/"), you can plot a time series by uploading a csv file, and pushing the button "Plot!". Some examples of input files are stored on GitHub, at [Techtonique/datasets/time_series/univariate](https://github.com/Techtonique/datasets/tree/main/time_series/univariate). Hover your cursor over the graph to see the options available, like downloading as png, zooming in and out, etc. Let's describe the API now.
+In the homepage ("/"), you can plot a time series by uploading a csv file, and pushing the button "Plot!". Some examples of input files are stored on GitHub, at [https://github.com/Techtonique/datasets/tree/main/time_series/univariate](https://github.com/Techtonique/datasets/tree/main/time_series/univariate). Hover your cursor over the graph to see the options available, like downloading as png, zooming in and out, etc. Let's describe the API now.
 
 ## 1 - Create an account:
 
@@ -50,7 +50,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"username":"tester_curl@ex
 ```
 
 
-If you want to translate these commands from `curl` to your favorite programming language (Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest), you can simply use the following website: https://curlconverter.com/. Of course, it's important to <u>[choose a better password](https://www.lifewire.com/strong-password-examples-2483118)</u>!
+If you want to translate these commands from `curl` to your favorite programming language (Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest), you can simply use the following website: [https://curlconverter.com/](https://curlconverter.com/). Of course, it's important to [choose a better password](https://www.lifewire.com/strong-password-examples-2483118)!
 
 
 **Using  Python**
@@ -105,7 +105,7 @@ requests to `https://` and not `http://`.
 curl -u tester_curl@example.com:pwd -X GET https://techtonique2.herokuapp.com/api/token 
 ```
 
-If you want to translate these commands from `curl` to your favorite programming language (Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest), you can simply use the following website: https://curlconverter.com/.  
+If you want to translate these commands from `curl` to your favorite programming language (Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest), you can simply use the following website: [https://curlconverter.com/](https://curlconverter.com/).  
 
 
 **Using  Python**
@@ -152,7 +152,7 @@ will be used here for authentication. You should read [the API's  documentation]
 ```bash
 curl -u eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpOCsOC8-I:x -F 'file=@/Users/t/Documents/datasets/time_series/univariate/USAccDeaths.csv' "https://techtonique2.herokuapp.com/api/theta?h=10&level=95"
 ```
-If you want to translate these commands from `curl` to your favorite programming language (Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest), you can simply use the following website: https://curlconverter.com/.  
+If you want to translate these commands from `curl` to your favorite programming language (Python, JavaScript, PHP, R, Go, C#, Ruby, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest), you can simply use the following website: [https://curlconverter.com/](https://curlconverter.com/).  
 
 `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpOCsOC8-I` is a simplified example of the type of token which can be obtained in step 2. The csv file sent in the request must be stored on your computer. Examples of such files can be found [here](https://github.com/Techtonique/datasets/tree/main/time_series/univariate).
 
