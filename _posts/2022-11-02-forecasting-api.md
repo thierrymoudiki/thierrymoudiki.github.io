@@ -253,10 +253,10 @@ when you want to compare models' performance, or tune their hyperparameters (mod
 You'd code a loop (with 3-seconds delays between each API call in the loop, because you're nice!) in which: 
 
 <ul>
-  <li>`start_training` is incremented of 1 at each iteration, and `n_training` 
+  <li><code>start_training</code> is incremented of 1 at each iteration, and <code>n_training</code>
   remains constant. 
   </li>
-  <li> `n_training` is incremented of 1 at each iteration, and `start_training` 
+  <li> <code>n_training</code> is incremented of 1 at each iteration, and <code>start_training</code>
   remains constant. 
   </li>
 </ul>
