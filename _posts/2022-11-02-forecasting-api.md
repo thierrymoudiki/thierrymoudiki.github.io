@@ -254,12 +254,10 @@ You'd code a loop (with 3-seconds delays between each API call in the loop, beca
 
 <ul>
   <li>`start_training` is incremented of 1 at each iteration, and `n_training` 
-  remains constant. We'd be in the following cross-validation situation:
-    ![fixed window]({{base}}/images/2022-11-02/2022-11-02-image3.png){:class="img-responsive"} 
+  remains constant. 
   </li>
   <li> `n_training` is incremented of 1 at each iteration, and `start_training` 
-  remains constant. We'd be in the following cross-validation situation:
-  ![rolling window]({{base}}/images/2022-11-02/2022-10-02-image4.png){:class="img-responsive"}
+  remains constant. 
   </li>
 </ul>
   
