@@ -27,9 +27,9 @@ In this post, I'll present two packages, one implemented in R and one in Python,
 
 <ul>
   <li> 0 - Install packages in R or Python </li>
-  <li> 1 - Create an account with `create_account` </li>
-  <li> 2 - Get a token for authentication using `get_token` </li>
-  <li> 3 - Requests for forecasts with `get_forecast` </li>
+  <li> 1 - Create an account with <code>create_account</code> </li>
+  <li> 2 - Get a token for authentication using <code>get_token</code> </li>
+  <li> 3 - Requests for forecasts with <code>get_forecast</code> </li>
 </ul>
 
 ## 0 - Install packages in R or Python:
