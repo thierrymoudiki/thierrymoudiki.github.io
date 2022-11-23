@@ -14,10 +14,10 @@ So far, as of 2022-11-23, this API contains four methods for univariate time
 series forecasting (with prediction intervals): 
 
 <ul>
-  <li>`mean` a (not so naïve) benchmark method, whose prediction is the sample mean.</li>
-  <li>`rw` a (not so naïve) benchmark method, whose prediction is the last value of the input time series.</li>
-  <li>`theta` is the forecasting method described in [1] and [2], which won the M3 competition. </li>
-  <li>`prophet` is a popular model described in [3].</li>
+  <li> <code>mean</code> a (not so naïve) benchmark method, whose prediction is the sample mean.</li>
+  <li> <code>rw</code> a (not so naïve) benchmark method, whose prediction is the last value of the input time series.</li>
+  <li> <code>theta</code> is the forecasting method described in [1] and [2], which won the M3 competition. </li>
+  <li> <code>prophet</code> is a popular model described in [3].</li>
 </ul>
 
 
