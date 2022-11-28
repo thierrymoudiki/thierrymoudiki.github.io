@@ -4,6 +4,7 @@ title: "Simple interfaces to the forecasting API"
 description: "High level Python & R functions for interacting with Techtonique forecasting API"
 date: 2022-11-23
 categories: [Python, R, Forecasting]
+comments: true
 ---
 
 A [few weeks ago](https://thierrymoudiki.github.io/blog/2022/11/02/python/r/forecasting/misc/forecasting-api), I introduced a **forecasting API** (Application Programming Interface). The application can be found here:

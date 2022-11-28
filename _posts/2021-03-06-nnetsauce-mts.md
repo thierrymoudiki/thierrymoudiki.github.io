@@ -4,6 +4,7 @@ title: "An infinity of time series models in nnetsauce"
 description: "An infinity of ML-based time series models in nnetsauce"
 date: 2021-03-06
 categories: [Python, R, QuasiRandomizedNN]
+comments: true
 ---
 
 I was selected and invited to present this family of univariate/multivariate time series models at [R/Finance 2020](https://www.rinfinance.com/) (in Chicago, IL). However, the COVID-19 pandemics decided differently. It's still a work in progress; comments, remarks, pull requests are welcome as usual (in [nnetsauce](https://techtonique.github.io/nnetsauce/index.html)). But the general philosophy of model construction in this framework is already set and will be explained in this post. An R example, with less details about the implementation (so, R users read on) can also be found in this post: [Bayesian forecasting for uni/multivariate time series](https://thierrymoudiki.github.io/blog/2020/12/04/r/quasirandomizednn/bayesian-forecasting). 

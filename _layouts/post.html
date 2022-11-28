@@ -1,7 +1,7 @@
 ---
 layout: default
 comments: true
-title: blog
+title: "blog"
 ---
 
 <!-- template for posts -->
@@ -67,9 +67,11 @@ title: blog
         </div>
  -->        
 
-        <!-- Comments -->
+        <!-- Comments -->        
         <div>
-          {% include disqus.html %} 
+          {% if page.comments == true and site.disqus.shortname %}
+            {% include disqus.html %}
+          {% endif %}
         </div>        
 
         <!-- Mailer lite -->
