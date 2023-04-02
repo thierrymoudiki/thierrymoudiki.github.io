@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A new version of nnetsauce (randomized and quasi-randomized 'neural' networks)"
-description: "Randomized and quasi-randomized 'neural' networks"
+description: "Randomized and quasi-randomized 'neural' networks for supervised learning"
 date: 2023-04-02
 categories: [Python, R, QuasiRandomizedNN]
 comments: true
@@ -17,7 +17,7 @@ comments: true
 
 ## nnetsauce's new version
 
-A new version of [nnetsauce](https://github.com/Techtonique/nnetsauce), v0.12.0, is available on PyPI and for conda. It's been mostly tested on Linux and macOS platforms so far. For Windows users: you can use the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about) in case it doesn't work on your computer.
+A new version of [nnetsauce](https://github.com/Techtonique/nnetsauce), v0.12.0, is available on PyPI and for conda. It's been mostly tested on Linux and macOS platforms. For **Windows users**: you can use the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about) in case it doesn't work directly on your computer.
 
 **As a reminder**, nnetsauce does Statistical/Machine Learning (regression, classification, and time series forecasting for now) using randomized and quasi-randomized _neural_ networks layers. More precisely, every model in nnetsauce is based on components g(XW + b), where:
 
@@ -33,8 +33,9 @@ A new version of [nnetsauce](https://github.com/Techtonique/nnetsauce), v0.12.0,
 ![RVFL]({{base}}/images/2023-04-02/2023-04-02-image1.png){:class="img-responsive"}
 
 
-**v0.12.0 is an important release**, because it's totally written in Python (using numpy, scipy, jax, and  scikit-learn), and doesn't use _C++_ nor _Cython_ anymore. Because of this, nnetsauce is faster to install, and easier to maintain. In addition, when faster calculations are needed, I'd like to try out tools like [numba](https://numba.pydata.org/), or [jax](https://github.com/google/jax)'s `jit` in the near future.
+**v0.12.0 is an important release**, because it's totally written in Python (using numpy, scipy, jax, and  scikit-learn), and doesn't use _C++_ nor _Cython_ anymore. Because of this, nnetsauce is faster to install, and easier to maintain.
 
+If you like using nnetsauce, do not hesitate to **star the repo** or **submit a pull request**!
 
 ## Installing nnetsauce for Python
 
@@ -67,5 +68,6 @@ make install
 ## About nnetsauce for R
 
 The R version is discontinued. Well, 'discontinued' until I finally wrap 
-my head around it... If you're interested in using nnetsauce for R, 
+my head around it... If you're interested in solving this issue, and therefore, using nnetsauce for R, 
 everything happens in [this R script](https://github.com/Techtonique/nnetsauce/blob/master/R-package/R/zzz.R). 
+You can submit a pull request (and **star the repo** ;) )! 
