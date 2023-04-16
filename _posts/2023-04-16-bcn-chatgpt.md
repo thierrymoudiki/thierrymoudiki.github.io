@@ -28,7 +28,7 @@ pip install -U git+https://github.com/Techtonique/bcn_python.git@numpy-conversio
 ```
 
 Here's a [notebook containing examples of use](https://github.com/Techtonique/bcn_python/blob/numpy-conversion/BCN/demo/thierrymoudiki_160423_bcn_classification.ipynb). Starting on Tuesday (April, 18), as the branch will be deleted, you'll use directly: 
-guè§(t§(r<e t§ttgfvcddfyhtbvcy(hys)))
+
 ```bash
 pip install BCN
 ```
