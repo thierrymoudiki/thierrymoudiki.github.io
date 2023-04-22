@@ -21,17 +21,7 @@ Then, I wanted to know how to **assign an R class to an rpy2 object (R list)**. 
 
 ![Affect class to R list]({{base}}/images/2023-04-16/2023-04-16-image2.png){:class="img-responsive"}
 
-To me, even though it's a small example, this was truly amazing. Fast, clear, and precise. StackOverflow would still _win_ in areas such as a **transparency**  on how answers are built: identified people publish questions, other people give their answers to these questions, and there's a vote for the _best_ answer. It would be interesting to see ChatGPT citing its sources in the future, for those who want it. Well, with that being said, the _bug_ was solved and you can use version 0.5.1 of [Python package BCN](https://github.com/Techtonique/bcn_python). For now, you can install version 0.5.1 **from a GitHub branch**: 
-
-```bash
-pip install -U git+https://github.com/Techtonique/bcn_python.git@numpy-conversion
-```
-
-Here's a [notebook containing examples of use](https://github.com/Techtonique/bcn_python/blob/numpy-conversion/BCN/demo/thierrymoudiki_160423_bcn_classification.ipynb). Starting on Tuesday (April, 18), as the branch will be deleted, you'll use directly: 
-
-```bash
-pip install BCN
-```
+To me, even though it's a small example, this was truly amazing. Fast, clear, and precise. StackOverflow would still _win_ in areas such as a **transparency**  on how answers are built: identified people publish questions, other people give their answers to these questions, and there's a vote for the _best_ answer. It would be interesting to see ChatGPT citing its sources in the future, for those who want it. Well, with that being said, the _bug_ was solved and you can use version 0.5.1 of [Python package BCN](https://github.com/Techtonique/bcn_python). Here's a [notebook containing examples of use](https://github.com/Techtonique/bcn_python/blob/main/BCN/demo/thierrymoudiki_160423_bcn_classification.ipynb). 
 
 Armed with my enthusiasm after solving the _bug_, I wanted to ask ChatGPT a LOT of questions: 
 
