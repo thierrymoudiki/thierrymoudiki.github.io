@@ -126,6 +126,6 @@ print(f"\n Elapsed: {time() - start}")
  Elapsed: 0.08791041374206543
 ```
 
-Due to `LSBoostClassifier`'s `tolerance` hyperparameter (equal to 0.05940552 here), the learning 
-procedure is stopped early, and only 8 iterations of the classifier are necessary 
+Due to `LSBoostClassifier`'s `tolerance` hyperparameter, the learning 
+procedure is stopped early, and only 45 iterations of the classifier are necessary 
 to obtain a high accuracy. 
