@@ -6,6 +6,8 @@ date: 2021-06-11
 categories: [Python, Misc]
 ---
 
+Update: 2023-08-01
+
 Statistical/Machine learning models can have multiple _hyperparameters_ 
 that control their performance (out-of-sample accuracy, area under the curve, Root Mean Squared Error, etc.). In this post, in order to determine these hyperparameters for mlsauce's `LSBoostClassifier` (on the [wine dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data)), cross-validation is used along with a [Bayesian optimizer, GPopt]({% post_url 2021-04-16-gpopt %}). The _best_ set of hyperparameters is the one that __maximizes 5-fold cross-validation accuracy__. 
 
@@ -66,7 +68,7 @@ def optimize_lsboost(X_train, y_train):
 
   gp_opt = gp.GPOpt(objective_func=crossval_objective, 
                       lower_bound = np.array([0.001, 5, 1e-2, 0, 0]), 
-                      upper_bound = np.array([0.4, 250, 1e4, 1, 1e-1]),
+                      upper_bound = np.array([0.4, 250, 1e4, 0.7, 1e-1]),
                       n_init=10, n_iter=190, seed=123)    
   return {'parameters': gp_opt.optimize(verbose=2, abs_tol=1e-2), 'opt_object':  gp_opt}
 ```
@@ -90,10 +92,11 @@ print(res)
 ```
 
 ```bash
-{'parameters': (array([ 0.30017694, 33.57635498,  5.50315857,  0.47113037,  0.05940552]), -0.993103448275862), 'opt_object': <GPopt.GPOpt.GPOpt.GPOpt object at 0x7f0373030ad0>}
+{'parameters': (array([2.36980835e-01, 6.82434082e+00, 3.72193011e+03, 4.01013184e-01,
+       3.09204102e-02]), -0.9652709359605911), 'opt_object': <GPopt.GPOpt.GPOpt.GPOpt object at 0x7ab7fc3b5ab0>}
 ```
 
-Cross-validation average accuracy is equal to 99.31%. 
+Cross-validation average accuracy is equal to 96.53%. 
 
 __Test set accuracy__
 
@@ -114,12 +117,13 @@ print(f"\n Elapsed: {time() - start}")
 ```
 
 ```bash
-  8%|▊         | 8/100 [00:00<00:00, 473.55it/s]
+ 45%|████▌     | 45/100 [00:00<00:00, 668.38it/s]
 
- Test set accuracy: 1.0
 
- Elapsed: 0.03318595886230469
 
+ Test set accuracy: 0.9722222222222222
+
+ Elapsed: 0.08791041374206543
 ```
 
 Due to `LSBoostClassifier`'s `tolerance` hyperparameter (equal to 0.05940552 here), the learning 
