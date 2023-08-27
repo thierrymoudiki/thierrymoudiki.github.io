@@ -1,0 +1,42 @@
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.1/ext/ffi_c
+/opt/ruby/2.7.7/bin/ruby -I /opt/ruby/2.7.7/lib/ruby/site_ruby/2.7.0 extconf.rb
+checking for ffi_prep_closure_loc() in -lffi... yes
+checking for ffi_prep_cif_var()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+creating extconf.h
+creating Makefile
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.1/ext/ffi_c
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-1srzs1z sitelibdir\=./.gem.20230822-3511-1srzs1z clean
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.1/ext/ffi_c
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-1srzs1z sitelibdir\=./.gem.20230822-3511-1srzs1z
+compiling AbstractMemory.c
+compiling ArrayType.c
+compiling Buffer.c
+compiling Call.c
+compiling ClosurePool.c
+compiling DynamicLibrary.c
+compiling Function.c
+compiling FunctionInfo.c
+compiling LastError.c
+compiling LongDouble.c
+compiling MappedType.c
+compiling MemoryPointer.c
+compiling MethodHandle.c
+compiling Platform.c
+compiling Pointer.c
+compiling Struct.c
+compiling StructByValue.c
+compiling StructLayout.c
+compiling Thread.c
+compiling Type.c
+compiling Types.c
+compiling Variadic.c
+compiling ffi.c
+linking shared-object ffi_c.so
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/ffi-1.13.1/ext/ffi_c
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-1srzs1z sitelibdir\=./.gem.20230822-3511-1srzs1z install
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20230822-3511-1srzs1z

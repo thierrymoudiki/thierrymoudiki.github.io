@@ -14,7 +14,7 @@ comments: true
 <link rel="stylesheet" href="{{base}}/css/sharing-buttons.css">
 
 <div style="width: 100%; overflow: hidden;">
-    <div style="width: 100px; float: left;"> <img src="{{site.url}}//images/t-logo.png" alt="logo" /> </div>
+    <div style="width: 100px; float: left;"> <a href="{{base}}/blog"><img src="{{base}}/images/t-logo.png" alt="logo" /></a></div>
     <div style="margin-left: 120px;"> <h2>{{page.title}}</h2> </div>
 </div>
 
@@ -23,7 +23,7 @@ comments: true
   <!-- Post's content -->
   <div class="post">	
 
-    <p class="meta">{{ page.date | date_to_string }} | <a href="{{site.url}}/feed.xml">RSS</a> | <a href="{{base}}/blog/index.html#list-posts">Back to list of posts</a>    
+    <p class="meta">{{ page.date | date_to_string }} | <a href="{{base}}/feed.xml">RSS</a> | <a href="{{base}}/blog/index.html#list-posts">Back to list of posts</a>    
     
       <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
       <div class="col-md-12"> 
@@ -72,12 +72,12 @@ comments: true
         </div>        
 
         <!-- Mailer lite -->
-        <div>              
+        <!-- <div>              
             <div class="ml-form-embed"
               data-account="1645632:e9k2y0f6a0"
               data-form="1465116:b1o3c8">
             </div>        
-        </div>            
+        </div>             -->
 
       </div>
 

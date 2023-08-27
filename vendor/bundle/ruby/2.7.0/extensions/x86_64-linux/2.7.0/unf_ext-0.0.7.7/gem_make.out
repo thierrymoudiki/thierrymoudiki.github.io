@@ -1,0 +1,16 @@
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+/opt/ruby/2.7.7/bin/ruby -I /opt/ruby/2.7.7/lib/ruby/site_ruby/2.7.0 extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-oeq6kh sitelibdir\=./.gem.20230822-3511-oeq6kh clean
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-oeq6kh sitelibdir\=./.gem.20230822-3511-oeq6kh
+compiling unf.cc
+linking shared-object unf_ext.so
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-oeq6kh sitelibdir\=./.gem.20230822-3511-oeq6kh install
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20230822-3511-oeq6kh

@@ -1,0 +1,11 @@
+"gcc -o conftest -I/opt/ruby/2.7.7/include/ruby-2.7.0/x86_64-linux -I/opt/ruby/2.7.7/include/ruby-2.7.0/ruby/backward -I/opt/ruby/2.7.7/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/opt/ruby/2.7.7/lib -Wl,-rpath,/opt/ruby/2.7.7/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/opt/ruby/2.7.7/lib -L/opt/ruby/2.7.7/lib -lruby  -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+

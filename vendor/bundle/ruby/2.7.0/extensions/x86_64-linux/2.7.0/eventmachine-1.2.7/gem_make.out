@@ -1,0 +1,16 @@
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/opt/ruby/2.7.7/bin/ruby -I /opt/ruby/2.7.7/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-1pvaqk sitelibdir\=./.gem.20230822-3511-1pvaqk clean
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-1pvaqk sitelibdir\=./.gem.20230822-3511-1pvaqk
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: /workspaces/thierrymoudiki.github.io/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20230822-3511-1pvaqk sitelibdir\=./.gem.20230822-3511-1pvaqk install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20230822-3511-1pvaqk
