@@ -183,6 +183,8 @@ f_xgboost <- function(x, y, ...) xgboost::xgboost(data = x, label = y, ...)
 boxplot(samples, main = "RMSE")
 ```
 
+![Boxplots for Regression models]({{base}}/images/2023-08-27/2023-08-27-image1.png){:class="img-responsive"}
+
 
 # 2 - Classification example
 
@@ -292,3 +294,4 @@ f_xgboost <- function(x, y, ...) {
 boxplot(samples, main = "Accuracy")
 abline(h = 1, col = "red", lty = 2, lwd = 2)
 ```
+![Boxplots for Classification models]({{base}}/images/2023-08-27/2023-08-27-image2.png){:class="img-responsive"}
