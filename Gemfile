@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-gem "jekyll"
 gem "github-pages"
 gem "rouge"
 gem "jemoji"
+gem "jekyll"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
