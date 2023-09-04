@@ -52,13 +52,8 @@ In [R package `ahead`](https://github.com/Techtonique/ahead), it is possible to 
 
 Using `ahead`:
 
-```R include=FALSE}
+```R 
 library(ahead)
-```
-
-```R
-library(ahead)
-library(fpp)
 ```
 
 # 1 - Get and transform data
@@ -96,6 +91,8 @@ obj <- ahead::ridge2f(EuStocksLogReturns, h = 7L,
                       type_pi = 'bootstrap',
                       B = 10L, ym = ym)
 ```
+
+**Checks**
 
 ```R
 rowMeans(obj$neutralized_sims$CAC)
