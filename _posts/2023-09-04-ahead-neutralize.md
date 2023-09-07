@@ -6,7 +6,7 @@ date: 2023-09-04
 categories: [R, Misc]
 ---
 
-A risk-neutral probability (in Quantitative Finance) is a probability measure in which, on average, all the risky assets return the _risk-free_ rate. Risk-neutral probabilities are widely used for the _pricing_ of [derivative](https://en.wikipedia.org/wiki/Derivative_(finance)) products. There are other advanced mathematical definitions of a risk-neutral probability that won't be discussed here. 
+**Update 2023-09-07 and disclaimer** : This is a _work in progress_, and some components are certainly missing. Submit an issue/discussion/pull request on GitHub if you want. 
 
 In [R package `ahead`](https://github.com/Techtonique/ahead), it is possible to obtain simulations of risky assets returns both in historical and risk-neutral probability. 
 
