@@ -8,7 +8,7 @@ categories: [Python, Forecasting]
 
 
 A _new_ Python version of [`ahead`](https://github.com/Techtonique/ahead_python) is now available on GitHub
-and PyPI. `ahead` is a package for univariate and multivariate time series forecasting, with **uncertainty 
+and PyPI. `ahead` is a package (Python and R) for univariate and multivariate time series forecasting, with **uncertainty 
 quantification** (in particular, simulation-based). 
 
 Here are the new features: 
