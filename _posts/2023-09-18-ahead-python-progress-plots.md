@@ -22,7 +22,7 @@ Since this implementation is based on the R version, it could take some time to 
 
 # Example 1
 
-Start by installing `ahead`:
+Start by installing `ahead` v0.9.0:
 
 ```bash
 pip install ahead
