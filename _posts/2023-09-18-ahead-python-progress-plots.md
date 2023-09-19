@@ -22,10 +22,17 @@ Since this implementation is based on the R version, it could take some time to 
 
 # Example 1
 
+Start by installing `ahead`:
+
+```bash
+pip install ahead
+```
+
 ```Python
 import numpy as np
 import pandas as pd
 from time import time
+from ahead import Ridge2Regressor # this is where the R packages are installed (if not available in the environment, and ONLY the 1st time)
 
 url = "https://raw.githubusercontent.com/thierrymoudiki/mts-data/master/heater-ice-cream/ice_cream_vs_heater.csv"
 
@@ -44,7 +51,7 @@ regr1 = Ridge2Regressor(h = 10, date_formatting = "original",
                      margins="empirical",
                      B=50, seed=1)
 
-regr1.forecast(df) 
+regr1.forecast(df) # this is where the R packages are installed (if not available in the environment, and ONLY the 1st time)
 
 regr1.plot(0) # dates are missing, + want to use series names
 regr1.plot(1)
