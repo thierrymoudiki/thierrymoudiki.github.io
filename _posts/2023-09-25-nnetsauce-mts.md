@@ -16,7 +16,7 @@ You can read [this post](https://thierrymoudiki.github.io/blog/2021/03/06/python
 In the examples presented here, I focus on **uncertainty quantification**: 
 
 - **simulation-based**, using [Kernel Density Estimation](https://en.wikipedia.org/wiki/Kernel_density_estimation) of the [residuals](https://en.wikipedia.org/wiki/Errors_and_residuals)
-- a **Bayesian** approach, even though 'Bayesianism' is _in hot water_ these days. Its _subjectivity_? I must admit that choosing a prior distribution is quite an _interesting_ (interpret 'interesting' here as you want, I mean both good and bad) experiment. But 'Bayesianism', [Gaussian Processes](http://gaussianprocess.org/gpml/) in particular, works quite well in settings such as [hyperparameters tuning](https://thierrymoudiki.github.io/blog/2021/04/16/python/misc/gpopt)(I hope the code still works) for example 
+- a **Bayesian** approach, even though 'Bayesianism' is _in hot water_ these days. Its _subjectivity_? I must admit that choosing a prior distribution is quite an _interesting_ (interpret 'interesting' here as you want, I mean both good and bad) experiment. But 'Bayesianism', [Gaussian Processes](http://gaussianprocess.org/gpml/) in particular, works quite well in settings such as [hyperparameters tuning](https://thierrymoudiki.github.io/blog/2021/04/16/python/misc/gpopt) (I hope the code still works) for example 
 
 [Conformal prediction](https://thierrymoudiki.github.io/blog/2022/10/05/python/explainableml/interpretation-and-PI-for-BCN), the new cool kid on the uncertainty quantification block, will certainly be included in future versions of the tool.  
 
@@ -24,8 +24,8 @@ In the examples presented here, I focus on **uncertainty quantification**:
 
 - 0 - Install and import packages + get data
 - 1 - Simulation-based forecasting using Kernel Density Estimation
-       - 1 - 1 With Ridge regression
-       - 1 - 2 With Random Forest
+- 1 - 1 With Ridge regression
+- 1 - 2 With Random Forest
 - 2 - Bayesian Forecasting
 - Appendix
 
