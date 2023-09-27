@@ -7,7 +7,7 @@ categories: [Python, Forecasting, QuasiRandomizedNN]
 comments: true
 ---
 
-**Update 2023-09-27**: `conda` users, `v0.13.0` [is now available](https://github.com/conda-forge/nnetsauce-feedstock/releases/tag/v0.13.0) for Linux and macOS. For Windows, please use [WSL2](https://t.co/SIS6KsPQ0I).
+**Update 2023-09-27**: `conda` users, `v0.13.0` of nnetsauce [is now available](https://github.com/conda-forge/nnetsauce-feedstock/releases/tag/v0.13.0) for Linux and macOS. For Windows, please use [WSL2](https://t.co/SIS6KsPQ0I).
 
 As [I said a few years ago](https://thierrymoudiki.github.io/blog/2021/03/06/python/r/quasirandomizednn/nnetsauce-mts), this is a family of univariate/multivariate time series forecasting models that I was supposed to present at [R/Finance 2020](https://www.rinfinance.com/) (this post is **100% Python**) in Chicago, IL. But the COVID-19 decided differently. 
 
