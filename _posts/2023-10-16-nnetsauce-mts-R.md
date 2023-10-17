@@ -92,6 +92,9 @@ start = time()
 obj_MTS3.fit(df_train)
 print(f"Elapsed {time()-start} s")
 
+# predict 
+obj_MTS3.predict()
+
 obj_MTS3.plot("heater")
 obj_MTS3.plot("ice cream")
 ```
