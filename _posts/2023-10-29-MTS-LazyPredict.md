@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "AutoML in nnetsauce (randomized and quasi-randomized nnetworks) Pt2: multivariate time series"
+title: "AutoML in nnetsauce (randomized and quasi-randomized nnetworks) Pt.2: multivariate time series forecasting"
 description: "AutoML with nnetsauce, that implements randomized and quasi-randomized 'neural' networks for supervised learning and time series forecasting"
 date: 2023-10-29
 categories: [Python, QuasiRandomizedNN]
 comments: true
 ---
 
-Last week, I talked about an AutoML method for regression and classification implemented in Python package `nnetsauce`. This week, my post is about the same method, applied to multivariate time series (MTS) forecasting. 
+Last week, I talked about an AutoML method for regression and classification implemented in Python package `nnetsauce`. This week, my post is about the same AutoML method, applied this time to multivariate time series (MTS) forecasting. 
 
-In the examples below, keep in mind that VAR (Vector Autoregression) and VECM (Vector Error Correction Model) forecasting models aren't thoroughly trained here. `nnetsauce.MTS` isn't really tuned either; this is just a demo. To finish, a probabilistic error metric (instead of Root Mean Squared Error, RMSE) is better for models capturing forecasting uncertainty.
+In the examples below, keep in mind that VAR (Vector Autoregression) and VECM (Vector Error Correction Model) forecasting models aren't thoroughly trained here. `nnetsauce.MTS` isn't really tuned either; this is just a demo. To finish, a probabilistic error metric (instead of the Root Mean Squared Error, RMSE) is better suited  for models capturing forecasting uncertainty.
 
 **Contents**
 
@@ -57,19 +57,11 @@ quarterly = dates["year"] + "Q" + dates["quarter"]
 
 quarterly = dates_from_str(quarterly)
 
-print(mdata.head())
-
-#mdata = mdata[['realgdp','realcons','realinv', 'realgovt',
-#               'realdpi', 'cpi', 'm1', 'tbilrate', 'unemp',
-#               'pop']]
-
 mdata = mdata[['realgovt', 'tbilrate']]
 
 mdata.index = pd.DatetimeIndex(quarterly)
 
 data = np.log(mdata).diff().dropna()
-
-#data = mdata
 
 display(data)
 ```
@@ -77,7 +69,7 @@ display(data)
 
 ```python
 df = data
-#df.set_index('Month', inplace=True)
+
 df.index.rename('date')
 
 idx_train = int(df.shape[0]*0.8)
@@ -692,7 +684,6 @@ results.plot_forecast(steps = df_test.shape[0]);
 ```
 
 ![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image3.png){:class="img-responsive"}
-![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image4.png){:class="img-responsive"}
 
 ## **2 - 3 - VECM**
 
@@ -712,7 +703,6 @@ vecm_res.plot_forecast(steps = df_test.shape[0])
 ```
 
 ![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image5.png){:class="img-responsive"}
-![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image6.png){:class="img-responsive"}
 
 
 out-of-sample errors
@@ -728,12 +718,6 @@ display(('VECM', mean_squared_error(df_test.values, forecast, squared=False)))
     [('nnetsauce.MTS+LassoCV', 0.22102547609924011),
      ('nnetsauce.MTS+ElasticNetCV', 0.22103106562991648),
      ('nnetsauce.MTS+LassoLarsCV', 0.22103468506703655)]
-
-
-
     ('VAR', 0.22128770514262763)
-
-
-
     ('VECM', 0.22170093788693065)
 
