@@ -671,12 +671,9 @@ regr.plot("realgovt")
 regr.plot("tbilrate")
 ```
 
+![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image1.png){:class="img-responsive"}
 
-![png](thierrymoudiki_271023_MTS_LazyPredict_files/thierrymoudiki_271023_MTS_LazyPredict_17_0.png)
-
-
-
-![png](thierrymoudiki_271023_MTS_LazyPredict_files/thierrymoudiki_271023_MTS_LazyPredict_17_1.png)
+![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image2.png){:class="img-responsive"}
 
 
 ## **2 - 2 - VAR**
@@ -694,9 +691,8 @@ VAR_preds = results.forecast(df_train.values[-lag_order:], df_test.shape[0])
 results.plot_forecast(steps = df_test.shape[0]);
 ```
 
-
-![png](thierrymoudiki_271023_MTS_LazyPredict_files/thierrymoudiki_271023_MTS_LazyPredict_20_0.png)
-
+![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image3.png){:class="img-responsive"}
+![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image4.png){:class="img-responsive"}
 
 ## **2 - 3 - VECM**
 
@@ -715,8 +711,8 @@ forecast, lower, upper = vecm_res.predict(df_test.shape[0], 0.05)
 vecm_res.plot_forecast(steps = df_test.shape[0])
 ```
 
-
-![png](thierrymoudiki_271023_MTS_LazyPredict_files/thierrymoudiki_271023_MTS_LazyPredict_23_0.png)
+![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image5.png){:class="img-responsive"}
+![image-title-here]({{base}}/images/2023-10-29/2023-10-29-image6.png){:class="img-responsive"}
 
 
 out-of-sample errors
