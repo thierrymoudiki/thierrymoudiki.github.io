@@ -9,7 +9,7 @@ comments: true
 
 Last week, I talked about an AutoML method for regression and classification implemented in Python package `nnetsauce`. This week, my post is about the same AutoML method, applied this time to multivariate time series (MTS) forecasting. 
 
-In the examples below, keep in mind that VAR (Vector Autoregression) and VECM (Vector Error Correction Model) forecasting models aren't thoroughly trained here. `nnetsauce.MTS` isn't really tuned either; this is just a demo. To finish, a probabilistic error metric (instead of the Root Mean Squared Error, RMSE) is better suited  for models capturing forecasting uncertainty.
+In the examples below, keep in mind that VAR (Vector Autoregression) and VECM (Vector Error Correction Model) forecasting models aren't thoroughly trained. `nnetsauce.MTS` isn't really tuned either; this is just a demo. To finish, a probabilistic error metric (instead of the Root Mean Squared Error, RMSE) is better suited for models capturing forecasting uncertainty.
 
 **Contents**
 
