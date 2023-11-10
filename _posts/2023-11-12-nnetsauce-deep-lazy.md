@@ -558,7 +558,7 @@ plt.show()
 ```
 
 
-![png](2023_11_09_lazy_deep_classifier_files/2023_11_09_lazy_deep_classifier_7_0.png)
+![image-title-here]({{base}}/images/2023-11-12/2023-11-12-image1.png){:class="img-responsive"}
 
 
 # 2 - iris data
@@ -1077,7 +1077,7 @@ plt.show()
 ```
 
 
-![png](2023_11_09_lazy_deep_classifier_files/2023_11_09_lazy_deep_classifier_12_0.png)
+![image-title-here]({{base}}/images/2023-11-12/2023-11-12-image2.png){:class="img-responsive"}
 
 
 # 3 - wine data
@@ -1596,7 +1596,7 @@ plt.show()
 ```
 
 
-![png](2023_11_09_lazy_deep_classifier_files/2023_11_09_lazy_deep_classifier_17_0.png)
+![image-title-here]({{base}}/images/2023-11-12/2023-11-12-image3.png){:class="img-responsive"}
 
 
 # 4 - digits data
@@ -2122,7 +2122,7 @@ plt.show()
 ```
 
 
-![png](2023_11_09_lazy_deep_classifier_files/2023_11_09_lazy_deep_classifier_22_0.png)
+![image-title-here]({{base}}/images/2023-11-12/2023-11-12-image4.png){:class="img-responsive"}
 
 
 
@@ -2132,5 +2132,5 @@ plt.show()
 ```
 
 
-![png](2023_11_09_lazy_deep_classifier_files/2023_11_09_lazy_deep_classifier_23_0.png)
+![image-title-here]({{base}}/images/2023-11-12/2023-11-12-image5.png){:class="img-responsive"}
 
