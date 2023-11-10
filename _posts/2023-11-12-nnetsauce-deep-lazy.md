@@ -13,9 +13,9 @@ Version `v0.15.0` of `nnetsauce` is now available on your favorite platforms: [P
 - _lazy_ prediction for multivariate time series (MTS): see [this post](https://thierrymoudiki.github.io/blog/2023/10/29/python/quasirandomizednn/MTS-LazyPredict) for more details (and remember to use `pip install nnetsauce` instead of installing from a GitHub branch named `lazy-predict`)
 - _lazy_ prediction with **_deep_ quasi-randomized _nnetworks_** will be described in this post
 
-Note that in the example below, for the offically released version (v0.15.0), Gradient boosting classifiers are available. This doesn't change the best model chosen by the algorithm (which is never Gradient boosting). To finish, for Windows users, if you run into issues when trying to install `nnetsauce`: remember that you can use the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install)
+Note that in the example below, for the offically released version (v0.15.0), Gradient boosting classifiers are available. This doesn't change the best model chosen by the algorithm (which is never Gradient boosting). To finish, for Windows users, if you run into issues when trying to install `nnetsauce`: remember that you can use the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). 
 
-**Contents**
+<h1 id="contents">Contents</h1>
 
 <ul>
   <li> <a href="#0---install-and-import-packages">0 - Install and import packages</a> </li>
@@ -25,8 +25,14 @@ Note that in the example below, for the offically released version (v0.15.0), Gr
   <li> <a href="#4---digits-data">4 - digits data</a> </li>
 </ul>
 
+Here is a [jupyter notebook](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_091123_lazy_deep_classifier.ipynb) reproducing these results. Do not hesitate 
+to modify these examples by choosing -- in `LazyDeepClassifier` -- a different number of layers `n_layers` or the number of 
+engineered features _per_ layer, `n_hidden_features`. 
+
 
 # 0 - Install and import packages 
+
+<a href="#contents">top</a>
 
 ```python
 !pip install nnetsauce --upgrade
@@ -44,7 +50,7 @@ from time import time
 
 # 1 - breast cancer data
 
-<a href="#">top</a>
+<a href="#contents">top</a>
 
 ```python
 data = load_breast_cancer()
@@ -563,7 +569,7 @@ plt.show()
 
 # 2 - iris data
 
-<a href="#">top</a>
+<a href="#contents">top</a>
 
 ```python
 data = load_iris()
@@ -1082,7 +1088,7 @@ plt.show()
 
 # 3 - wine data
 
-<a href="#">top</a>
+<a href="#contents">top</a>
 
 ```python
 data = load_wine()
@@ -1601,7 +1607,7 @@ plt.show()
 
 # 4 - digits data
 
-<a href="#">top</a>
+<a href="#contents">top</a>
 
 ```python
 data = load_digits()
