@@ -2,18 +2,22 @@
 layout: post
 title: "A classifier that's very accurate (and deep)"
 description: "nnetsauce version 0.15.0, an example of a deep-layered classifier calibrated with Automated Machine Learning (AutoML)"
-date: 2023-11-10
+date: 2023-11-12
 categories: [Python, R, QuasiRandomizedNN]
 comments: true
 ---
 
-Version `v0.15.0` of `nnetsauce` is now available on your favorite platforms: [PyPI](https://pypi.org/project/nnetsauce/), [conda](https://anaconda.org/conda-forge/nnetsauce) and [GitHub](https://github.com/Techtonique/nnetsauce). The changes in this version are mostly related to  **Automated Machine learning (AutoML)**: 
+Version `v0.15.0` of `nnetsauce` is now available on your favorite platforms: [PyPI](https://pypi.org/project/nnetsauce/), [conda](https://anaconda.org/conda-forge/nnetsauce) and [GitHub](https://github.com/Techtonique/nnetsauce) for Python; [R universe](https://techtonique.r-universe.dev/nnetsauce) and [GitHub](https://github.com/Techtonique/nnetsauce_r) for R. 
 
-- _lazy_ prediction for classification and regression: see [this post](https://thierrymoudiki.github.io/blog/2023/10/22/python/quasirandomizednn/nnetsauce-lazy-predict-preview) for more details (and remember to use `pip install nnetsauce` instead of installing from a GitHub branch named `lazy-predict`)
-- _lazy_ prediction for multivariate time series (MTS): see [this post](https://thierrymoudiki.github.io/blog/2023/10/29/python/quasirandomizednn/MTS-LazyPredict) for more details (and remember to use `pip install nnetsauce` instead of installing from a GitHub branch named `lazy-predict`)
+The changes in this version are mostly related to  **Automated Machine learning (AutoML)**: 
+
+- _lazy_ prediction for classification and regression: see [this post](https://thierrymoudiki.github.io/blog/2023/10/22/python/quasirandomizednn/nnetsauce-lazy-predict-preview) for more details on the subject (and remember to use `pip install nnetsauce` directly, instead of installing from a GitHub branch named `lazy-predict`)
+- _lazy_ prediction for multivariate time series (MTS): see [this post](https://thierrymoudiki.github.io/blog/2023/10/29/python/quasirandomizednn/MTS-LazyPredict) for more details on the subject (and remember to use `pip install nnetsauce` directly, instead of installing from a GitHub branch named `lazy-predict`)
 - _lazy_ prediction with **_deep_ quasi-randomized _nnetworks_** will be described in this post
 
-Note that in the example below, for the offically released version (v0.15.0), Gradient boosting classifiers are available. This doesn't change the best model chosen by the algorithm (which is never Gradient boosting). To finish, for Windows users, if you run into issues when trying to install `nnetsauce`: remember that you can use the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). 
+Note that in the example below, for the offically released version (v0.15.0), Gradient boosting classifiers are available. This doesn't change the best model chosen by the algorithm (which is never Gradient boosting, because **the deep model is already doing "too much"**). Not sure if Gradient boosting will be kept as a default model here because, in this context, it's relatively slow.  
+
+To finish, for Windows users, if you run into issues when trying to install `nnetsauce` (but you shouldn't): remember that you can use the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). 
 
 <h1 id="contents">Contents</h1>
 
@@ -23,10 +27,11 @@ Note that in the example below, for the offically released version (v0.15.0), Gr
   <li> <a href="#2---iris-data">2 - iris data</a> </li>
   <li> <a href="#3---wine-data">3 - wine data</a> </li>
   <li> <a href="#4---digits-data">4 - digits data</a> </li>
+  <li> <a href="#5---r-examples">5 - R examples</a> </li>
 </ul>
 
 Here is a [jupyter notebook](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_091123_lazy_deep_classifier.ipynb) reproducing these results. Do not hesitate 
-to modify these examples by choosing -- in `LazyDeepClassifier` -- a different number of layers `n_layers` or the number of 
+to modify these examples by choosing -- in `LazyDeepClassifier` -- a different number of layers `n_layers`, or the number of 
 engineered features _per_ layer, `n_hidden_features`. 
 
 
@@ -2140,3 +2145,13 @@ plt.show()
 
 ![image-title-here]({{base}}/images/2023-11-12/2023-11-12-image5.png){:class="img-responsive"}
 
+# 5 - R examples
+
+<a href="#contents">top</a>
+
+I hope this is not too technical: please note that installing the R version of `nnetsauce` will create an environment in the current directory (more precisely, a folder named `r-reticulate` will be created where you'll install the package). 
+
+**Classification**
+
+
+**Regression**
