@@ -30,7 +30,7 @@ To finish, for Windows users, if you run into issues when trying to install `nne
   <li> <a href="#5---r-examples">5 - R examples</a> </li>
 </ul>
 
-Here is a [jupyter notebook](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_091123_lazy_deep_classifier.ipynb) reproducing these results. Do not hesitate 
+Here is a [jupyter notebook](https://github.com/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_091123_lazy_deep_classifier.ipynb) allowing you to reproduce these results. Do not hesitate 
 to modify these examples by choosing -- in `LazyDeepClassifier` -- a different number of layers `n_layers`, or the number of 
 engineered features _per_ layer, `n_hidden_features`. 
 
