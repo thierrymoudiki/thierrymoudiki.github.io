@@ -2153,5 +2153,44 @@ I hope this is not too technical: please note that installing the R version of `
 
 **Classification**
 
+```R
+remotes::install_github("Techtonique/nnetsauce_r") # install nnetsauce from GitHub
+
+library(datasets)
+
+set.seed(123)
+X <- as.matrix(iris[, 1:4])
+y <- as.integer(iris$Species) - 1L
+
+(index_train <- base::sample.int(n = nrow(X),
+                                 size = floor(0.8*nrow(X)),
+                                 replace = FALSE))
+X_train <- X[index_train, ]
+y_train <- y[index_train]
+X_test <- X[-index_train, ]
+y_test <- y[-index_train]
+
+obj <- nnetsauce::LazyDeepClassifier(n_layers = 3L)
+res <- obj$fit(X_train, X_test, y_train, y_test)
+print(res[[1]]) # best accuracy must be 1.0
+```
 
 **Regression**
+
+```R
+X <- MASS::Boston[,-14] # dataset has an ethical problem
+y <- MASS::Boston$medv
+
+set.seed(13)
+(index_train <- base::sample.int(n = nrow(X),
+                                 size = floor(0.8*nrow(X)),
+                                 replace = FALSE))
+X_train <- X[index_train, ]
+y_train <- y[index_train]
+X_test <- X[-index_train, ]
+y_test <- y[-index_train]
+
+obj <- nnetsauce::LazyDeepRegressor(n_layers = 3L, n_clusters=2L)
+res <- obj$fit(X_train, X_test, y_train, y_test)
+print(res[[1]]) # best RMSE must be close to 2.8, try n_clusters=3L for 2.69
+```
