@@ -7,7 +7,7 @@ categories: [Python, R, Misc, mlsauce]
 comments: true
 ---
 
-Starting with `mlsauce`'s next release (`v0.9.0`, for [Python](https://github.com/Techtonique/mlsauce) and [R](https://github.com/Techtonique/mlsauce_r)), you'll be able to download a plethora of datasets for your statistical/machine learning experiments (this is a _work in progress_, it will done from a GitHub branch today). These datasets come from the [R-universe](https://r-universe.dev/search/), and you'll be able to use them **no matter whether you're working Python or R**. 
+Starting with `mlsauce`'s next release (`v0.9.0`, for [Python](https://github.com/Techtonique/mlsauce) and [R](https://github.com/Techtonique/mlsauce_r)), you'll be able to download a plethora of datasets for your statistical/machine learning experiments (this is a _work in progress_, it will done from a GitHub branch today). These datasets come from the [R-universe](https://r-universe.dev/search/), and you'll be able to use them **no matter whether you're working with Python or R**. 
 
 In the R-universe (new CRAN in disguise?), among other things, there's an **automated package-building workflow** for all the common platforms (Linux, macOS and Windows). There's also an **open data API**, whose usage underlies what's described in this post. Remember to cite datasets' sources. A _good_ practice in packaging R datasets is to provide their  references, but I'm guilty of not having done it everytime ;) 
 
