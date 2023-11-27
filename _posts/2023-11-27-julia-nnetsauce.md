@@ -37,7 +37,7 @@ Run (terminal):
 ```bash
 tar zxvf julia-1.9.4-linux-x86_64.tar.gz
 ```
-Run (terminal):
+Run (terminal)(This is VSCode, but use your favorite editor here):
 ```bash
 code ~/.bashrc
 ```
