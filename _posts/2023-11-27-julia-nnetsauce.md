@@ -9,7 +9,7 @@ comments: true
 
 `nnetsauce`, a package for quasi-randomized supervised learning (classification and regression), is currently available for [R and Python](https://github.com/Techtonique/nnetsauce). For more details on `nnetsauce`, you can read [these posts](https://thierrymoudiki.github.io/blog/#QuasiRandomizedNN). 
 
-I've always wanted to port `nnetsauce` to the Julia language. However, in the past few years, there was a little timing _overhead_ (more precisely, a lag) when I tried to do that with Julia's `PyCall`, based on my Python source code. This _overhead_ seems to have 'disappeared' now. 
+I've always wanted to port `nnetsauce` to the Julia language. However, in the past few years, there was a little timing _overhead_ (more precisely, a lag) when I tried to do that with Julia's `PyCall`, based on my Python source code. This _overhead_ seems to have 'disappeared'. 
 
 Julia language's `nnetsauce` is not a package **yet**, but you can already use `nnetsauce` in Julia. 
 
@@ -59,7 +59,7 @@ julia nnetsauce_example.jl
 
 # 2 - Example using a nnetsauce classifier in Julia language
 
-For Python user's, notice that this is _basically_ Python ^^
+For Python users, notice that this is _basically_... Python ^^
 
 ```julia
 using Pkg
