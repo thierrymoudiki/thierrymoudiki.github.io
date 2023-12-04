@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Julia packaging at the commanf line"
+title: "Julia packaging at the command line"
 description: "A simple Calculator package in Julia Language"
 date: 2023-12-04
 categories: [Julia, Misc]
