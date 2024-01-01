@@ -7,13 +7,11 @@ categories: [R, learningmachine]
 comments: true
 ---
 
-I created R package `learningmachine` in the first place, in order to have a unified, object-oriented (using [R6](https://r6.r-lib.org/)), interface for the machine learning algorithms I use the most on tabular data. 
+I created R package `learningmachine` in the first place, in order to have a unified, object-oriented (using [R6](https://r6.r-lib.org/)), interface for the machine learning algorithms I use the most on tabular data. This (_work in progress_) package is available [on GitHub](https://github.com/Techtonique/learningmachine) and the [R-universe](https://techtonique.r-universe.dev/learningmachine). There will certainly be a Python version in the future.
 
-This (_work in progress_) package is available [on GitHub](https://github.com/Techtonique/learningmachine) and [on R-universe](https://techtonique.r-universe.dev/learningmachine). There will certainly be a Python version in the future.
+This post shows how to use `learningmachine` to compute prediction intervals for miles per gallon (mpg) car consumption using conformalized Kernel ridge regression and R package `ranger`'s Random Forest.
 
-This post shows how to use `learningmachine` to compute prediction intervals for miles per gallon (mpg) car consumption using conformalized Kernel ridge regression and random forest.
-
-**Install packages**
+# **Install packages**
 
 ```r
 utils::install.packages('learningmachine',
@@ -22,13 +20,13 @@ utils::install.packages('learningmachine',
 utils::install.packages("skimr")
 ```
 
-**Import dataset**
+# **Import dataset**
 
 ```r
 data(mtcars)
 ```
 
-**Descriptive statistics**
+# **Descriptive statistics**
 
 ```r
 skimr::skim(mtcars)
@@ -72,7 +70,7 @@ skimr::skim(mtcars)
     11   4      8    ▇▂▅▁▁
 
 
-**Model fitting and predictions**
+# **Model fitting and predictions**
 
 ```r
 library(learningmachine)
@@ -121,7 +119,7 @@ res2_RF <- obj_RF$predict(X = X_test, level = 95,
       |======================================================================| 100%
       |======================================================================| 100%
 
-**Graph**
+# **Graph**
 
 ```r
 par(mfrow=c(2, 2))
