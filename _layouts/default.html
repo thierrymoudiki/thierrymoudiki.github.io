@@ -49,6 +49,8 @@
         {% include main.css %}
     </style>
 
+    <link rel="stylesheet" href="{{base}}/css/dark-mode.css">
+
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="{{base}}/images/t-logo.png">
@@ -70,8 +72,17 @@
 
   </head>
 
+  <body>
     <div class="container col-sm-9">
-            {{content}}
+      {{content}}
     </div>
+  </body>
+
+  <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+  </script>
 
 </html>

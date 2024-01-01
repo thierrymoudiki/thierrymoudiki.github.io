@@ -1186,6 +1186,8 @@ a.email {
 }
     </style>
 
+    <link rel="stylesheet" href="/css/dark-mode.css">
+
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="/images/t-logo.png">
@@ -1207,8 +1209,9 @@ a.email {
 
   </head>
 
+  <body>
     <div class="container col-sm-9">
-            <br>
+      <br>
 
 <div style="width: 100%; overflow: hidden;">
     <div style="width: 100px; float: left;"> <a href="/index.html"><img src="../images/t-logo.png" alt="logo" /> </div></a>
@@ -2478,5 +2481,13 @@ a.email {
   </div>
 
     </div>
+  </body>
+
+  <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+  </script>
 
 </html>
