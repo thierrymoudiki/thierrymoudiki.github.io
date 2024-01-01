@@ -134,7 +134,7 @@ lines(c(y_train, res_KRR$lower), col="gray60", lwd = 3)
 lines(c(y_train, res_KRR$preds), col = "red", lwd = 2)
 lines(c(y_train, y_test), col = "blue", lwd = 2)
 
-plot(c(y_train, res2_RF$preds), type='l',
+plot(c(y_train, res2_KRR$preds), type='l',
      main="jackknife+ (KRR) \n prediction intervals",
      xlab="obs.",
      ylab="mpg",
