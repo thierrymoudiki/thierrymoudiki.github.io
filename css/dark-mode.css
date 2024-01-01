@@ -1,0 +1,15 @@
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: whitesmoke;    
+  }
+
+  code {
+    background-color: lightgrey;
+    color: blue;
+    }
