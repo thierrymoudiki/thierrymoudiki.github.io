@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "`nnetsauce`'s introduction as of 2024-02-11 (new version `0.17.0`)"
-description: "`nnetsauce`'s version `0.17.0` is available"
+title: "nnetsauce's introduction as of 2024-02-11 (new version 0.17.0)"
+description: "nnetsauce's version 0.17.0 is available"
 date: 2024-02-11
 categories: [Python, QuasiRandomizedNN]
 comments: true
