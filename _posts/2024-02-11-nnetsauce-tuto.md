@@ -110,8 +110,8 @@ make run-examples
 
 There are also: 
 
-- Several Jupyter notebooks available in: https://github.com/Techtonique/nnetsauce/tree/master/nnetsauce/demo
-- Blog posts available in: https://thierrymoudiki.github.io/blog#QuasiRandomizedNN
+- Several Jupyter notebooks available in: [https://github.com/Techtonique/nnetsauce/tree/master/nnetsauce/demo](https://github.com/Techtonique/nnetsauce/tree/master/nnetsauce/demo)
+- Blog posts available in: [https://thierrymoudiki.github.io/blog#QuasiRandomizedNN](https://thierrymoudiki.github.io/blog#QuasiRandomizedNN)
 
 # 2 - Automated Machine Learning (AutoML) with `nnetsauce` classifiers on Wisconsin breast cancer data set
 
