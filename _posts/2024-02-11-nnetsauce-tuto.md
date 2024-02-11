@@ -23,7 +23,7 @@ Goodfellow, Bengio, and Courville (2016)) are trained by using
 gradient-based optimization algorithms, QRNNs do actually engineer
 features by creating new, randomized or deterministic ones.
 
-The package lives and relies on a **well-supported and documented Python
+The package lives in and relies on a **well-supported and documented Python
 ecosystem**; the one introduced by Pedregosa et al. (2011):
 
 -   ML models are trained by using a method called `fit`
