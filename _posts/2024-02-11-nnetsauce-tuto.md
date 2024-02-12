@@ -45,7 +45,7 @@ and `LazyDeepMTS`
 `DeepMTS` 
 - New class `Downloader`: querying the R universe API for
 datasets (see
-https://thierrymoudiki.github.io/blog/2023/12/25/python/r/misc/mlsauce/runiverse-api2
+[https://thierrymoudiki.github.io/blog/2023/12/25/python/r/misc/mlsauce/runiverse-api2](https://thierrymoudiki.github.io/blog/2023/12/25/python/r/misc/mlsauce/runiverse-api2)
 for similar example in `mlsauce`) 
 - Add custom metrics to `Lazy*` 
 - Rename Deep regressors and classifiers to `Deep*` in `Lazy*` 
@@ -111,7 +111,7 @@ make run-examples
 There are also: 
 
 - Several Jupyter notebooks available in: [https://github.com/Techtonique/nnetsauce/tree/master/nnetsauce/demo](https://github.com/Techtonique/nnetsauce/tree/master/nnetsauce/demo)
-- Blog posts available in: [https://thierrymoudiki.github.io/blog#QuasiRandomizedNN](https://thierrymoudiki.github.io/blog#QuasiRandomizedNN)
+- Blog posts available at: [https://thierrymoudiki.github.io/blog#QuasiRandomizedNN](https://thierrymoudiki.github.io/blog#QuasiRandomizedNN)
 
 # 2 - Automated Machine Learning (AutoML) with `nnetsauce` classifiers on Wisconsin breast cancer data set
 
