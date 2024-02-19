@@ -17,12 +17,10 @@ Today:
 -   I'll show you how to use Python’s [`nnetsauce`](https://techtonique.github.io/nnetsauce/) (version `0.17.0`) to
     download data from the [R universe
     API](https://r-universe.dev/search/).
--   Use `nnetsauce` automated Machine Learning to fit a model to the
+-   I'll use `nnetsauce`'s automated Machine Learning (AutoML) to adjust a model to the
     [Affairs](https://zeileis.r-universe.dev/AER/doc/manual.html#Affairs)
-    data set also studied in [this post from
-    2023-12-25](https://thierrymoudiki.github.io/blog/2023/12/25/python/r/misc/mlsauce/runiverse-api2).
--   Understand the model’s decisions and obtain prediction intervals on
-    the test set.
+    data set also studied in [this post from 2023-12-25](https://thierrymoudiki.github.io/blog/2023/12/25/python/r/misc/mlsauce/runiverse-api2).
+-   Understand the model’s decisions and obtain prediction intervals on the test set.
 
 # 0 - Install packages
 
