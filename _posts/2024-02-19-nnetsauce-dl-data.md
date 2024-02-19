@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A plethora of datasets at your fingertips Part3: how many times do couples cheat on each other?"
-description: ""Dowload data from the R-Universe API with nnetsauce. Automated Machine Learning, Interpretability and prediction intervals using conformal prediction."
+description: "Download data from the R-Universe API with nnetsauce. Automated Machine Learning, Interpretability and prediction intervals using conformal prediction."
 date: 2024-02-19
 categories: [Python, QuasiRandomizedNN, ExplainableML]
 comments: true
