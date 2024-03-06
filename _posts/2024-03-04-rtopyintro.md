@@ -8,6 +8,15 @@ categories: [Python, R]
 comments: true
 ---
 
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb)
+
+<span>
+<a target="_blank" rel="noreferrer noopener" href="https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+</span>
+
 [`rtopy`](https://github.com/Techtonique/rtopy) is a Python package that allows you to call R functions in Python. 
 There are other packages doing something similar, but in addition to have a different interface, under the hood,  `rtopy` explicitly uses R at the command line, plus **text mining** and **caching** tools. It's a work in progress, and you can find some examples of use below. 
 
@@ -31,56 +40,56 @@ import rtopy as rp
 # an R function that returns the product of an arbitrary number of arguments
 # notice the (mandatory) double braces around the R function's code
 # and the a semi-colon (';') after each instruction
-r_code1 = f"""my_func <- function(arg1=NULL, arg2=NULL, arg3=NULL, arg4=NULL, arg5=NULL) {{
+r_code1 = f'''my_func <- function(arg1=NULL, arg2=NULL, arg3=NULL, arg4=NULL, arg5=NULL) {{
                 args <- c(arg1, arg2, arg3, arg4, arg5);
                 args <- args[!sapply(args, is.null)];
                 result <- prod(args);
                 return(result)
               }}
-              """
+              '''
 
 # an R function that returns the sum of an arbitrary number of arguments
-r_code2 = f"""my_func <- function(arg1=NULL, arg2=NULL, arg3=NULL, arg4=NULL, arg5=NULL) {{
+r_code2 = f'''my_func <- function(arg1=NULL, arg2=NULL, arg3=NULL, arg4=NULL, arg5=NULL) {{
             args <- c(arg1, arg2, arg3, arg4, arg5);
             args <- args[!sapply(args, is.null)];
             result <- sum(args);
             return(result)
           }}
-         """
+         '''
 
 # an R function that returns a list of vectors
-r_code3 = f"""my_func <- function(arg1, arg2) {{
+r_code3 = f'''my_func <- function(arg1, arg2) {{
             list(x = mtcars[, 'mpg'], y = mtcars[, arg1], z = mtcars[, arg2])
           }}
-         """
+         '''
 
 # an R function that returns a vector
-r_code4 = f"""my_func <- function(arg1=NULL, arg2=NULL, arg3=NULL) {{
+r_code4 = f'''my_func <- function(arg1=NULL, arg2=NULL, arg3=NULL) {{
             args <- c(arg1, arg2, arg3);
             args <- args[!sapply(args, is.null)];
             print(args);
             return(as.vector(args))
           }}
-         """
+         '''
 
 # an R function that returns a list of matrices
 # won't work for named rows
-r_code5 = f"""my_func <- function(arg1, arg2) {{
+r_code5 = f'''my_func <- function(arg1, arg2) {{
             X <- as.matrix(mtcars);
             colnames(X) <- NULL;
             rownames(X) <- NULL;
             list(x = X[, 1], y = X[, c(arg1, arg2)])
           }}
-         """
+         '''
 
 # an R function that returns a list of vector, matrix and scalar
-r_code6 = f"""my_func <- function(arg1, arg2) {{
+r_code6 = f'''my_func <- function(arg1, arg2) {{
             X <- as.matrix(mtcars);
             colnames(X) <- NULL;
             rownames(X) <- NULL;
             list(x = X[, 1], y = X[, c(arg1, arg2)], z = 5)
           }}
-         """
+         '''
 ```
 
 # 3 - Examples
