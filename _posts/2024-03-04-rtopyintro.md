@@ -8,7 +8,7 @@ categories: [Python, R]
 comments: true
 ---
 
-R code is not rendered properly below, but you can [open this notebook](https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb) or 
+R code is not rendered properly below, but you can [open this notebook](https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb) or 
 
 <span>
 <a target="_blank" rel="noreferrer noopener" href="https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb">
@@ -21,7 +21,7 @@ There are other packages doing something similar, but in addition to have a diff
 
 # 1 - Install and import `rtopy`
 
-R code is not rendered properly below, but you can [open this notebook](https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb) or 
+R code is not rendered properly below, but you can [open this notebook](https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb) or 
 
 <span>
 <a target="_blank" rel="noreferrer noopener" href="https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb">
