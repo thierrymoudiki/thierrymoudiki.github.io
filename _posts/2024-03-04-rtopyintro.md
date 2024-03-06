@@ -8,12 +8,9 @@ categories: [Python, R]
 comments: true
 ---
 
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb)
-
 <span>
 <a target="_blank" rel="noreferrer noopener" href="https://colab.research.google.com/github/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  <img style="width: inherit;" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 </span>
 
@@ -36,7 +33,6 @@ import rtopy as rp
 
 
 ```python
-
 # an R function that returns the product of an arbitrary number of arguments
 # notice the (mandatory) double braces around the R function's code
 # and the a semi-colon (';') after each instruction
