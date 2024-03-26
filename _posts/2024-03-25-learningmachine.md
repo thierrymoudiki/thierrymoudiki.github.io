@@ -24,7 +24,7 @@ The new features are:
   remain this way): for empty prediction sets, the class with the highest probability is chosen. This _may_ 
   lead to over-conservative prediction sets. 
 
-`learningmachine` is still experimental, probably with some quirks (because achieving this level of abstraction required some effort), with no beautiful documentation, but you can already tinker it and do advanced analysis, as shown below. 
+`learningmachine` is still experimental, probably with some quirks (because achieving this level of abstraction required some effort), with no beautiful documentation, but you can already tinker it and do advanced analysis, as shown below. You may also like [this vignette](https://techtonique.r-universe.dev/learningmachine/doc/getting-started.html) and [this vignette](https://techtonique.r-universe.dev/learningmachine/doc/classifiers-probs.html).
 
 
 ```R
