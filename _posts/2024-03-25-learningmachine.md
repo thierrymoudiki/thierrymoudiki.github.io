@@ -7,12 +7,6 @@ categories: R
 comments: true
 ---
 
-<span>
-<a target="_blank" href="https://colab.research.google.com/github/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_20240318_conformal_and_bayesian_regression.ipynb">
-  <img style="width: inherit;" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-</span>
-
 Considering the number of people who read [this post](https://thierrymoudiki.github.io/blog/2024/01/01/r/learningmachine/learningmachine), a lot of you are probably using `learningmachine` `v0.1.0`. Maybe because of the fancy name. Just so you know, `learningmachine` is only doing batch learning at the moment. Stay tuned. 
 
 Well, today, there are good news and bad news. The good news is `learningmachine` is back with `v1.0.0` (Python port coming next week). The "bad" news is: jumping to v1.0.0 this early means there's a **change in the interface** (that won't change drastically anymore); with a lot of good reasons: 
