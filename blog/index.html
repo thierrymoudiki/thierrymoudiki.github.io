@@ -50,7 +50,7 @@ description: Thierry Moudiki's blog
 
 <h2 id="list-posts">List of posts by date of publication | <a href="#">Top</a> </h2>
  <div class="content">
-  <ol class="myposts">
+  <ol reversed class="myposts">
     {% for post in site.posts %}
         <li><a href="{{ post.url }}">{{ post.title}}</a>
         <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -79,7 +79,7 @@ description: Thierry Moudiki's blog
 
         <h3 class="category-head">{{ category_name }}</h3>      
         <a name="{{ category_name | slugize }}"></a>
-        <ol class="myposts">
+        <ol reversed class="myposts">
         {% for post in site.categories[category_name] %}        
           <li><a href="{{ post.url }}">{{post.title}}</a></li>    
         {% endfor %}
