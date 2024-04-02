@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "learningmachine v1.1.0: prediction intervals around the probability of the event 'a tumor being malignant'"
-description: "learningmachine v1.0.0: prediction intervals around the probability of the event 'a tumor being malignant'; using conformal prediction and density estimation"
+title: "learningmachine v1.1.2: for Python"
+description: "Machine learning with uncertainty quantification and interpretatbility"
 date: 2024-04-01
 categories: Python
 comments: true
@@ -13,7 +13,7 @@ comments: true
 </a>
 </span>
 
-I talked about `learningmachine` -- a package for machine learning witj uncertainty quantification and interpretatbility -- [last week](https://thierrymoudiki.github.io/blog/2024/03/25/r/learningmachine) in #131. 
+I talked about `learningmachine` -- a package for machine learning with uncertainty quantification and interpretatbility -- [last week](https://thierrymoudiki.github.io/blog/2024/03/25/r/learningmachine) in #131. 
 **Here comes the Python version!**
 
 Keep in mind that `learningmachine` is still experimental, probably with some quirks (because achieving this level of abstraction required some effort), with no beautiful documentation, but you can already tinker it and do advanced analysis, as shown below.
