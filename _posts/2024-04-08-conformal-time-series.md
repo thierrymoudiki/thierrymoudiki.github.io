@@ -1,8 +1,8 @@
 ---
-title: "Conformalized predictive simulations for univariate time series"
 layout: post
-date: "2024-04-08"
-description: Conformalized predictive simulations for univariate time series on > 250 data sets 
+title: "Conformalized predictive simulations for univariate time series"
+description: "Conformalized predictive simulations for univariate time series on > 250 data sets"
+date: 2024-04-08
 categories: R
 comments: true
 ---
