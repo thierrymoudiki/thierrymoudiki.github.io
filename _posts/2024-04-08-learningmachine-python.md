@@ -2,7 +2,7 @@
 layout: post
 title: "learningmachine v1.1.2: for Python"
 description: "Machine learning with uncertainty quantification and interpretatbility"
-date: 2024-04-07
+date: 2024-04-08
 categories: Python
 comments: true
 ---
