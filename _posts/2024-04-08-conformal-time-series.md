@@ -3,7 +3,7 @@ layout: post
 title: "Conformalized predictive simulations for univariate time series on more than 250 data sets"
 description: "Conformalized predictive simulations for univariate time series on more than 250 data sets."
 date: 2024-04-08
-categories: [Python, R]
+categories: R
 comments: true
 ---
 
