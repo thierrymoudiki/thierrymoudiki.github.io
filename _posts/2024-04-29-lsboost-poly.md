@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "mlsauce's `v0.17.0`: boosting with polynomials and heterogeneity in explanatory variables"
-description: "LSBoost's boosting with polynomials and heterogeneity in explanatory variables."
+title: "mlsauce's `v0.17.0`: boosting with Elastic Net, polynomials and heterogeneity in explanatory variables"
+description: "LSBoost's boosting with Elastic Net, polynomials and heterogeneity in explanatory variables."
 date: 2024-04-29
 categories: Python
 comments: true
@@ -11,13 +11,11 @@ comments: true
 Last week [in #135](https://thierrymoudiki.github.io/blog/), I talked about `mlsauce`'s `v0.13.0`, and [`LSBoost`](https://www.researchgate.net/publication/346059361_LSBoost_gradient_boosted_penalized_nonlinear_least_squares) in particular. When using `LSBoost`, it's now possible to: 
 
 - Obtain **prediction intervals** for regression, notably by employing Split Conformal Prediction. 
-  
 - Take into account an _a priori_ heterogeneity in explanatory variables through clustering.
 
 In `v0.17.0`, I added a **2 new features** to `LSBoost`:
 
 - The possibility to add polynomial interaction functions of explanatory variables to the mix (see  [`sklearn.preprocessing.PolynomialFeatures`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html) for more details). This is done by setting the `degree` parameter of `LSBoostRegressor` or `LSBoostClassifier` to a positive integer value.
-  
 - The possibility to use [Elastic Net](https://glmnet.stanford.edu/articles/glmnet.html#linear-regression-family-gaussian-default) as a `solver` (a _base learner_), in addition to `ridge`, and `lasso`. /!\ `enet` (for Elastic Net) **will become the default value** for the `solver` parameter next week, as it's _fast_ (uses [coordinate descent](https://en.wikipedia.org/wiki/Coordinate_descent)) and gracefully combines both ridge regression and the lasso. `ridge`, and `lasso` will remain available to avoid breaking existing pipelines, but you'd have to specify them explicitly as `solver`s. For `enet`, `reg_lambda` is still used as a regularization parameter, and an `alpha` (in [0, 1]) parameter defines a compromise between lasso (`alpha = 1`) and ridge (`alpha = 0`) penalties. The default value for `alpha` is `0.5`.
 
  This week, I'll show how to use the new features, to **gain an intuition** of how they work. Keep in mind however: these examples only show that it's possible to overfit the training set (hence reducing the loss function's magnitude) by adding some clusters. The whole model's hyperparameters need to be 'fine-tuned', the `learning_rate` and `n_iterations` in particular, for example by using  [GPopt](https://thierrymoudiki.github.io/blog/2023/11/05/python/r/adaopt/lsboost/mlsauce_classification). Next week, I'll update the documentation and notably [this working paper](https://www.researchgate.net/publication/346059361_LSBoost_gradient_boosted_penalized_nonlinear_least_squares) in a more comprehensive way. 
