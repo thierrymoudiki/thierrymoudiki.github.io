@@ -164,7 +164,7 @@ obj1.fit(X_train, y_train)
 print(f"\n Elapsed: {time()-start}")
 print(f"loss: {obj1.obj['loss']}")
 
-obj2 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.2, solver="enet",
+obj2 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.2, solver="enet", 
                            n_estimators=25)
 print(obj2.get_params())
 start = time()
@@ -172,7 +172,7 @@ obj2.fit(X_train, y_train)
 print(f"\n Elapsed: {time()-start}")
 print(f"loss: {obj2.obj['loss']}")
 
-obj3 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.2, solver="enet",
+obj3 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.2, solver="enet", 
                            n_estimators=25, alpha=0)
 print(obj3.get_params())
 start = time()
@@ -180,7 +180,7 @@ obj3.fit(X_train, y_train)
 print(f"\n Elapsed: {time()-start}")
 print(f"loss: {obj3.obj['loss']}")
 
-obj4 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.2, solver="enet",
+obj4 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.2, solver="enet", 
                            n_estimators=25, alpha=1)
 print(obj4.get_params())
 start = time()
@@ -188,7 +188,7 @@ obj4.fit(X_train, y_train)
 print(f"\n Elapsed: {time()-start}")
 print(f"loss: {obj4.obj['loss']}")
 
-obj5 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.2, solver="enet",
+obj5 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.1, solver="enet", 
                            n_estimators=25, alpha=1, degree=2)
 print(obj5.get_params())
 start = time()
@@ -196,69 +196,28 @@ obj5.fit(X_train, y_train)
 print(f"\n Elapsed: {time()-start}")
 print(f"loss: {obj5.obj['loss']}")
 
+obj6 = ms.LSBoostRegressor(n_clusters=2, learning_rate=0.06, solver="enet", 
+                           n_estimators=25, alpha=1, degree=3)
+print(obj6.get_params())
+start = time()
+obj6.fit(X_train, y_train)
+print(f"\n Elapsed: {time()-start}")
+print(f"loss: {obj6.obj['loss']}")
 
 # Plotting the lines with labels
 plt.plot(obj1.obj['loss'], label='Loss - learning_rate=0.1, alpha=0.5 (L1+L2)')
 plt.plot(obj2.obj['loss'], label='Loss - n_clusters=2, learning_rate=0.2, alpha=0.5 (L1+L2)')
 plt.plot(obj3.obj['loss'], label='Loss - learning_rate=0.1, alpha=0 (L2 pen.)')
 plt.plot(obj4.obj['loss'], label='Loss - n_clusters=2, learning_rate=0.2, alpha=1 (L1 pen.)')
-plt.plot(obj5.obj['loss'], label='Loss - n_clusters=2, learning_rate=0.2, alpha=1, degree=2')
+plt.plot(obj5.obj['loss'], label='Loss - n_clusters=2, learning_rate=0.1, alpha=1, degree=2')
+plt.plot(obj6.obj['loss'], label='Loss - n_clusters=2, learning_rate=0.06, alpha=1, degree=3')
 
 # Displaying the legend
 plt.legend()
 
 # Show the plot
 plt.show()
-
 ```
-
-    {'activation': 'relu', 'alpha': 0.5, 'backend': 'cpu', 'cluster_scaling': 'standard', 'clustering_method': 'kmeans', 'col_sample': 1, 'degree': 0, 'direct_link': 1, 'dropout': 0, 'kernel': None, 'learning_rate': 0.1, 'n_clusters': 0, 'n_estimators': 25, 'n_hidden_features': 5, 'reg_lambda': 0.1, 'replications': None, 'row_sample': 1, 'seed': 123, 'solver': 'enet', 'tolerance': 0.0001, 'type_pi': None, 'verbose': 1}
-
-
-    100%|██████████| 25/25 [00:00<00:00, 47.55it/s]
-
-
-    
-     Elapsed: 0.5511448383331299
-    loss: [139.4354291181404, 134.04860172435463, 129.03704407555875, 124.61992090034947, 121.40657221231528, 118.29722826228726, 116.0586796182525, 114.03187153272418, 112.46589723152815, 110.91617268708922, 109.83817740965685, 108.83140089329949, 108.03339225985236, 107.31107218851054, 106.74696561474326, 106.24728675392203, 105.83624710221372, 105.43061331833108, 105.10885864438998, 104.84726156958487, 104.6004194476885, 104.39348029601547, 104.1902981736055, 103.98754676300594, 103.83640154671413]
-    {'activation': 'relu', 'alpha': 0.5, 'backend': 'cpu', 'cluster_scaling': 'standard', 'clustering_method': 'kmeans', 'col_sample': 1, 'degree': 0, 'direct_link': 1, 'dropout': 0, 'kernel': None, 'learning_rate': 0.2, 'n_clusters': 2, 'n_estimators': 25, 'n_hidden_features': 5, 'reg_lambda': 0.1, 'replications': None, 'row_sample': 1, 'seed': 123, 'solver': 'enet', 'tolerance': 0.0001, 'type_pi': None, 'verbose': 1}
-
-
-    100%|██████████| 25/25 [00:00<00:00, 38.39it/s]
-
-
-    
-     Elapsed: 0.818737268447876
-    loss: [133.99068400971234, 125.34899781758122, 118.81439186169462, 114.2065839785141, 110.89199116823127, 108.6632906200425, 107.28352102111089, 106.27779161258653, 105.37816545333398, 104.83746195637701, 104.3924327210331, 103.9605256119815, 103.69362395896887, 103.44599872477694, 103.25816556316416, 103.1113827199278, 102.98555567782437, 102.81463416446454, 102.72467961038245, 102.56794496516358, 102.50207696487394, 102.43635148400048, 102.38351774624878, 102.3353390515508, 102.28040658406701]
-    {'activation': 'relu', 'alpha': 0, 'backend': 'cpu', 'cluster_scaling': 'standard', 'clustering_method': 'kmeans', 'col_sample': 1, 'degree': 0, 'direct_link': 1, 'dropout': 0, 'kernel': None, 'learning_rate': 0.2, 'n_clusters': 2, 'n_estimators': 25, 'n_hidden_features': 5, 'reg_lambda': 0.1, 'replications': None, 'row_sample': 1, 'seed': 123, 'solver': 'enet', 'tolerance': 0.0001, 'type_pi': None, 'verbose': 1}
-
-
-    100%|██████████| 25/25 [00:00<00:00, 35.58it/s]
-
-
-    
-     Elapsed: 0.8718903064727783
-    loss: [131.86362748424415, 121.78836293839404, 114.7942241393109, 109.81305727402513, 106.52982461570632, 104.53698341110132, 103.43711830704014, 102.66014534085303, 102.0290328230347, 101.53196714619348, 101.13653642251832, 100.76244643310258, 100.43993149453821, 100.14792721545851, 99.86115860023098, 99.60671481524858, 99.37868525070988, 99.12166989810993, 98.89375784569046, 98.65892652244924, 98.4390070995436, 98.2396329270718, 98.04168541594527, 97.85287791146655, 97.67911238188505]
-    {'activation': 'relu', 'alpha': 1, 'backend': 'cpu', 'cluster_scaling': 'standard', 'clustering_method': 'kmeans', 'col_sample': 1, 'degree': 0, 'direct_link': 1, 'dropout': 0, 'kernel': None, 'learning_rate': 0.2, 'n_clusters': 2, 'n_estimators': 25, 'n_hidden_features': 5, 'reg_lambda': 0.1, 'replications': None, 'row_sample': 1, 'seed': 123, 'solver': 'enet', 'tolerance': 0.0001, 'type_pi': None, 'verbose': 1}
-
-
-    100%|██████████| 25/25 [00:02<00:00, 12.44it/s]
-
-
-    
-     Elapsed: 2.0565598011016846
-    loss: [136.0548156094128, 128.3375760646074, 122.60976291353313, 118.38212020636537, 115.15294063696274, 112.80382509739829, 111.33788072698884, 110.23901729385085, 109.28636442755926, 108.64103084049539, 108.12424759573145, 107.60104359686447, 107.28948200200561, 106.96416400066711, 106.72476067118077, 106.56320649382118, 106.43213481870976, 106.25997068482286, 106.17285564398698, 105.90038447774012, 105.84192168484296, 105.760298648814, 105.71968675085114, 105.68599468010764, 105.63893336547038]
-    {'activation': 'relu', 'alpha': 1, 'backend': 'cpu', 'cluster_scaling': 'standard', 'clustering_method': 'kmeans', 'col_sample': 1, 'degree': 2, 'direct_link': 1, 'dropout': 0, 'kernel': None, 'learning_rate': 0.2, 'n_clusters': 2, 'n_estimators': 25, 'n_hidden_features': 5, 'reg_lambda': 0.1, 'replications': None, 'row_sample': 1, 'seed': 123, 'solver': 'enet', 'tolerance': 0.0001, 'type_pi': None, 'verbose': 1}
-
-
-    100%|██████████| 25/25 [00:03<00:00,  6.73it/s]
-
-
-    
-     Elapsed: 3.9757931232452393
-    loss: [111.4866474356533, 106.6426178890959, 105.96652736220898, 105.73027817932079, 105.61130062816889, 105.53571011105976, 105.4761027412948, 105.42890209756975, 105.39139060173062, 105.36148684966663, 105.33758493904953, 105.31829398244282, 105.3026655765702, 105.28998257594097, 105.27967513834588, 105.27128836109804, 105.26445764217611, 105.2588897553494, 105.25434819349432, 105.25064173117914, 105.24761543824263, 105.24514357611025, 105.24312395236538, 105.24147341339146, 105.24012423128893]
-
-
 ![pres-image]({{base}}/images/2024-04-29/2024-04-29-image2.png){:class="img-responsive"}        
 
 
