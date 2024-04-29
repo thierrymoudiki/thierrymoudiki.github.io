@@ -3,7 +3,7 @@ layout: post
 title: "mlsauce's `v0.17.0`: boosting with Elastic Net, polynomials and heterogeneity in explanatory variables"
 description: "LSBoost's boosting with Elastic Net, polynomials and heterogeneity in explanatory variables."
 date: 2024-04-29
-categories: Python, LSBoost
+categories: [Python, LSBoost]
 comments: true
 ---
 
