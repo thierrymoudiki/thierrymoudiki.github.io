@@ -2,7 +2,7 @@
 layout: post
 title: "mlsauce's `v0.18.2`: various examples and benchmarks with dimension reduction"
 description: "Various LSBoost examples and benchmarks with PCA and RandomForest dimension reduction."
-date: 2024-05-06
+date: 2024-05-05
 categories: [Python, R, LSBoost]
 comments: true
 ---
