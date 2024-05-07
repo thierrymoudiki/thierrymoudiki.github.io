@@ -10,7 +10,7 @@ comments: true
 This week's post is about `mlsauce` (again), and `LSBoost` in particular. No new [working paper](https://www.researchgate.net/publication/346059361_LSBoost_gradient_boosted_penalized_nonlinear_least_squares) (still working on it), but:
 
 - An updated [R version](https://techtonique.r-universe.dev/builds), working at least on Linux and macOS (Windows users, if not working on your machine, give a try to the _Windows Subsystem for Linux_, WSL) 
-- A new updated [documentation page](https://techtonique.r-universe.dev/mlsauce) 
+- A new updated [documentation page](https://techtonique.github.io/mlsauce/mlsauce.html) 
 - My first [StackOverflow question](https://stackoverflow.com/questions/78397654/getting-an-importerror-when-packaging-a-cython-extension) **ever** (still unanswered)
 
 The examples below probably include some kind of [_leakage_](https://en.wikipedia.org/wiki/Leakage_(machine_learning)) (great if you can spot it), but take it as an illustration. 
