@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Probability of having a credit; using learningmachine"
-description: "Probability of having a credit; using learningmachine."
+title: "Probability of receiving a credit; using learningmachine"
+description: "Probability of receiving a credit; using learningmachine."
 date: 2024-05-12
 categories: [Python, R]
 comments: true
