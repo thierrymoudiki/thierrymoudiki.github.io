@@ -23,12 +23,6 @@ Keep in mind that there's no hyperparameter tuning in these examples. Hyperparam
 !pip install nnetsauce
 ```
 
-
-```python
-
-```
-
-
 ```r
 %%R
 
@@ -117,13 +111,6 @@ for (series_id in c(2, 3, 4, 5))
 }
 ```
 
-
-    
-![png](2024-05-27-nnetsauce-MTS-R_files/2024-05-27-nnetsauce-MTS-R_8_0.png)
-    
-
+![pres-image]({{base}}/images/2024-05-27/2024-05-27-image1.png){:class="img-responsive"}        
 
 In this figure, KDE stands for Kernel Density Estimation. Prediction intervals are depicted as a blue line, and mean forecast as a red line. The true value is depicted as a black line. Again, keep in mind that every model is used with its default hyperparameters, and hyperparameters' tuning will give a different result.
-
-
-![pres-image]({{base}}/images/2024-05-27/2024-05-27-image1.png){:class="img-responsive"}        
