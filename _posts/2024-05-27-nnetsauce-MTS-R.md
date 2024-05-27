@@ -7,7 +7,7 @@ categories: [R]
 comments: true
 ---
 
-Keep in mind that there's no hyperparameter tuning in these examples. Hyperparameter tuning must be used in practice. Looking for `reticulate` and `rpy2` experts to discuss speedups for this R package (port from the stable Python version) installation and loading.
+Keep in mind that there's no hyperparameter tuning in these examples. Hyperparameter tuning must be used in practice. Looking for `reticulate` and `rpy2` experts to discuss speedups for this R package (port from the stable Python version) installation and loading. There's still room for improvement in this R port, especially in terms of data structure (a data structure that would handle time series not as matrices) choices.
 
 
 ```python
@@ -114,3 +114,17 @@ for (series_id in c(2, 3, 4, 5))
 ![pres-image]({{base}}/images/2024-05-27/2024-05-27-image1.png){:class="img-responsive"}        
 
 In this figure, KDE stands for Kernel Density Estimation. Prediction intervals are depicted as a blue line, and mean forecast as a red line. The true value is depicted as a black line. Again, keep in mind that every model is used with its default hyperparameters, and hyperparameters' tuning will give a different result.
+
+
+**Visualizing predictive simulations for `DeepMTS`**
+
+```r
+%%R
+par(mfrow=c(2, 2))
+matplot(preds_DeepMTS$sims[[1]], type='l', col=1:4, lwd=2, lty=1, ylim=c(-40, 40))
+matplot(preds_DeepMTS$sims[[25]], type='l', col=1:4, lwd=2, lty=1, ylim=c(-40, 40))
+matplot(preds_DeepMTS$sims[[50]], type='l', col=1:4, lwd=2, lty=1, ylim=c(-40, 40))
+matplot(preds_DeepMTS$sims[[100]], type='l', col=1:4, lwd=2, lty=1, ylim=c(-40, 40))
+```
+
+![pres-image]({{base}}/images/2024-05-27/2024-05-27-image2.png){:class="img-responsive"}
