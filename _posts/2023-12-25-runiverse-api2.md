@@ -86,7 +86,7 @@ from imblearn.over_sampling import RandomOverSampler
 
 ```python
 # Affairs dataset
-df = ms.download(pkgname="AER", dataset="Affairs", source="https://zeileis.r-universe.dev/")
+df = ms.download(pkgname="AER", dataset="Affairs", source="https://cran.r-universe.dev/")
 print(f"===== df: \n {df} \n")
 print(f"===== df.dtypes: \n {df.dtypes}")
 ```

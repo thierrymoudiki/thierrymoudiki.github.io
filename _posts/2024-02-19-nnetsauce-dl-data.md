@@ -49,7 +49,7 @@ from time import time
 ```python
 downloader = ns.Downloader()
 
-df = downloader.download(pkgname="AER", dataset="Affairs", source = "https://zeileis.r-universe.dev/")
+df = downloader.download(pkgname="AER", dataset="Affairs", source = "https://cran.r-universe.dev/")
 
 print(f"===== df: \n {df} \n")
 print(f"===== df.dtypes: \n {df.dtypes}")
