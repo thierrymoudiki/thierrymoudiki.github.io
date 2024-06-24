@@ -36,9 +36,10 @@ df.index = pd.DatetimeIndex(df.date)
 df.drop(columns=['date'], inplace=True)
 ```
 
-**Number of estimators for the base learner**
+**Adjusting XGBoost regressors with different number of estimators**
 
 ```python
+# number of estimators for the base learner
 n_estimators_list = [5, 20, 50, 100]
 estimators = []
 residuals = []
@@ -54,6 +55,7 @@ for n_estimators in n_estimators_list:
   regr_xgb.fit(df)
   # in sample residuals 
   residuals.append(regr_xgb.residuals_.ravel())
+  # out-of-sample predictions
   regr_xgb.predict(h=30)
   estimators.append(regr_xgb)
 
