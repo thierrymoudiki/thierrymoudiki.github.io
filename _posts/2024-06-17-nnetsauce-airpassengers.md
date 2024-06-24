@@ -20,7 +20,7 @@ It also has a time-varying volatility, which makes it a bit more challenging and
 
 # 0 - Install and load packages 
 
-**Install `nnetsauce` command line**: 
+**Install `nnetsauce` at the command line**: 
 
 ```bash
 pip install nnetsauce --upgrade --no-cache-dir
