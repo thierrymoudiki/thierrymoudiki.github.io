@@ -8,9 +8,9 @@ categories: [Python, QuasiRandomizedNN, Forecasting]
 comments: true
 ---
 
-Next week, I'll present [`nnetsauce`](https://github.com/Techtonique/nnetsauce)'s univariate and multivariate (probabilistic) time series forecasting capabilities at the 44th [International Symposium on Forecasting (ISF)](https://isf.forecasters.org/) (ISF) 2024. ISF is the **premier forecasting conference, attracting the world’s leading forecasting (I don't only do forecasting though) researchers, practitioners, and students**. I hope to see you there.
+Next week, I'll present [`nnetsauce`](https://github.com/Techtonique/nnetsauce)'s  (univariate and multivariate probabilistic) time series forecasting capabilities at the 44th [International Symposium on Forecasting (ISF)](https://isf.forecasters.org/) (ISF) 2024. ISF is the **premier forecasting conference, attracting the world’s leading forecasting (I don't only do forecasting though) researchers, practitioners, and students**. I hope to see you there!
 
-In this post, I illustrate how to obtain predictive simulations with [`nnetsauce`](https://github.com/Techtonique/nnetsauce)'s `MTS` class using XGBoost as base learner, and I give some intuition behind the method `"kde"` employed for uncertainty quantification in this case.
+In this post, I illustrate how to obtain predictive simulations with [`nnetsauce`](https://github.com/Techtonique/nnetsauce)'s `MTS` class using XGBoost as base learner, and I give some intuition behind the method `"kde"` employed for uncertainty quantification in this case. The time series used here is the `USAccDeaths` dataset, a univariate time series of monthly deaths from motor vehicle traffic in the United States from 1973 to 1978.
 
 
 **(Command line)**
@@ -29,6 +29,7 @@ import xgboost as xgb
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# import data 
 url = "https://raw.githubusercontent.com/Techtonique/datasets/main/time_series/univariate/USAccDeaths.csv"
 df = pd.read_csv(url)
 df.index = pd.DatetimeIndex(df.date)
