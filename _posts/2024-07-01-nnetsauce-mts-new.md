@@ -22,7 +22,7 @@ This week, I released (Python) version `0.22.4` of [`nnetsauce`](https://github.
 
 The [release](https://github.com/Techtonique/nnetsauce/releases/edit/v0.22.4) is available on Github, Conda and PyPI.
 
-I'll present `nnetsauce` and these methods with more details and examples at the 44th [International Symposium on Forecasting (ISF)](https://isf.forecasters.org/) (ISF) 2024 (on Wednesday). I hope to see you there, with your questions and suggestions. 
+I'll present `nnetsauce` and these methods with more details and examples at the 44th [International Symposium on Forecasting (ISF)](https://isf.forecasters.org/) (ISF) 2024 (on Wednesday). I hope to see you there, with your questions, remarks and suggestions. 
 
 Next week, I'll release a stable (and documented) version of [`learningmachine`](https://thierrymoudiki.github.io/blog/2024/04/01/python/learningmachine-python). 
 
