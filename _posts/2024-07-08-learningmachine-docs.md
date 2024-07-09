@@ -25,3 +25,5 @@ There are only 2 classes `Classifier` and `Regressor`, with methods `fit` and `p
 There are also unit tests in the `tests` folder [on GitHub](https://github.com/Techtonique/learningmachine). 
 
 ![xxx]({{base}}/images/2024-03-25/2024-03-25-image1.png){:class="img-responsive"}      
+
+PS: In [these slides](https://www.researchgate.net/publication/381957724_Probabilistic_Forecasting_with_RandomizedQuasi-Randomized_networks_presentation_at_the_International_Symposium_on_Forecasting_2024), in present probabilistic forecasting with [`nnetsauce`](https://github.com/Techtonique/nnetsauce)
