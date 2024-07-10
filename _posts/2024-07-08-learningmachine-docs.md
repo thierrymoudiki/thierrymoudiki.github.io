@@ -25,7 +25,7 @@ So far, `learningmachine` offers a unified interface for:
 - `ranger`: Random Forest; see [https://www.jstatsoft.org/article/view/v077i01](https://www.jstatsoft.org/article/view/v077i01)
 - `ridge`: Ridge regression; see [https://arxiv.org/pdf/1509.09169](https://arxiv.org/pdf/1509.09169)
 - `xgboost`: a scalable tree boosting system see [https://arxiv.org/abs/1603.02754](https://arxiv.org/abs/1603.02754)
-- `svm`: Support Vector Machines (only for regression, for now), see https://cran.r-project.org/web/packages/e1071/vignettes/svmdoc.pdf
+- `svm`: Support Vector Machines (only for regression, for now), see [https://cran.r-project.org/web/packages/e1071/vignettes/svmdoc.pdf](https://cran.r-project.org/web/packages/e1071/vignettes/svmdoc.pdf)
 
 There are only 2 classes `Classifier` and `Regressor`, with methods `fit` and `predict` and `summary`, and all these models can be **enhanced by using a [quasi-randomized layer](https://github.com/Techtonique/nnetsauce)** that basically augments their capacity. The [3 package vignettes](https://github.com/Techtonique/learningmachine/tree/main/vignettes) are a great way to get started. Along with the (work in progress, as I'm struggling a little bit with documenting R6 objects) **documentation**, they'll eventually be available here:
 
