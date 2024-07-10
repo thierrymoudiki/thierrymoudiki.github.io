@@ -7,7 +7,15 @@ categories: R
 comments: true
 ---
 
-This is the most stable version of [`learningmachine`](https://github.com/Techtonique/learningmachine) for R: the one you should use. `learningmachine` is a package for Machine Learning that includes **uncertainty quantification for regression and classification** (work in progress), and **explainability through sensitivity analysis**. So far, it offers a unified interface for: 
+`learningmachine` is a package for Machine Learning that includes **uncertainty quantification for regression and classification** (work in progress), and **explainability through sensitivity analysis**. This is the most stable version of [`learningmachine`](https://github.com/Techtonique/learningmachine) for R: the one you should use (update 2024-07-10: use `v2.0.1`). 
+
+**Install `learningmachine` from GitHub (in R console, tested on macOS, Google Colab, and Posit Cloud)**
+
+```R
+remotes::install_github("Techtonique/learningmachine")
+```
+
+So far, `learningmachine` offers a unified interface for: 
 
 - `lm`: Linear model
 - `bcn`: *Boosted Configuration 'neural' Networks*, see [https://www.researchgate.net/publication/380760578_Boosted_Configuration_neural_Networks_for_supervised_classification](https://www.researchgate.net/publication/380760578_Boosted_Configuration_neural_Networks_for_supervised_classification)
@@ -17,6 +25,7 @@ This is the most stable version of [`learningmachine`](https://github.com/Techto
 - `ranger`: Random Forest; see [https://www.jstatsoft.org/article/view/v077i01](https://www.jstatsoft.org/article/view/v077i01)
 - `ridge`: Ridge regression; see [https://arxiv.org/pdf/1509.09169](https://arxiv.org/pdf/1509.09169)
 - `xgboost`: a scalable tree boosting system see [https://arxiv.org/abs/1603.02754](https://arxiv.org/abs/1603.02754)
+- `svm`: Support Vector Machines (only for regression, for now), see https://cran.r-project.org/web/packages/e1071/vignettes/svmdoc.pdf
 
 There are only 2 classes `Classifier` and `Regressor`, with methods `fit` and `predict` and `summary`, and all these models can be **enhanced by using a [quasi-randomized layer](https://github.com/Techtonique/nnetsauce)** that basically augments their capacity. The [3 package vignettes](https://github.com/Techtonique/learningmachine/tree/main/vignettes) are a great way to get started. Along with the (work in progress, as I'm struggling a little bit with documenting R6 objects) **documentation**, they'll eventually be available here:
 
