@@ -11,7 +11,7 @@ Last week, I (re)introduced `learningmachine`, an R package for Machine Learning
 
 <ul>
 <li>It's faster to install if R is already installed on your machine (otherwise, the Python package will attempt to install R and the package dependencies by itself)</li>
-<li>If R and the package dependencies are not already installed it (`learningmachine` Python) may take a long time to get started, but ONLY the first time it's installed and run</li>
+<li>If R and the package dependencies are not already installed it (learningmachine Python) may take a long time to get started, but ONLY the first time it's installed and run</li>
 </ul>
 
 Not everything is ultra-smooth yet (documentation coming in a few weeks), **but you can already do some _advanced_ stuff**, as shown below. 
