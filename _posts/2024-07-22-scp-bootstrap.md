@@ -17,9 +17,9 @@ Underlying algorithm:
 - Obtain Point forecast on test set
 - Prediction = Calibrated residuals simulations + point forecast on test set
 
-Interested in experimenting more? Here is [a web app](https://github.com/thierrymoudiki/2024-07-17-scp-block-bootstrap): 
+Interested in experimenting more? Here is [a web app](https://github.com/thierrymoudiki/2024-07-17-scp-block-bootstrap). 
 
-For more details, you can read: [https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series](https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series)
+For more details, you can read (under review): [https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series](https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series)
 
 ![xxx]({{base}}/images/2024-07-22/2024-07-22-image1.png){:class="img-responsive"}      
 
