@@ -7,7 +7,7 @@ categories: [Python, R]
 comments: true
 ---
 
-This post was first submitted to the [Applied Quantitative Investment Management](https://www.linkedin.com/groups/12877102/) group on LinkedIn. It illustrates a recipe implemented in [Python package nnetsauce](https://thierrymoudiki.github.io/blog/2024/07/03/python/quasirandomizednn/forecasting/nnetsauce-mts-isf2024) for time series forecasting uncertainty quantification (through simulation): **sequential split conformal prediction + block bootstrap** 
+This post was firstly submitted to the [Applied Quantitative Investment Management](https://www.linkedin.com/groups/12877102/) group on LinkedIn. It illustrates a recipe implemented in [Python package nnetsauce](https://thierrymoudiki.github.io/blog/2024/07/03/python/quasirandomizednn/forecasting/nnetsauce-mts-isf2024) for time series forecasting uncertainty quantification (through simulation): **sequential split conformal prediction + block bootstrap** 
 
 Underlying algorithm: 
 - Split data into training set, calibration set and test set
