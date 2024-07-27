@@ -11,7 +11,7 @@ On Friday (2024-07-26), I presented `nnetsauce` ("Probabilistic Forecasting with
 
 - A method `cross_val_score`: **time series cross-validation** for classes `MTS` and `DeepMTS`, with fixed and increasing window
   
-- **Copula simulation** for uncertainty quantification in classes `MTS` and `DeepMTS`: 
+- **Copula simulation** (thanks to [pyvinecopulib](https://github.com/vinecopulib/pyvinecopulib)) for uncertainty quantification in classes `MTS` and `DeepMTS`: 
   
   - `type_pi` based on copulas of in-sample residuals: `vine-tll` (default), `vine-bb1`, `vine-bb6`, `vine-bb7`, `vine-bb8`, `vine-clayton`, `vine-frank`, `vine-gaussian`, `vine-gumbel`, `vine-indep`, `vine-joe`, `vine-student`
   
