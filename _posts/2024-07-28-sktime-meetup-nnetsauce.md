@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Copulas for uncertainty quantification in forecasting"
+title: "Copulas for uncertainty quantification in time series forecasting"
 description: "Probabilistic Forecasting with nnetsauce (using Density Estimation, Bayesian inference, Conformal prediction and Vine copulas): nnetsauce presentation at sktime meetup (2024-07-26)"
 date: 2024-07-28
 categories: Python
 comments: true
 ---
 
-On Friday (2024-07-26), I presented `nnetsauce` ("Probabilistic Forecasting with nnetsauce (using Density Estimation, Bayesian inference, Conformal prediction and Vine copulas)") version `0.23.0` at an [sktime](https://github.com/sktime/sktime) (a unified interface for machine learning with time series) meetup. The news for `0.23.0` are: 
+On Friday (2024-07-26), I presented `nnetsauce` ("Probabilistic Forecasting with nnetsauce (using Density Estimation, Bayesian inference, Conformal prediction and Vine copulas)") version `0.23.0` at an **[sktime](https://github.com/sktime/sktime) (a unified interface for machine learning with time series) meetup**. The news for `0.23.0` are: 
 
 - A method `cross_val_score`: **time series cross-validation** for classes `MTS` and `DeepMTS`, with fixed and increasing window
   
