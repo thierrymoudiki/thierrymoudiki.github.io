@@ -9,14 +9,11 @@ comments: true
 
 On Friday (2024-07-26), I presented `nnetsauce` ("Probabilistic Forecasting with nnetsauce (using Density Estimation, Bayesian inference, Conformal prediction and Vine copulas)") version `0.23.0` at an **[sktime](https://github.com/sktime/sktime) (a unified interface for machine learning with time series) meetup**. The news for `0.23.0` are: 
 
-- A method `cross_val_score`: **time series cross-validation** for classes `MTS` and `DeepMTS`, with fixed and increasing window
-  
+
+- A method `cross_val_score`: **time series cross-validation** for classes `MTS` and `DeepMTS`, with fixed and increasing window  
 - **Copula simulation** (thanks to [pyvinecopulib](https://github.com/vinecopulib/pyvinecopulib)) for uncertainty quantification in classes `MTS` and `DeepMTS`: 
-  
   - `type_pi` based on copulas of in-sample residuals: `vine-tll` (default), `vine-bb1`, `vine-bb6`, `vine-bb7`, `vine-bb8`, `vine-clayton`, `vine-frank`, `vine-gaussian`, `vine-gumbel`, `vine-indep`, `vine-joe`, `vine-student`
-  
-  - `type_pi` based on sequential split conformal prediction (`scp`) + vine copula based on [calibrated residuals](https://github.com/thierrymoudiki/2024-07-17-scp-block-bootstrap): `scp-vine-tll`, `scp-vine-bb1`, `scp-vine-bb6`, `scp-vine-bb7`, `scp-vine-bb8`, `scp-vine-clayton`, `scp-vine-frank`, `scp-vine-gaussian`, `scp-vine-gumbel`, `scp-vine-indep`, `scp-vine-joe`, `scp-vine-student`
-  
+  - `type_pi` based on sequential split conformal prediction (`scp`) + vine copula based on [calibrated residuals](https://github.com/thierrymoudiki/2024-07-17-scp-block-bootstrap): `scp-vine-tll`, `scp-vine-bb1`, `scp-vine-bb6`, `scp-vine-bb7`, `scp-vine-bb8`, `scp-vine-clayton`, `scp-vine-frank`, `scp-vine-gaussian`, `scp-vine-gumbel`, `scp-vine-indep`, `scp-vine-joe`, `scp-vine-student`  
   - `type_pi` based on sequential split conformal prediction (`scp2`) + vine copula based on **standardized** calibrated residuals: `scp2-vine-tll`, `scp2-vine-bb1`, `scp2-vine-bb6`, `scp2-vine-bb7`, `scp2-vine-bb8`, `scp2-vine-clayton`, `scp2-vine-frank`, `scp2-vine-gaussian`, `scp2-vine-gumbel`, `scp2-vine-indep`, `scp2-vine-joe`, `scp2-vine-student`
 
 For more details and examples of use, you can read these slides:
