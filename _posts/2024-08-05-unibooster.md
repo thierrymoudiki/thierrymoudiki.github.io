@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Auto XGBoost, Auto LighGBM, Auto CatBoost, Auto GradientBoosting"
-description: "Auto XGBoost, Auto LighGBM, Auto CatBoost, Auto GradientBoosting"
+title: "Auto XGBoost, Auto LightGBM, Auto CatBoost, Auto GradientBoosting"
+description: "Auto XGBoost, Auto LightGBM, Auto CatBoost, Auto GradientBoosting"
 date: 2024-08-05
 categories: [Python, R]
 comments: true
