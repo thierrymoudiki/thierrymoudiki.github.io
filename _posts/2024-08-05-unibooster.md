@@ -74,7 +74,7 @@ print(res)
     result(best_params={'learning_rate': 0.9611431739764045, 'max_depth': 1, 'rowsample': 0.597564697265625, 'colsample': 0.508392333984375, 'model_type': 'lightgbm', 'n_estimators': 250}, best_score=-0.9780219780219781, test_accuracy=0.9736842105263158)
 
 
-How do we **verify what we've just did?**
+How do we **verify what we just did?**
 
 
 ```python
