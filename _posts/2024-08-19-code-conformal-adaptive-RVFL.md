@@ -7,7 +7,7 @@ categories: [R, Python]
 comments: true
 ---
 
-The model presented here is a frequentist -- [conformalized](https://conformalpredictionintro.github.io/) -- version of the Bayesian one presented last week in [#152](https://thierrymoudiki.github.io/blog/2024/08/12/r/bqrvfl). The model is implemented in `learningmachine`, both in [Python](https://github.com/Techtonique/learningmachine_python) and [R](https://github.com/Techtonique/learningmachine). Model explanations are given as sensitivity analysis. 
+The model presented here is a frequentist -- [conformalized](https://conformalpredictionintro.github.io/) -- version of the Bayesian one presented last week in [#152](https://thierrymoudiki.github.io/blog/2024/08/12/r/bqrvfl). The model is implemented in `learningmachine`, both in [Python](https://github.com/Techtonique/learningmachine_python) and [R](https://github.com/Techtonique/learningmachine). Model explanations are given as sensitivity analyses. 
 
 # 0 - install packages
 
