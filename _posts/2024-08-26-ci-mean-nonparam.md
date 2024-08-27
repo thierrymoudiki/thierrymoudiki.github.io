@@ -8,6 +8,8 @@ categories: R
 comments: true
 ---
 
+**Update 2024-08-27**: do not use the 'p-value' as is 
+
 Last week, I was looking for a way to construct nonparametric confidence intervals for average 
 effects in [`learningmachine`](https://thierrymoudiki.github.io/blog/2024/07/08/r/learningmachine-docs) (using Student-T tests to construct confidence intervals for now). So, I thought of one and implemented it. The methodology combines stratified sampling with the generation of pseudo-observations derived from standardized residuals.
 
