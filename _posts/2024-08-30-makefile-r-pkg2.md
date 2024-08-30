@@ -7,9 +7,9 @@ categories: R
 comments: true
 ---
 
-Earlier this week in [#155](https://thierrymoudiki.github.io/blog/2024/08/27/r/makefile-r-pkg), I posted about a quick/automated workflow for R package development **at the command line**. Using this workflow along with VS Code Editor -- after experimenting it myself -- is **a breeze**... 
+**Disclaimer**: I have no affiliation with the VS Code team, just a user who likes the product.
 
-Interested in using VS Code for your R package development? Read this resource: https://code.visualstudio.com/docs/languages/r.
+Earlier this week in [#155](https://thierrymoudiki.github.io/blog/2024/08/27/r/makefile-r-pkg), I posted about a quick/automated workflow for R package development **at the command line**. Using this workflow along with VS Code Editor -- after experimenting it myself -- is **a breeze**... Interested in using VS Code for your R package development? Read this resource: https://code.visualstudio.com/docs/languages/r.
 
 Here's the updated Makefile: [https://gist.github.com/thierrymoudiki/3bd7cfa099aef0c64eb5f91138d8cedb](https://gist.github.com/thierrymoudiki/3bd7cfa099aef0c64eb5f91138d8cedb)
 
