@@ -32,6 +32,12 @@ All you need to do is **store it at the root of your package folder**. Type `mak
 - `test`: runs the the package tests
 - `usegit`: initialize Git repo and initial commit
 
+You can even **chain operations by doing**: 
+
+```bash
+make check&&make install
+```
+
 Feel free to fork or **comment the [GitHub Gist](https://gist.github.com/thierrymoudiki/3bd7cfa099aef0c64eb5f91138d8cedb)** if you have a suggestion like [Prof. Rob J Hyndman](https://robjhyndman.com/) who found it useful (like me). The more feedback, the better the experience for everyone ;) 
 
 ![idontowntherightsofthispic]({{base}}/images/2024-08-30/2024-08-30-image1.png){:class="img-responsive"} 
