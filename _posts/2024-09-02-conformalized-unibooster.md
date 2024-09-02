@@ -9,7 +9,7 @@ comments: true
 
 In [#151](https://thierrymoudiki.github.io/blog/2024/08/05/python/r/unibooster), I introduced a minimal unified interface to `XGBoost`, `CatBoost`, `LightGBM`, and `GradientBoosting` in Python and R. These models can be automatically calibrated by using [`GPopt`](https://github.com/Techtonique/GPopt) (a package for Bayesian optimization) under the hood. In this post, I'll show how to obtain **prediction sets (classification) and prediction intervals (regression)** for these models. For the prediction sets, I extensively relied on Python's `nonconformist`. 
 
-Below, I present a **Python version and an R version**.
+Below, I present a **Python version (section 1) and an R version (section 2)**.
 
 # 1 - Python examples
 
