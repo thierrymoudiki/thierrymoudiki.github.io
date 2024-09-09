@@ -18,3 +18,5 @@ defaults:
     values:
       layout: "post"
       comments: true   # change to false to default to comments off site-wide
+talkyard_server_url: https://site-956hwbepn0.talkyard.net
+talkyard_script_url: https://c1.ty-cdn.net/-/talkyard-comments.min.js
