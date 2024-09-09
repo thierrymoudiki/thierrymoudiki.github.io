@@ -7,4 +7,6 @@ categories: [R, Python]
 comments: true
 ---
 
-New versions of [nnetsauce](https://github.com/Techtonique/nnetsauce) and [ahead](https://github.com/Techtonique/ahead) will be released this week. Big releases, notably with more uncertainty quantification methods implemented in both packages. Stay tuned!
+New versions of [nnetsauce](https://github.com/Techtonique/nnetsauce) and [ahead](https://github.com/Techtonique/ahead) will be released this week. Big releases, notably with more uncertainty quantification methods implemented in both packages. Stay tuned.
+
+PS: You can now (well, again) comment on posts on this website. Hope it works better than Disqus.
