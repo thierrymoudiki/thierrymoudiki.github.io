@@ -13,6 +13,8 @@ Earlier this week in [#155](https://thierrymoudiki.github.io/blog/2024/08/27/r/m
 
 Here's the updated Makefile (as of 2024-08-30): [https://gist.github.com/thierrymoudiki/3bd7cfa099aef0c64eb5f91138d8cedb](https://gist.github.com/thierrymoudiki/3bd7cfa099aef0c64eb5f91138d8cedb)
 
+<script src="https://gist.github.com/thierrymoudiki/3bd7cfa099aef0c64eb5f91138d8cedb.js"></script>
+
 All you need to do is **store it at the root of your package folder**. Type `make` or `make help` at the command line to see all the commands available. You can start with `make initialize`, that will install `devtools`, `usethis` and `rmarkdown`, if they're not available yet. Here's what you can do so far (as of 2024-08-30): 
 
 - `buildsite`: create a website for your package
