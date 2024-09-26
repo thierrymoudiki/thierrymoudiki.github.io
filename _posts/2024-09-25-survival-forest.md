@@ -30,17 +30,25 @@ A common type of [request](https://en.wikipedia.org/wiki/Representational_state_
 Below is an example. In this case, the **resource** we want to manage is a list of **users**.
 
 - Request type (verb): **GET**  
-  - **URL Path:** `http://users` &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; **API Response:** Displays a list of all users  
-  - **URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Displays a specific user
+  <ul>
+    <li>**URL Path:** `http://users` &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; **API Response:** Displays a list of all users  </li>
+    <li>**URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Displays a specific user</li>
+  </ul>
 
 - Request type (verb): **POST**  
-  - **URL Path:** `http://users` &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; **API Response:** Creates a new user
+  <ul>
+    <li>**URL Path:** `http://users` &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; **API Response:** Creates a new user</li>
+  </ul>  
 
 - Request type (verb): **PUT**  
-  - **URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Updates a specific user
+  <ul>
+    <li>**URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Updates a specific user</li>
+  </ul>
 
 - Request type (verb): **DELETE**  
-  - **URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Deletes a specific user
+  <ul>
+    <li>**URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Deletes a specific user</li>
+  </ul>
 
 In Techtonique/APIs, a typical resource endpoint would be `/MLmodel`. Since the resources are predefined and do not need to be updated (PUT) or deleted (DELETE), **every request will be a [POST](https://en.wikipedia.org/wiki/Representational_state_transfer) request** to a `/MLmodel`, with additional parameters for the ML model.  
 After reading this, you can proceed to the [/howtoapi](https://www.techtonique.net/howtoapi) page.
