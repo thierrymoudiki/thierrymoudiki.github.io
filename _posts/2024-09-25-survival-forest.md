@@ -29,26 +29,26 @@ A common type of [request](https://en.wikipedia.org/wiki/Representational_state_
 
 Below is an example. In this case, the **resource** we want to manage is a list of **users**.
 
-- Request type (verb): **GET**  
-  <ul>
-    <li>**URL Path:** `http://users` &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; **API Response:** Displays a list of all users  </li>
-    <li>**URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Displays a specific user</li>
-  </ul>
+<p>- Request type (verb): <strong>GET</strong></p>
+<ul>
+    <li><strong>URL Path:</strong> <code>http://users</code> &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; <strong>API Response:</strong> Displays a list of all users</li>
+    <li><strong>URL Path:</strong> <code>http://users/:id</code> &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; <strong>API Response:</strong> Displays a specific user</li>
+</ul>
 
-- Request type (verb): **POST**  
-  <ul>
-    <li>**URL Path:** `http://users` &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; **API Response:** Creates a new user</li>
-  </ul>  
+<p>- Request type (verb): <strong>POST</strong></p>
+<ul>
+    <li><strong>URL Path:</strong> <code>http://users</code> &nbsp;|&nbsp; Endpoint: users &nbsp;|&nbsp; <strong>API Response:</strong> Creates a new user</li>
+</ul>  
 
-- Request type (verb): **PUT**  
-  <ul>
-    <li>**URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Updates a specific user</li>
-  </ul>
+<p>- Request type (verb): <strong>PUT</strong></p>
+<ul>
+    <li><strong>URL Path:</strong> <code>http://users/:id</code> &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; <strong>API Response:</strong> Updates a specific user</li>
+</ul>
 
-- Request type (verb): **DELETE**  
-  <ul>
-    <li>**URL Path:** `http://users/:id` &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; **API Response:** Deletes a specific user</li>
-  </ul>
+<p>- Request type (verb): <strong>DELETE</strong></p>
+<ul>
+    <li><strong>URL Path:</strong> <code>http://users/:id</code> &nbsp;|&nbsp; Endpoint: users/:id &nbsp;|&nbsp; <strong>API Response:</strong> Deletes a specific user</li>
+</ul>
 
 In Techtonique/APIs, a typical resource endpoint would be `/MLmodel`. Since the resources are predefined and do not need to be updated (PUT) or deleted (DELETE), **every request will be a [POST](https://en.wikipedia.org/wiki/Representational_state_transfer) request** to a `/MLmodel`, with additional parameters for the ML model.  
 After reading this, you can proceed to the [/howtoapi](https://www.techtonique.net/howtoapi) page.
