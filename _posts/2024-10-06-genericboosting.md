@@ -1412,7 +1412,7 @@ shap.force_plot(explainer.expected_value[0], shap_values[..., 0], X_test)
 
 
 
-
+![xxx]({{base}}/images/2024-10-06/2024-10-06-image1.png){:class="img-responsive"}  
 
 
 <div id='iWCAF1CLPRAYNHROB8H2N'>
