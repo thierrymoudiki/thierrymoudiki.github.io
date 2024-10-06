@@ -10,7 +10,7 @@ comments: true
 We've always been told that decision trees are _best_ for [Gradient Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) Machine Learning. I've always wanted to see for myself. [AdaBoostClassifier](https://techtonique.github.io/nnetsauce/nnetsauce.html#AdaBoostClassifier) is working well, but is relatively _slow_ (by my own standards). A few days ago, I noticed that my Cython implementation of [LSBoost](https://www.researchgate.net/publication/346059361_LSBoost_gradient_boosted_penalized_nonlinear_least_squares) in Python package mlsauce was already quite _generic_ (never noticed before), and I decided to adapt it to any machine learning model with `fit` and `predict` methods. It's worth mentioning that only regression algorithms are accepted as base learners, and classification is [regression-based](https://www.researchgate.net/publication/377227280_Regression-based_machine_learning_classifiers). The results are promising indeed; I'll let you see for yourself below. All the algorithms, including `xgboost` and `RandomForest`, are used with their default hyperparameters. Which means, there's still a room for improvement.
 
 
-
+Install mlsauce (version 0.20.3) from GitHub:
 
 ```python
 !pip install git+https://github.com/Techtonique/mlsauce.git --verbose --upgrade --no-cache-dir
