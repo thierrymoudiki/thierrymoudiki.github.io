@@ -230,5 +230,8 @@ GenericBooster(LassoLars)                             0.2727273         0.333333
 If you want use one of the models, type `?mlsauce::GradientBoostingClassifier` 
 or `?mlsauce::GradientBoostingRegressor` in the console.
 
+**Bonus**: R package development at the command line
+
+<script src="https://gist.github.com/thierrymoudiki/3bd7cfa099aef0c64eb5f91138d8cedb.js"></script>
 
 ![xxx]({{base}}/images/2024-10-14/2024-10-14-image1.png){:class="img-responsive"}  
