@@ -7,7 +7,7 @@ categories: R
 comments: true
 ---
 
-Last week, I presented a functionality from Python package called `mlsauce` that allows gradient boosting of any regression algorithm. This post is about the [R version](https://github.com/Techtonique/mlsauce_r). 
+[Last week](https://thierrymoudiki.github.io/blog/2024/10/06/python/r/genericboosting), I presented a functionality from Python package called `mlsauce` that allows gradient boosting of any regression algorithm. This post is about the [R version](https://github.com/Techtonique/mlsauce_r). 
 
 I think (?) I finally wrapped my head around the process of creating an R package from a Python package systematically, using `reticulate`. By default when _onload_ ing, `reticulate` creates a Python virtual environment in the working directory (should ask). Then [you need to tell R](https://github.com/Techtonique/mlsauce_r/blob/main/R/zzz.R) where to find the Python packages: in that virtual environment. 
 
