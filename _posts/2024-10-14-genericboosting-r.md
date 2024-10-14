@@ -18,7 +18,6 @@ devtools::install_github("Techtonique/mlsauce_r")
 ```
 
 ```R
-
 library(mlsauce)
 
 # 1 ---- MASS::Aids2 data set: Australian AIDS Survival Data
