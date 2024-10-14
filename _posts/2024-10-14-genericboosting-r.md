@@ -11,7 +11,7 @@ comments: true
 
 I think (?) I finally wrapped my head around the process of creating an R package from a Python package systematically, using `reticulate`. By default when _onload_ ing, `reticulate` creates a Python virtual environment in the working directory (should ask). Then [you need to tell R](https://github.com/Techtonique/mlsauce_r/blob/main/R/zzz.R) where to find the Python packages: in that virtual environment. 
 
-Keep it mind that there are many layers here: Cython, C, Python, R, and the R package interface, so it **may** not work on your machine. I only tested it on Linux Ubuntu 20.04. 
+Keep it mind that there are many layers here: Cython, C, Python, R, and the R package interface, so it **may** not work on your machine. I only tested it on Linux Ubuntu 20.04. Also, every model presented below is using its default hyperparameters...
 
 ```R
 devtools::install_github("Techtonique/mlsauce_r")
