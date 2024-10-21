@@ -9,7 +9,7 @@ comments: true
 
 It's now possible to **run R code in an editor** and **SQL queries in a console** on [www.techtonique.net](https://www.techtonique.net/). In the R editor, you can write and execute R code, **including plotting**, and in the SQL console, you can display SQL queries' results and download these results as csv files.
 
-![xxx]({{base}}/images/2024-10-15/2024-10-21-image1.png){:class="img-responsive"}  
+![xxx]({{base}}/images/2024-10-21/2024-10-21-image1.png){:class="img-responsive"}  
 
 As a reminder from last week, you can run R or Python code interactively in your browser, on [www.techtonique.net](https://www.techtonique.net/). 
 
