@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "R editor and SQL console in www.techtonique.net"
-description: "R editor and SQL console in www.techtonique.net"
+title: "R editor and SQL console (in addition to Python editors) in www.techtonique.net"
+description: "R editor and SQL console (in addition to Python editors) in www.techtonique.net"
 date: 2024-10-21
-categories: [R, SQL]
+categories: [R, Python, SQL]
 comments: true
 ---
 
