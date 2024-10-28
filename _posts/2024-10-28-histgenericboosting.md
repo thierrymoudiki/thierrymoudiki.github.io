@@ -9,10 +9,10 @@ comments: true
 
 A few weeks ago, I intoduced a model-agnostic gradient boosting procedure, that can use any base learner (available in R and Python package `mlsauce`): 
 
-- https://thierrymoudiki.github.io/blog/2024/10/06/python/r/genericboosting
-- https://thierrymoudiki.github.io/blog/2024/10/14/r/genericboosting-r
+- [https://thierrymoudiki.github.io/blog/2024/10/06/python/r/genericboosting](https://thierrymoudiki.github.io/blog/2024/10/06/python/r/genericboosting)
+- [https://thierrymoudiki.github.io/blog/2024/10/14/r/genericboosting-r](https://thierrymoudiki.github.io/blog/2024/10/14/r/genericboosting-r)
 
-The logic is different from other histogram-based gradient boosting algorithms, as histograms are _only_ used here for **feature engineering of continuous features**. So far, I don't see huge differences with the original implementation of the `GenericBooster`, but it's still a work in progress. I envisage to try it out on a data set that contains a mix of continuous and categorical features (as categorical features are not _histogram-engineered_).
+The rationale is different from other histogram-based gradient boosting algorithms, as histograms are _only_ used here for **feature engineering of continuous features**. So far, I don't see huge differences with the original implementation of the `GenericBooster`, but it's still a work in progress. I envisage to try it out on a data set that contains a 'higher' mix of continuous and categorical features (as categorical features are not _histogram-engineered_).
 
 Here are a few results that can give you an idea of the performance of the algorithm:
 
