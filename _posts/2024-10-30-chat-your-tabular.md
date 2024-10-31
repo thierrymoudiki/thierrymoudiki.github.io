@@ -66,5 +66,5 @@ Below is an example. In this case, the **resource** we want to manage is a list 
 In Techtonique/APIs, a typical resource endpoint would be `/MLmodel`. Since the resources are predefined and do not need to be updated (PUT) or deleted (DELETE), **every request will be a [POST](https://en.wikipedia.org/wiki/Representational_state_transfer) request** to a `/MLmodel`, with additional parameters for the ML model.  
 After reading this, you can proceed to the [/howtoapi](https://www.techtonique.net/howtoapi) page.
 
-![xxx]({{base}}/images/2024-10-31/2024-10-31-image1.png){:class="img-responsive"}  
+![xxx]({{base}}/images/2024-10-30/2024-10-30-image1.png){:class="img-responsive"}  
 
