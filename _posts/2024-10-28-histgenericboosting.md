@@ -6,9 +6,9 @@ date: 2024-10-28
 categories: [Python, R, QuasiRandomizedNN]
 comments: true
 ---
-**Update 2024-10-29**: Fixed an error, and the histogram-based is actually failing miserably. Still trying to wrap my head around it (why is it not only failing, but so badly). The original implementation of the `GenericBooster` is still doing great.
+**Update 2024-10-29**: Fixed an error, and the histogram-based is actually failing miserably. Still trying to wrap my head around it (why is it not only failing, but so badly). The original implementation of the **`GenericBooster` is still doing great** as shown below.
 
-A few weeks ago, I introduced a model-agnostic gradient boosting (XGBoost, LightGBM, CatBoost-like) procedure for supervised regression and classififcatin, that can use any base learner (available in R and Python package `mlsauce`): 
+A few weeks ago, I introduced a model-agnostic gradient boosting (XGBoost, LightGBM, CatBoost-like) procedure for supervised regression and classifcation, that can use any base learner (available in R and Python package `mlsauce`): 
 
 - [https://thierrymoudiki.github.io/blog/2024/10/06/python/r/genericboosting](https://thierrymoudiki.github.io/blog/2024/10/06/python/r/genericboosting)
 - [https://thierrymoudiki.github.io/blog/2024/10/14/r/genericboosting-r](https://thierrymoudiki.github.io/blog/2024/10/14/r/genericboosting-r)
