@@ -78,7 +78,7 @@ sims <- forecastingapi::get_forecast(path_to_file, type_pi="scp2-kde", replicati
 matplot(sims, type='l', lwd=2)
 ```
 
-![xxx]({{base}}/images/2024-11-03/2024-11-03-image3.pdf){:class="img-responsive"}
+![xxx]({{base}}/images/2024-11-03/2024-11-03-image3.png){:class="img-responsive"}
 
 As a reminder: 
 
