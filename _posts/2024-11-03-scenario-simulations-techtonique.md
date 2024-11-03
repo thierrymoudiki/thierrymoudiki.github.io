@@ -93,7 +93,7 @@ You can now obtain insights from your tabular data by chatting with it in [techt
 
 You can also run R or Python code interactively in your browser, on [www.techtonique.net/consoles](https://www.techtonique.net/consoles). 
 
-[Techtonique web app](https://www.techtonique.net/), a tool designed to help you make informed, data-driven decisions using Mathematics, Statistics, Machine Learning, and Data Visualization. As of September 2024, the tool is in its beta phase (subject to crashes) and will remain completely free to use until December 24, 2024. 
+[Techtonique web app](https://www.techtonique.net/) is a tool designed to help you make informed, data-driven decisions using Mathematics, Statistics, Machine Learning, and Data Visualization. As of September 2024, the tool is in its beta phase (subject to crashes) and will remain completely free to use until December 24, 2024. 
 After registering, you will receive an email. CHECK THE SPAMS.
 A few selected users will be contacted directly for feedback, but you can also [send yours](https://forms.gle/aLHoi9roQy4s5RM99).  
 
