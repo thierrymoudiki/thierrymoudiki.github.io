@@ -9,7 +9,7 @@ comments: true
 
 In this post, we will learn how to simulate predictive scenarios using R, Python, and Excel, by using  [Techtonique API](https://www.techtonique.net/docs), available at [https://www.techtonique.net](https://www.techtonique.net). Input csv files used in the examples are available in [Techtonique/datasets](https://github.com/Techtonique/datasets). 
 
-The **Excel version** can be found in the Excel file [https://github.com/thierrymoudiki/techtonique-excel-server/VBA-Web.xlsm](https://github.com/thierrymoudiki/techtonique-excel-server) (in 'Sheet3'). Behind the scenes, I'm using Visual Basic for Applications (VBA) to send requests to the API. All you need to do to make it work is [get a token](https://www.techtonique.net/docs) and press a button. Remember to enable macros in Excel when asked to do so (this is safe).
+The **Excel version** can be found in the Excel file [https://github.com/thierrymoudiki/techtonique-excel-server/VBA-Web.xlsm](https://github.com/thierrymoudiki/techtonique-excel-server) (in 'Sheet3'). Behind the scenes, I'm using Visual Basic for Applications (VBA) to send requests to the API. All you need to do to make it work is [get a token](https://www.techtonique.net/token) and press a button. Remember to enable macros in Excel when asked to do so (this is safe).
 
 ![xxx]({{base}}/images/2024-11-03/2024-11-03-image1.png){:class="img-responsive"}  
 
