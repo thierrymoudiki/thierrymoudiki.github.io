@@ -33,7 +33,7 @@ n_hidden_features=5,
 lags=25,
 type_pi='scp2-kde',
 replications=10,
-h=5)
+h=10)
 print(f"Elapsed: {time() - start} seconds \n")
 
 print(res_get_forecast)
@@ -73,7 +73,7 @@ To finish, here's the **R version**, which relies on [`forecastingapi`](https://
 ```R
 path_to_file <- "/Users/t/Documents/datasets/time_series/univariate/AirPassengers.csv"
 forecastingapi::get_forecast(path_to_file)
-forecastingapi::get_forecast(path_to_file, type_pi='scp2-kde', h=5L, replications=10L)
+forecastingapi::get_forecast(path_to_file, type_pi='scp2-kde', h=10L, replications=10L)
 sims <- forecastingapi::get_forecast(path_to_file, type_pi="scp2-kde", replications=10L)$sims
 matplot(sims, type='l', lwd=2)
 ```
