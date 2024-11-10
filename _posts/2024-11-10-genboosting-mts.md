@@ -121,7 +121,7 @@ print(models[["RMSE", "WINKLERSCORE", "Time Taken"]].iloc[0:25,:])
 
 # 2 - Individual examples 
 
-Here, I will show how to use `mlsauce` for time series forecasting, with Ridge regression and Kernel Ridge regression as base learners.
+Here, I will show how to use `mlsauce` for time series forecasting, with Ridge regression and Kernel Ridge regression as base learners. 250 _predictive_ simulations are performed, and the prediction is made for the next 20 periods.
 
 ```python
 import nnetsauce as ns
