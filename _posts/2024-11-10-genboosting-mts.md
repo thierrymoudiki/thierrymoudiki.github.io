@@ -17,7 +17,7 @@ LightGBM is widely used in the context of time series forecasting (see e.g for [
 
 # 1 - Hold-out set cross-validation
 
-Here, Generic Gradient Boosting is compared to popular models such as VAR and VECM (without hyperparameter tuning), on the macrodata dataset from the `statsmodels` package. The dataset is split into a training set (90% of the data) and a testing set (10% of the data), and model performance is evaluated using Root Mean Squared Error (RMSE) and  [Winkler score](https://www.otexts.com/fpp3/distaccuracy.html#winkler-score) (uncertainty quantification). Uncertainty quantification uses conformal prediction and numerical simulation, as described in [my paper](https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series) and more details can be found in [these slides](https://www.researchgate.net/publication/382589729_Probabilistic_Forecasting_with_nnetsauce_using_Density_Estimation_Bayesian_inference_Conformal_prediction_and_Vine_copulas).
+Here, Generic Gradient Boosting is compared to popular models such as VAR and VECM (without hyperparameter tuning), on the macrodata dataset from the `statsmodels` package. The dataset is split into a training set (90% of the data) and a testing set (10% of the data), and model performance is evaluated using Root Mean Squared Error (RMSE) and  [Winkler score](https://www.otexts.com/fpp3/distaccuracy.html#winkler-score) (uncertainty quantification). Uncertainty quantification uses conformal prediction and numerical simulation as described in [my paper](https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series), and more details can be found in [these slides](https://www.researchgate.net/publication/382589729_Probabilistic_Forecasting_with_nnetsauce_using_Density_Estimation_Bayesian_inference_Conformal_prediction_and_Vine_copulas).
 
 ```python
 import mlsauce as ms 
@@ -121,7 +121,7 @@ print(models[["RMSE", "WINKLERSCORE", "Time Taken"]].iloc[0:25,:])
 
 # 2 - Individual examples 
 
-Here, I will show how to use `mlsauce` for time series forecasting, with Ridge regression and Kernel Ridge regression as base learners. 250 conformal _predictive_ simulations are performed, and the prediction is made for the next 20 periods.
+Here, I will show how to use `mlsauce` for time series forecasting, with Ridge regression and Kernel Ridge regression as base learners. 250 conformal _predictive_ simulations are obtained, and the prediction is made for the next 20 periods.
 
 ```python
 import nnetsauce as ns
