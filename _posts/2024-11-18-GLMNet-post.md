@@ -62,10 +62,7 @@ for dataset in datasets:
     print("accuracy: ", np.mean(preds == y_test))
 ```
 
-```python
-
-    
-    
+```python    
      dataset: load_iris -------------------
     {'alpha': 1.0, 'dfmax': 10000000000.0, 'exclude': None, 'family': 'multinomial', 'lambdau': None, 'lower_lambdau': None, 'maxit': 100000.0, 'ncores': -1, 'nlambda': 100, 'parallel': False, 'penalty_factor': None, 'pmax': 10000000000.0, 'standardize': True, 'thresh': 1e-07, 'type_measure': 1, 'upper_lambdau': None, 'verbose': False, 'weights': None}
     elapsed: 0.5259675979614258
@@ -1639,7 +1636,6 @@ for dataset in [load_diabetes, fetch_california_housing]:
     preds = model.predict(X_test)
     rmse = ((preds - y_test)**2).mean()**0.5
     print(f"RMSE: {rmse}")
-
 ```
 
 ```python
