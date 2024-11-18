@@ -14,7 +14,7 @@ GLMNet implements the entire [lasso or elastic-net](https://glmnet.stanford.edu/
 - uses `numpy` instead of `scipy`  
 - uses `scikit-learn` style, with a main class `GLMNet` having methods `fit` and `predict`
 
-If (like me) you're a fond a GLMNet and scikit-learn style, you may love this package. Here, I illustrate the usage of this "new" package, along with its use within the Techtonique ecosystem (`nnetsauce` and `mlsauce`).
+If (like me) you're fond of GLMNet and scikit-learn style, you may love this package. Here, I illustrate the usage of this "new" package, along with its use within the Techtonique ecosystem (`nnetsauce` and `mlsauce`).
 
 ```python
 !pip install nnetsauce
