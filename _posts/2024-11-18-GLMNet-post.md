@@ -60,7 +60,7 @@ for dataset in datasets:
     print(preds)
 
     print("accuracy: ", np.mean(preds == y_test))
-
+```
 
 ```python
 
@@ -91,12 +91,12 @@ for dataset in datasets:
     [2. 1. 2. 1. 1. 2. 0. 2. 2. 1. 2. 2. 2. 0. 0. 2. 1. 1. 0. 1. 1. 2. 2. 2.
      1. 2. 2. 1. 0. 0. 0. 0. 2. 1. 2. 1.]
     accuracy:  0.9722222222222222
-
+```
 
 ## 1 - 2 GLMNet Regression
 
 
-```
+```python
 import numpy as np
 import os
 import sys
@@ -143,8 +143,7 @@ for dataset in datasets:
 
 ```
 
-    
-    
+```    
      dataset: load_diabetes -------------------
     {'alpha': 1.0, 'dfmax': 10000000000.0, 'exclude': None, 'family': 'gaussian', 'lambdau': None, 'lower_lambdau': None, 'maxit': 100000.0, 'ncores': -1, 'nlambda': 100, 'parallel': False, 'penalty_factor': None, 'pmax': 10000000000.0, 'standardize': True, 'thresh': 1e-07, 'type_measure': 1, 'upper_lambdau': None, 'verbose': False, 'weights': None}
     elapsed: 0.003544330596923828
@@ -1381,10 +1380,9 @@ for dataset in datasets:
            2.05146858e-03, 1.86922176e-03, 1.70316525e-03, 1.55186075e-03,
            1.41399772e-03, 1.28838206e-03, 1.17392574e-03, 1.06963742e-03,
            9.74613777e-04, 8.88031775e-04, 8.09141480e-04, 7.37259581e-04]), 'npasses': 800, 'jerr': 0, 'dim': array([ 8, 76]), 'offset': False, 'class': 'elnet'}, 'lambda_min': array([0.00297633]), 'lambda_1se': array([0.01588378]), 'class': 'cvglmnet'}
-
+```
 
 # 2 - GLMNet + nnetsauce
-
 
 ```python
 import glmnetforpython as glmnet
@@ -1468,6 +1466,7 @@ for dataset in [load_breast_cancer, load_wine, load_iris]:
     print(f"Accuracy: {accuracy}")
 ```
 
+```
     /usr/local/lib/python3.10/dist-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
       and should_run_async(code)
 
@@ -1585,11 +1584,7 @@ for dataset in [load_breast_cancer, load_wine, load_iris]:
 
     Training time: 0.5447156429290771 seconds
     Accuracy: 0.9333333333333333
-
-
-    
-
-
+```
 
 ```python
 from sklearn.datasets import load_diabetes, fetch_california_housing
@@ -1645,9 +1640,9 @@ for dataset in [load_diabetes, fetch_california_housing]:
     rmse = ((preds - y_test)**2).mean()**0.5
     print(f"RMSE: {rmse}")
 
-
 ```
 
+```python
     /usr/local/lib/python3.10/dist-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
       and should_run_async(code)
 
@@ -1680,6 +1675,6 @@ for dataset in [load_diabetes, fetch_california_housing]:
     RMSE: 0.8218417233321206
     Training time: 0.512531042098999 seconds
     RMSE: 0.8218417233321208
-
+```
 
 ![xxx]({{base}}/images/2024-11-18/2024-11-18-image1.png){:class="img-responsive"}          
