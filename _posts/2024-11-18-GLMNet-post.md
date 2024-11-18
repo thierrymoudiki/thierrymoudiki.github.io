@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GLMNet in Python: Generalized Linear Models"
-description: "GLMNet in Python: Generalized Linear Models"
+description: "GLMNet in Python: Generalized Linear Model, within the Techtonique ecosystem (nnetsauce, mlsauce)"
 date: 2024-11-18
 categories: [Python, R]
 comments: true
