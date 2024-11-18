@@ -62,7 +62,7 @@ for dataset in datasets:
     print("accuracy: ", np.mean(preds == y_test))
 
 
-```
+```python
 
     
     
@@ -96,7 +96,7 @@ for dataset in datasets:
 ## 1 - 2 GLMNet Regression
 
 
-```python
+```
 import numpy as np
 import os
 import sys
@@ -1382,11 +1382,6 @@ for dataset in datasets:
            1.41399772e-03, 1.28838206e-03, 1.17392574e-03, 1.06963742e-03,
            9.74613777e-04, 8.88031775e-04, 8.09141480e-04, 7.37259581e-04]), 'npasses': 800, 'jerr': 0, 'dim': array([ 8, 76]), 'offset': False, 'class': 'elnet'}, 'lambda_min': array([0.00297633]), 'lambda_1se': array([0.01588378]), 'class': 'cvglmnet'}
 
-
-
-```python
-
-```
 
 # 2 - GLMNet + nnetsauce
 
