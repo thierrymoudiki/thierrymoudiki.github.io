@@ -46,7 +46,7 @@ h <- 25L
 
 ## 1 - 1 - Using default parameters
 
-```{r fig.width=7.5}
+```{r}
 par(mfrow=c(2, 2))
 plot(ahead::genericforecast(FUN=forecast::thetaf, y, h))
 plot(ahead::genericforecast(FUN=forecast::meanf, y, h))
@@ -66,7 +66,7 @@ plot(ahead::genericforecast(FUN=ahead::dynrmf, y, h))
 
 ## 1 - 2 - Using additional parameters
 
-```{r fig.width=7.5}
+```{r}
 par(mfrow=c(2, 2))
 plot(ahead::genericforecast(FUN=ahead::dynrmf, y=y, h=h, 
                             fit_func=e1071::svm, predict_func=predict))
@@ -84,7 +84,7 @@ plot(ahead::genericforecast(FUN=forecast::rwf,
 
 ## 2 - 1 - Using default parameters
 
-```{r fig.width=7.5}
+```{r}
 y <- USAccDeaths
 
 par(mfrow=c(3, 2))
@@ -106,7 +106,7 @@ obj <- ahead::conformalize(FUN=forecast::Arima, y, h); plot(obj)
 
 ## 2 - 2 - Using additional parameters
 
-```{r fig.width=7.5}
+```{r}
 y <- AirPassengers
 
 par(mfrow=c(2, 2))
@@ -121,7 +121,7 @@ obj <- ahead::conformalize(FUN=ahead::dynrmf, y=y, h=h, fit_func=glmnet::cv.glmn
 
 ## 2 - 3 - Using other simulation methods (conformal prediction-based)
 
-```{r fig.width=7.5}
+```{r}
 y <- fdeaths
 
 par(mfrow=c(3, 2))
