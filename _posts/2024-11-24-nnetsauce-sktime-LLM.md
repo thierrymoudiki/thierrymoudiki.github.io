@@ -8,9 +8,7 @@ comments: true
 ---
 
 In this post:
-
-- I show how to use python package `nnetsauce` alongside `sktime` for univariate and multivariate time series (probabilistic) forecasting. `sktime` useful for benchmarking a plethora of (probabilistic) forecasts with a unified interface
-
+- I show how to use python package [`nnetsauce`](https://github.com/Techtonique/nnetsauce) alongside `sktime` for univariate and multivariate time series (probabilistic) forecasting. `sktime` useful for benchmarking a plethora of (probabilistic) forecasts with a unified interface
 - I benchmark [`nnetsauce.MTS`](https://www.researchgate.net/publication/382589729_Probabilistic_Forecasting_with_nnetsauce_using_Density_Estimation_Bayesian_inference_Conformal_prediction_and_Vine_copulas)'s _armada_ (**not with `sktime`**) against foundation models ("LLMs", Amazon's _Chronos_, IBM's TinyTimeMixer) and _statistical_ models. Regarding the LLMs: If I'm not doing it well (I just _plugged and played_), do not hesitate to reach out.  
 
 A link to the notebook is availble at the end of this post.
