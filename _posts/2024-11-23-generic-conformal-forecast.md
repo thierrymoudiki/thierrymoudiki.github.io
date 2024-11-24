@@ -87,7 +87,7 @@ plot(ahead::genericforecast(FUN=forecast::rwf,
 ```{r}
 y <- USAccDeaths
 
-par(mfrow=c(3, 2))
+par(mfrow=c(2, 2))
 obj <- ahead::conformalize(FUN=forecast::thetaf, y, h); plot(obj)
 obj <- ahead::conformalize(FUN=forecast::meanf, y, h); plot(obj)
 obj <- ahead::conformalize(FUN=forecast::rwf, y, h); plot(obj)
@@ -114,7 +114,6 @@ obj <- ahead::conformalize(FUN=forecast::thetaf, y, h); plot(obj)
 obj <- ahead::conformalize(FUN=forecast::rwf, y=y, h=h, drift=TRUE); plot(obj)
 obj <- ahead::conformalize(FUN=HoltWinters, y=y, h=h, seasonal = "mult"); plot(obj)
 obj <- ahead::conformalize(FUN=ahead::dynrmf, y=y, h=h, fit_func=glmnet::cv.glmnet, predict_func=predict); plot(obj)
-
 ```
 
 ![xxx]({{base}}/images/2024-11-23/2024-11-23-image6.png){:class="img-responsive"}          
