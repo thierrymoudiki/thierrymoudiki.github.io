@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Unified interface and conformal prediction (calibrated prediction intervals) for R package forecast (and affiliates)"
+title: "Unified interface and conformal prediction (calibrated prediction intervals) for R package forecast (and 'affiliates')"
 description: "Unified interface and calibrated prediction intervals for R package forecast, with multiple examples"
 date: 2024-11-23
 categories: R
