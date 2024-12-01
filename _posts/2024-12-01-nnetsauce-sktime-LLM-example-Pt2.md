@@ -11,12 +11,6 @@ In this post I benchmark [`nnetsauce.MTS`](https://www.researchgate.net/publicat
 
 The _armada_ is [now](https://thierrymoudiki.github.io/blog/2024/11/24/r/python/forecasting/nnetsauce/nnetsauce-sktime-LLM) made of Generic Gradient Boosters (see https://www.researchgate.net/publication/386212136_Scalable_Gradient_Boosting_using_Randomized_Neural_Networks).
 
-**Contents**
-
-- [0 - Install `nnetsauce` and `mlsauce`](#0---install-nnetsauce-and-mlsauce)
-- [1 - sktime foundation models and nnetsauce](#1---sktime-foundation-models-and-nnetsauce)
-    - [1 - 2 - Example2 on antidiabetic drug sales with generic booster](#1---2---example2-on-antidiabetic-drug-sales-with-generic-booster)
-
 
 # 0 - Install `nnetsauce` and `mlsauce`
 
