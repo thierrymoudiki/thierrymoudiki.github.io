@@ -9,7 +9,7 @@ comments: true
 
 In this post I benchmark [`nnetsauce.MTS`](https://www.researchgate.net/publication/382589729_Probabilistic_Forecasting_with_nnetsauce_using_Density_Estimation_Bayesian_inference_Conformal_prediction_and_Vine_copulas)'s _armada_ of base models against foundation models ("LLMs", Amazon's [_Chronos_](https://openreview.net/pdf?id=gerNCVqqtR), IBM's [_TinyTimeMixer_](https://arxiv.org/pdf/2401.03955)) and _statistical_ models. Regarding the LLMs: If I'm not doing it well (I just _plugged and played_), do not hesitate to reach out.  
 
-The _armada_ is [now](https://thierrymoudiki.github.io/blog/2024/11/24/r/python/forecasting/nnetsauce/nnetsauce-sktime-LLM) made of Generic Gradient Boosters (see https://www.researchgate.net/publication/386212136_Scalable_Gradient_Boosting_using_Randomized_Neural_Networks).
+The _armada_ is [now](https://thierrymoudiki.github.io/blog/2024/11/24/r/python/forecasting/nnetsauce/nnetsauce-sktime-LLM) made of Generic Gradient Boosters (see [https://www.researchgate.net/publication/386212136_Scalable_Gradient_Boosting_using_Randomized_Neural_Networks](https://www.researchgate.net/publication/386212136_Scalable_Gradient_Boosting_using_Randomized_Neural_Networks)).
 
 
 # 0 - Install `nnetsauce` and `mlsauce`
