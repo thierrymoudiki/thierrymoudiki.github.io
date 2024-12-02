@@ -44,7 +44,7 @@ from statsmodels.tsa.base.datetools import dates_from_str
 from sktime.forecasting.nnetsaucemts import NnetsauceMTS
 ```
 
-# 1 - sktime foundation models and nnetsauce
+# 1 - Error metrics
 
 
 ```python
@@ -55,12 +55,9 @@ def rmse(predictions, targets):
 
 def mae(predictions, targets):
     return np.mean(np.abs(predictions - targets))
-
-def me(predictions, targets):
-    return np.mean(predictions - targets)
 ```
 
-### 1 - 2 - Example2 on antidiabetic drug sales with generic booster
+### 1 - 2 - Examples on 3 datasets
 
 
 ```python
