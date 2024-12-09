@@ -18,7 +18,7 @@ The most common surrogate model in BO is the [Gaussian process](https://gaussian
 
 In this post, I'll show how to use conformalized surrogates for optimization, thanks to [GPopt](https://github.com/Techtonique/GPopt) and [nnetsauce](https://github.com/Techtonique/nnetsauce). With this approach, any surrogate model can be used for optimization, and there's no more constraint on the choice of a prior (Gaussian, Laplace, etc.). The acquisition function is the lower confidence bound (LCB) of the conformalized surrogate model.
 
-A future post will show how to use conformalized surrogates for Machine Learning and Deep Learning.
+A future post will show how to use conformalized surrogates for Machine Learning and Deep Learning hyperparameter tuning.
 
 ```bash
 pip install GPopt nnetsauce
