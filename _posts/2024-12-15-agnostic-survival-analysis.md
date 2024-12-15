@@ -3,7 +3,7 @@ layout: post
 title: "survivalist: Probabilistic model-agnostic survival analysis using scikit-learn, glmnet, xgboost, lightgbm, pytorch, keras, nnetsauce and mlsauce" 
 description: "Survival analysis is used to predict the time until an event of interest occurs. In this post, I show how to use scikit-learn, glmnet, xgboost, pytorch, keras, and nnetsauce for probabilistic survival analysis"
 date: 2024-12-15
-categories: [Python, R]
+categories: Python
 comments: true
 ---
 
