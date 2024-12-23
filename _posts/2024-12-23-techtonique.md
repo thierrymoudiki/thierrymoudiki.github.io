@@ -7,7 +7,7 @@ categories: [Python, R, techtonique]
 comments: true
 ---
 
-I've added a new feature to [techtonique.net](https://www.techtonique.net/): **No-code Machine Learning Cross-validation and Interpretability** for tabular data (supervised learning,regression and classification). [techtonique.net](https://www.techtonique.net/) will remain free to use until ~~December 24~~, December 30, 2024.
+I've added a new feature to [techtonique.net](https://www.techtonique.net/): **No-code Machine Learning Cross-validation and Interpretability** for tabular data (supervised learning,regression and classification). [techtonique.net](https://www.techtonique.net/) will remain free to use until ~~December 24~~, December 30, 2024. **As many others have already done, give it a try!**
 
 To use this new feature, you'll need to navigate to [https://www.techtonique.net/mlcvexplain](https://www.techtonique.net/mlcvexplain), and select a file from [Techtonique/datasets](https://github.com/Techtonique/datasets). The files to be used are those with names ending with a "2", in folders /classification or /regression i.e tables with a training set index. This means: you can create similar files with your own data, and add a training set index as an additional column for predictive purposes.
 
