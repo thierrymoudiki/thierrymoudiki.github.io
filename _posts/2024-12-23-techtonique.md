@@ -9,17 +9,17 @@ comments: true
 
 I've added a new feature to [techtonique.net](https://www.techtonique.net/): **No-code Machine Learning Cross-validation and Interpretability** for tabular data (supervised learning,regression and classification). [techtonique.net](https://www.techtonique.net/) will remain free to use until ~~December 24~~, December 30, 2024. **As many others have already done, give it a try!**
 
-To use this new feature, you'll need to navigate to [https://www.techtonique.net/mlcvexplain](https://www.techtonique.net/mlcvexplain), and select a file from [Techtonique/datasets](https://github.com/Techtonique/datasets). The files to be used are those with names ending with a "2", in folders /classification or /regression i.e tables with a training set index. This means: you can create similar files with your own data, and add a training set index as an additional column for predictive purposes.
+To use this new feature, you'll need to navigate to [https://www.techtonique.net/mlcvexplain](https://www.techtonique.net/mlcvexplain), and select a file from [Techtonique/datasets](https://github.com/Techtonique/datasets). The files to be used are those with names ending with a "2", in folders /classification or /regression, i.e tables with a training set index. This means: you can create similar files with your own data, and add a training set index as an additional column for predictive purposes.
 
 ![xxx]({{base}}/images/2024-12-23/2024-12-23-image1.gif){:class="img-responsive"}
 
 Once the file is uploaded, you can click on the "Submit" button to see (work in progress): 
 
-- 5-fold cross-validation results: Balanced accuracy for classification, or Root Mean Squared Error (RMSE) for regression (how well the model performs on the training set)
-- Out-of-sample errors: Balanced accuracy for classification, or Root Mean Squared Error (RMSE) for regression (how well the model performs on the test set of interest)
-- Sensitivity analysis summary: impact of each feature on the response variable (e.g **what are the variables that drive an increase in the price of an apartment, or the probability of a patient having cancer**)
-- Parametric tests of significance (for now). Identify variables for which there's no significant ambiguity (given the assumptions hold) regarding the fact that their effect on the response variable is different from zero (e.g **is the effect of the number of rooms on the price of an apartment statistically significant?**)
-- Feature effects' heterogeneity: the distribution of the effects of each feature on the response variable (e.g **to what extent does the number of rooms affects the price of an apartment?**)
+- **5-fold cross-validation results**: Balanced accuracy for classification, or Root Mean Squared Error (RMSE) for regression (how well the model performs on the training set)
+- **Out-of-sample errors**: Balanced accuracy for classification, or Root Mean Squared Error (RMSE) for regression (how well the model performs on the test set of interest)
+- **Sensitivity analysis summary**: impact of each feature on the response variable (e.g **what are the variables that drive an increase in the price of an apartment, or the probability of a patient having cancer**)
+- **Parametric tests of significance (for now)**. Identify variables for which there's no significant ambiguity (given the assumptions hold) regarding the fact that their effect on the response variable is different from zero (e.g **is the effect of the number of rooms on the price of an apartment statistically significant?**)
+- **Feature effects' heterogeneity**: the distribution of the effects of each feature on the response variable (e.g **to what extent does the number of rooms affects the price of an apartment?**)
 
 As a reminder of [techtonique.net](https://www.techtonique.net/) features: 
 
