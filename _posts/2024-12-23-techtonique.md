@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "No-code Machine Learning Cross-validation and Interpretability in techtonique.net"
-description: "No-code Machine Learning Cross-validation and Interpretability in techtonique.net"
+description: "No-code Machine Learning Cross-validation and Interpretability in techtonique.net: what are the variables that drive an increase in the price of an apartment, or the probability of a patient having cancer? Is the effect of the number of rooms on the price of an apartment statistically significant? To what extent does the number of rooms affects the price of an apartment?"
 date: 2024-12-23
 categories: [Python, R, techtonique]
 comments: true
@@ -19,7 +19,7 @@ Once the file is uploaded, you can click on the "Submit" button to see (work in 
 - Out-of-sample errors: Balanced accuracy for classification, or Root Mean Squared Error (RMSE) for regression (how well the model performs on the test set of interest)
 - Sensitivity analysis summary: impact of each feature on the response variable (e.g **what are the variables that drive an increase in the price of an apartment, or the probability of a patient having cancer**)
 - Parametric tests of significance (for now). Identify variables for which there's no significant ambiguity (given the assumptions hold) regarding the fact that their effect on the response variable is different from zero (e.g **is the effect of the number of rooms on the price of an apartment statistically significant?**)
-- Feature effects' heterogeneity: the distribution of the effects of each feature on the response variable (e.g **to what extent does the number of rooms affect the price of an apartment?**)
+- Feature effects' heterogeneity: the distribution of the effects of each feature on the response variable (e.g **to what extent does the number of rooms affects the price of an apartment?**)
 
 As a reminder of [techtonique.net](https://www.techtonique.net/) features: 
 
