@@ -112,14 +112,6 @@ stock_forecasting_summary("DAX")
     
 ![xxx]({{base}}/images/2024-12-29/2024-12-29-mlf_4_1.png){:class="img-responsive"}  
     
-The first 2 graphics look just perfect -- the same observation holds for the stocks studied in the next examples. No overfitting, no leakage as you noticed. Try to beat them with Deep Learning, Transformer, LSTM, etc. And **Good luck**! ;) (more details also in [the pdf file https://cbergmeir.com/talks/neurips2024/](https://cbergmeir.com/talks/neurips2024/)). And **it's not about simplicity**, but about the inherent nature of the problem/data. 
-
-The residuals (difference between observed and forecast values) reveal a more interesting reality. These little _pesky_   (increasing, decreasing, around 0, as high and low as -200 and 200, with a volatility that changes with time) residuals are the reason why you won't become rich by applying advanced neural networks (or anything) to stock price forecasting. **Why?**
-
-(One of?) The point(s) of stock price forecasting is to correctly "guess" how a stock's price will move tomorrow. Even though it may either leave you in trouble or make you rich (to actually know the future), see [https://eu.usatoday.com/story/news/factcheck/2024/12/12/unitedhealthcare-ceo-nancy-pelosi-insider-trading-fact-check/76919053007/](https://eu.usatoday.com/story/news/factcheck/2024/12/12/unitedhealthcare-ceo-nancy-pelosi-insider-trading-fact-check/76919053007/) and [https://www.lemonde.fr/argent/article/2017/02/21/assurance-vie-la-mauvaise-foi-d-aviva_5082920_1657007.html](https://www.lemonde.fr/argent/article/2017/02/21/assurance-vie-la-mauvaise-foi-d-aviva_5082920_1657007.html). However, in addition to the fact that their distribution is symmetric around 0 and they have a volatility that changes with time, we observe that there's no trend in the residuals (slope is not significantly different from 0). 
-
-IMHO, anyone claiming to forecast stock prices with more GPU power must at least be able to beat Random Walk forecasts, because that's the hard part.
-
     
     Call:
     lm(formula = resids ~ seq_len(length(resids)))
@@ -140,6 +132,15 @@ IMHO, anyone claiming to forecast stock prices with more GPU power must at least
     proportion of correct_guesses
             0         1 
     0.5569892 0.4430108 
+
+
+The first 2 graphics look just perfect -- the same observation holds for the stocks studied in the next examples. No overfitting, no leakage as you noticed. Try to beat them with Deep Learning, Transformer, LSTM, etc. And **Good luck**! ;) (more details also in [the pdf file https://cbergmeir.com/talks/neurips2024/](https://cbergmeir.com/talks/neurips2024/)). And **it's not about simplicity**, but about the inherent nature of the problem/data. 
+
+The residuals (difference between observed and forecast values) reveal a more interesting reality. These little _pesky_   (increasing, decreasing, around 0, as high and low as -200 and 200, with a volatility that changes with time) residuals are the reason why you won't become rich by applying advanced neural networks (or anything) to stock price forecasting. **Why?**
+
+(One of?) The point(s) of stock price forecasting is to correctly "guess" how a stock's price will move tomorrow. Even though it may either leave you in trouble or make you rich (to actually know the future), see [https://eu.usatoday.com/story/news/factcheck/2024/12/12/unitedhealthcare-ceo-nancy-pelosi-insider-trading-fact-check/76919053007/](https://eu.usatoday.com/story/news/factcheck/2024/12/12/unitedhealthcare-ceo-nancy-pelosi-insider-trading-fact-check/76919053007/) and [https://www.lemonde.fr/argent/article/2017/02/21/assurance-vie-la-mauvaise-foi-d-aviva_5082920_1657007.html](https://www.lemonde.fr/argent/article/2017/02/21/assurance-vie-la-mauvaise-foi-d-aviva_5082920_1657007.html). However, in addition to the fact that their distribution is symmetric around 0 and they have a volatility that changes with time, we observe that there's no trend in the residuals (slope is not significantly different from 0). 
+
+IMHO, anyone claiming to forecast stock prices with more GPU power must at least be able to beat Random Walk forecasts, because that's the hard part.
 
 The other examples reveal the same patterns. Can you beat these Random Walk forecasts with Deep Learning, Transformer, LSTM, etc?
 
