@@ -142,7 +142,7 @@ The residuals (difference between observed and forecast values) reveal a more in
 
 IMHO, anyone claiming to forecast stock prices with more GPU power must at least be able to beat Random Walk forecasts, because that's the hard part.
 
-The other examples reveal the same patterns. Can you beat these Random Walk forecasts with Deep Learning, Transformer, LSTM, etc?
+The other examples reveal the same patterns. The proportion of correct guesses is around 50% (51% for SMI, 52% for CAC, 51% for FTSE, 50% for GOOG, 51% for AAPL, 49% for MSFT). Which is basically like flipping a fair coin. Can you beat these Random Walk forecasts with Deep Learning, Transformer, LSTM, etc?
 
 ```
 stock_forecasting_summary("SMI")
