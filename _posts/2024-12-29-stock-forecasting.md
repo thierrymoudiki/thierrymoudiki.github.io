@@ -140,7 +140,7 @@ The residuals (difference between observed and forecast values) reveal a more in
 
 (One of?) The point(s) of stock price point forecasting is to correctly "guess" how a stock's price will move tomorrow. Even though it may either leave you in trouble or make you rich (to actually know the future), see [https://eu.usatoday.com/story/news/factcheck/2024/12/12/unitedhealthcare-ceo-nancy-pelosi-insider-trading-fact-check/76919053007/](https://eu.usatoday.com/story/news/factcheck/2024/12/12/unitedhealthcare-ceo-nancy-pelosi-insider-trading-fact-check/76919053007/) and [https://www.lemonde.fr/argent/article/2017/02/21/assurance-vie-la-mauvaise-foi-d-aviva_5082920_1657007.html](https://www.lemonde.fr/argent/article/2017/02/21/assurance-vie-la-mauvaise-foi-d-aviva_5082920_1657007.html). However, in addition to the fact that their distribution is symmetric around 0 and they have a volatility that changes with time, we observe that there's no trend in the residuals (slope is not significantly different from 0). 
 
-IMHO, anyone claiming to forecast stock prices with more GPU power must at least be able to beat Random Walk forecasts, because that's the hard part.
+**IMHO, anyone claiming to forecast stock prices with more GPU power must at least be able to beat Random Walk forecasts, because that's the hard part.**
 
 The other examples reveal the same patterns. The proportion of correct guesses is around 50% (51% for SMI, 52% for CAC, 51% for FTSE, 50% for GOOG, 51% for AAPL, 49% for MSFT). Which is basically like flipping a fair coin. Can you beat these Random Walk forecasts with Deep Learning, Transformer, LSTM, etc?
 
