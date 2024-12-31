@@ -7,7 +7,9 @@ categories: R
 comments: true
 ---
 
-You may (surely) have seen many posts on **Stock price forecasting with Deep Learning** on the web. LSTMs, GANs, Transformers, etc. You name it. Sometimes with beautiful graphics showing how well the forecast tracks the actual data. I'll show you how to create these exact same graphics without cheating, overfitting, leakage, or GPUs. I'll use **Random Walk forecasts** (predicting the next day's value as the last day's value), and try to tell you why these **Stock price forecasting with Deep Learning** posts are deceptive and misleading.  
+You may (surely) have seen many posts on **Stock price forecasting with Deep Learning** on the web. LSTMs, GANs, Transformers, etc. You name it. Sometimes with beautiful graphics showing how well the forecast tracks the actual data. I'll show you how to create these exact same graphics without cheating, overfitting, leakage, or GPUs. I'll use **Random Walk forecasts** (predicting the next day's value as the last day's value), and try to tell you why these **Stock price forecasting with Deep Learning** posts are deceptive and misleading. 
+
+See also the [Python version](https://thierrymoudiki.github.io/blog/2024/12/31/python/stock-forecasting-python-js).
 
 # Packages 
 
