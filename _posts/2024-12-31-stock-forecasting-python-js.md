@@ -408,7 +408,7 @@ for stock_index in range(stocks.shape[1]):
 
 
     
-![png](2024_12_31_stock_random_walk_files/2024_12_31_stock_random_walk_5_1.png)
+![xxx]({{base}}/images/2024-12-31/2024_12_31_stock_random_walk_5_1.png)
     
 
 
@@ -417,7 +417,7 @@ for stock_index in range(stocks.shape[1]):
 
 
     
-![png](2024_12_31_stock_random_walk_files/2024_12_31_stock_random_walk_5_3.png)
+![xxx]({{base}}/images/2024-12-31/2024_12_31_stock_random_walk_5_3.png)
     
 
 
@@ -426,7 +426,7 @@ for stock_index in range(stocks.shape[1]):
 
 
     
-![png](2024_12_31_stock_random_walk_files/2024_12_31_stock_random_walk_5_5.png)
+![xxx]({{base}}/images/2024-12-31/2024_12_31_stock_random_walk_5_5.png)
     
 
 
@@ -435,6 +435,6 @@ for stock_index in range(stocks.shape[1]):
 
 
     
-![png](2024_12_31_stock_random_walk_files/2024_12_31_stock_random_walk_5_7.png)
+![xxx]({{base}}/images/2024-12-31/2024_12_31_stock_random_walk_5_7.png)
     
 
