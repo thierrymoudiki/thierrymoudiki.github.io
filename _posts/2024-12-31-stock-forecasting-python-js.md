@@ -16,11 +16,11 @@ This is the Python and JavaScript version of the [Stock price forecasting with D
 - [Python code](#python-code)
 
 
-# Interactive dashboard
+## Interactive dashboard
 
 {% include 2024-12-31-stockanalysis.html %}
 
-# Python code
+## Python code
 
 ```python
 !pip install nnetsauce
