@@ -45,7 +45,7 @@ On a brighter note, a stable version of [www.techtonique.net](https://www.techto
 
 Benchmarking errors in the examples below are measured by:
 - **Coverage rate**: the percentage of future values that are within the prediction intervals, for 80% and 95% prediction intervals
-- **Winkler score**: the length of the prediction intervals, penalized by every time the true future value is outside the interval (see [https://www.otexts.com/fpp3/distaccuracy.html#winkler-score](https://www.otexts.com/fpp3/distaccuracy.html#winkler-score) for more details)
+- **Winkler score**: the length of the prediction intervals, penalized by every time the true future value is outside the interval (see [https://www.otexts.com/fpp3/distaccuracy.html#winkler-score](https://www.otexts.com/fpp3/distaccuracy.html#winkler-score) for more details). The lower the score, the better the method.
   
 Plus, `splitconformal` denotes the method described in the paper.
 
