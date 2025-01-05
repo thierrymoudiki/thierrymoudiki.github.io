@@ -25,7 +25,7 @@ To a **rejection** saying things such as:
 - "The forecasting community strongly benefits from new approaches and experiments on how to quantify uncertainty, that is why I appreciate the author's contribution." Hmm... Okay then...
 - "can only accept a limited number of them, which make **substantial contributions to the science and practice of forecasting**": knock-out punch. 
 
-![gbms]({{base}}/images/2025-01-05/2025-05-01-image1.png){:class="img-responsive"}
+![gbms]({{base}}/images/2025-01-05/2025-01-05-image1.png){:class="img-responsive"}
 
 I'm definitely not the type to whine or cry foul (this is a battle-tested sentence), but I'm curious. Do you see any coherence in the last 2 paragraphs, or am I losing my mind? (No) One thing that was asked and that I'll address (and I guess it'll make sense) is why not training the models on the whole training set at the end of my conformal prediction algorithm? Because **I want to avoid data leakage**, and I also want to **use the most contemporaneous data for forecasting**.
 
