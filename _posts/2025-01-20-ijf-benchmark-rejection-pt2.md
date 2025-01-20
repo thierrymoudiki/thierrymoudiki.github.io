@@ -207,6 +207,8 @@ for (level in c(80, 95))
 
 # 3 - Plot Results
 
+Coverage rates and Winkler scores for the 80% and 95% prediction intervals are presented, along with boxplots of the log-error rates (the lower the better).
+
 ```R
 tourism_benchmark80 <- readRDS("2025-01-20-tourism-benchmark80.rds")
 tourism_benchmark95 <- readRDS("2025-01-20-tourism-benchmark95.rds")
