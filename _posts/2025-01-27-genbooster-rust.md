@@ -17,7 +17,7 @@ This post is a quick overview of `genbooster`, in Python and R. It was an occasi
 
 # Python version
 
-{% include 2025-01-27-genbooster-rust.html %}
+{% include 2025-01-27-genbooster_randombag_rust_python.html %}
 
 # R version
 
