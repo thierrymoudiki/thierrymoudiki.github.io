@@ -7,9 +7,9 @@ categories: [Python, R]
 comments: true
 ---
 
-I recently released the [`genbooster`](https://github.com/Techtonique/genbooster) Python package (usable from R), a [Gradient-Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) and [Boostrap aggregating](https://en.wikipedia.org/wiki/Bootstrap_aggregating) implementations that uses a Rust backend. Any base learner in the ensembles use randomized features as a form of feature engineering. The package was downloaded 3000 times in 5 days, so I guess it's somehow useful.
+I recently released the [`genbooster`](https://github.com/Techtonique/genbooster) Python package (usable from R),  [Gradient-Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) and [Boostrap aggregating](https://en.wikipedia.org/wiki/Bootstrap_aggregating) implementations that use a Rust backend. Any base learner in the ensembles use randomized features as a form of feature engineering. The package was downloaded 3000 times in 5 days, so I guess it's somehow useful.
 
-The last version of my generic Gradient Boosting algorithm was implemented in Python package mlsauce (see #172, #169, #166, #165), but the package can be difficult to install on some systems. If you're using Windows, for example, you may want to use the Windows Subsystem for Linux (WSL). Installing directly from PyPI is also nearly impossible, and it needs to be installed directly from GitHub.
+The last version of [my generic Gradient Boosting algorithm](https://www.researchgate.net/publication/386212136_Scalable_Gradient_Boosting_using_Randomized_Neural_Networks) was implemented in Python package mlsauce (see #172, #169, #166, #165), but the package can be difficult to install on some systems. If you're using Windows, for example, you may want to use the Windows Subsystem for Linux (WSL). Installing directly from PyPI is also nearly impossible, and it needs to be installed directly from GitHub.
 
 This post is a quick overview of `genbooster`, in Python and R. It was an occasion to "learn"/try the Rust programming language, and I'm happy with the result; a stable package that's easy to install. However, I wasn't blown away ( hey Rust guys ;)) by the speed, which is roughly equivalent to Cython (that is, using C under the hood). 
 

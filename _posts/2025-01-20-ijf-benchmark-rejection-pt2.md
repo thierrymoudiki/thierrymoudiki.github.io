@@ -7,7 +7,7 @@ categories: [R, Forecasting, Python, misc]
 comments: true
 ---
 
-In [#182](https://thierrymoudiki.github.io/blog/2025/01/05/r/forecasting/python/misc/ijf-benchmark-rejection/), I presented a benchmark based on 30,000 time series, comparing the [sequential split conformal method](https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series)  to the state of the art in Conformal prediction for Forecast. 
+In [#182](https://thierrymoudiki.github.io/blog/2025/01/05/r/forecasting/python/misc/ijf-benchmark-rejection), I presented a benchmark based on 30,000 time series, comparing the [sequential split conformal method](https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series)  to the state of the art in Conformal prediction for Forecast. 
 
 In this post, I'll present a benchmark based on 1311 time series from the Tourism competition, comparing the sequential split conformal method to the state of the art. Theta method from the `forecast` package is used as the base model, along with [my R package `ahead`](https://github.com/Techtonique/ahead) for conformalizing the base model. 2 target coverage levels are considered: 80% and 95%. The benchmarking errors are measured by: 
 - Achieved test set coverage rate (percentage of future values that are within the prediction intervals) for 80% and 95% prediction intervals.
