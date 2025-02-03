@@ -29,7 +29,7 @@ Where $$\sigma\left(X_{n}, X_{n-1}, \ldots, X_{1}\right)$$ is the sigma-algebra 
 
 ## 1. Regression Model
 
-One way to conduct such a test of the Martingale Hypothesis, is to adjust a multiple linear regression of the change in the series, $$\Delta X_{t+1}=X_{t+1}-X_{t}$$, on the past values $$X_{t}, X_{t-1}, \ldots, X_{1}$$, for all $$t>0$$ :
+One way to conduct such a test of the Martingale Hypothesis, is to adjust a multiple linear regression of the change in the series, $$\Delta X_{t+1}=X_{t+1}-X_{t}$$, on the past values $$X_{t-1}, X_{t-2}, \ldots, X_{1}$$, for all $$t>0$$ :
 
 $$
 \Delta X_{t+1} \approx \beta_{1} X_{t-1}+\beta_{2} X_{t-2}+\cdots+\beta_{p} X_{1}+\epsilon_{t+1}
