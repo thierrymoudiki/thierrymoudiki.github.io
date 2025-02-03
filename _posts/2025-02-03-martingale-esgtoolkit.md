@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "A simple test for the martingale hypothesis in esgtoolkit"
-description: "Details and examples of a simple test for the martingale hypothesis in esgtoolkit"
+title: "A simple test of the martingale hypothesis in esgtoolkit"
+description: "Details and examples of a simple test of the martingale hypothesis in esgtoolkit"
 date: 2025-02-03
 categories: R
 comments: true
