@@ -39,7 +39,7 @@ where $$\epsilon_{t+1}$$ are the (centered and homoskedastic) residuals of the r
 
 $$
 \begin{equation*}
-\mathbb{E}\left[X_{t+1}-X_{t} \mid \sigma\left(X_{t}, X_{t-1}, \ldots, X_{1}\right)\right]=0 \tag{2}
+\mathbb{E}\left[X_{t+1}-X_{t} \mid \sigma\left(X_{t-1}, X_{t-2}, \ldots, X_{1}\right)\right]=0 \tag{2}
 \end{equation*}
 $$
 
