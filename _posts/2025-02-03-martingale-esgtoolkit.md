@@ -13,7 +13,7 @@ R code at the end.
 
 ## Introduction
 
-A fundamental utility in financial econometrics and stochastic processes is the **martingale property**, which implies that the best approximation of the future value of a time series or stochastic process, based on its historical values, is its present value. This property is critical in the efficient market hypothesis, risk-neutral pricing models. Testing whether a given time series satisfies the martingale hypothesis involves examining whether past values significantly predict future changes. This blog post outlines a formalized statistical test implemented in the [esgtoolkit](https://github.com/techtonique/esgtoolkit) package, and leveraging multiple linear regression, F-statistics, and residual diagnostics to determine whether a time series follows a martingale process.
+A fundamental utility in financial econometrics and stochastic processes is the **martingale property**, which implies that the best approximation of the future value of a time series or stochastic process, based on its historical values, is its present value. This property is critical in the efficient market hypothesis, risk-neutral pricing models. Testing whether a given time series satisfies the martingale hypothesis involves examining whether past values significantly predict expected future changes. This blog post outlines a formalized statistical test implemented in the [esgtoolkit](https://github.com/techtonique/esgtoolkit) package, and leveraging multiple linear regression, F-statistics, and residual diagnostics to determine whether a time series follows a martingale process.
 
 ## Martingale Hypothesis Test
 
