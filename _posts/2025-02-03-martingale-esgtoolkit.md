@@ -32,14 +32,14 @@ Where $$\sigma\left(X_{n}, X_{n-1}, \ldots, X_{1}\right)$$ is the sigma-algebra 
 One way to conduct such a test of the Martingale Hypothesis, is to adjust a multiple linear regression of the change in the series, $$\Delta X_{t+1}=X_{t+1}-X_{t}$$, on the past values $$X_{t-1}, X_{t-2}, \ldots, X_{1}$$, for all $$t>0$$ :
 
 $$
-\Delta X_{t+1} \approx \beta_{1} X_{t-1}+\beta_{2} X_{t-2}+\cdots+\beta_{p} X_{1}+\epsilon_{t+1}
+\Delta X_{t+1} \approx \beta_{1} X_{t}+\beta_{2} X_{t-1}+\cdots+\beta_{p} X_{1}+\epsilon_{t+1}
 $$
 
 where $$\epsilon_{t+1}$$ are the (centered and homoskedastic) residuals of the regression, because, under the assumption that $$\hat{\beta}_{1}=\hat{\beta}_{2}=\cdots=\hat{\beta}_{p}=$$ 0 , we'd have:
 
 $$
 \begin{equation*}
-\mathbb{E}\left[X_{t+1}-X_{t} \mid \sigma\left(X_{t-1}, X_{t-2}, \ldots, X_{1}\right)\right]=0 \tag{2}
+\mathbb{E}\left[X_{t+1}-X_{t} \mid \sigma\left(X_{t}, X_{t-1}, \ldots, X_{1}\right)\right]=0 \tag{2}
 \end{equation*}
 $$
 
