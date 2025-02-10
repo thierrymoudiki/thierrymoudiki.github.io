@@ -7,7 +7,7 @@ categories: Python
 comments: true
 ---
 
-In this post I provide a quickstart Python code based on the one provided in [https://challengedata.ens.fr/challenges/162](https://challengedata.ens.fr/challenges/162). In particular, I use [Python package survivalist](https://github.com/Techtonique/survivalist), that does Survival analysis with Machine Learning and uncertainty quantification.
+In this post I provide a quickstart Python code based on the one provided in [https://challengedata.ens.fr/challenges/162](https://challengedata.ens.fr/challenges/162). In particular, I use [Python package survivalist](https://github.com/Techtonique/survivalist), that does Survival analysis with Machine Learning and uncertainty quantification (introduced in [https://thierrymoudiki.github.io/blog/2024/12/15/python/agnostic-survival-analysis](https://thierrymoudiki.github.io/blog/2024/12/15/python/agnostic-survival-analysis)).
 
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Logo-gustave-roussy.jpg/1200px-Logo-gustave-roussy.jpg" alt="Logo 1" width="250"/>
