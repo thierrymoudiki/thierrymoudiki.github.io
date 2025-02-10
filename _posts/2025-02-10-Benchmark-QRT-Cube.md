@@ -830,8 +830,8 @@ print(f"Cox Proportional Hazard Model Concordance Index IPCW on train: {cox_cind
 print(f"Cox Proportional Hazard Model Concordance Index IPCW on test: {cox_cindex_test:.5f}")
 ```
 
-    Cox Proportional Hazard Model Concordance Index IPCW on train: 0.66
-    Cox Proportional Hazard Model Concordance Index IPCW on test: 0.66
+    Cox Proportional Hazard Model Concordance Index IPCW on train: 0.66302
+    Cox Proportional Hazard Model Concordance Index IPCW on test: 0.66060
 
 
 ### Step 4: other models
