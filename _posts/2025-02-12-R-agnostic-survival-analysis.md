@@ -7,6 +7,8 @@ categories: R
 comments: true
 ---
 
+This post is to be read in conjunction with [https://thierrymoudiki.github.io/blog/2025/02/10/python/Benchmark-QRT-Cube](https://thierrymoudiki.github.io/blog/2025/02/10/python/Benchmark-QRT-Cube) and [https://thierrymoudiki.github.io/blog/2024/12/15/python/agnostic-survival-analysis](https://thierrymoudiki.github.io/blog/2024/12/15/python/agnostic-survival-analysis).
+
 **Survival analysis** is a group of Statistical/Machine Learning (ML) methods for predicting the **time until an event of interest occurs**. Examples of events include: 
 
 - death 
