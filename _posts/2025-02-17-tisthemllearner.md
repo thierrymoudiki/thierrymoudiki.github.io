@@ -3,7 +3,7 @@ layout: post
 title: "tisthemachinelearner: A Lightweight interface to scikit-learn with 2 classes, Classifier and Regressor (in Python and R)" 
 description: "Demo usage of tisthemachinelearner, in Python and R"
 date: 2025-02-17
-categories: 
+categories: [Python, R]
 comments: true
 ---
 
