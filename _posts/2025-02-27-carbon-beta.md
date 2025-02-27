@@ -7,14 +7,12 @@ categories: [Python, R, Forecasting]
 comments: true
 ---
 
-Link to the preprint at the end of the post.
+I'll be presenting my (preprint) paper, "Online Probabilistic Estimation of Carbon Beta and Carbon Shapley Values for Financial and Climate Risk," at the [18th FINANCIAL RISKS INTERNATIONAL FORUM](https://www.risks-forum.org/), hosted by [Institut Louis Bachelier](https://www.institutlouisbachelier.org/) (link to the preprint at the end of the post).
 
 As climate change becomes a key financial risk factor, investors seek reliable ways to measure the exposure of stocks to climate transition risks. This paper introduces methods to estimate **Carbon Beta** and **Carbon Shapley values** dynamically and probabilistically.  
 
 - **Carbon Beta** measures how stock returns react to a *Brown Minus Green (BMG)* portfolio, which holds long positions in carbon-intensive (brown) stocks and short positions in climate-friendly (green) stocks.  
-- **Carbon Shapley values**, inspired by game theory, quantify the contribution of input factors to model predictions, helping explain stock return sensitivities.  
-
-Unlike traditional methods that assume a fixed, linear relationship between stock and market returns, this approach is **adaptive, nonparametric, and uncertainty-aware**.  
+- **Carbon Shapley values**, inspired by game theory, quantify the additive contribution of input factors to model predictions, helping explain stock return sensitivities.  
 
 ## Context: From CAPM to Carbon Beta  
 
@@ -24,7 +22,9 @@ The **Capital Asset Pricing Model (CAPM)** (Sharpe, 1964) introduced **Beta** as
 
 ## Proposed Methodology  
 
-This study introduces a **machine learning (ML)-based, online estimation** of Carbon Beta and Carbon Shapley values. Key innovations include:  
+__Unlike traditional methods that assume a fixed, linear relationship between stock and market returns, the approach is described in the paper in **nonlinear**, **adaptive, nonparametric, and uncertainty-aware**.__ 
+
+My study introduces a **machine learning (ML)-based, online estimation** of Carbon Beta and Carbon Shapley values. Key innovations include:  
 
 1. **No assumption of a “true” Carbon Beta**  
    - Uses numerical derivatives instead of a fixed linear model.  
@@ -34,8 +34,6 @@ This study introduces a **machine learning (ML)-based, online estimation** of Ca
 
 3. **Model-agnostic Shapley values**  
    - Computes dynamic Shapley values to understand the influence of climate risk factors on stock returns.  
-
-The core model is a **Random Vector Functional Link (RVFL) neural network**, trained online to adjust continuously to new market data.  
 
 **Link to the preprint:**
 
