@@ -172,6 +172,8 @@ Generating next word: classifier.
 This is a classifier. An sgd classifier. And generates text incrementally using an sgd classifier.
 ```
 
+![image-title-here]({{base}}/images/2025-03-08/2025-03-08-image1.gif)
+
 # R version 
 
 ```R
@@ -371,5 +373,3 @@ This classifier is
 [1] "This classifier is for text"
 ```
 
-
-![image-title-here]({{base}}/images/2025-03-08/2025-03-08-image1.gif)
