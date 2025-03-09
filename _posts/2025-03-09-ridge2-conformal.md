@@ -7,6 +7,8 @@ categories: R
 comments: true
 ---
 
+Scroll down for the post.
+
 ![image-title-here]({{base}}/images/2025-03-09/2025-03-09-image1.png)
 
 {% include 2025-03-09-ridge2_conformal.html %}
