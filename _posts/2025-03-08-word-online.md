@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Word-Online: recreating Karpathy's char-RNN (with supervised linear online learning of word embeddings) for text completion" 
+title: "Word-Online: re-creating Karpathy's char-RNN (with supervised linear online learning of word embeddings) for text completion" 
 description: "R and Python implementations of word completion"
 date: 2025-03-08
 categories: [R, Python, LLMs]
