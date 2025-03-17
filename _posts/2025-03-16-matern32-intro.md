@@ -226,8 +226,11 @@ plot(fit_obj, choice = "coeffs")
 plot(fit_obj, choice = "GCV")
 ```
 
+![image-title-here]({{base}}/images/2025-03-16/2025-03-16-image2.png)
+
 ```R
 plot(fit_obj, choice = "residuals")
 ```
 
+![image-title-here]({{base}}/images/2025-03-16/2025-03-16-image3.png)
 
