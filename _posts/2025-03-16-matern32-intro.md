@@ -7,6 +7,8 @@ categories: R
 comments: true
 ---
 
+`matern32` was inspired in 2019 (still _work in progress_) by Journal of Statistical Software's paper [Kernel-Based Regularized Least Squares in R (KRLS) and Stata (krls)](https://www.jstatsoft.org/article/view/v079i03), but using Matérn 3/2 kernels instead of Gaussian kernels. In 2025, [conformal prediction](https://www.researchgate.net/publication/379643443_Conformalized_predictive_simulations_for_univariate_time_series) allows to obtain prediction intervals/predictive simulations, making Kernel Ridge Regression comparable to Gaussian Processes, but in a frequentist and non-Gaussian way. In `matern32`, there are ways to deal with scalability by using clustering. To finish `matern32`'s models, could be used as surrogates for other models' interpretability. The package is available on the CRAN-like repository located at: [https://r-packages.techtonique.net](https://r-packages.techtonique.net).
+
 # Install package
 
 ```R
@@ -48,6 +50,12 @@ preds_surrogateconformal <- predict(fit_obj, X[-idx_train,], level=95, method = 
 (coverage_kdeconformal <- mean((y[-idx_train] >= preds_kdeconformal$lower) & (y[-idx_train] <= preds_kdeconformal$upper)))
 (coverage_bootstrapconformal <- mean((y[-idx_train] >= preds_bootstrapconformal$lower) & (y[-idx_train] <= preds_bootstrapconformal$upper)))
 (coverage_surrogateconformal <- mean((y[-idx_train] >= preds_surrogateconformal$lower) & (y[-idx_train] <= preds_surrogateconformal$upper)))
+```
+```R
+## [1] 0.9705882
+## [1] 0.9803922
+## [1] 0.9509804
+## [1] 0.9705882
 ```
 
 ```R
