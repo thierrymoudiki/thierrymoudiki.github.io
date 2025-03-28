@@ -73,7 +73,7 @@ comments: true
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             const postPath = "{{ page.url }}"; // Jekyll variable for the post's URL
-            const apiBaseUrl = "https://agile-earth-48511-3d797ee7c19c.herokuapp.com/"; // Replace with your FastAPI backend URL
+            const apiBaseUrl = "https://agile-earth-48511-3d797ee7c19c.herokuapp.com"; // No trailing slash
         
             // Increment page views
             fetch(`${apiBaseUrl}/increment/`, {
@@ -92,7 +92,12 @@ comments: true
         
             // Fetch and display the current page view count
             fetch(`${apiBaseUrl}/views/${encodeURIComponent(postPath)}`)
-              .then((response) => response.json())
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+              })
               .then((data) => {
                 const viewCount = data.views || 0;
                 document.getElementById("view-count").innerText = `${viewCount} views`;
