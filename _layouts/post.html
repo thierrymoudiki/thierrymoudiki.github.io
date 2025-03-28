@@ -66,9 +66,43 @@ comments: true
         <span>
           <em id="pv" class="pageviews">
             <i class="fa-duotone fa-circle-dot"></i>
+            <span id="view-count">Loading views...</span>
           </em>
-          <img style="width: inherit;" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fthierrymoudiki.github.io%2Fblog%2F{{page.url}}&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" title="Views" alt="Views" />          
-        </span>        
+        </span>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const postPath = "{{ page.url }}"; // Jekyll variable for the post's URL
+            const apiBaseUrl = "https://your-fastapi-backend.com"; // Replace with your FastAPI backend URL
+        
+            // Increment page views
+            fetch(`${apiBaseUrl}/increment/`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ path: postPath }),
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  console.error("Failed to increment page views:", response.statusText);
+                }
+              })
+              .catch((error) => console.error("Error incrementing page views:", error));
+        
+            // Fetch and display the current page view count
+            fetch(`${apiBaseUrl}/views/${encodeURIComponent(postPath)}`)
+              .then((response) => response.json())
+              .then((data) => {
+                const viewCount = data.views || 0;
+                document.getElementById("view-count").innerText = `${viewCount} views`;
+              })
+              .catch((error) => {
+                console.error("Error fetching page views:", error);
+                document.getElementById("view-count").innerText = "Error loading views";
+              });
+          });
+        </script>
 
         <br>
 

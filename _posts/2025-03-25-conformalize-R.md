@@ -7,7 +7,7 @@ categories: R
 comments: true
 ---
 
-In the new version of [`misc`](https://r-packages.techtonique.net/packages), we introduce the `conformalize` function (work in progress, along with `predict` and `simulate` S3 methods), which allows you to perform conformal prediction with any R machine learning model. Conformal prediction improves prediction intervals' coverage rate thanks to held-out set cross-validation errors. 
+In the new version of [`misc`](https://r-packages.techtonique.net/packages), we introduce a `conformalize` function (work in progress, along with `predict` and `simulate` S3 methods), which allows you to perform conformal prediction with any R machine learning model. Conformal prediction improves prediction intervals' coverage rate thanks to held-out set cross-validation errors. 
 
 
 ```R
