@@ -13,4 +13,4 @@ Probabilistic Time Series Forecasting (predictive simulations) in Microsoft Exce
 
  -- By Techtonique on Microsoft Azure by Microsoft for Startups
 
-![xlwings lite](https://github.com/thierrymoudiki/techtonique-excel-server/blob/main/xlwings-lite.gif)
+![image-title-here]({{base}}/images/2025-03-28/xlwings-lite.gif)
