@@ -27,7 +27,7 @@ library(rvfl)
 
 Keep in mind that the models should be tuned in practice. They are not tuned by default in these examples. 
 
-The examples demonstrate how you can obtain conformalized predictions from R models, including Generalized Linear Models (GLMs; here Poisson, Quasi-Poisson, and zero inflated GLMs). 
+The examples demonstrate how you can obtain conformalized predictions from R models, including Generalized Linear Models (GLMs; here Poisson, Quasi-Poisson, and zero inflated GLMs). More examples can be found in the [package's vignette](https://docs.techtonique.net/rvfl/)(Articles).
 
 {% include 2025-03-31-glm-zero-infl.html %}
 
