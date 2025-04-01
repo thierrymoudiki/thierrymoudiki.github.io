@@ -29,5 +29,7 @@ Keep in mind that the models should be tuned in practice. They are not tuned by 
 
 The examples demonstrate how you can obtain conformalized predictions from R models, including Generalized Linear Models (GLMs; here Poisson, Quasi-Poisson, and [zero inflated GLMs](https://www.jstatsoft.org/article/view/v027i08)). More examples can be found in the [package's vignette](https://docs.techtonique.net/rvfl/) ("Get Started" and "Articles" sections).
 
+PS: It's worth mentioning that the lower bound is 0 in this particular example. Truncating the distribution to 0 is a question for future work.
+
 {% include 2025-03-31-glm-zero-infl.html %}
 
