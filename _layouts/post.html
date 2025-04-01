@@ -68,47 +68,7 @@ comments: true
             <i class="fa-duotone fa-circle-dot"></i>
             <span id="view-count">Loading views...</span>
           </em>
-        </span>
-        
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const postPath = "{{ page.url }}"; // Jekyll variable for the post's URL
-            const apiBaseUrl = "https://agile-earth-48511-3d797ee7c19c.herokuapp.com"; // No trailing slash
-        
-            // Increment page views
-            fetch(`${apiBaseUrl}/increment/`, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ path: postPath }),
-            })
-              .then((response) => {
-                if (!response.ok) {
-                  console.error("Failed to increment page views:", response.statusText);
-                }
-              })
-              .catch((error) => console.error("Error incrementing page views:", error));
-        
-            // Fetch and display the current page view count
-            fetch(`${apiBaseUrl}/views/${encodeURIComponent(postPath)}`)
-              .then((response) => {
-                if (!response.ok) {
-                  throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-              })
-              .then((data) => {
-                const viewCount = data.views || 0;
-                document.getElementById("view-count").innerText = `${viewCount} views (since 2025-04-01)`;
-              })
-              .catch((error) => {
-                console.error("Error fetching page views:", error);
-                document.getElementById("view-count").innerText = "Error loading views";
-              });
-          });
-        </script>
-
+        </span>                
 
         <br>
 
@@ -212,3 +172,43 @@ $(document).ready(function() {
 <script>hljs.initHighlightingOnLoad();</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6715738890677216"
      crossorigin="anonymous"></script>
+
+<!-- Increment page views -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const postPath = "{{ page.url }}"; // Jekyll variable for the post's URL
+    const apiBaseUrl = "https://agile-earth-48511-3d797ee7c19c.herokuapp.com"; // No trailing slash
+
+    // Increment page views
+    fetch(`${apiBaseUrl}/increment/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ path: postPath }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          console.error("Failed to increment page views:", response.statusText);
+        }
+      })
+      .catch((error) => console.error("Error incrementing page views:", error));
+
+    // Fetch and display the current page view count
+    fetch(`${apiBaseUrl}/views/${encodeURIComponent(postPath)}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const viewCount = data.views || 0;
+        document.getElementById("view-count").innerText = `${viewCount} views (since 2025-04-01)`;
+      })
+      .catch((error) => {
+        console.error("Error fetching page views:", error);
+        document.getElementById("view-count").innerText = "Error loading views";
+      });
+  });
+</script>     
