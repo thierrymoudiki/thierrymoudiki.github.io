@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-In the new version (`v0.18.0`) of the [`ahead` package](), I have extended the `forecast::thetaf` function to support Generalized Linear Models (GLMs) and added an [attention mechanism](https://en.wikipedia.org/wiki/Attention_(machine_learning)). 
+In the new version (`v0.18.0`) of the [`ahead` package](https://r-packages.techtonique.net), I have extended the `forecast::thetaf` function to support Generalized Linear Models (GLMs) and added an [attention mechanism](https://en.wikipedia.org/wiki/Attention_(machine_learning)). 
 
 Attention is widely used in current neural networks (because they tend to forget; blame it on the gradients :) ) to focus on specific parts of the input data when making predictions. 
 
