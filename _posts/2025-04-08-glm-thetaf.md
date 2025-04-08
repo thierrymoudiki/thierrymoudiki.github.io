@@ -205,7 +205,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![image-title-here]({{base}}/images/2025-04-08-image1.png)
+![image-title-here]({{base}}/images/2025-04-08/2025-04-08-image1.png)
 
 <a target="_blank" href="https://colab.research.google.com/github/thierrymoudiki/notebooks/blob/main/Python/2025_04_08_theta_attention_Tourism2010.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
