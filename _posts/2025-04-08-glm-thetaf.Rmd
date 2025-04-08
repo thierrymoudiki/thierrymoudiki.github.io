@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Extending the Theta forecasting method to GLMs and attention (in package)"
+title: "Extending the Theta forecasting method to GLMs and attention"
 description: "Python and R examples of use of the Theta model for GLMs and attention (context)"
 date: 2025-04-08
 categories: [R, Python]
