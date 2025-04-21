@@ -73,7 +73,7 @@ cat("Time taken:", end - start, "seconds\n")
 #print(preds_conformal)
 ```
 
-# Coverage rate as a function for level = 95 
+# Coverage rate for required level = 95% 
 
 ```R
 > mean((preds_bayesian[, "lwr"] <= y_test)*(preds_bayesian[, "upr"] >= y_test))*100
