@@ -27,7 +27,7 @@ library("tisthemachinelearner")
 library("tseries")
 ```
 
-# Import the data
+# Import data
 
 ```R
 library(MASS)
@@ -44,7 +44,7 @@ y_train <- Boston$medv[train_idx]
 y_test <- Boston$medv[-train_idx]
 ```
 
-# Fit the model
+# Fit model
 
 ```R
 # R6 interface
@@ -73,7 +73,17 @@ cat("Time taken:", end - start, "seconds\n")
 #print(preds_conformal)
 ```
 
-# Plot the results
+# Coverage rate as a function of level = 95 
+
+```R
+> mean((preds_bayesian[, "lwr"] <= y_test)*(preds_bayesian[, "upr"] >= y_test))*100
+[1] 99.01961
+> mean((preds_conformal[, "lwr"] <= y_test)*(preds_conformal[, "upr"] >= y_test))*100
+[1] 95.09804
+> 
+```
+
+# Plot results
 
 ```R
 par(mfrow=c(1, 2))
