@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "A lightweight interface to scikit-learn in R Pt.2: probabilistic time series forecasting with ahead::dynrmf"
-description: "Example of use of tisthemachinelearner; a lightweight interface to scikit-learn in R: probabilistic time series forecasting with ahead::dynrmf"
+title: "A lightweight interface to scikit-learn in R Pt.2: probabilistic time series forecasting in conjunction with ahead::dynrmf"
+description: "Example of use of tisthemachinelearner; a lightweight interface to scikit-learn in R: probabilistic time series forecasting in conjunction with ahead::dynrmf"
 date: 2025-04-20
 categories: R
 comments: true
