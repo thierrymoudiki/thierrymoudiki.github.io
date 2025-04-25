@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-In this post, I will demonstrate how to use the `bayesianrvfl` package for ['Bayesian'  optimization](https://optimization.cbe.cornell.edu/index.php?title=Bayesian_Optimization) of hyperparameters in a machine learning model. We will use the `Sonar` dataset from the `mlbench` package and optimize hyperparameters for an XGBoost model.
+In this post, I will demonstrate how to use the [`bayesianrvfl`](https://docs.techtonique.net/bayesianrvfl/index.html) package for ['Bayesian'  optimization](https://optimization.cbe.cornell.edu/index.php?title=Bayesian_Optimization) of hyperparameters in a machine learning model. We will use the `Sonar` dataset from the `mlbench` package and optimize hyperparameters for an XGBoost model.
 
 The surrogate model used for [Bayesian optimization](https://optimization.cbe.cornell.edu/index.php?title=Bayesian_Optimization) is a Non-Bayesian Gaussian Random Vector Functional Link (RVFL) network (instead of a Gaussian Process) (see [Chapter 6](https://www.researchgate.net/publication/328954526_Interest_rates_modeling_for_insurance_interpolation_extrapolation_and_forecasting)), whose number of nodes in the hidden layer and volatility of residuals are chosen by using **maximum likelihood estimation** (MLE). This surrogate model is trained on 10 results of the objective function evaluations, and an Expected Improvement acquisition function is used to determine the next point to sample in the hyperparameter space.
 
