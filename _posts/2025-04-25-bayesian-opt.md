@@ -125,7 +125,7 @@ caret::confusionMatrix(data = preds, reference = testing$Class)
 ## 
 ```
 
-```{r fig.width=6.5}
+```R
 # Get probability predictions for the whole test set
 probs <- predict(model, newdata = testing, type = "prob")
 
