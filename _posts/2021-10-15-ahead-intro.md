@@ -40,7 +40,12 @@ Here's how to install the package:
     Or
     
     ```R
-    remotes::install_github("Techtonique/ahead")
+    options(repos = c(
+  techtonique = "https://r-packages.techtonique.net",
+  CRAN = "https://cloud.r-project.org"
+))
+
+utils::install.packages("ahead")
     ```
 
 And here are the packages that will be used for this demo: 

@@ -34,7 +34,12 @@ with examples of Random Forest and Support Vector Machines _fitting functions_ (
     Or
     
     ```R
-    remotes::install_github("Techtonique/ahead")
+    options(repos = c(
+  techtonique = "https://r-packages.techtonique.net",
+  CRAN = "https://cloud.r-project.org"
+))
+
+utils::install.packages("ahead")
     ```
 
 In version 0.2.0 of `ahead`, [**Ridge regression**](https://en.wikipedia.org/wiki/Ridge_regression) is the default _fitting function_ for `dynrmf`. Let's see how it works: 

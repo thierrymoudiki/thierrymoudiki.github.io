@@ -29,7 +29,12 @@ In this post, I describe how to obtain probabilistic forecasts from R package `f
 
 ```{r}
 utils::install.packages(c("remotes", "e1071", "forecast", "glmnet"))
-remotes::install_github("Techtonique/ahead")
+options(repos = c(
+  techtonique = "https://r-packages.techtonique.net",
+  CRAN = "https://cloud.r-project.org"
+))
+
+utils::install.packages("ahead")
 ```
 
 ```{r}

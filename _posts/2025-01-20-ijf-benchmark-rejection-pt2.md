@@ -18,7 +18,12 @@ In this post, I'll present a benchmark based on 1311 time series from the Touris
 ```R
 utils::install.packages(c('foreach', 'forecast', 'fpp', 'fpp2', 'remotes', 'Tcomp'),
                         repos="https://cran.r-project.org")
-remotes::install_github("Techtonique/ahead")
+options(repos = c(
+  techtonique = "https://r-packages.techtonique.net",
+  CRAN = "https://cloud.r-project.org"
+))
+
+utils::install.packages("ahead")
 remotes::install_github("thierrymoudiki/simulatetimeseries")
 remotes::install_github("herbps10/AdaptiveConformal", force=TRUE)
 remotes::install_github("thierrymoudiki/misc")

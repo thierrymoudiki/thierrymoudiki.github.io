@@ -47,7 +47,12 @@ In [R package `ahead`](https://github.com/Techtonique/ahead), it is possible to 
     Or
 
     ``` r
-    remotes::install_github("Techtonique/ahead")
+    options(repos = c(
+  techtonique = "https://r-packages.techtonique.net",
+  CRAN = "https://cloud.r-project.org"
+))
+
+utils::install.packages("ahead")
     ```
 
 Using `ahead`:
