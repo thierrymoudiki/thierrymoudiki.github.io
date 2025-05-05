@@ -18,3 +18,7 @@ The `survivalist` package provides a convenient way to perform survival stacking
 ![image-title-here]({{base}}/images/2025-05-05/2025-05-05-image1.png)
 
 {% include 2025_05_05_survival_stacking.html %}
+
+<a target="_blank" href="https://colab.research.google.com/github/Techtonique/survivalist/blob/main/survivalist/demo/2025_05_05_survival_stacking.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
