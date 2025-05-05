@@ -13,7 +13,7 @@ comments: true
 
 This method is particularly useful when you want to leverage the power of machine learning algorithms for survival analysis, as it allows you to use a wide range of classifiers without having to worry about the specific requirements of survival analysis.
 
-The `survivalist` package provides a convenient way to perform survival stacking. 
+The [`survivalist`](https://github.com/Techtonique/survivalist) package provides a convenient way to perform survival stacking, as demonstrated below (link to a notebook at the end of this post). 
 
 ![image-title-here]({{base}}/images/2025-05-05/2025-05-05-image1.png)
 
