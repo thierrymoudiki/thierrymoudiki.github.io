@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Survival stacking: survival analysis using as supervised classification in R and Python"
+title: "Survival stacking: survival analysis translated as supervised classification in R and Python"
 description: "Example of use of 'survivalist' in R and Python -- Survival stacking: survival analysis with any classifier"
 date: 2025-05-05
 categories: [R, Python]
