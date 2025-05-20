@@ -38,5 +38,5 @@ The nnetsauce package provides a flexible way to perform quantile regression usi
 {% include 2025-05-20_quantile_regression.html %}
 
 <a target="_blank" href="https://colab.research.google.com/github/Techtonique/nnetsauce/blob/master/nnetsauce/demo/thierrymoudiki_2025-05-20_quantile_regression.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" width="40" height="20"/>
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; height: auto; width: 120px;"/>
 </a>
