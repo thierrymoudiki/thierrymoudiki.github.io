@@ -17,11 +17,11 @@ In this blog post, we'll explore how to perform quantile regression in R and Pyt
 
 Traditional regression models (e.g., linear regression) predict the mean of the dependent variable given the independent variables. However, in many real-world scenarios, we might be interested in:
 
-- Predicting extreme values (e.g., high or low sales, extreme temperatures).
-
-- Assessing uncertainty by estimating prediction intervals.
-
-- Handling non-Gaussian distributions where mean regression may be insufficient.
+<ul>
+<li> Predicting extreme values (e.g., high or low sales, extreme temperatures). </li>
+<li> Assessing uncertainty by estimating prediction intervals. </li>
+<li> Handling non-Gaussian distributions where mean regression may be insufficient. </li>
+</ul>
 
 Quantile regression allows us to estimate any quantile (e.g., 5th, 50th, 95th percentiles) of the response variable, offering a more robust analysis.
 
@@ -29,11 +29,11 @@ Quantile regression allows us to estimate any quantile (e.g., 5th, 50th, 95th pe
 
 The nnetsauce package provides a flexible way to perform quantile regression using any scikit-learn regressor. Below, we'll demonstrate how to use it with three different models, in R and Python:
 
-- RandomForestRegressor
-
-- RidgeCV (linear regression with cross-validated regularization)
-
-- KNeighborsRegressor
+<ul>
+<li> RandomForestRegressor </li>
+<li> RidgeCV (linear regression with cross-validated regularization) </li>
+<li> KNeighborsRegressor </li>
+</ul>
 
 {% include 2025-05-20_quantile_regression.html %}
 
