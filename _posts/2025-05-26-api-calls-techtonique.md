@@ -14,6 +14,7 @@ This blog post demonstrates how to use the machine learning classification API p
 1. **curl** - For command-line users and shell scripts
 2. **Python requests** - For Python developers
 3. **R httr** - For R users
+4. **Excel** - For Excel users
 
 We'll walk through examples using two classic datasets:
 - The Iris dataset for multi-class classification
