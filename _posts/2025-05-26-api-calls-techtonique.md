@@ -64,7 +64,7 @@ Then download the classification dataset:
 
 ```python
 !curl -X POST \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDgzMDM0NzJ9.vmc6czfUZo2jJEsKCTcZBPA1yYd2vToB6VpXm2Ty04E" \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@iris_dataset2.csv;type=text/csv" \
 "https://www.techtonique.net/mlclassification?base_model=GradientBoostingClassifier&n_hidden_features=5&predict_proba=True"
 ```
