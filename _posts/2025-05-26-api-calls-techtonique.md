@@ -9,7 +9,7 @@ comments: true
 
 In today's data-driven world, machine learning classification tasks are ubiquitous across various domains. While building and deploying machine learning models can be complex, APIs provide a convenient way to leverage powerful classification capabilities without the need for extensive setup or infrastructure.
 
-This blog post demonstrates how to use the machine learning classification API provided by [techtonique.net](https://www.techtonique.net) using three different methods:
+This blog post demonstrates how to use the machine learning classification API provided by [techtonique.net](https://www.techtonique.net) (the news are in the new [the API's blog](https://www.techtonique.net/blog)) using three different methods:
 
 1. **curl** - For command-line users and shell scripts
 2. **Python requests** - For Python developers
@@ -19,6 +19,8 @@ This blog post demonstrates how to use the machine learning classification API p
 We'll walk through examples using two classic datasets:
 - The Iris dataset for multi-class classification
 - The Breast Cancer dataset for binary classification
+
+The input files can be found in <a href="https://github.com/Techtonique/datasets/tree/main/tabular/classification">Techtonique/datasets</a>    (the ones with names ending with 2 specify a training set index).
 
 Each example will show how to:
 - Make API calls with proper authentication
@@ -71,7 +73,61 @@ Then download the classification dataset:
 
     {"y_true":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"y_pred":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,1,1,1,2,2,1,2,2,2,2,2,2],"0":{"precision":1.0,"recall":1.0,"f1-score":1.0,"support":15.0},"1":{"precision":0.7894736842105263,"recall":1.0,"f1-score":0.8823529411764706,"support":15.0},"2":{"precision":1.0,"recall":0.7333333333333333,"f1-score":0.8461538461538461,"support":15.0},"accuracy":0.9111111111111111,"macro avg":{"precision":0.9298245614035089,"recall":0.9111111111111111,"f1-score":0.9095022624434389,"support":45.0},"weighted avg":{"precision":0.9298245614035088,"recall":0.9111111111111111,"f1-score":0.9095022624434389,"support":45.0},"proba":[[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.9999960244140262,3.334039683616685e-06,6.415462901466744e-07],[0.9999960244140262,3.334039683616685e-06,6.415462901466744e-07],[0.9999960244140262,3.334039683616685e-06,6.415462901466744e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[0.999996024414054,3.3340396558155455e-06,6.415462901466922e-07],[3.045033869468758e-06,0.9999937901439727,3.164822157743673e-06],[3.4085260162096436e-06,0.9999931695319606,3.4219420233008224e-06],[3.1524138718715695e-06,0.9999936827643102,3.1648218179040277e-06],[9.588330585448842e-06,0.9998587655346274,0.0001316461347872],[3.4085260162096436e-06,0.9999931695319606,3.4219420233008224e-06],[3.1524138718715695e-06,0.9999936827643102,3.1648218179040277e-06],[3.1524138718715695e-06,0.9999936827643102,3.1648218179040277e-06],[3.1524138718715695e-06,0.9999936827643102,3.1648218179040277e-06],[3.4085260162096436e-06,0.9999931695319606,3.4219420233008224e-06],[3.1524138718715695e-06,0.9999936827643102,3.1648218179040277e-06],[0.004932272272005095,0.9799043377817493,0.015163389946245788],[3.1524138718715695e-06,0.9999936827643102,3.1648218179040277e-06],[9.588330585508172e-06,0.9998587655408142,0.00013164612860042232],[3.4085260162096436e-06,0.9999931695319606,3.4219420233008224e-06],[3.1524138718715695e-06,0.9999936827643102,3.1648218179040277e-06],[8.748137691624919e-07,2.8391363939081826e-06,0.9999962860498369],[3.4506054062196775e-05,0.007887348624295493,0.9920781453216423],[8.620706075486918e-07,2.5556823801935716e-06,0.9999965822470123],[0.007316994751226876,0.9353406793501166,0.05734232589865652],[0.006129685125947995,0.7712671846855687,0.22260313018848327],[0.003273968018685709,0.969594174153424,0.027131857827890307],[7.169724003427306e-05,0.004745498561275488,0.9951828041986902],[2.245977897875399e-06,8.537222217088907e-06,0.9999892167998851],[0.00016867136329469363,0.568295956512619,0.4315353721240864],[3.1992229758050182e-06,0.0008659343830747356,0.9991308663939493],[2.301715170556224e-05,0.005261230377511008,0.9947157524707835],[8.748139925370251e-07,2.5837975927175516e-06,0.9999965413884147],[8.748137418487531e-07,2.8703586517843243e-06,0.9999962548276062],[2.2462428700241693e-06,1.3402409372558758e-05,0.9999843513477573],[8.748139925370251e-07,2.5837975927175516e-06,0.9999965413884147]]}
 
-Use [https://curlconverter.com/](https://curlconverter.com/) for translating this request.
+Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
+
+```bash
+curl -X POST \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
+-F "file=@/Users/t/Documents/datasets/tabular/classification/iris_dataset2.csv;type=text/csv" \
+"http://127.0.0.1:8000/mlclassification?base_model=RandomForestClassifier&n_hidden_features=5&predict_proba=False"
+```
+
+Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
+
+```bash
+curl -X POST \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
+-F "file=@/Users/t/Documents/datasets/tabular/classification/iris_dataset2.csv;type=text/csv" \
+"http://127.0.0.1:8000/mlclassification?base_model=RandomForestClassifier&n_hidden_features=5&predict_proba=True"
+```
+
+Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
+
+```bash
+curl -X POST \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
+-F "file=@/Users/t/Documents/datasets/tabular/classification/breast_cancer_dataset2.csv;type=text/csv" \
+"http://127.0.0.1:8000/mlclassification?base_model=RandomForestClassifier&n_hidden_features=5&predict_proba=True"
+```
+
+Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
+
+```bash
+curl -X POST \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
+-F "file=@/Users/t/Documents/datasets/tabular/classification/breast_cancer_dataset2.csv;type=text/csv" \
+"http://127.0.0.1:8000/gbdtclassification"
+```
+Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
+
+```bash
+curl -X POST \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
+-F "file=@/Users/t/Documents/datasets/tabular/classification/breast_cancer_dataset2.csv;type=text/csv" \
+"http://127.0.0.1:8000/gbdtclassification?model_type=xgboost"
+```
+
+Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
+
+```bash
+curl -X POST \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
+-F "file=@/Users/t/Documents/datasets/tabular/classification/breast_cancer_dataset2.csv;type=text/csv" \
+"http://127.0.0.1:8000/gbdtclassification?model_type=xgboost&predict_proba=False"
+```
+
+Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
+
 
 # 2 - Python
 
