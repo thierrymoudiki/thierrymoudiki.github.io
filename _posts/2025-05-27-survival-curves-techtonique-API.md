@@ -37,7 +37,7 @@ Use [https://curlconverter.com/](https://curlconverter.com/) to translate this r
 
 ```python
 !curl -X POST \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDgzNjI0NDl9.4iJEWoXIVNVStO_2Y6a1vlWaxRimBPN4bRI-5cGBfTY" \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@kidney.csv;type=text/csv" \
 "https://www.techtonique.net/survivalcurve?method=km"
 ```
@@ -63,7 +63,7 @@ Use [https://curlconverter.com/](https://curlconverter.com/) to translate this r
 
 ```python
 !curl -X POST \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDgzNjI0NDl9.4iJEWoXIVNVStO_2Y6a1vlWaxRimBPN4bRI-5cGBfTY" \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@gbsg2_2.csv;type=text/csv" \
 "https://www.techtonique.net/survivalcurve?method=RidgeCV&patient_id=1"
 ```
@@ -79,7 +79,7 @@ Obtain survival curves for the 4 first patients in the test set (patients with t
 import requests
 
 headers = {
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDgzNjI0NDl9.4iJEWoXIVNVStO_2Y6a1vlWaxRimBPN4bRI-5cGBfTY',
+    'Authorization': 'Bearer YOUR_TOKEN_HERE',
 }
 
 responses = []
@@ -158,7 +158,7 @@ Kaplan-Meier survival curve for the entire population
 import requests
 
 headers = {
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDgzNjI0NDl9.4iJEWoXIVNVStO_2Y6a1vlWaxRimBPN4bRI-5cGBfTY',
+    'Authorization': 'Bearer YOUR_TOKEN_HERE',
 }
 
 params = {
