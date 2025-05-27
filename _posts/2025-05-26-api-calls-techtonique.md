@@ -106,7 +106,7 @@ Use [https://curlconverter.com/](https://curlconverter.com/) to translate this r
 curl -X POST \
 -H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@/Users/t/Documents/datasets/tabular/classification/breast_cancer_dataset2.csv;type=text/csv" \
-"http://127.0.0.1:8000/gbdtclassification"
+"http://127.0.0.1:8000/gbdtclassification" # default is lightgbm
 ```
 Use [https://curlconverter.com/](https://curlconverter.com/) to translate this request in your favorite programming language.
 
