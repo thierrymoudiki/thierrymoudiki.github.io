@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Will my appartment in 5th avenue be overpriced or not? Harnessing the power of www.techtonique.net to find out"
-description: "How to make API calls to techtonique.net for conformal machine learning regression tasks using curl, curlconverter.com, Python requests"
+title: "Will my appartment in 5th avenue be overpriced or not? Harnessing the power of www.techtonique.net (+ xgboost, lighgbm, catboost) to find out"
+description: "How to make API calls to techtonique.net (and xgboost, lighgbm, catboost) for conformal machine learning regression tasks using curl, curlconverter.com, Python requests"
 date: 2025-05-28
 categories: [R, Python, Techtonique]
 comments: true
