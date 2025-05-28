@@ -31,7 +31,7 @@ Let's get started by downloading our datasets and making our first API call.
 
 # 1 - Using curl
 
-Firt, get a token from: [https://www.techtonique.net/token](https://www.techtonique.net/token).
+First, get a token from: [https://www.techtonique.net/token](https://www.techtonique.net/token).
 
 
 Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
