@@ -7,7 +7,7 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
-This blog post demonstrates how to use the stochastic simulation API provided by [techtonique.net](https://www.techtonique.net) to generate scenarios using various diffusion models. We'll explore how to simulate paths using:
+This blog post demonstrates how to use the (work in progress) stochastic simulation API provided by [techtonique.net](https://www.techtonique.net) to generate scenarios using various diffusion models. We'll explore how to simulate paths using:
 
 1. Geometric Brownian Motion (GBM)
 2. Cox-Ingersoll-Ross (CIR) process
