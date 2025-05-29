@@ -38,6 +38,9 @@ First, get a token from: [https://www.techtonique.net/token](https://www.techton
 
 Now, here's how to use the token in API requests for stochatic simulations. The JSON response contains a key "sims". Each list is a future scenario, as envisaged by the chosen model, and based on the initial value 100.
 
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
+
+
 ```bash
 # Replace YOUR_TOKEN_HERE with your actual token
 curl -X GET "https://www.techtonique.net/scenarios/simulate/?model=GBM&n=6&horizon=5&frequency=quarterly&x0=100&theta1=0.1&theta2=0.2&theta3=0.3&seed=123" \
@@ -45,17 +48,26 @@ curl -X GET "https://www.techtonique.net/scenarios/simulate/?model=GBM&n=6&horiz
      -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
 
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
+
+
 ```bash
 curl -X GET "https://www.techtonique.net/scenarios/simulate/?model=CIR&n=6&horizon=5&frequency=quarterly&x0=100&theta1=0.1&theta2=0.2&theta3=0.3&seed=123" \
      -H "accept: application/json" \
      -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
 
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
+
+
 ```bash
 curl -X GET "https://www.techtonique.net/scenarios/simulate/?model=OU&n=6&horizon=5&frequency=quarterly&x0=100&theta1=0.1&theta2=0.2&theta3=0.3&seed=123" \
      -H "accept: application/json" \
      -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
+
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
+
 
 ```bash
 curl -X GET "https://www.techtonique.net/scenarios/simulate/?model=shocks&n=6&horizon=5&frequency=quarterly&seed=123" \
