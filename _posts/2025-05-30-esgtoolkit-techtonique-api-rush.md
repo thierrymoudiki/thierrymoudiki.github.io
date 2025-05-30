@@ -26,7 +26,7 @@ source ~/.zshrc # or source ~/.bashrc
 rush --help # check if rush is installed
 ```
 
-Now, download and save the following script in your current directory (note that there's nothing malicious in it): 
+Now, download and save the following script in your current directory (note that there's nothing malicious in it). Replace AUTH_TOKEN by a token that can be found at [techtonique.net/token](https://www.techtonique.net/token): 
 
 <script src="https://gist.github.com/thierrymoudiki/026834be69dfbc034ba05ee27e338ddf.js"></script>
 
