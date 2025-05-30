@@ -36,6 +36,6 @@ Then, at the command line, run:
 ./fetch_and_plot_rush_techtonique.sh
 ```
 
-The result plot can be found in your current directory as a PNG file `plot.png`.
+The result plot can be found in your current directory as a PNG file named `plot.png`.
 
 ![image-title-here]({{base}}/images/2025-05-30/2025-05-30-image1.png){:class="img-responsive"}
