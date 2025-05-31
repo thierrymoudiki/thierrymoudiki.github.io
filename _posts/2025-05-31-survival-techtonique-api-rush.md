@@ -8,7 +8,7 @@ comments: true
 ---
 
    
-In today's post, we'll see how to use [_rush_](https://jeroenjanssens.com/dsatcl/chapter-7-exploring-data) and the probabilistic survival analysis API provided by [techtonique.net](https://www.techtonique.net) (along with R and Python) to plot survival curves results. Note the that, [the web app](https://www.techtonique.net) also contains a page for plotting these curves,  in 1 click. 
+In today's post, we'll see how to use [_rush_](https://jeroenjanssens.com/dsatcl/chapter-7-exploring-data) and the probabilistic survival analysis API provided by [techtonique.net](https://www.techtonique.net) (along with R and Python) to plot survival curves results. Note that [the web app](https://www.techtonique.net) also contains a page for plotting these curves,  in 1 click. You can also read [this post](https://thierrymoudiki.github.io/blog/2025/05/27/r/python/survival-curves-techtonique-API) more Python examples. 
 
 First, you'd need to install _rush_. Here is how I did it: 
 
