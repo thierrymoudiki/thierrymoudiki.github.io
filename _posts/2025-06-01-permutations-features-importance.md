@@ -62,7 +62,7 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
     100  122k  100  2751  100  119k   1130  50421  0:00:02  0:00:02 --:--:-- 51557
 
 
-Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language. This is a  _slow_ request, for generally-accepted APIs standards.
 
 ```python
 !curl -X POST \
@@ -75,7 +75,7 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
                                      Dload  Upload   Total   Spent    Left  Speed
     100  236k  100  117k  100  119k   2780   2845  0:00:43  0:00:43 --:--:-- 26830
 
-Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language. This is a  _slow_ request, for generally-accepted APIs standards.
 
 
 ```python
@@ -105,8 +105,8 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
     100 52785  100 11903  100 40882   8541  29337  0:00:01  0:00:01 --:--:-- 37893
 
 
-Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
-
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language. This is a  _slow_ request, for generally-accepted APIs standards.
+ 
 
 ```python
 !curl -X POST \
@@ -120,7 +120,7 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
     100 87409  100 46527  100 40882   4139   3637  0:00:11  0:00:11 --:--:-- 12810
 
 
-Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
+Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language. This is a  _slow_ request, for generally-accepted APIs standards.
 
 
 ```python
@@ -240,13 +240,6 @@ with open('res3.json', 'r') as f:
 # Assuming 'shap_values' and 'feature_names' are keys in the JSON response for SHAP
 shap_values = data['interpretability']['values']
 feature_names = data['interpretability']['feature_names']
-
-# Install shap if not already installed
-try:
-    import shap
-except ImportError:
-    !pip install shap
-    import shap
 
 print(shap_values[0])
 
