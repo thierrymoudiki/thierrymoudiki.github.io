@@ -21,9 +21,9 @@ The model decomposes the time series into two components:
 
 where:
 
-- $\mu_t$ is the conditional mean (modeled using **any forecasting method**)
-- $\sigma_t$ is the conditional volatility (modeled using **machine learning**)
-- $\varepsilon_t$ are standardized residuals
+- $$\mu_t$$ is the conditional mean (modeled using **any forecasting method**)
+- $$\sigma_t$$ is the conditional volatility (modeled using **machine learning**)
+- $$\varepsilon_t$$ are standardized residuals
 
 The **key innovation** is using any time series model for mean forecast, and machine learning methods + conformal prediction to model the volatility component, allowing for more flexible and potentially more accurate volatility forecasts than traditional GARCH models. The function supports various machine learning methods through parameters `fit_func` and `predict_func` as in other `ahead` models, and through the `caret` package.
 
