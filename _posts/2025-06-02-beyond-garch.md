@@ -16,8 +16,8 @@ Probabilistic ([not point forecasting](https://thierrymoudiki.github.io/blog/202
 
 The model decomposes the time series into two components:
 
-1. Mean component: $y_t = \mu_t + \sigma_t \varepsilon_t$
-2. Volatility component: $\sigma_t^2 = f(\varepsilon_{t-1}^2, \varepsilon_{t-2}^2, ...)$
+1. Mean component: $$y_t = \mu_t + \sigma_t \varepsilon_t$$
+2. Volatility component: $$\sigma_t^2 = f(\varepsilon_{t-1}^2, \varepsilon_{t-2}^2, ...)$$
 
 where:
 
@@ -57,7 +57,7 @@ install.packages("ahead")
 
 Let's start with a simple example using the Google stock price data from the `fpp2` package:
 
-```{r setup, include=FALSE}
+```R
 library(forecast)
 library(ahead)
 library(randomForest)
@@ -65,7 +65,7 @@ library(e1071)
 library(glmnet)
 ```
 
-```{r basic_example, fig.width=7.2}
+```R
 y <- fpp2::goog200
 
 # Default model for volatility (Ridge regression for volatility)
@@ -76,7 +76,7 @@ y <- fpp2::goog200
 
 The package supports various machine learning methods for volatility modeling. Here are some examples:
 
-```{r ml_methods, fig.width=7.2}
+```R
 # Random Forest
 (obj_rf <- ahead::mlarchf(y, fit_func = randomForest::randomForest, 
                      predict_func = predict, h=20L, B=500L))
@@ -92,13 +92,13 @@ The package supports various machine learning methods for volatility modeling. H
 
 Let's visualize the forecasts:
 
-```{r plot_ridge_rf, fig.width=7.2}
+```R
 par(mfrow=c(1, 2))
 plot(obj_ridge, main="Ridge Regression")
 plot(obj_rf, main="Random Forest")
 ```
 
-```{r plot_svm_glmnet, fig.width=7.2}
+```R
 par(mfrow=c(1, 2))
 plot(obj_svm, main="Support Vector Machine")
 plot(obj_glmnet, main="Elastic Net")
@@ -111,7 +111,7 @@ plot(obj_glmnet, main="Elastic Net")
 
 The package also supports models from the `caret` package, which provides access to hundreds of machine learning methods. Here's how to use them:
 
-```{r caret_example, fig.width=7}
+```R
 y <- window(fpp2::goog200, start=100)
 
 # Random Forest via caret
@@ -123,7 +123,7 @@ y <- window(fpp2::goog200, start=100)
 
 Visualizing the forecasts:
 
-```{r plot_caret, fig.width=7.2}
+```R
 par(mfrow=c(1, 2))
 plot(obj_rf, main="Random Forest (caret)")
 plot(obj_glmboost, main="Gradient Boosting (caret)")
@@ -131,7 +131,7 @@ plot(obj_glmboost, main="Gradient Boosting (caret)")
 
 Looking at the simulation paths:
 
-```{r plot_sims, fig.width=7.2}
+```R
 par(mfrow=c(1, 2))
 matplot(obj_rf$sims, type='l', main="RF Simulation Paths")
 matplot(obj_glmboost$sims, type='l', main="GBM Simulation Paths")
@@ -141,7 +141,7 @@ matplot(obj_glmboost$sims, type='l', main="GBM Simulation Paths")
 
 You can also customize both the mean forecasting model and the model for forecasting standardized residuals:
 
-```{r custom_models, fig.width=7}
+```R
 # Using Theta method for both mean and residuals
 (obj_svm <- ahead::mlarchf(y, fit_func = e1071::svm, 
                      predict_func = predict, h=20L, 
@@ -154,7 +154,7 @@ You can also customize both the mean forecasting model and the model for forecas
                      model_residuals=forecast::thetaf))
 ```
 
-```{r plot_custom, fig.width=7.2}
+```R
 par(mfrow=c(1, 2))
 plot(obj_svm, main="SVM with Theta")
 plot(obj_glmnet, main="Elastic Net with Theta")
@@ -162,7 +162,7 @@ plot(obj_glmnet, main="Elastic Net with Theta")
 
 When using non-ARIMA models for the mean forecast, it's important to check if the residuals are centered and stationary:
 
-```{r diagnostics}
+```R
 # Diagnostic tests for residuals
 print(obj_svm$resids_t_test)
 ## 
