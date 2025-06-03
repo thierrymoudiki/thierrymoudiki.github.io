@@ -174,7 +174,7 @@ plot(obj_glmnet, main="Elastic Net with Theta + Theta")
 When using non-ARIMA models for the mean forecast, it's important to check if the residuals are centered and stationary:
 
 ```R
-# Diagnostic tests for residuals
+# Diagnostic tests for mean forecast residuals
 print(obj_svm$resids_t_test)
 ## 
 ##  One Sample t-test
