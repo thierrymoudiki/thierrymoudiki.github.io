@@ -44,7 +44,7 @@ This new approach combines the interpretability of traditional time series model
 
 # Basic Usage
 
-Install package: 
+Install package [`ahead`](https://docs.techtonique.net/ahead/): 
 
 ```R
 options(repos = c(
