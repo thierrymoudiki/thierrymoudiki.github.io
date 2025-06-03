@@ -10,7 +10,7 @@ comments: true
 
 # Introduction
 
-Probabilistic ([not point forecasting](https://thierrymoudiki.github.io/blog/2024/12/29/r/stock-forecasting)) stock forecasting is notably useful for **testing trading strategies** or **risk capital valuation**. Because stock prices exhibit a latent stochastic volatility, this type of forecasting methods relies on classical  parametric models like [ARMA for the mean and GARCH for volatility](https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity). 
+Probabilistic ([not point forecasting](https://thierrymoudiki.github.io/blog/2024/12/29/r/stock-forecasting)) stock forecasting is notably useful for **testing trading strategies** or **risk capital valuation**. Because stock prices exhibit a latent stochastic volatility, this type of forecasting methods generally relies on classical  parametric models like [ARMA for the mean and GARCH for volatility](https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity). 
 
 **This post offers a flexible hybrid alternative to ARMA-GARCH, combining conformal prediction and machine learning approaches with AutoRegressive Conditional Heteroskedastic (ARCH) effects.**
 
@@ -25,11 +25,11 @@ where:
 - $$\sigma_t$$ is the conditional volatility (modeled using **machine learning**)
 - $$\varepsilon_t$$ are standardized residuals
 
-The **key innovation** is using any time series model for mean forecast, and machine learning methods + conformal prediction to model the volatility component, allowing for more flexible and potentially more accurate volatility forecasts than traditional GARCH models. The function supports various machine learning methods through parameters `fit_func` and `predict_func` as in other `ahead` models, and through the `caret` package.
+The **key innovation** is using any time series model for mean forecast, and machine learning methods + conformal prediction to model the volatility component, allowing for more flexible and potentially more accurate volatility forecasts than traditional GARCH models. The function supports various machine learning methods through parameters `fit_func` and `predict_func` as in other [`ahead`](https://docs.techtonique.net/ahead/) models, and through the `caret` package.
 
 The forecasting process involves:
 
-- Fitting a mean model (default: `auto.arima`)
+- Fitting a mean model (default: [`auto.arima`](https://www.rdocumentation.org/packages/forecast/versions/8.24.0/topics/auto.arima))
 - Modeling the squared residuals using machine learning. For this to work, the residuals from the mean model need to be centered, so that 
   
 $$
@@ -77,15 +77,15 @@ y <- fpp2::goog200
 The package supports various machine learning methods for volatility modeling. Here are some examples:
 
 ```R
-# Random Forest
+# ARIMA is used for mean forecast + Random Forest to model the latent volatility
 (obj_rf <- ahead::mlarchf(y, fit_func = randomForest::randomForest, 
                      predict_func = predict, h=20L, B=500L))
 
-# Support Vector Machine
+# ARIMA is used for mean forecast + Support Vector Machine to model the latent volatility
 (obj_svm <- ahead::mlarchf(y, fit_func = e1071::svm, 
                      predict_func = predict, h=20L, B=500L))
 
-# Elastic Net
+# ARIMA is used for mean forecast + Elastic Net to model the latent volatility
 (obj_glmnet <- ahead::mlarchf(y, fit_func = glmnet::cv.glmnet, 
                      predict_func = predict, h=20L, B=500L))
 ```
@@ -109,15 +109,15 @@ plot(obj_glmnet, main="Elastic Net")
 
 # Using caret Models
 
-The package also supports models from the `caret` package, which provides access to hundreds of machine learning methods. Here's how to use them:
+The package also supports models from the `caret` package, which provides access to hundreds of machine learning methods for volatility forecasting. Here's how to use them:
 
 ```R
 y <- window(fpp2::goog200, start=100)
 
-# Random Forest via caret
+# ARIMA is used for mean forecast + Random Forest via caret for the mean
 (obj_rf <- ahead::mlarchf(y, ml_method="ranger", h=20L))
 
-# Gradient Boosting via caret
+# ARIMA is used for mean forecast + Gradient Boosting via caret for the mean
 (obj_glmboost <- ahead::mlarchf(y, ml_method="glmboost", h=20L))
 ```
 
@@ -129,6 +129,9 @@ plot(obj_rf, main="Random Forest (caret)")
 plot(obj_glmboost, main="Gradient Boosting (caret)")
 ```
 
+![image-title-here]({{base}}/images/2025-06-02/2025-06-02-image2.png){:class="img-responsive"}    
+
+
 Looking at the simulation paths:
 
 ```R
@@ -137,17 +140,21 @@ matplot(obj_rf$sims, type='l', main="RF Simulation Paths")
 matplot(obj_glmboost$sims, type='l', main="GBM Simulation Paths")
 ```
 
+![image-title-here]({{base}}/images/2025-06-02/2025-06-02-image3.png){:class="img-responsive"}    
+
+
 # Customizing Mean and Residual Models
 
 You can also customize both the mean forecasting model and the model for forecasting standardized residuals:
 
 ```R
-# Using Theta method for both mean and residuals
+# Using RW + Theta method for mean and residuals along with SVM for volatility
 (obj_svm <- ahead::mlarchf(y, fit_func = e1071::svm, 
                      predict_func = predict, h=20L, 
                      mean_model=forecast::rwf,
                      model_residuals=forecast::thetaf))
 
+# Using Theta + Theta method for mean and residuals along with GLMNET for volatility
 (obj_glmnet <- ahead::mlarchf(y, fit_func = glmnet::cv.glmnet, 
                      predict_func = predict, h=20L, 
                      mean_model=forecast::thetaf,
@@ -155,10 +162,14 @@ You can also customize both the mean forecasting model and the model for forecas
 ```
 
 ```R
-par(mfrow=c(1, 2))
-plot(obj_svm, main="SVM with Theta")
-plot(obj_glmnet, main="Elastic Net with Theta")
+plot(obj_svm, main="SVM with RW + Theta")
+plot(obj_glmnet, main="Elastic Net with Theta + Theta")
 ```
+
+![image-title-here]({{base}}/images/2025-06-02/2025-06-02-image4.png){:class="img-responsive"}    
+
+![image-title-here]({{base}}/images/2025-06-02/2025-06-02-image5.png){:class="img-responsive"}    
+
 
 When using non-ARIMA models for the mean forecast, it's important to check if the residuals are centered and stationary:
 
