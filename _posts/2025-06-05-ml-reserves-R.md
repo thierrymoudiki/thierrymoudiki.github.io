@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "R version of Machine Learning (for longitudinal data) Reserving (work in progress)"
-description: "R version Examples of use of Machine Learning (for longitudinal data) Reserving"
+title: "R version of Probabilistic Machine Learning (for longitudinal data) Reserving (work in progress)"
+description: "R version Examples of use of Probabilistic Machine Learning (for longitudinal data) Reserving"
 date: 2025-06-05
 categories: R
 comments: true
