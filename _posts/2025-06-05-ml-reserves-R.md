@@ -475,4 +475,8 @@ legend("topleft", legend = c("IBNR Mean", "Confidence Interval"),
     Name: values, dtype: float64)
 
 ![image-title-here]({{base}}/images/2025-06-05/2025-06-05-image1.png){:class="img-responsive"}    
+
+<a target="_blank" href="https://colab.research.google.com/github/Techtonique/mlreserving/blob/main/mlreserving/demo/2025-06-05-ml-reserving-R-version.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; height: auto; width: 120px;"/>
+</a>
     
