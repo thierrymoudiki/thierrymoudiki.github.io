@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Machine Learning (for longitudinal data) Reserving (work in progress)"
-description: "Examps of use of Machine Learning (for longitudinal data) Reserving"
+description: "Examples of use of Machine Learning (for longitudinal data) Reserving"
 date: 2025-06-04
 categories: Python
 comments: true
