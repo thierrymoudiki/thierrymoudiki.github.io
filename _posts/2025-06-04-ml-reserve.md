@@ -99,7 +99,7 @@ for use_factors in [False, True]:
 ```
 
 <a target="_blank" href="https://colab.research.google.com/github/Techtonique/mlreserving/blob/main/mlreserving/demo/2025-06-05-ml-reserving.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; height: auto; width: 120px;"/>
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 ![image-title-here]({{base}}/images/2025-06-04/2025-06-04-image1.png){:class="img-responsive"}    
