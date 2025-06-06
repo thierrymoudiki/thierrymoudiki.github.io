@@ -7,7 +7,7 @@ categories: R
 comments: true
 ---
 
-Work in progress. Comments welcome. 
+Work in progress. Comments welcome. Link to notebook at the end of this post. 
 
 ```python
 !pip install git+https://github.com/Techtonique/mlreserving.git --verbose
