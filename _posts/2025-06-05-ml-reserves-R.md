@@ -71,41 +71,37 @@ print(py_df$head())
 print(py_df$tail())
 
 # Create models list
-models <- list(
-  RidgeCV(),
-  ExtraTreesRegressor(),
-  RandomForestRegressor()
-)
+mdl <- RandomForestRegressor()
 
 # Helper function to create Python integers
 py_int <- function(x) {
   floor(x)
 }
 
-for (mdl in models) {
-  # Initialize the model with explicit Python integers
-  model <- MLReserving(
-    model = mdl,
-    level = py_int(95),  # 95% confidence level
-    random_state = py_int(42)
-  )
+# Initialize the model with explicit Python integers
+model <- MLReserving(
+  model = mdl,
+  level = py_int(95),  # 95% confidence level
+  random_state = py_int(42)
+)
 
-  # Fit the model
-  model$fit(
-    py_df,
-    origin_col = "origin",
-    development_col = "development",
-    value_col = "values"
-  )
+# Fit the model
+model$fit(
+  py_df,
+  origin_col = "origin",
+  development_col = "development",
+  value_col = "values"
+)
 
-  # Uncomment to make predictions
-  result <- model$predict()
-  print(result)
-}
+# Uncomment to make predictions
+result <- model$predict()
+print(result)
 
-(mean_df <- py_to_r(result$ibnr_mean))
-(lower_df <- py_to_r(result$ibnr_lower))
-(upper_df <- py_to_r(result$ibnr_upper))
+ibnr <- model$get_ibnr()
+
+(mean_df <- py_to_r(ibnr$mean))
+(lower_df <- py_to_r(ibnr$lower))
+(upper_df <- py_to_r(ibnr$upper))
 
 mean_vals <- mean_df
 lower_vals <- lower_df
