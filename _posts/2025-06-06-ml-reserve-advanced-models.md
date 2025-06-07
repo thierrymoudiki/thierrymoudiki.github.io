@@ -19,7 +19,7 @@ Key aspects covered:
 - Calculation of IBNR (Incurred But Not Reported) estimates
 - Visualization of results and uncertainty bounds
 
-Note that this is a work in progress, and the models shown are not fully tuned. The focus is on demonstrating the methodology rather than achieving optimal performance. Link to notebook at the end. 
+Note that this is a work in progress, and the models shown are not fully tuned. The focus is on demonstrating the methodology rather than achieving optimal performance. **Link to notebook at the end**. 
 
 ```bash
 !pip install git+https://github.com/Techtonique/mlreserving.git --verbose
@@ -276,9 +276,11 @@ for mdl in models:
 print(models_run)
 ```
 
+![image-title-here]({{base}}/images/2025-06-06/2025-06-06-image1.png){:class="img-responsive"}    
+
 <a target="_blank" href="https://colab.research.google.com/github/Techtonique/mlreserving/blob/main/mlreserving/demo/2025_06_06_advanced_models.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; height: auto; width: 120px;"/>
 </a>
 
-![image-title-here]({{base}}/images/2025-06-06/2025-06-06-image1.png){:class="img-responsive"}    
+
 
