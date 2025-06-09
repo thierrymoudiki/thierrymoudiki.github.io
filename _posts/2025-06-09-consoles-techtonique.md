@@ -7,7 +7,7 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
-In this post, I'll showcase the free online code editors available on [www.techtonique.net](www.techtonique.net) for R, Python, and SQL. These editors provide a convenient way to write and test code directly in your browser without any installation required. Whether you're learning to code, testing snippets, or working on small projects, these tools offer a lightweight and accessible development environment.
+In this post, I'll showcase the free online code editors available on [https://www.techtonique.net](https://www.techtonique.net) for R, Python, and SQL. These editors provide a convenient way to write and test code directly in your browser without any installation required. Whether you're learning to code, testing snippets, or working on small projects, these tools offer a lightweight and accessible development environment.
 
 The short video below demonstrates how to use these editors, highlighting their key features and functionality. You'll see how to write and execute code, view outputs.
 
