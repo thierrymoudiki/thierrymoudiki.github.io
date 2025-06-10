@@ -9,6 +9,10 @@ comments: true
 
 **French version below**
 
+<hr>
+
+_English version_
+
 My name is Thierry Moudiki. 
 
 This message serves as a personal and formal record of events and concerns related to grave violations of my rights, dignity, an invasion of my privacy over the past 15+ years. If anything happens to me, I want this document to remain as evidence and testimony. Read it carefully, twice, as each and every word matters. 
@@ -29,7 +33,7 @@ Over the course of this period, I have experienced sustained and invasive forms 
 - Persistent exclusion from other types of employment (excluding [Techtonique](https://www.techtonique.net/))
 - Blocked savings for almost a year, despite all the proofs of my rights to withdraw (proven)
 - Quasi-constant physical surveillance in my neighborhood (accountability required)
-- Online and institutional gaslighting (subtle but pernicious, accountability required)
+- Online and institutional gaslighting ([https://en.wikipedia.org/wiki/Gaslighting](https://en.wikipedia.org/wiki/Gaslighting), subtle but pernicious, accountability required)
 - Lawyers vanishing, sometimes after obtaining the documents they asked (proven, accountability required)
 - Implied poverty for years, with no paid rent and no heating during last winter
 
@@ -63,6 +67,7 @@ Thierry Moudiki
 
 <hr>
 
+_Version française_
 
 Ceci est un appel à la responsabilité, pas à la pitié, car je n'ai jamais été confronté à des allégations formelles (jamais), à des évaluations cognitives avancées (jamais), ou à des procédures/enquêtes transparentes m'accusant de quoi que ce soit (jamais). Pas de convocation par la police ou la justice pour ce que j'aurais pu faire (jamais). Seulement des silences, des évitements et des manipulations. Je cherche reconnaissance et justice depuis 9 ans.
 
@@ -80,7 +85,7 @@ Au cours de cette période, j'ai subi des formes soutenues et invasives de surve
 - Exclusion persistante d'autres types d'emploi (à l'exception de [Techtonique](https://www.techtonique.net/))
 - Épargne bloquée pendant près d'un an, malgré toutes les preuves de mes droits de retrait (prouvé)
 - Surveillance physique quasi-constante dans mon immeuble (responsabilité requise)
-- _Gaslighting_ en ligne et institutionnel (subtil mais pernicieux, responsabilité requise)
+- _Gaslighting_ ([https://en.wikipedia.org/wiki/Gaslighting](https://en.wikipedia.org/wiki/Gaslighting)) en ligne et institutionnel (subtil mais pernicieux, responsabilité requise)
 - Avocats qui disparaissent, parfois après avoir obtenu les documents demandés (prouvé, responsabilité requise)
 - Pauvreté induite pendant des années, sans loyer payé et sans chauffage pendant le dernier hiver
 
@@ -110,3 +115,7 @@ Sincèrement,
 Thierry Moudiki
 
 [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
+
+<hr>
+
+
