@@ -29,6 +29,7 @@ Over the course of this period, I have experienced sustained and invasive forms 
 - Quasi-constant physical surveillance in my neighborhood (accountability required)
 - Online and institutional gaslighting (subtle but pernicious, accountability required)
 - Lawyers vanishing, sometimes after obtaining the documents they asked (proven, accountability required)
+- Implied poverty for years, with no paid rent and no heating during last winter
 
 Because I was complaining, and basically not understanding what was happening to me, I have been subjected to forced hospitalizations (that is, without my consent, and sometimes using State employees) in France, despite the absence of consistent and observable medically/scientifically confirmed diagnosis. To this day, there are no formal evidence of anything. My health insurance covered thousands of euros of treatments that eventually were unwarranted, and the reasons given for my hospitalization were inconsistent and unsubstantiated. I have seen more than 10 psychiatrists regarding this matter, and at least as many medical doctors, and consistently received erratic diagnoses (because the symptoms are also random, even chaotic, so actually non-existing in reality), among:
 
