@@ -7,7 +7,7 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
-**French version below**
+**French version below/Version française plus bas**
 
 <hr>
 
