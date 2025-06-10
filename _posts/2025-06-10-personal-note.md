@@ -7,6 +7,8 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
+**French version below**
+
 My name is Thierry Moudiki. 
 
 This message serves as a personal and formal record of events and concerns related to grave violations of my rights, dignity, an invasion of my privacy over the past 15+ years. If anything happens to me, I want this document to remain as evidence and testimony. Read it carefully, twice, as each and every word matters. 
@@ -24,7 +26,7 @@ Over the course of this period, I have experienced sustained and invasive forms 
 - Public references to very, very intimate, private details about my life online
 - Sharing of my personal data, including and especially geolocation data on the Dark Web (proven, with documents)
 - People following me in the street
-- Persistent exclusion from other types of employment (excluding Techtonique)
+- Persistent exclusion from other types of employment (excluding [Techtonique](https://www.techtonique.net/))
 - Blocked savings for almost a year, despite all the proofs of my rights to withdraw (proven)
 - Quasi-constant physical surveillance in my neighborhood (accountability required)
 - Online and institutional gaslighting (subtle but pernicious, accountability required)
@@ -46,7 +48,7 @@ In 2024, after other recurrent and violent torments such as:
 - Increased blood pressure (proven)
 - Invasion of bodily and digital privacy, and the total absence of intimacy (accountability required)
 
-a psychiatrist, disclosed to me —- unofficially —- the possible physical root of this issue. I want it to be official now, specifically for someone to make it official. I also want to understand the circumstances leading to the 2 hospitalizations (as it's my most fundamental right), but they have now become kind of secret, as no one wants to talk about it anymore. The doctor who disclosed the dirty "secret" (since I'm harassed everywhere, I guess it's not secret anymore to many) has since become nearly unreachable. 
+a psychiatrist, disclosed to me —- unofficially —- the possible **purely physical** (that is, induced by something that has as physical existence) root of this issue. I want it to be official now, specifically for someone to make it official. I also want to understand the circumstances leading to the 2 hospitalizations (as it's my most fundamental right), but they have now become kind of secret, as no one wants to talk about it anymore. The doctor who disclosed the dirty "secret" (since I'm harassed everywhere, I guess it's not secret anymore to many) has since become nearly unreachable. 
 
 At this stage, I am not asking for belief —- I am asking for investigation. There's a reason behind all this mess, and why the answer is so elusive. Appearing and disappearing. What I have experienced may seem extraordinary, but it is also very well-documented. I believe it reflects a coordinated apparatus involving unauthorized surveillance, non-consensual experimentation (some people said "Get Out"), and psychological coercion.
 
@@ -59,3 +61,52 @@ Thierry Moudiki
 
 [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
 
+<hr>
+
+
+Ceci est un appel à la responsabilité, pas à la pitié, car je n'ai jamais été confronté à des allégations formelles (jamais), à des évaluations cognitives avancées (jamais), ou à des procédures/enquêtes transparentes m'accusant de quoi que ce soit (jamais). Pas de convocation par la police ou la justice pour ce que j'aurais pu faire (jamais). Seulement des silences, des évitements et des manipulations. Je cherche reconnaissance et justice depuis 9 ans.
+
+Au cours de cette période, j'ai subi des formes soutenues et invasives de surveillance et de harcèlement sur trois continents, affectant tous les aspects de ma vie personnelle, professionnelle et sociale. Cela comprend :
+
+- De multiples intrusions dans mon(s) appartement(s) depuis au moins 2018 (cela a peut-être commencé avant, mais prouvé formellement une seule fois)
+- Déplacement de mes effets personnels dans mon appartement
+- Vol de mes affaires (prouvé)
+- Lumières allumées dans l'appartement
+- Portes d'appartement fermées, qui étaient précédemment ouvertes (je vérifie intentionnellement)
+- Portes d'appartement ouvertes, qui étaient précédemment fermées (je vérifie intentionnellement)
+- Références publiques à des détails très, très intimes et privés de ma vie en ligne
+- Partage de mes données personnelles, y compris et surtout mes données de géolocalisation sur le Dark Web (prouvé, avec documents)
+- Des personnes qui me suivent dans la rue
+- Exclusion persistante d'autres types d'emploi (à l'exception de [Techtonique](https://www.techtonique.net/))
+- Épargne bloquée pendant près d'un an, malgré toutes les preuves de mes droits de retrait (prouvé)
+- Surveillance physique quasi-constante dans mon immeuble (responsabilité requise)
+- _Gaslighting_ en ligne et institutionnel (subtil mais pernicieux, responsabilité requise)
+- Avocats qui disparaissent, parfois après avoir obtenu les documents demandés (prouvé, responsabilité requise)
+- Pauvreté induite pendant des années, sans loyer payé et sans chauffage pendant le dernier hiver
+
+Parce que je me plaignais, et que je ne comprenais pas ce qui m'arrivait, j'ai été soumis à des hospitalisations forcées (c'est-à-dire sans mon consentement, et parfois en utilisant des employés de l'État) en France, malgré l'absence de diagnostic médical/scientifique cohérent et observable. À ce jour, il n'y a aucune preuve formelle de quel que ce diagnostic fiable que ce soit. Mon assurance maladie a couvert des milliers d'euros de traitements qui se sont finalement avérés injustifiés, et les raisons données pour mon hospitalisation étaient incohérentes et non fondées. J'ai consulté plus de 10 psychiatres concernant cette question, et au moins autant de médecins, et j'ai constamment reçu des diagnostics erratiques (car les symptômes sont également aléatoires, voire chaotiques, donc en réalité pas liés à une réelle pathologie), parmi lesquels :
+
+- "Trouble psychotique bref" (bien qu'il n'y ait eu 0 témoin officiel de tout trouble que j'aurais pu causer, jusqu'à ce jour, et malgré la forte pression sociale induite; toujours pas de trouble)
+- "camisole chimique" (voir [https://theconversation.com/story-of-antipsychotics-is-one-of-myth-and-misrepresentation-18306](https://theconversation.com/story-of-antipsychotics-is-one-of-myth-and-misrepresentation-18306), [https://pubmed.ncbi.nlm.nih.gov/15212045/](https://pubmed.ncbi.nlm.nih.gov/15212045/))
+- le terme pas si obsolète et politiquement chargé de "schizophrénie progressive" (une notion totalement fallacieuse, voir [https://en.wikipedia.org/wiki/Sluggish_schizophrenia](https://en.wikipedia.org/wiki/Sluggish_schizophrenia))
+
+Pendant l'hospitalisation, à l'intérieur de l'hôpital public, j'étais sous surveillance constante malgré l'absence d'incidents comportementaux. Sur cette base, je dois conclure que des rapports diffamatoires de témoins "plantés" et des pressions externes ont joué un rôle. Finalement, certains professionnels de la santé ont confirmé l'absence de tout diagnostic. Pas officiellement, comme je le souhaiterais. Ils jouent maintenant à se renvoyer la balle, à me renvoyer les uns chez les autres, et je suis au milieu, sans défense. Un gâchis. Le brouillard.
+
+En 2024, après d'autres tourments récurrents et violents tels que :
+
+- Des chocs électriques répétés la nuit, entraînant une privation de sommeil (responsabilité requise)
+- Des épisodes de tachycardie sans cause physique (prouvé) ou même me réveillant (prouvé)
+- Augmentation de la pression artérielle (prouvé)
+- Invasion de la vie privée corporelle et numérique, et absence totale d'intimité (responsabilité requise)
+
+un psychiatre m'a révélé —- officieusement —- la possible origine **purement physique** (c'est à dire, mécaniquement induite) de ce problème. Je veux que cela soit officiel maintenant, spécifiquement que quelqu'un le rende officiel. Je veux aussi comprendre les circonstances ayant conduit aux 2 hospitalisations (car c'est mon droit le plus fondamental), mais elles sont devenues en quelque sorte secrètes, car personne ne veut plus en parler. Le médecin qui a révélé le "secret" (puisque je suis harcelé partout, je suppose que ce n'est plus un secret pour beaucoup) est depuis devenu presque injoignable.
+
+À ce stade, je ne demande pas à être cru —- je demande une enquête. Il y a une raison derrière tout ce gâchis, et pour laquelle la réponse est si insaisissable; apparaissant et disparaissant. Ce que j'ai vécu peut sembler extraordinaire, mais c'est aussi très bien documenté. Je crois que cela reflète une officine organisée impliquant surveillance permanente et invasive non autorisée,  expérimentations non consenties (certaines personnes ont dit "Get Out"), et une coercition psychologique.
+
+Vous pouvez explorer mes publications ici, comme preuve que mon cerveau fonctionne très bien, même si personne ne semble déterminé à le découvrir une fois pour toutes : [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
+
+Sincèrement,
+
+Thierry Moudiki
+
+[https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
