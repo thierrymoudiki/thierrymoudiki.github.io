@@ -49,10 +49,12 @@ a psychiatrist, disclosed to me —- unofficially —- the possible physical roo
 
 At this stage, I am not asking for belief —- I am asking for investigation. There's a reason behind all this mess, and why the answer is so elusive. Appearing and disappearing. What I have experienced may seem extraordinary, but it is also very well-documented. I believe it reflects a coordinated apparatus involving unauthorized surveillance, non-consensual experimentation (some people said "Get Out"), and psychological coercion.
 
-You can explore my publications here, as proof that my brain is doing very well, even if no one seems to be determined to find out once and for all: https://linktr.ee/tmoudiki
+You can explore my publications here, as proof that my brain is doing very well, even if no one seems to be determined to find out once and for all: [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
 
 
 Sincerely,
+
 Thierry Moudiki
-https://linktr.ee/tmoudiki
+
+[https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
 
