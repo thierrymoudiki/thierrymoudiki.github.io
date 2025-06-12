@@ -100,7 +100,7 @@ Pendant l'hospitalisation, à l'intérieur de l'hôpital public, j'étais sous s
 En 2024, après d'autres tourments récurrents et violents tels que :
 
 - Des chocs électriques répétés la nuit, entraînant une privation de sommeil (responsabilité requise)
-- Des épisodes de tachycardie sans cause physique (prouvé) ou même me réveillant (prouvé)
+- Des épisodes de tachycardie sans cause pathologique (prouvé, et malgré des réveils par/à plus de 120 pulsations, je suis renvoyé chez moi) 
 - Augmentation de la pression artérielle (prouvé)
 - Invasion de la vie privée corporelle et numérique, et absence totale d'intimité (responsabilité requise)
 
