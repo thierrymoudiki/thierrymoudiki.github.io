@@ -7,6 +7,28 @@ categories: [R, Techtonique]
 comments: true
 ---
 
+# Introduction
+
+This post demonstrates how to use [www.techtonique.net](https://www.techtonique.net)'s API for programming language-agnostic reserving using Machine Learning models. We'll use the RAA dataset available at [https://raw.githubusercontent.com/Techtonique/datasets/refs/heads/main/tabular/triangle/raa.csv](https://raw.githubusercontent.com/Techtonique/datasets/refs/heads/main/tabular/triangle/raa.csv).
+
+The API supports various Machine Learning models including:
+- RidgeCV
+- LightGBM 
+- XGBoost
+- ExtraTrees
+
+The API returns among other things IBNR (Incurred But Not Reported) estimates along with confidence intervals, making it easy to compare different models' predictions.
+
+# Setup
+
+We'll:
+1. Download the RAA dataset
+2. Send requests to the API for each model
+3. Visualize and compare the results
+
+Let's get started!
+
+
 # 0 - Download data
 
 From [https://raw.githubusercontent.com/Techtonique/datasets/refs/heads/main/tabular/triangle/raa.csv](https://raw.githubusercontent.com/Techtonique/datasets/refs/heads/main/tabular/triangle/raa.csv)
@@ -41,11 +63,13 @@ From [https://raw.githubusercontent.com/Techtonique/datasets/refs/heads/main/tab
 Note that you can use [https://curlconverter.com/](https://curlconverter.com/) to translate the following request in your favorite programming language.
 
 
+# 1 - Send requests to www.techtonique.net
 
+Tokens available for free at [https://www.techtonique.net/token](https://www.techtonique.net/token).
 
 ```python
 !curl -X POST \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDk4NDczMDF9.UF3Ob0HgnykT-mFaGqtTFB6bu9QDTfc6wOsjzewzoiQ" \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@./raa.csv;type=text/csv" \
 "https://www.techtonique.net/mlreserving?method=RidgeCV" > ridge_ibnr.json
 ```
@@ -63,7 +87,7 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
 
 ```python
 !curl -X POST \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDk4NDczMDF9.UF3Ob0HgnykT-mFaGqtTFB6bu9QDTfc6wOsjzewzoiQ" \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@./raa.csv;type=text/csv" \
 "https://www.techtonique.net/mlreserving?method=lightgbm" > lightgbm_ibnr.json
 
@@ -80,7 +104,7 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
 
 ```python
 !curl -X POST \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDk4NDczMDF9.UF3Ob0HgnykT-mFaGqtTFB6bu9QDTfc6wOsjzewzoiQ" \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@./raa.csv;type=text/csv" \
 "https://www.techtonique.net/mlreserving?method=xgboost" > xgboost_ibnr.json
 
@@ -98,7 +122,7 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
 
 ```python
 !curl -X POST \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NGY3ZDE3Ny05OWQ0LTQzNDktOTc1OC0zZTBkOGVkYWZkYWUiLCJlbWFpbCI6InRoaWVycnkubW91ZGlraS50ZWNodG9uaXF1ZUBnbWFpbC5jb20iLCJleHAiOjE3NDk4NDczMDF9.UF3Ob0HgnykT-mFaGqtTFB6bu9QDTfc6wOsjzewzoiQ" \
+-H "Authorization: Bearer YOUR_TOKEN_HERE" \
 -F "file=@./raa.csv;type=text/csv" \
 "https://www.techtonique.net/mlreserving?method=ExtraTreesRegressor" > et_ibnr.json
 
@@ -108,6 +132,8 @@ Note that you can use [https://curlconverter.com/](https://curlconverter.com/) t
                                      Dload  Upload   Total   Spent    Left  Speed
     100  2076  100   898  100  1178   1071   1405 --:--:-- --:--:-- --:--:--  2477
 
+
+# 2 - Extract and plot results
 
 The programming language used in this post is R, but your can use any programming language capable to read JSON or speak http directly (see [https://curlconverter.com/](https://curlconverter.com/)). 
 
