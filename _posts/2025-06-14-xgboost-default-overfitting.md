@@ -9,7 +9,7 @@ comments: true
 
 # Introduction
 
-In this post, we'll explore an intriguing comparison between XGBoost's balanced accuracy with its default hyperparameters on 72 data sets and a [GenericBooster](https://github.com/Techtonique/genbooster) with Linear Regression as a base learner, also with its default hyperparameters. Whereas the first one clearly overfits when not tuned (to an extend that I wanted to verify), but gives an overall higher test set balanced accuracy, the second one gives highly correlated training and test set errors, with an overall lower test set balanced accuracy. 
+In this post, we'll explore an intriguing comparison between XGBoost's balanced accuracy with its default hyperparameters on 72 data sets and a [GenericBooster](https://github.com/Techtonique/genbooster) with Linear Regression as a base learner, also with its default hyperparameters. Whereas the first one clearly overfits when not tuned (to an extent that I wanted to verify), but gives an overall higher test set balanced accuracy, the second one gives highly correlated training and test set errors, with an overall lower test set balanced accuracy. 
 
 # What We'll Cover
 
