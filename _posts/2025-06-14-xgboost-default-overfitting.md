@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An Overfitting dilemma: XGBoost Default Hyperparameters vs GenericBooster + LinearRegression Hyperparameters"
+title: "An Overfitting dilemma: XGBoost Default Hyperparameters vs GenericBooster + LinearRegression Default Hyperparameters"
 description: "Comparing XGBoost's default hyperparameters with GenericBooster + LinearRegression hyperparameters to analyze overfitting patterns in balanced accuracy metrics"
 date: 2025-06-14
 categories: [Python]
