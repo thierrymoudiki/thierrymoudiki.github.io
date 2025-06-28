@@ -8,6 +8,8 @@ categories: Python
 comments: true
 ---
 
+**Disclaimer:** Updated on 2025-06-28
+
 **Bayesian optimization (BO)** is a popular (and clever, and elegant, and beautiful, and efficient) optimization method for hyperparameter tuning in Machine Learning and Deep Learning. BO is based on the use of a surrogate model that approximates the objective function (the function to be minimized) in a probabilistic way. It optimizes a cheaper [_acquisition function_](https://www.researchgate.net/publication/332292006_Online_Bayesian_Quasi-Random_functional_link_networks_application_to_the_optimization_of_black_box_functions) that  allows to select the next point to evaluate.
 
 The most common surrogate model in BO is the [Gaussian process](https://gaussianprocess.org/gpml/) regressor, a Bayesian  model with a Gaussian prior, and the most common acquisition function is the Expected Improvement (EI). The idea of EI is to select the next point to evaluate based on the expected improvement relative to the current best point.
