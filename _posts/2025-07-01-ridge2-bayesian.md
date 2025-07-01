@@ -11,6 +11,7 @@ Link to notebook at the end.
 
 {% include 2025_07_01_Ridge2_Forecasting_Bayesian_Frequentist.html %}
 
+
 <a target="_blank" href="https://colab.research.google.com/github/Techtonique/ahead_python/blob/main/ahead/demo/2025_07_01_Ridge2_Forecasting_Bayesian_Frequentist.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; height: auto; width: 120px;/>
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
