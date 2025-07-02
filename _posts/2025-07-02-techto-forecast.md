@@ -23,20 +23,22 @@ Here's a unified way to use `=TECHTO_FORECAST` directly and easily in Excel with
   
 <li> In the main xlwings Lite code editor (`main.py`), **paste**:
 
-```python
+<code>
 from techtonique_apis import TECHTO_FORECAST
-```
+</code>
+
 </li>
 
 <li> In xlwings Lite's requirements.txt, **paste**:
 
-```bash
+<code>
 xlwings==0.33.14  # required
 python-dotenv==1.1.0  # required
 pyodide-http  # required
 black  # required
 techtonique_apis
-```
+</code>
+
 </li>
 
 <li> Click Restart (or click "Restart" in the dropdown menu) </li>
