@@ -44,11 +44,9 @@ techtonique_apis
   
 - Now you can close the xlwings Lite task pane, and **Type =TECHTO_FORECAST in a cell** and select an input range (link to examples [https://github.com/Techtonique/techtonique-apis/blob/main/examples/excel_formulas.xlsx](https://github.com/Techtonique/techtonique-apis/blob/main/examples/excel_formulas.xlsx)). as long as the token is valid, it will work. It's valid for 1 hour. 
   
-- Help for each function is here: https://docs.techtonique.net/techtonique_api_py/techtonique_apis.html. Or use Excel help for the function 
+- Help for each function is here: [https://docs.techtonique.net/techtonique_api_py/techtonique_apis.html](https://docs.techtonique.net/techtonique_api_py/techtonique_apis.html). Or use Excel help for the function 
   
-- If you suddenly get VALUE error every time, check if the token is still valid (https://www.techtonique.net/token). It's valid for 1 hour 
-
-</ol>
+- If you suddenly get VALUE error every time, check if the token is still valid ([https://www.techtonique.net/token](https://www.techtonique.net/token)). It's valid for 1 hour 
 
 ![image-title-here]({{base}}/images/2025-07-02/2025-07-02-image1.gif){:class="img-responsive"}    
 
