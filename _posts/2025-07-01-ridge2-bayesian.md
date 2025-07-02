@@ -9,7 +9,7 @@ comments: true
 
 Link to notebook at the end. 
 
-{% include 2025_07_01_Ridge2_Forecasting_Bayesian_Frequentist.html %}
+{% include 2025_07_01_Ridge2_Forecasting_Bayesian_Frequentist2.html %}
 
 
 <a target="_blank" href="https://colab.research.google.com/github/Techtonique/ahead_python/blob/main/ahead/demo/2025_07_01_Ridge2_Forecasting_Bayesian_Frequentist.ipynb">

@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>2025_07_01_Ridge2_Forecasting_Bayesian_Frequentist</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2025_07_01_Ridge2_Forecasting_Bayesian_Frequentist2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7505,7 +7507,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>A Random Vector Functional Link (RVFL) artificial <em>neural</em> network with 2 regularization parameters has been successfully for forecasting in professional settings (available soon for an increased flexibility in <a href="https://www.techtonique.net/">https://www.techtonique.net/</a> and Microsoft Excel, stay tuned):</p>
+<p>A Random Vector Functional Link (RVFL) artificial <em>neural</em> network with 2 regularization parameters has been successfully used for forecasting in professional settings (available soon for an increased flexibility in <a href="https://www.techtonique.net/">https://www.techtonique.net/</a> and Microsoft Excel, stay tuned):</p>
 <ul>
 <li>Introduced in <em>Multiple Time Series Forecasting Using Quasi-Randomized Functional Link Neural Networks</em>: <a href="https://www.mdpi.com/2227-9091/6/1/22">https://www.mdpi.com/2227-9091/6/1/22</a></li>
 <li><a href="https://www.ressources-actuarielles.net/EXT/ISFA/fp-isfa.nsf/0/0b9df464e9543283c1256f130067b2f9/$FILE/GSE_RVFL_LAL.pdf">https://www.ressources-actuarielles.net/EXT/ISFA/fp-isfa.nsf/0/0b9df464e9543283c1256f130067b2f9/$FILE/GSE_RVFL_LAL.pdf</a></li>
@@ -7513,7 +7515,7 @@ a.anchor-link {
 <li><a href="https://www.institutdesactuaires.com/docs/mem/ed9acfdd661fe96f70d1078f2b70bade.pdf">https://www.institutdesactuaires.com/docs/mem/ed9acfdd661fe96f70d1078f2b70bade.pdf</a></li>
 <li><a href="https://www.ressources-actuarielles.net/EXT/ISFA/1226-02.nsf/d512ad5b22d73cc1c1257052003f1aed/957f021200c51ba5c1258c340023c8da/$FILE/m%C3%A9moire_ia_pt_diallo.pdf">https://www.ressources-actuarielles.net/EXT/ISFA/1226-02.nsf/d512ad5b22d73cc1c1257052003f1aed/957f021200c51ba5c1258c340023c8da/$FILE/m%C3%A9moire_ia_pt_diallo.pdf</a></li>
 </ul>
-<p>All the implementations cited in these works were done in R, but this post considers various python implementations/adaptations/flavors of the model, with potentially increased model capacity (and regularization parameters). The models used here as workhorses for Multivariate Time Series are described in <a href="https://www.researchgate.net/publication/339512391_Quasi-randomized_networks_for_regression_and_classification_with_two_shrinkage_parameters">https://www.researchgate.net/publication/339512391_Quasi-randomized_networks_for_regression_and_classification_with_two_shrinkage_parameters</a> (could be tuned further these days, I guess).</p>
+<p>All the implementations cited in these works were done in R, but this post considers various python implementations/adaptations/flavors of the model, with potentially increased model capacity (and regularization parameters). The models used here as workhorses for Multivariate Time Series forecasting are described in <a href="https://www.researchgate.net/publication/339512391_Quasi-randomized_networks_for_regression_and_classification_with_two_shrinkage_parameters">https://www.researchgate.net/publication/339512391_Quasi-randomized_networks_for_regression_and_classification_with_two_shrinkage_parameters</a> (could be tuned further these days, I guess).</p>
 <p>It's worth mentioning that these models are amenable to backpropagation (see <a href="https://thierrymoudiki.github.io/blog/2025/06/24/r/backprop-qrnn-r-version">https://thierrymoudiki.github.io/blog/2025/06/24/r/backprop-qrnn-r-version</a> and <a href="https://thierrymoudiki.github.io/blog/2025/06/23/python/backprop-qrnn">https://thierrymoudiki.github.io/blog/2025/06/23/python/backprop-qrnn</a>, although slower in this setting), but there's no evidence that backpropagating would lead to a <em>better</em> model.</p>
 </div>
 </div>
@@ -7534,7 +7536,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -7544,7 +7546,7 @@ a.anchor-link {
 <span class="n">url</span> <span class="o">+=</span> <span class="s2">"ice_cream_vs_heater.csv"</span>
 
 <span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="n">df_temp</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">df_temp</span><span class="o">.</span><span class="n">date</span><span class="p">)</span> <span class="c1"># must have# first other difference</span>
+<span class="n">df_temp</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">df_temp</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
 <span class="n">df_icecream</span> <span class="o">=</span> <span class="n">df_temp</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'date'</span><span class="p">])</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7556,7 +7558,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">df_icecream</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
@@ -7837,7 +7839,7 @@ a.anchor-link {
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>&lt;Axes: xlabel='date'&gt;</pre>
 </div>
@@ -7878,7 +7880,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">nnetsauce</span> <span class="k">as</span> <span class="nn">ns</span>
@@ -7921,7 +7923,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="3---Use-Ridge2Regressor-as-a-workhorse-(frequential---%3E-conformal-prediction)">3 - Use <code>Ridge2Regressor</code> as a workhorse (frequential --&gt; conformal prediction)<a class="anchor-link" href="#3---Use-Ridge2Regressor-as-a-workhorse-(frequential---%3E-conformal-prediction)">¶</a></h1>
+<h1 id="3---Use-Ridge2Regressor-as-a-workhorse-(frequentist-approach---%3E-conformal-prediction)">3 - Use <code>Ridge2Regressor</code> as a workhorse (frequentist approach --&gt; conformal prediction)<a class="anchor-link" href="#3---Use-Ridge2Regressor-as-a-workhorse-(frequentist-approach---%3E-conformal-prediction)">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7941,7 +7943,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">regr</span> <span class="o">=</span> <span class="n">ns</span><span class="o">.</span><span class="n">MTS</span><span class="p">(</span><span class="n">obj</span><span class="o">=</span><span class="n">ns</span><span class="o">.</span><span class="n">Ridge2Regressor</span><span class="p">(</span><span class="n">lambda1</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">lambda2</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_hidden_features</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
@@ -8000,7 +8002,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This is the original R implementation, but in Python.</p>
+<p>This is the original R implementation, but in Python. See <a href="https://docs.techtonique.net/ahead/index.html">https://docs.techtonique.net/ahead/index.html</a> and <a href="https://docs.techtonique.net/ahead_python/ahead.html#Ridge2Regressor">https://docs.techtonique.net/ahead_python/ahead.html#Ridge2Regressor</a>.</p>
 </div>
 </div>
 </div>
@@ -8041,7 +8043,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Forecasting horizon</span>
@@ -8078,7 +8080,7 @@ Elapsed 0.03411126136779785
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">d1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">"heater"</span><span class="p">)</span>
