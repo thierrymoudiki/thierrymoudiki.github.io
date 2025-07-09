@@ -1,48 +1,21 @@
 ---
 layout: post
-title: "Calling =TECHTO_MLCLASSIFICATION for Machine Learning supervised CLASSIFICATION in Excel is just a matter of copying and pasting"
-description: "Calling =TECHTO_MLCLASSIFICATION for Machine Learning supervised CLASSIFICATION in Excel is just a matter of copying and pasting"
-date: 2025-07-07
+title: "A user-friendly graphical interface to techtonique dot net's API (will eventually contain graphics)."
+description: "A user-friendly graphical interface to techtonique dot net's API (will eventually contain graphics)."
+date: 2025-07-08
 categories: [R, Python]
 comments: true
 ---
 
-`=TECHTO_MLCLASSIFICATION` in Excel is based on R and Python code from the [Techtonique](https://github.com/Techtonique) project's Machine Learning supervised classification functions.
 
-Here's a unified way to use `=TECHTO_MLCLASSIFICATION` directly and easily in Excel with xlwings Lite:
+[www.techtonique.net](www.techtonique.net)'s API is based on R and Python code from the [Techtonique](https://github.com/Techtonique) project's packages.
 
+The web app now contains a user-friendly graphical interface to the API allowing you to use buttons to interact with it (will eventually include graphical representations of the responses). Just navigate to [www.techtonique.net/apidisplay](https://www.techtonique.net/apidisplay) to play with it.
 
-- If you haven't done it yet, install xlwings Lite [https://lite.xlwings.org/installation](https://lite.xlwings.org/installation) and click on its icon in the top right corner to open the editor
-  
-- Get a token from [https://www.techtonique.net/token](https://www.techtonique.net/token) 
-  
--  In the xlwings Lite editor, click on the dropdown menu > Environment variables 
-  
-- Name the environment variable `TECHTONIQUE_TOKEN`, provide its token value, and **push "Save"** 
-  
-- In the main xlwings Lite code editor (`main.py`), **paste**:
+The graphical interface is designed to be intuitive and easy to use, allowing users to interact with the API without needing extensive programming knowledge. It provides a straightforward way to access various functionalities offered by the Techtonique project.
 
-```python
-from techtonique_apis import techto_mlclassification
-```
+The interface is still under development, and more features will be added over time. Users can expect enhancements that will make it even easier to utilize the API's capabilities.
 
-- In xlwings Lite's requirements.txt, **paste**:
+For now, you can explore the existing functionalities and provide feedback to help shape future updates. The goal is to create a comprehensive tool that meets the needs of both casual users and developers.
 
-```bash
-xlwings==0.33.14  # required
-python-dotenv==1.1.0  # required
-pyodide-http  # required
-black  # required
-techtonique_apis
-```
-
-- Click Restart (or click "Restart" in the dropdown menu) 
-  
-- Now you can close the xlwings Lite task pane, and **Type =TECHTO_MLCLASSIFICATION in a cell** and select an input range (link to examples [https://github.com/Techtonique/techtonique-apis/blob/main/examples/excel_formulas.xlsx](https://github.com/Techtonique/techtonique-apis/blob/main/examples/excel_formulas.xlsx)). as long as the token is valid, it will work. It's valid for 1 hour. 
-  
-- Help for each function is here: [https://docs.techtonique.net/techtonique_api_py/techtonique_apis.html](https://docs.techtonique.net/techtonique_api_py/techtonique_apis.html). Or use Excel help for the function 
-  
-- If you suddenly get VALUE error every time, check if the token is still valid ([https://www.techtonique.net/token](https://www.techtonique.net/token)). It's valid for 1 hour 
-
-![image-title-here]({{base}}/images/2025-07-07/2025-07-07-image1.gif){:class="img-responsive"}    
-
+![image-title-here]({{base}}/images/2025-07-08/2025-07-08-image1.png){:class="img-responsive"}
