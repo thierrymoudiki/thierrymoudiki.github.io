@@ -7,7 +7,7 @@ categories: [Python]
 comments: true
 ---
 
-This post/notebook demonstrates the usage of the `cybooster` library for boosting various scikit-learn-like (having `fit` and `predict` methods is enough) estimators on different datasets. It includes examples of regression and classification and time series forecasting tasks. It's worth mentioning that only regressors are accepted in `cybooster`, no matter the task. 
+This post/notebook demonstrates the usage of the `cybooster` library for boosting various scikit-learn-like (having `fit` and `predict` methods is enough, for GPU learning see e.g slides 35-38 [https://www.researchgate.net/publication/382589729_Probabilistic_Forecasting_with_nnetsauce_using_Density_Estimation_Bayesian_inference_Conformal_prediction_and_Vine_copulas](https://www.researchgate.net/publication/382589729_Probabilistic_Forecasting_with_nnetsauce_using_Density_Estimation_Bayesian_inference_Conformal_prediction_and_Vine_copulas)) estimators on different datasets. It includes examples of regression and classification and time series forecasting tasks. It's worth mentioning that only regressors are accepted in `cybooster`, no matter the task. 
 
 `cybooster` is a high-performance generic gradient boosting (any based learner can be used) library designed for classification and regression tasks. It is built on Cython (that is, C) for speed and efficiency. This version will also be more GPU friendly, thanks to JAX, making it suitable for large datasets.
 
