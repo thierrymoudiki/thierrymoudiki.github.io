@@ -65,6 +65,8 @@ Thierry Moudiki
 
 [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
 
+PS: I'm not suicidal. 
+
 <hr>
 
 _Version française_
@@ -115,6 +117,8 @@ Sincèrement,
 Thierry Moudiki
 
 [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
+
+PS: Je ne suis pas suicidaire. 
 
 <hr>
 
