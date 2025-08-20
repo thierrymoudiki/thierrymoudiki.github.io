@@ -36,6 +36,7 @@ Over the course of this period, I have experienced sustained and invasive forms 
 - Online and institutional gaslighting ([https://en.wikipedia.org/wiki/Gaslighting](https://en.wikipedia.org/wiki/Gaslighting), subtle but pernicious, accountability required)
 - Lawyers vanishing, sometimes after obtaining the documents they asked (proven, accountability required)
 - Implied poverty for years, with no paid rent and no heating during last winter
+- Been kidnapped by firefighters inside a public hospital
 
 Because I was complaining, and basically not understanding what was happening to me, I have been subjected to forced hospitalizations (that is, without my consent, and sometimes using State employees) in France, despite the absence of consistent and observable medically/scientifically confirmed diagnosis. To this day, there are no formal evidence of anything. My health insurance covered thousands of euros of treatments that eventually were unwarranted, and the reasons given for my hospitalization were inconsistent and unsubstantiated. I have seen more than 10 psychiatrists regarding this matter, and at least as many medical doctors, and consistently received erratic diagnoses (because the symptoms are also random, even chaotic, so actually non-existing in reality), among:
 
@@ -66,6 +67,14 @@ Thierry Moudiki
 [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
 
 PS: I'm not suicidal. 
+
+PS2: 
+
+- Political Abuse of Psychiatry—An Historical Overview: [https://pmc.ncbi.nlm.nih.gov/articles/PMC2800147/](https://pmc.ncbi.nlm.nih.gov/articles/PMC2800147/)
+
+- Schizophrenia: a Narrative Review of Etiological and Diagnostic Issues: 
+
+[https://pmc.ncbi.nlm.nih.gov/articles/PMC11262116/](https://pmc.ncbi.nlm.nih.gov/articles/PMC11262116/)
 
 <hr>
 
@@ -119,6 +128,15 @@ Thierry Moudiki
 [https://linktr.ee/tmoudiki](https://linktr.ee/tmoudiki)
 
 PS: Je ne suis pas suicidaire. 
+
+PS2: 
+
+- Political Abuse of Psychiatry—An Historical Overview: [https://pmc.ncbi.nlm.nih.gov/articles/PMC2800147/](https://pmc.ncbi.nlm.nih.gov/articles/PMC2800147/)
+
+- Schizophrenia: a Narrative Review of Etiological and Diagnostic Issues: 
+
+[https://pmc.ncbi.nlm.nih.gov/articles/PMC11262116/](https://pmc.ncbi.nlm.nih.gov/articles/PMC11262116/)
+
 
 <hr>
 
