@@ -122,12 +122,13 @@ comments: true
       
       <div class="cc-license">
         {% assign author = "T. Moudiki" %}
+        {% assign authorname = "tmoudiki" %}
         {% assign title = page.title %}
         {% assign date = page.date | date: "%Y-%m-%d" %}
         {% assign otherdate = page.date | date: "%Y%m%d" %}
         {% assign post_url = page.url %}
         {% assign categories = page.categories | join: "/" %}
-        {% assign bibtex_key = author | append: otherdate %}
+        {% assign bibtex_key = authorname | append: otherdate %}
 
         <strong>Citation</strong>
         <p>For attribution, please cite this work as:</p>
