@@ -124,10 +124,10 @@ comments: true
         {% assign author = "tmoudiki" %}
         {% assign title = page.title %}
         {% assign date = page.date | date: "%Y-%m-%d" %}
+        {% assign otherdate = page.date | date: "%Y%m%d" %}
         {% assign post_url = page.url %}
         {% assign categories = page.categories | join: "/" %}
-        {% assign clean_title = title | downcase | replace: " ", "-" | replace: "'", "" %}
-        {% assign bibtex_key = author | append: clean_title | slice: 0,10 %}
+        {% assign bibtex_key = author | append: otherdate | slice: 0,10 %}
 
         <b>Citation</b>
         <p>For attribution, please cite this work as:</p>
@@ -149,6 +149,9 @@ comments: true
           <img alt="Licence Creative Commons" style="border-width:0; max-width: 100%; height: auto; width: 88px;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
         </a><br />Under License <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>
       </div>
+
+<br>
+<br>      
 
 <p><b>Previous publications</b></p>
 
