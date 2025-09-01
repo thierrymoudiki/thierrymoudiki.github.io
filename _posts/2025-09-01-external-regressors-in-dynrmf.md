@@ -3,7 +3,7 @@ layout: post
 title: "external regressors in ahead::dynrmf's interface for Machine learning forecasting"
 description: "external regressors in ahead::dynrmf's interface for Machine learning forecasting"
 date: 2025-09-01
-categories: [R, Python]
+categories: R
 comments: true
 ---
 
