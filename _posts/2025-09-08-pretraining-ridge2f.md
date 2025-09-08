@@ -3,11 +3,11 @@ layout: post
 title: "Transfer Learning using ahead::ridge2f on synthetic stocks returns"
 description: "I pretrain ahead::ridge2f on 1000 synthetic stock returns using Bayesian Optimization, and test its performance on real market data."
 date: 2025-09-08
-categories: R
+categories: [R, Python]
 comments: true
 ---
 
-In [https://github.com/thierrymoudiki/2025-09-05-transfer-learning-ridge2f](https://github.com/thierrymoudiki/2025-09-05-transfer-learning-ridge2f), I pretrain `ahead::ridge2f` on 1000 synthetic stock returns using Bayesian Optimization, and test its performance on real market data. 
+In [https://github.com/thierrymoudiki/2025-09-05-transfer-learning-ridge2f](https://github.com/thierrymoudiki/2025-09-05-transfer-learning-ridge2f), I pretrain [`ahead::ridge2f`](https://docs.techtonique.net/ahead/index.html) (also [available Python](https://docs.techtonique.net/ahead_python/ahead.html#Ridge2Regressor)) on 1000 synthetic stock returns using Bayesian Optimization, and test its performance on real market data. 
 
 In order to reproduce results from [https://github.com/thierrymoudiki/2025-09-05-transfer-learning-ridge2f](https://github.com/thierrymoudiki/2025-09-05-transfer-learning-ridge2f), either: 
 
