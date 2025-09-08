@@ -27,7 +27,7 @@ Results on 4 major European indices:
 3 rugarch 0.05919827     93.5     0.04753477
 ```
 
-Results on 10 CAC stocks: 
+Results on 10 CAC40 stocks: 
 
 ```R
   Method    Winkler Coverage Interval_Width
