@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Transfer Learning using `ahead::ridge2f` on synthetic stocks returns"
-description: "I pretrain `ahead::ridge2f` on 1000 synthetic stock returns using Bayesian Optimization, and test its performance on real market data."
+title: "Transfer Learning using ahead::ridge2f on synthetic stocks returns"
+description: "I pretrain ahead::ridge2f on 1000 synthetic stock returns using Bayesian Optimization, and test its performance on real market data."
 date: 2025-09-08
 categories: R
 comments: true
