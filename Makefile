@@ -20,12 +20,13 @@ IMAGE_OUTPUT_DIR := $(IMAGES_DIR)/$(DATE)
 # 🆘 Default target: show help
 .DEFAULT_GOAL := help
 
-.PHONY: help post format all 
+.PHONY: help post format render all 
 
 help:
 	@echo "Available targets:"
 	@echo "  post             Download latest .ipynb from ~/Downloads, convert to markdown, and move images."
 	@echo "  format           Add YAML front matter and format image links in latest converted post."
+	@echo "  render           Render a selected markdown file from /_posts using R and open the HTML in browser."
 	@echo "  all  Run both post and format steps in sequence."
 
 post:
@@ -76,6 +77,20 @@ format:
 	@perl -pi -e 's|!\[.*?\]\((.*?_files/.*?\.png)\)|"![" . "image-title-here]({{base}}/images/$(DATE)/" . $$1 =~ s!.*/!!r . "){:class=\"img-responsive\"}"|eg' "$(MARKDOWN_PATH)"
 
 	@echo "✅ Formatting complete."
+
+render: ## run R markdown file in /vignettes, open rendered HTML
+	@files=$$(ls -1 ./_posts/*.md | sort); \
+	i=0; \
+	echo "Available Rmd files:"; \
+	for file in $$files; do \
+		echo "$$i: $$(basename $$file .md)"; \
+		i=$$((i+1)); \
+	done; \
+	read -p "Enter the number of the md file to render: " filenum; \
+	filename=$$(echo $$files | cut -d' ' -f$$((filenum+1))); \
+	filename=$$(basename $$filename .md); \
+	Rscript -e "rmarkdown::render(paste0('./_posts/', '$$filename', '.md'))"; \
+	python3 -c "$$BROWSER_PYSCRIPT" "$$filename.html"
 
 all: post format
 	@echo "🧹 Cleaning up original notebook..."
