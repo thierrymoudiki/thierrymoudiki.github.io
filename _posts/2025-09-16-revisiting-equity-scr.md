@@ -10,7 +10,7 @@ comments: true
 
 # Reimagining Equity Solvency Capital Requirement Approximation (one of my Master's Thesis subjects): From Bilinear Interpolation to Probabilistic Machine Learning
 
-In the world of insurance and financial risk management, calculating the Solvency Capital Requirement (SCR) for equity risk could be a computationally intensive task that can make or break real-time decision making. Traditional approaches rely on expensive Monte Carlo simulations that can take hours to complete, forcing practitioners to **develop approximation schemes**. **Developing an approximation scheme was a project** I tackled back in 2007-2009 for my Master's Thesis in Actuarial Science.
+In the world of insurance and financial risk management, calculating the Solvency Capital Requirement (SCR) for equity risk could be a computationally intensive task that can make or break real-time decision making. Traditional approaches rely on expensive Monte Carlo simulations that can take hours to complete, forcing practitioners to **develop approximation schemes**. **Developing an approximation scheme was a project** I tackled back in 2007-2009 for my Master's Thesis in Actuarial Science (see references below).
 
 ## What I did back then
 
