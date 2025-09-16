@@ -2,10 +2,16 @@
 
 POSTS_DIR := _posts
 IMAGES_DIR := images
+# Ensure the path to the Downloads directory is correct
 DOWNLOADS_DIR := $(HOME)/Downloads
 
-# Get the latest .ipynb notebook from Downloads
+# Get the latest notebook in the Downloads directory
+$(info LS result: $(shell ls -t $(DOWNLOADS_DIR)/*.ipynb 2>/dev/null))
 LATEST_NOTEBOOK := $(shell ls -t $(DOWNLOADS_DIR)/*.ipynb 2>/dev/null | head -n 1)
+
+# Debugging: Print out the path to the latest notebook
+$(info Latest notebook: $(LATEST_NOTEBOOK))
+
 NOTEBOOK_FILENAME := $(notdir $(LATEST_NOTEBOOK))
 
 # Convert underscores to dashes for Markdown filename
@@ -30,6 +36,9 @@ help:
 	@echo "  all  Run both post and format steps in sequence."
 
 post:
+	@echo "Download directory: $(DOWNLOADS_DIR)"
+	@echo "Latest notebook: $(LATEST_NOTEBOOK)"
+
 	@if [ -z "$(LATEST_NOTEBOOK)" ]; then \
 		echo "❌ No notebook found in $(DOWNLOADS_DIR)"; \
 		exit 1; \
