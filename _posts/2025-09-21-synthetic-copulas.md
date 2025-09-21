@@ -7,6 +7,7 @@ categories: R
 comments: true
 ---
 
+**R-vine copulas** are powerful tools for modeling complex dependencies among multiple variables. The `esgtoolkit` package in R provides a user-friendly interface to fit R-vine copula models and generate synthetic data that preserves the statistical properties of the original dataset.
 
 See also:
 
