@@ -7,7 +7,7 @@ categories: Python
 comments: true
 ---
 
-**Survival analysis** is a group of Statistical/Machine Learning (ML) methods for predicting the **time until an event of interest occurs**. Examples of events include: 
+**Survival analysis** is a group of Statistical/Machine Learning (ML) methods for predicting the **time until an event of interest occurs**. Examples of events include (link to notebook at the end): 
 
 - death 
 - failure
