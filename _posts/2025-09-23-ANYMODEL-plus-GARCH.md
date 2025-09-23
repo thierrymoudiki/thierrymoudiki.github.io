@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Combining any model with GARCH(1,1) for probabilistic stock forecasting"
-description: "Combining any model with GARCH(1,1) for probabilistic stock forecasting
+description: "Combining any model with GARCH(1,1) for probabilistic stock forecasting"
 date: 2025-09-23
 categories: R
 comments: true
