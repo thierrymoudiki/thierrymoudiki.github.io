@@ -7,7 +7,9 @@ categories: [R, Python]
 comments: true
 ---
 
-[https://alphathon2025-344c7b0f914a.herokuapp.com/](https://alphathon2025-344c7b0f914a.herokuapp.com/) is a [Python FastAPI](https://fastapi.tiangolo.com/) Web app submitted at [https://alphathon.org/](https://alphathon.org/). This web app [interacts](https://pretrainedridge2f-8aee3d9572cc.herokuapp.com/__docs__/) with a [pretrained model](https://thierrymoudiki.github.io/blog/2025/09/09/r/python/pretraining-ridge2f-part2) for probabilistic stock return forecasting. 
+[https://alphathon2025-344c7b0f914a.herokuapp.com/](https://alphathon2025-344c7b0f914a.herokuapp.com/) is a [Python FastAPI](https://fastapi.tiangolo.com/) Web app submitted at [https://alphathon.org/](https://alphathon.org/). 
+
+This web app [interacts](https://pretrainedridge2f-8aee3d9572cc.herokuapp.com/__docs__/) with a [pretrained model](https://thierrymoudiki.github.io/blog/2025/09/09/r/python/pretraining-ridge2f-part2) for probabilistic stock return forecasting. 
 
 The methodology for _pretraining_ is described concisely in: 
 
