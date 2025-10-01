@@ -25,5 +25,7 @@ The [R Plumber](https://www.rplumber.io/) API ([its code](/plumberAPI)):
 
 [https://pretrainedridge2f-8aee3d9572cc.herokuapp.com/__docs__/](https://pretrainedridge2f-8aee3d9572cc.herokuapp.com/__docs__/)
 
+![image-title-here]({{base}}/images/2025-10-01/2025-10-01-image1.png){:class="img-responsive"}
+
 
 
