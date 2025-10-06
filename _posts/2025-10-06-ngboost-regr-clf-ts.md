@@ -7,7 +7,7 @@ categories: Python
 comments: true
 ---
 
-This post demonstrates the use of the `cybooster` library for regression and classification tasks using **NGBoost (Natural Gradient Boosting)**. NGBoost is a probabilistic boosting algorithm that provides **uncertainty estimates along with predictions**. It works by fitting a base learner (like decision trees or linear models) to the negative gradient of a specified loss function, and was **first introduced by Stanford Machine Learning Group in the paper "NGBoost**: Natural Gradient Boosting for Probabilistic Prediction" by Duan et al. (2019).
+This post demonstrates the use of the `cybooster` library for regression and classification tasks using **NGBoost (Natural Gradient Boosting)**. NGBoost is a probabilistic boosting algorithm that provides **uncertainty estimates along with predictions**. It works by fitting a base learner (like decision trees or linear models) to the negative gradient of a specified loss function, and was **first introduced by [Stanford Machine Learning Group](https://github.com/stanfordmlgroup) in the paper "NGBoost**: Natural Gradient Boosting for Probabilistic Prediction" by Duan et al. (2019).
 
 Their implementation is 100% Python. 
 
