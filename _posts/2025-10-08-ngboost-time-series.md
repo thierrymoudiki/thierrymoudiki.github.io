@@ -9,7 +9,7 @@ comments: true
 
 [2 days ago](https://thierrymoudiki.github.io/blog/2025/10/06/python/ngboost-regr-clf-ts), I presented a Cythonized implementation of NGBoost. NGBoost is a probabilistic boosting algorithm that provides **uncertainty estimates along with predictions**. It works by fitting a base learner (like decision trees or linear models) to the negative gradient of a specified loss function, and was **first introduced by [Stanford Machine Learning Group](https://github.com/stanfordmlgroup) in the paper "NGBoost**: Natural Gradient Boosting for Probabilistic Prediction" by Duan et al. (2019).
 
-In this post, we will explore how to use NGBoost, a powerful library for probabilistic forecasting, in conjunction with the `nnetsauce` and `cybooster` libraries to perform time series analysis with native uncertainty quantification.
+In this post, we will explore how to use NGBoost, a powerful library for probabilistic forecasting, in conjunction with the `nnetsauce` and `cybooster` libraries to perform time series analysis with native uncertainty quantification. The difference with the previous post is that we will use the native uncertainty quantification capabilities of NGBoost.
 
 ```python
 !pip install git+https://github.com/Techtonique/nnetsauce.git
