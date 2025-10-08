@@ -27,7 +27,6 @@ In this post, we will explore how to use NGBoost, a powerful library for probabi
 
 # `ice_cream_vs_heater`
 
-
 ```python
 import nnetsauce as ns
 import pandas as pd
@@ -100,9 +99,7 @@ regr.plot()
 ![image-title-here]({{base}}/images/2025-10-08/2025-10-08-ngboost-time-series_8_1.png){:class="img-responsive"}
     
 
-
 # `nile`
-
 
 ```python
 url = "https://raw.githubusercontent.com/Techtonique/"
@@ -126,12 +123,8 @@ regr.plot()
 
     100%|██████████| 1/1 [00:02<00:00,  2.36s/it]
 
-
-
     
 ![image-title-here]({{base}}/images/2025-10-08/2025-10-08-ngboost-time-series_10_1.png){:class="img-responsive"}
-    
-
 
 
 ```python
@@ -158,13 +151,9 @@ regr.plot()
 
     100%|██████████| 1/1 [00:01<00:00,  1.11s/it]
 
-
-
     
 ![image-title-here]({{base}}/images/2025-10-08/2025-10-08-ngboost-time-series_11_1.png){:class="img-responsive"}
     
-
-
 
 ```python
 from sklearn.linear_model import Ridge
@@ -205,7 +194,7 @@ regr.plot()
 ```
 
 
-```r
+```R
 %%R
 
 install.packages("pak")
@@ -213,14 +202,14 @@ pak::pak("reticulate")
 ```
 
 
-```r
+```R
 %%R
 
 pak::pak(c("readr", "xts", "ggplot2"))
 ```
 
 
-```r
+```R
 %%R
 
 
@@ -242,7 +231,7 @@ df_temp <- read.csv(url)
 ```
 
 
-```r
+```R
 %%R
 
 head(df_temp)
@@ -258,7 +247,7 @@ head(df_temp)
 
 
 
-```r
+```R
 %%R
 
 np <- import("numpy")
@@ -272,7 +261,7 @@ regr <- ns$MTS(obj = cyb$SkNGBRegressor(),
 ```
 
 
-```r
+```R
 %%R
 
 df <- df_temp[, -1]
@@ -280,7 +269,7 @@ rownames(df) <- df_temp$date
 ```
 
 
-```r
+```R
 %%R
 
 df
@@ -488,7 +477,7 @@ df
 
 
 
-```r
+```R
 %%R
 
 # Fit the model
@@ -504,7 +493,7 @@ regr$fit(df)
 
 
 
-```r
+```R
 %%R
 
 library(ggplot2)
@@ -517,20 +506,13 @@ regr$plot("heater")
 regr$plot("icecream")
 ```
 
-
-    
 ![image-title-here]({{base}}/images/2025-10-08/2025-10-08-ngboost-time-series_23_0.png){:class="img-responsive"}
     
-
-
-
     
 ![image-title-here]({{base}}/images/2025-10-08/2025-10-08-ngboost-time-series_23_1.png){:class="img-responsive"}
     
 
-
-
-```r
+```R
 %%R
 
 preds
