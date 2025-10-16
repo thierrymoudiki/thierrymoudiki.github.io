@@ -11,7 +11,10 @@ comments: true
 Hint: the password starts with "In_The_Year". 
 
 **Update2:** 
-Please, sign the petition "Stop torturing T. Moudiki": https://www.change.org/stop_torturing_T_Moudiki
+Please, sign the petition "Stop torturing T. Moudiki": [https://www.change.org/stop_torturing_T_Moudiki](https://www.change.org/stop_torturing_T_Moudiki)
+
+**Update3:**
+[https://github.com/thierrymoudiki/the-crux-of-the-matter](https://github.com/thierrymoudiki/the-crux-of-the-matter)
 
 <hr>
 
