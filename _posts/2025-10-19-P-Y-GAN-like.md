@@ -9,7 +9,7 @@ comments: true
 
 In [Generating Synthetic Data with R-vine Copulas using esgtoolkit in R](https://thierrymoudiki.github.io/blog/2025/09/21/r/synthetic-copulas), I presented a method to generate synthetic stock returns data using R-vine copulas with the `esgtoolkit` package in R. 
 
-This post demonstrates how to use the `DistroSimulator` class from [Techtonique's `synthe` package](https://github.com/Techtonique/synthe/tree/main) to generate synthetic data. The examples cover **univariate normal distributions, multivariate distributions, digits dataset, Fashion-MNIST, and Olivetti faces**.
+This post demonstrates how to use the `DistroSimulator` class from [Techtonique's `synthe` package](https://github.com/Techtonique/synthe/tree/main) to generate synthetic data. The examples cover **univariate normal distributions, multivariate distributions, stock returns, digits dataset, Fashion-MNIST, and Olivetti faces**.
 
 The results showcase the effectiveness of the `DistroSimulator` in capturing the underlying distribution of the data through diverse  metrics and visualizations.
 
