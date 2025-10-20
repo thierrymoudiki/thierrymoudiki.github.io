@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GAN-like Synthetic Data Generation Examples (on univariate, multivariate distributions, digits recognition, Fashion-MNIST, and Olivetti faces) with DistroSimulator"
+title: "GAN-like Synthetic Data Generation Examples (on univariate, multivariate distributions, digits recognition, Fashion-MNIST, stock returns, and Olivetti faces) with DistroSimulator"
 description: "Examples of synthetic data generation using DistroSimulator for univariate, multivariate distributions, digits, Fashion-MNIST, and Olivetti faces."
 date: 2025-10-19
 categories: [R, Python]
