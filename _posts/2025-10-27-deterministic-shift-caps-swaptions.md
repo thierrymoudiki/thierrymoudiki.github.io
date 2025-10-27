@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-I propose, in addition, three distinct methods for short rate
+I propose three distinct methods for short rate
 construction—ranging from parametric (Nelson-Siegel) to fully data-driven approaches—and
 derive a deterministic shift adjustment ensuring consistency with the fundamental theorem of
 asset pricing. The framework naturally integrates with modern statistical learning methods,
