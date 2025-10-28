@@ -23,7 +23,7 @@ rate derivatives including caps and swaptions
 I developed in conjunction with these short rates models, a flexible framework for arbitrage-free simulation of short rates that reconciles descriptive yield curve models with no-arbitrage pricing theory. Unlike existing approaches that require strong parametric assumptions, the method accommodates any bounded, continuous,
 and simulable short rate process. 
 
-In this post, we implement three methods for constructing instantaneous short rates from historical yield curves, as described in the preprint [https://www.researchgate.net/publication/393794192_An_arbitrage-free_extension_of_Nelson-Siegel-Diebold-Li_simulations_via_deterministic_shift_adjustment_of_short_rates](https://www.researchgate.net/publication/393794192_An_arbitrage-free_extension_of_Nelson-Siegel-Diebold-Li_simulations_via_deterministic_shift_adjustment_of_short_rates). We also implement the deterministic shift adjustment to ensure arbitrage-free pricing of caps and swaptions.
+In this post, we implement three methods for constructing instantaneous short rates from historical yield curves, as described in the preprint [https://www.researchgate.net/publication/393794192_New_Short_Rate_Models_and_their_Arbitrage-Free_Extension_A_Flexible_Framework_for_Historical_and_Market-Consistent_Simulation](https://www.researchgate.net/publication/393794192_New_Short_Rate_Models_and_their_Arbitrage-Free_Extension_A_Flexible_Framework_for_Historical_and_Market-Consistent_Simulation). We also implement the deterministic shift adjustment to ensure arbitrage-free pricing of caps and swaptions.
 
 
 ```R
