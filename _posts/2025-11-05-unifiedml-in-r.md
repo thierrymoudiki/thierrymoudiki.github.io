@@ -12,8 +12,6 @@ comments: true
 
 > A Unified Machine Learning Interface for R
 
-[![Documentation](https://img.shields.io/badge/documentation-is_here-green)](https://techtonique.github.io/unifiedml/index.html)
-
 ## Overview
 
 `unifiedml` provides a consistent, sklearn-like interface for virtually any machine learning model in R.
@@ -271,3 +269,4 @@ cat("\nMean Accuracy:", mean(cv4), "\n")
 ![image-title-here]({{base}}/images/2025-11-05/2025-11-05-unifiedml-in-r_4_7.png){:class="img-responsive"}
     
 
+[![Documentation](https://img.shields.io/badge/documentation-is_here-green)](https://techtonique.github.io/unifiedml/index.html)
