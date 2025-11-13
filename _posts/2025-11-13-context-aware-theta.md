@@ -57,7 +57,7 @@ These methods provide more robust uncertainty quantification, especially for non
 
 ## Mathematical Formulation
 
-The forecast at horizon $h$ is given by:
+The forecast at horizon $$h$$ is given by:
 
 $$\hat{y}_{n+h} = \ell_n + b_h \left(\frac{1-(1-\alpha)^n}{\alpha} + h - 1\right)$$
 
@@ -70,7 +70,7 @@ For seasonal series, multiplicative seasonal adjustment is applied:
 
 $$\hat{y}_{n+h} = \left[\ell_n + b_h \cdot d_h\right] \times s_{h \bmod m}$$
 
-where $s_i$ are seasonal indices and $m$ is the seasonal period.
+where $$s_i$$ are seasonal indices and $m$ is the seasonal period.
 
 
 ## Practical Implementation
