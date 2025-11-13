@@ -11,15 +11,15 @@ The Theta method has been a cornerstone of time series forecasting since Assimak
 
 ## The Classical Theta Method Revisited
 
-The classical Theta method decomposes a time series into "theta lines" by modifying the local curvature. For a time series $y_t$, the theta line with parameter $\theta$ is defined through the second differences:
+The classical Theta method decomposes a time series into "theta lines" by modifying the local curvature. For a time series $$y_t$$, the theta line with parameter $$\theta$$ is defined through the second differences:
 
 $$\nabla^2 Z_t(\theta) = \theta \nabla^2 y_t$$
 
-where $\nabla^2$ denotes the second difference operator. The classical method uses $\theta = 2$, which amplifies the long-term trend while damping short-term fluctuations. As Hyndman and Billah (2003) demonstrated, this is mathematically equivalent to SES with drift:
+where $$\nabla^2$$ denotes the second difference operator. The classical method uses $$\theta = 2$$, which amplifies the long-term trend while damping short-term fluctuations. As Hyndman and Billah (2003) demonstrated, this is mathematically equivalent to SES with drift:
 
 $$\hat{y}_{t+h|t} = \ell_t + b h$$
 
-where $\ell_t$ is the level from SES and $b$ is the drift term.
+where $$\ell_t$$ is the level from SES and $b$ is the drift term.
 
 ## Extending the Framework
 
@@ -27,22 +27,22 @@ The `ahead::ctxthetaf` function generalizes this approach in three key ways:
 
 ### 1. Flexible Theta Parameterization
 
-Rather than fixing $\theta = 2$, the method accepts a tunable parameter $\theta \in [0, \infty)$:
+Rather than fixing $$\theta = 2$$, the method accepts a tunable parameter $$\theta \in [0, \infty)$$:
 
-- **$\theta = 0$**: No drift component (pure SES)
-- **$\theta = 0.5$**: Classical Theta behavior ($\theta$ line = 2)
-- **$\theta = 1$**: Full drift weight
-- **$\theta > 1$**: Amplified drift for strongly trending series
+- **$$\theta = 0$$**: No drift component (pure SES)
+- **$$\theta = 0.5$$**: Classical Theta behavior ($$\theta$$ line = 2)
+- **$$\theta = 1$$**: Full drift weight
+- **$$\theta > 1$$**: Amplified drift for strongly trending series
 
 This flexibility allows the forecaster to control the emphasis on trend continuation versus mean reversion.
 
 ### 2. Context-Aware Slope Estimation
 
-Instead of assuming constant drift, the method estimates time-varying slopes using machine learning models. The drift at each forecast horizon $h$ is computed as:
+Instead of assuming constant drift, the method estimates time-varying slopes using machine learning models. The drift at each forecast horizon $$h$$ is computed as:
 
 $$b_h = \theta \cdot \text{slope}_h(f)$$
 
-where $f$ is a fitted model (linear regression by default, but can be random forests, gradient boosting, etc.) and $\text{slope}_h$ is obtained through numerical differentiation of the model's predictions.
+where $$f$$ is a fitted model (linear regression by default, but can be random forests, gradient boosting, etc.) and $$\text{slope}_h$$ is obtained through numerical differentiation of the model's predictions.
 
 ### 3. Advanced Prediction Intervals
 
@@ -62,9 +62,9 @@ The forecast at horizon $h$ is given by:
 $$\hat{y}_{n+h} = \ell_n + b_h \left(\frac{1-(1-\alpha)^n}{\alpha} + h - 1\right)$$
 
 where:
-- $\ell_n$ is the final level from SES with smoothing parameter $\alpha$
-- $b_h$ is the context-aware drift at horizon $h$
-- The term $(1-(1-\alpha)^n)/\alpha$ accounts for the cumulative smoothing effect
+- $$\ell_n$$ is the final level from SES with smoothing parameter $$\alpha$$
+- $$b_h$$ is the context-aware drift at horizon $$h$$
+- The term $$(1-(1-\alpha)^n)/\alpha$$ accounts for the cumulative smoothing effect
 
 For seasonal series, multiplicative seasonal adjustment is applied:
 
