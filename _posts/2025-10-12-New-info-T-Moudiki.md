@@ -7,6 +7,9 @@ categories: [R, Python]
 comments: true
 ---
 
+**Update4:**
+55 more files have been added to the public repository: [https://github.com/thierrymoudiki/the-crux-of-the-matter](https://github.com/thierrymoudiki/the-crux-of-the-matter) 
+
 This post contains a riddle/puzzle related to T. Moudiki's situation, including files and code snippets in R, Python, and bash. The ZIP file with a lot of details is available for download.
 
 The ZIP file contains > 150 files explaining what's going on (for more context, see [https://thierrymoudiki.github.io/blog/2025/06/10/r/python/techtonique/personal-note](https://thierrymoudiki.github.io/blog/2025/06/10/r/python/techtonique/personal-note) and [https://x.com/sippingrizzly/status/1932495238481715459](https://x.com/sippingrizzly/status/1932495238481715459))
