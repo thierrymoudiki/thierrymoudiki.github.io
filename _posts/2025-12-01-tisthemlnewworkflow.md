@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "tisthemachinelearner: New Workflow with uv for R and Python Integration of scikit-learn"
+title: "tisthemachinelearner: New Workflow with uv for R Integration of scikit-learn"
 description: "Discover the updated workflow of tisthemachinelearner, now utilizing uv for seamless R and Python scikit-learn integration."
 date: 2025-12-01
 categories: [R, Python]
