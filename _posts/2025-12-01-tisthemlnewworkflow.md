@@ -10,23 +10,11 @@ comments: true
 A quick reminder of the previous post:  
 👉 https://thierrymoudiki.github.io/blog/2025/02/17/python/r/tisthemllearner
 
-tisthemachinelearner is an R package that provides a lightweight interface (with 2 classes, hence facilitating benchmarks e.g) to the popular Python machine learning library **scikit-learn**. The package allows R users to leverage the power of scikit-learn models directly from R, using both **S3** and **R6** object-oriented programming styles.
+[tisthemachinelearner](https://github.com/Techtonique/tisthemachinelearner_r) is an R ([and Python](https://github.com/Techtonique/tisthemachinelearner)) package that provides a lightweight interface (with approx. 2 classes, hence facilitating benchmarks e.g) to the popular Python machine learning library **scikit-learn**. The package allows R users to leverage the power of scikit-learn models directly from R, using both **S3** and **R6** object-oriented programming styles.
 
 Since then, **tisthemachinelearner** has evolved with a cleaner and more predictable workflow for connecting **R** to **Python scikit-learn**, using both **S3** and **R6** interfaces. It's now using a dedicated virtual environment manager called **uv** to handle Python dependencies seamlessly. Faster setup, less hassle!
 
 uv is a lightweight and extremely fast tool to create and manage isolated Python environments. It simplifies the process of setting up the necessary Python environment for R packages that depend on Python libraries. Another advantage here, is that I know exactly what is installed in the environment, making it easier to debug potential issues.
-
----
-
-# tisthemachinelearner 
-
-[![Documentation](https://img.shields.io/badge/documentation-is_here-green)](https://docs.techtonique.net/tisthemachinelearner_r/index.html)  
-![Downloads](https://r-packages.techtonique.net/badges/downloads/last-month/tisthemachinelearner.svg)  
-![Total Downloads](https://r-packages.techtonique.net/badges/downloads/grand-total/tisthemachinelearner.svg?color=brightgreen)
-
-R interface to **scikit-learn** (through the Python package `tisthemachinelearner`) with **S3** and **R6** APIs.
-
----
 
 ## 1. Command line
 
