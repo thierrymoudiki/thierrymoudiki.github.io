@@ -31,6 +31,8 @@ This creates an isolated Python environment containing the correct dependencies 
 
 ## 2. Use it from R
 
+In the current directory (same as the virtual environment), run the following R code:
+
 ```R
 install.packages("devtools")
 devtools::install_github("Techtonique/tisthemachinelearner_r")
