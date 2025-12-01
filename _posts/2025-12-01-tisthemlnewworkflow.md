@@ -8,7 +8,7 @@ comments: true
 ---
 
 A quick reminder of the previous post:  
-👉 https://thierrymoudiki.github.io/blog/2025/02/17/python/r/tisthemllearner
+👉 [https://thierrymoudiki.github.io/blog/2025/02/17/python/r/tisthemllearner](https://thierrymoudiki.github.io/blog/2025/02/17/python/r/tisthemllearner)
 
 [tisthemachinelearner](https://github.com/Techtonique/tisthemachinelearner_r) is an R ([and Python](https://github.com/Techtonique/tisthemachinelearner)) package that provides a lightweight interface (with approx. 2 classes, hence facilitating benchmarks e.g) to the popular Python machine learning library **scikit-learn**. The package allows R users to leverage the power of scikit-learn models directly from R, using both **S3** and **R6** object-oriented programming styles.
 
