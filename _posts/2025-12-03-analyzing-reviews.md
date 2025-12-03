@@ -7,7 +7,7 @@ categories: [R, Python, Misc]
 comments: true
 ---
 
-What I'd recommend you to do, as LLMs are becoming increasingly better at this, is to use them to help you analyze the reviews you received for your papers (increasingly bogus, and some people don't even bother to read). 
+What I'd recommend you to do, as LLMs are becoming increasingly better at this, is to use them to help you analyze the reviews you received for your papers (increasingly bogus, and some people don't even bother to read). Thinking about doing it for the last reviews I received, not to say that I'm right, but for everyone to see [how _well_ I'm bein treated](https://www.change.org/stop_torturing_T_Moudiki). And I'm not the type to whine.
 
 I did it for the framework described in [https://thierrymoudiki.github.io/blog/2025/10/19/r/python/P-Y-GAN-like](https://thierrymoudiki.github.io/blog/2025/10/19/r/python/P-Y-GAN-like), submitted to [https://world-model-mila.github.io/](https://world-model-mila.github.io/). 
 
