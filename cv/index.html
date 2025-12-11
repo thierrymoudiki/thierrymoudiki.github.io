@@ -80,6 +80,26 @@
             color: #d0d0d0;
         }
 
+        /* General link styles */
+        a {
+            color: #228B22;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2E8B57;
+            text-decoration: underline;
+        }
+
+        body.dark-mode a {
+            color: #32CD32;
+        }
+
+        body.dark-mode a:hover {
+            color: #90EE90;
+        }
+
         .button-group {
             display: flex;
             justify-content: center;
@@ -392,7 +412,7 @@
             display: inline-block;
             padding: 10px 20px;
             background: white;
-            color: #0066cc;
+            color: #228B22;
             text-decoration: none;
             border: 1px solid #ddd;
             transition: all 0.3s;
@@ -401,18 +421,18 @@
 
         .link-btn:hover {
             background: #f5f5f5;
-            border-color: #0066cc;
+            border-color: #228B22;
         }
 
         body.dark-mode .link-btn {
             background: #3a3a3a;
-            color: #4da3ff;
+            color: #32CD32;
             border-color: #555;
         }
 
         body.dark-mode .link-btn:hover {
             background: #444;
-            border-color: #4da3ff;
+            border-color: #32CD32;
         }
 
         /* Page Break Control Styles */
@@ -577,7 +597,7 @@
 
             /* Ensure links are visible in print */
             a {
-                color: #0066cc !important;
+                color: #228B22 !important;
                 text-decoration: underline !important;
             }
 
@@ -625,7 +645,8 @@
             </div>
             <div class="contact-info">
                 <div class="contact-item"><a href="https://thierrymoudiki.github.io">thierrymoudiki.github.io</a></div>
-                <div class="contact-item"><a href="https://linkedin.com/in/thierry-moudiki">linkedin.com/in/thierry-moudiki</a></div>
+                <div class="contact-item"><a
+                        href="https://linkedin.com/in/thierry-moudiki">linkedin.com/in/thierry-moudiki</a></div>
             </div>
             <div class="button-group">
                 <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
