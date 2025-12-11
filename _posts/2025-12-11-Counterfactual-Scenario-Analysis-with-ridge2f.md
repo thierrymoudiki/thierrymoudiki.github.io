@@ -368,7 +368,193 @@ ggplot(df_long, aes(x = Variable, y = Value, fill = Variable)) +
 ```
 
 
+```R
+# 1. Time series plot showing the full picture
+library(ggplot2)
+library(tidyr)
+
+# Combine all periods for context
+full_data <- data.frame(
+  Time = c(t_train, t_scenario, time(y_test)),
+  Actual = c(y_train, y_scenario, y_test),
+  Period = c(rep("Train", length(y_train)), 
+             rep("Scenario", length(y_scenario)),
+             rep("Test", length(y_test)))
+)
+
+forecast_data <- data.frame(
+  Time = rep(time(y_test), 3),
+  Forecast = c(res_Baseline$mean, res_A$mean, res_B$mean),
+  Scenario = rep(c("Baseline", "TV +1", "TV -1"), each = h_test)
+)
+
+ggplot() +
+  geom_line(data = full_data, aes(x = Time, y = Actual), color = "black", size = 1) +
+  geom_vline(xintercept = t_scenario[1], linetype = "dashed", color = "gray50", alpha = 0.7) +
+  geom_vline(xintercept = time(y_test)[1], linetype = "dashed", color = "gray50", alpha = 0.7) +
+  geom_line(data = forecast_data, aes(x = Time, y = Forecast, color = Scenario), size = 1) +
+  annotate("text", x = mean(t_train), y = max(full_data$Actual), label = "TRAIN") +
+  annotate("text", x = mean(t_scenario), y = max(full_data$Actual), label = "SCENARIO") +
+  annotate("text", x = mean(time(y_test)), y = max(full_data$Actual), label = "TEST") +
+  theme_minimal() +
+  labs(title = "Counterfactual Forecasts: How Past TV Changes Affect Future Predictions",
+       subtitle = "Different scenario assumptions in the recent past lead to different test forecasts",
+       y = "Insurance Quotes", x = "Time") +
+  scale_color_manual(values = c("Baseline" = "blue", "TV +1" = "red", "TV -1" = "green"))
+
+# 2. Forecast difference plot (shows the impact more clearly)
+diff_data <- data.frame(
+  Time = time(y_test),
+  Diff_A_vs_Baseline = res_A$mean - res_Baseline$mean,
+  Diff_B_vs_Baseline = res_B$mean - res_Baseline$mean,
+  Diff_A_vs_B = res_A$mean - res_B$mean
+) %>%
+  pivot_longer(cols = -Time, names_to = "Comparison", values_to = "Difference")
+
+ggplot(diff_data, aes(x = Time, y = Difference, color = Comparison)) +
+  geom_line(size = 1) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
+  theme_minimal() +
+  labs(title = "Forecast Differences: Impact of Counterfactual Scenarios",
+       subtitle = "How much do forecasts change under different scenario assumptions?",
+       y = "Difference in Forecasts", x = "Time")
+
+# 3. Prediction interval comparison
+interval_data <- data.frame(
+  Time = rep(time(y_test), 2),
+  Actual = rep(y_test, 2),
+  Forecast = c(res_A$mean, res_B$mean),
+  Lower = c(res_A$lower, res_B$lower),
+  Upper = c(res_A$upper, res_B$upper),
+  Scenario = rep(c("TV +1", "TV -1"), each = h_test)
+)
+
+ggplot(interval_data, aes(x = Time)) +
+  geom_ribbon(aes(ymin = Lower, ymax = Upper, fill = Scenario), alpha = 0.3) +
+  geom_line(aes(y = Forecast, color = Scenario), size = 1) +
+  geom_point(aes(y = Actual), color = "black", size = 2) +
+  geom_line(aes(y = Actual), color = "black", linetype = "dashed") +
+  facet_wrap(~Scenario, ncol = 1) +
+  theme_minimal() +
+  labs(title = "Prediction Intervals: Coverage Comparison",
+       subtitle = "Black points show actual values",
+       y = "Insurance Quotes", x = "Time")
+```
     
 ![image-title-here]({{base}}/images/2025-12-11/2025-12-11-Counterfactual-Scenario-Analysis-with-ridge2f_4_0.png){:class="img-responsive"}
-    
 
+
+```R
+# Multiple comparison correction
+cat("\n=== STATISTICAL SIGNIFICANCE (with Bonferroni correction) ===\n")
+n_tests <- 5
+alpha_corrected <- 0.05 / n_tests
+cat(sprintf("Adjusted alpha level: %.4f (Bonferroni correction for %d tests)\n\n",
+            alpha_corrected, n_tests))
+
+# Focus on the most relevant contrasts
+contrasts <- list(
+  "Scenario A vs B" = comparison$Diff_A_B,
+  "Scenario A vs Baseline" = comparison$Diff_A_Baseline,
+  "Scenario B vs Baseline" = comparison$Diff_B_Baseline
+)
+
+results <- data.frame(
+  Contrast = names(contrasts),
+  Mean_Diff = sapply(contrasts, mean),
+  SE = sapply(contrasts, function(x) sd(x)/sqrt(length(x))),
+  t_stat = NA,
+  p_value = NA,
+  CI_lower = NA,
+  CI_upper = NA,
+  Significant_at_0.05 = NA,
+  Significant_corrected = NA
+)
+
+for(i in 1:nrow(results)) {
+  test <- t.test(contrasts[[i]])
+  results$t_stat[i] <- test$statistic
+  results$p_value[i] <- test$p.value
+  results$CI_lower[i] <- test$conf.int[1]
+  results$CI_upper[i] <- test$conf.int[2]
+  results$Significant_at_0.05[i] <- test$p.value < 0.05
+  results$Significant_corrected[i] <- test$p.value < alpha_corrected
+}
+
+# Only round numeric columns for printing
+numeric_cols_results <- sapply(results, is.numeric)
+results_display <- results
+results_display[, numeric_cols_results] <- round(results_display[, numeric_cols_results], 4)
+print(results_display)
+
+# Effect sizes (Cohen's d)
+cat("\n=== EFFECT SIZES (Cohen's d) ===\n")
+cohens_d <- function(x) {
+  mean(x) / sd(x)
+}
+
+effect_sizes <- data.frame(
+  Contrast = names(contrasts),
+  Cohens_d = sapply(contrasts, cohens_d),
+  Interpretation = sapply(sapply(contrasts, cohens_d), function(d) {
+    abs_d <- abs(d)
+    if(abs_d < 0.2) "negligible"
+    else if(abs_d < 0.5) "small"
+    else if(abs_d < 0.8) "medium"
+    else "large"
+  })
+)
+print(effect_sizes)
+
+# Paired comparisons if more appropriate
+cat("\n=== PAIRWISE COMPARISONS ===\n")
+cat("Testing if forecast differences are consistently non-zero:\n\n")
+
+# Wilcoxon signed-rank test (non-parametric alternative)
+for(i in 1:length(contrasts)) {
+  cat(names(contrasts)[i], ":\n")
+  wilcox_test <- wilcox.test(contrasts[[i]], alternative = "two.sided")
+  cat(sprintf("  Wilcoxon p-value: %.4f\n", wilcox_test$p.value))
+  cat(sprintf("  Median difference: %.4f\n\n", median(contrasts[[i]])))
+}
+```    
+
+```R
+
+=== STATISTICAL SIGNIFICANCE (with Bonferroni correction) ===
+Adjusted alpha level: 0.0100 (Bonferroni correction for 5 tests)
+
+                                     Contrast Mean_Diff     SE  t_stat p_value
+Scenario A vs B               Scenario A vs B   -0.0802 0.6702 -0.1196  0.9082
+Scenario A vs Baseline Scenario A vs Baseline    0.2740 0.5549  0.4938  0.6366
+Scenario B vs Baseline Scenario B vs Baseline    0.3542 0.6379  0.5552  0.5961
+                       CI_lower CI_upper Significant_at_0.05
+Scenario A vs B         -1.6650   1.5047               FALSE
+Scenario A vs Baseline  -1.0381   1.5861               FALSE
+Scenario B vs Baseline  -1.1543   1.8626               FALSE
+                       Significant_corrected
+Scenario A vs B                        FALSE
+Scenario A vs Baseline                 FALSE
+Scenario B vs Baseline                 FALSE
+
+=== EFFECT SIZES (Cohen's d) ===
+                                     Contrast    Cohens_d Interpretation
+Scenario A vs B               Scenario A vs B -0.04228715     negligible
+Scenario A vs Baseline Scenario A vs Baseline  0.17458895     negligible
+Scenario B vs Baseline Scenario B vs Baseline  0.19628662     negligible
+
+=== PAIRWISE COMPARISONS ===
+Testing if forecast differences are consistently non-zero:
+
+Scenario A vs B :
+  Wilcoxon p-value: 0.7422
+  Median difference: -0.3001
+
+Scenario A vs Baseline :
+  Wilcoxon p-value: 0.9453
+  Median difference: -0.0923
+
+Scenario B vs Baseline :
+  Wilcoxon p-value: 0.6406
+  Median difference: 0.0457
+```
