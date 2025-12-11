@@ -420,17 +420,17 @@
             page-break-inside: avoid;
             break-inside: avoid;
         }
-        
+
         .page-break-before {
             page-break-before: always;
             break-before: page;
         }
-        
+
         .page-break-after {
             page-break-after: always;
             break-after: page;
         }
-        
+
         .keep-together {
             page-break-inside: avoid;
             break-inside: avoid;
@@ -446,7 +446,7 @@
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
-            
+
             .container {
                 box-shadow: none !important;
                 max-width: 100% !important;
@@ -454,7 +454,7 @@
                 padding: 0 !important;
                 background: white !important;
             }
-            
+
             .header {
                 padding: 30px 20px !important;
                 margin-bottom: 20px !important;
@@ -462,81 +462,95 @@
                 color: black !important;
                 border-bottom: 3px solid #000 !important;
             }
-            
+
             .content {
                 padding: 0 20px !important;
             }
-            
+
             .button-group {
                 display: none !important;
             }
-            
+
             /* Page break control for print */
             .section {
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
                 margin-bottom: 30px !important;
             }
-            
-            .experience-item, .education-item, .skill-category, .membership-item {
+
+            .experience-item,
+            .education-item,
+            .skill-category,
+            .membership-item {
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
             }
-            
+
             .publications-list li {
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
             }
-            
+
             /* Adjust font sizes for print */
             .header h1 {
                 font-size: 24pt !important;
                 margin-bottom: 8px !important;
             }
-            
+
             .section-title {
                 font-size: 14pt !important;
                 margin-bottom: 15px !important;
                 color: black !important;
                 border-bottom-color: black !important;
             }
-            
-            .position, .company, .description, .summary {
+
+            .position,
+            .company,
+            .description,
+            .summary {
                 font-size: 11pt !important;
                 color: black !important;
             }
-            
-            .date, .location {
+
+            .date,
+            .location {
                 font-size: 10pt !important;
                 color: #555 !important;
             }
-            
+
             /* Force black text for all elements in print */
-            body, .position, .company, .description, .summary,
-            .skill-list li, .publications-list li, .membership-item,
+            body,
+            .position,
+            .company,
+            .description,
+            .summary,
+            .skill-list li,
+            .publications-list li,
+            .membership-item,
             .skill-category h4 {
                 color: black !important;
             }
-            
+
             /* Fix background colors for print */
-            .skill-category, .membership-item {
+            .skill-category,
+            .membership-item {
                 background: #f9f9f9 !important;
                 border-color: #ddd !important;
                 border-left-color: #000 !important;
             }
-            
+
             .publication-year {
                 background: #f0f0f0 !important;
                 color: #555 !important;
                 border: 1px solid #ddd !important;
             }
-            
+
             /* Links styling for print */
             .links {
                 display: block !important;
                 margin-top: 15px !important;
             }
-            
+
             .link-btn {
                 display: inline-block !important;
                 padding: 5px 10px !important;
@@ -547,7 +561,7 @@
                 background: white !important;
                 page-break-inside: avoid !important;
             }
-            
+
             /* Remove any dark mode styling */
             body.dark-mode .container,
             body.dark-mode .header,
@@ -560,18 +574,18 @@
                 color: black !important;
                 border-color: #000 !important;
             }
-            
+
             /* Ensure links are visible in print */
             a {
                 color: #0066cc !important;
                 text-decoration: underline !important;
             }
-            
+
             /* Fix the specific font issue for "Tutor" */
             .experience-item:nth-child(2) .position {
                 font-family: 'Times New Roman', Times, serif !important;
             }
-            
+
             /* Add bottom margin to last item on page */
             .section:last-child {
                 margin-bottom: 20px !important;
@@ -605,13 +619,13 @@
             <h1>Thierry Moudiki, PhD</h1>
             <div class="title">Machine Learning • Time Series Forecasting • Financial & Climate Risk Modeling</div>
             <div class="contact-info">
-                <div class="contact-item">thierry.moudiki@gmail.com</div>
+                <div class="contact-item"><a href="mailto:thierry.moudiki@gmail.com">thierry.moudiki@gmail.com</a></div>
                 <!-- <div class="contact-item">+33 6 50 05 43 29</div> -->
-                <div class="contact-item">France</div>
+                <!-- <div class="contact-item">France</div> -->
             </div>
             <div class="contact-info">
-                <div class="contact-item">thierrymoudiki.github.io</div>
-                <div class="contact-item">linkedin.com/in/thierry-moudiki</div>
+                <div class="contact-item"><a href="https://thierrymoudiki.github.io">thierrymoudiki.github.io</a></div>
+                <div class="contact-item"><a href="https://linkedin.com/in/thierry-moudiki">linkedin.com/in/thierry-moudiki</a></div>
             </div>
             <div class="button-group">
                 <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
@@ -959,7 +973,8 @@
             <section class="section">
                 <h2 class="section-title">Licenses & Certifications</h2>
                 <ul class="skill-list">
-                    <li class="page-break-avoid"><strong>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and
+                    <li class="page-break-avoid"><strong>Improving Deep Neural Networks: Hyperparameter Tuning,
+                            Regularization and
                             Optimization</strong> - <a href="https://www.coursera.org/">Coursera</a> (October 2023) -
                         Credential ID: LEE25YAV65P8</li>
                     <li class="page-break-avoid"><strong>Neural Networks and Deep Learning</strong> - <a
@@ -1018,22 +1033,22 @@
 
         function downloadPDF() {
             const element = document.getElementById('cv-content');
-            
+
             // Store current dark mode state and force light mode for PDF generation
             const wasDarkMode = document.body.classList.contains('dark-mode');
             if (wasDarkMode) {
                 document.body.classList.remove('dark-mode');
             }
-            
+
             const opt = {
                 margin: [15, 15, 15, 15], // Top, Right, Bottom, Left in mm
                 filename: 'Thierry_Moudiki_CV.pdf',
-                image: { 
-                    type: 'jpeg', 
+                image: {
+                    type: 'jpeg',
                     quality: 1.0,
                     compression: 'NONE'
                 },
-                html2canvas: { 
+                html2canvas: {
                     scale: 2,
                     useCORS: true,
                     letterRendering: true,
@@ -1042,9 +1057,9 @@
                     windowWidth: 900, // Match container width
                     allowTaint: true
                 },
-                jsPDF: { 
-                    unit: 'mm', 
-                    format: 'a4', 
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
                     orientation: 'portrait',
                     compress: false,
                     hotfixes: ["px_scaling"]
@@ -1062,7 +1077,7 @@
             if (btnGroup) {
                 btnGroup.style.display = 'none';
             }
-            
+
             // Add a temporary class for PDF generation
             document.body.classList.add('generating-pdf');
 
@@ -1071,10 +1086,10 @@
                 if (btnGroup) {
                     btnGroup.style.display = 'flex';
                 }
-                
+
                 // Remove temporary class
                 document.body.classList.remove('generating-pdf');
-                
+
                 // Restore dark mode if it was enabled
                 if (wasDarkMode) {
                     document.body.classList.add('dark-mode');
@@ -1091,12 +1106,12 @@
                 }
             });
         }
-        
+
         // Add a print-specific class when printing
         window.addEventListener('beforeprint', () => {
             document.body.classList.add('printing');
         });
-        
+
         window.addEventListener('afterprint', () => {
             document.body.classList.remove('printing');
         });
