@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thierry Moudiki - CV</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f5f5f5;
+            padding: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        body.dark-mode {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: background 0.3s ease;
+        }
+        
+        body.dark-mode .container {
+            background: #2d2d2d;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        .header {
+            background: #1a1a1a;
+            color: white;
+            padding: 50px 40px;
+            border-bottom: 3px solid #000;
+            transition: background 0.3s ease;
+        }
+        
+        body.dark-mode .header {
+            background: #000;
+            border-bottom-color: #444;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        .header .title {
+            font-size: 1.1em;
+            color: #b0b0b0;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+        
+        .contact-item {
+            color: #d0d0d0;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .btn {
+            background: white;
+            color: #1a1a1a;
+            border: 2px solid #000;
+            padding: 10px 25px;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Georgia', serif;
+        }
+        
+        .btn:hover {
+            background: #000;
+            color: white;
+        }
+        
+        body.dark-mode .btn {
+            background: #2d2d2d;
+            color: #e0e0e0;
+            border-color: #666;
+        }
+        
+        body.dark-mode .btn:hover {
+            background: #444;
+            border-color: #888;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body.dark-mode .section-title {
+            color: #fff;
+            border-bottom-color: #666;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #2d2d2d;
+            text-align: justify;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .summary {
+            color: #c0c0c0;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 2px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+        
+        body.dark-mode .experience-item,
+        body.dark-mode .education-item {
+            border-left-color: #555;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .position {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #000;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .position {
+            color: #fff;
+        }
+        
+        .company {
+            font-size: 1.05em;
+            color: #404040;
+            font-weight: 500;
+            font-style: italic;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .company {
+            color: #b0b0b0;
+        }
+        
+        .date {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .date {
+            color: #999;
+        }
+        
+        .location {
+            color: #555;
+            font-size: 0.95em;
+            margin-top: 3px;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .location {
+            color: #aaa;
+        }
+        
+        .description {
+            margin-top: 8px;
+            color: #3d3d3d;
+            line-height: 1.7;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .description {
+            color: #b0b0b0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-left: 4px solid #000;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body.dark-mode .skill-category {
+            background: #3a3a3a;
+            border-color: #555;
+            border-left-color: #888;
+        }
+        
+        .skill-category h4 {
+            color: #000;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .skill-category h4 {
+            color: #fff;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 5px 0;
+            color: #3d3d3d;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .skill-list li {
+            color: #b0b0b0;
+        }
+        
+        .skill-list li:before {
+            content: "• ";
+            color: #000;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        body.dark-mode .skill-list li:before {
+            color: #888;
+        }
+        
+        .publications-list {
+            list-style: none;
+        }
+        
+        .publications-list li {
+            margin-bottom: 18px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.7;
+            color: #2d2d2d;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .publications-list li {
+            color: #b0b0b0;
+        }
+        
+        .publications-list li:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #000;
+            font-size: 1.2em;
+        }
+        
+        body.dark-mode .publications-list li:before {
+            color: #888;
+        }
+        
+        .publication-year {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-left: 10px;
+            color: #555;
+            font-weight: 500;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        body.dark-mode .publication-year {
+            background: #444;
+            color: #ccc;
+        }
+        
+        .publication-citations {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-top: 3px;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .publication-citations {
+            color: #999;
+        }
+        
+        .memberships-list {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .membership-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-left: 4px solid #000;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body.dark-mode .membership-item {
+            background: #3a3a3a;
+            border-color: #555;
+            border-left-color: #888;
+        }
+        
+        .membership-item strong {
+            color: #000;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .membership-item strong {
+            color: #fff;
+        }
+        
+        .membership-item br + text,
+        .membership-item {
+            color: #3d3d3d;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .membership-item {
+            color: #b0b0b0;
+        }
+        
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .link-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: #0066cc;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .link-btn:hover {
+            background: #f5f5f5;
+            border-color: #0066cc;
+        }
+        
+        body.dark-mode .link-btn {
+            background: #3a3a3a;
+            color: #4da3ff;
+            border-color: #555;
+        }
+        
+        body.dark-mode .link-btn:hover {
+            background: #444;
+            border-color: #4da3ff;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .button-group {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+            .header {
+                padding: 40px 20px;
+            }
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cv-content">
+        <div class="header">
+            <h1>Thierry Moudiki, PhD</h1>
+            <div class="title">Machine Learning • Time Series Forecasting • Financial & Climate Risk Modeling</div>
+            <div class="contact-info">
+                <div class="contact-item">thierrymoudiki@hotmail.fr</div>
+                <div class="contact-item">+33 6 50 05 43 29</div>
+                <div class="contact-item">France</div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">thierrymoudiki.github.io</div>
+                <div class="contact-item">linkedin.com/in/thierry-moudiki</div>
+            </div>
+            <div class="button-group">
+                <button class="btn" onclick="downloadPDF()">Download PDF</button>
+                <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <section class="section">
+                <h2 class="section-title">Summary</h2>
+                <p class="summary">
+                    Senior Data Scientist, Actuary, and Researcher specializing in machine learning, time series forecasting, and financial modeling. 
+                    Founder and lead of <strong>Techtonique LLC</strong> (Delaware, USA), selected for the <strong>Microsoft for Startups program</strong>. 
+                    PhD from Université Lyon 1 with expertise bridging academic research, open-source software development, and practical financial applications. 
+                    Creator of widely-adopted R and Python packages downloaded over <strong>1 million times</strong>, with research presented at leading international conferences 
+                    including the International Symposium on Forecasting and published in peer-reviewed venues.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Founder & Analytics Professional</div>
+                            <div class="company">Techtonique LLC</div>
+                        </div>
+                        <div class="date">September 2019 - Present</div>
+                    </div>
+                    <div class="description">
+                        Leading research and development in statistical machine learning, computer simulation, and numerical optimization. 
+                        Created Techtonique web app for data-driven decision-making using Mathematics, Statistics, ML, and Data Visualization. 
+                        Member of the <strong>Microsoft for Startups</strong> community. Developed widely-adopted open-source packages including 
+                        <strong>nnetsauce</strong> (>1M downloads).
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Tutor</div>
+                            <div class="company">Université Paris Dauphine - PSL</div>
+                        </div>
+                        <div class="date">September 2023 - June 2024</div>
+                    </div>
+                    <div class="description">
+                        Supervised MSc students for their actuarial thesis projects, providing guidance on advanced statistical methods 
+                        and research methodologies. Student work on RVFLs received awards from the French Institute of Actuaries.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Lecturer</div>
+                            <div class="company">ICN Business School</div>
+                        </div>
+                        <div class="date">September 2023 - December 2023</div>
+                    </div>
+                    <div class="location">Greater Paris Metropolitan Region</div>
+                    <div class="description">
+                        Taught Data Analysis to MSc final year students, covering statistical methods, machine learning techniques, 
+                        and practical applications in business contexts.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Lecturer</div>
+                            <div class="company">Université Paris-Dauphine | Tunis</div>
+                        </div>
+                        <div class="date">September 2022 - September 2023</div>
+                    </div>
+                    <div class="location">Grand Tunis Metropolitan Area</div>
+                    <div class="description">
+                        Taught Numerical Simulation in Quantitative Finance and Insurance, covering Monte Carlo methods, 
+                        stochastic processes, and computational techniques.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Postdoctoral Researcher</div>
+                            <div class="company">Université Claude Bernard Lyon 1</div>
+                        </div>
+                        <div class="date">September 2018 - September 2019</div>
+                    </div>
+                    <div class="location">Lyon, Auvergne-Rhône-Alpes, France</div>
+                    <div class="description">
+                        Research on excess death rates associated with specific insured populations, 
+                        applying advanced statistical modeling and actuarial methods.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Actuary</div>
+                            <div class="company">Aviva</div>
+                        </div>
+                        <div class="date">July 2015 - July 2017</div>
+                    </div>
+                    <div class="location">Paris Area, France</div>
+                    <div class="description">
+                        Life Actuarial Economic Capital modeling and risk assessment.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Non-Life Reserving</div>
+                            <div class="company">Allianz</div>
+                        </div>
+                        <div class="date">April 2015 - July 2015</div>
+                    </div>
+                    <div class="description">
+                        Technical reserves calculation and validation for non-life insurance portfolios.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Actuarial Consultant</div>
+                            <div class="company">Optimind Winter</div>
+                        </div>
+                        <div class="date">September 2011 - February 2015</div>
+                    </div>
+                    <div class="description">
+                        Provided actuarial consulting services across various insurance and financial projects.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Actuarial Consultant</div>
+                            <div class="company">Premium Consulting</div>
+                        </div>
+                        <div class="date">January 2010 - September 2011</div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Risk Capital Modeling</div>
+                            <div class="company">Allianz Investment Management</div>
+                        </div>
+                        <div class="date">April 2008 - September 2009</div>
+                    </div>
+                    <div class="description">
+                        Developed risk capital models for investment management.
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Doctor of Philosophy (PhD) in Actuarial Science</div>
+                            <div class="company">Institut de Science Financière et d'Assurances (ISFA) - Université Lyon 1</div>
+                        </div>
+                        <div class="date">2015 - 2018</div>
+                    </div>
+                    <div class="description">
+                        <strong>Dissertation:</strong> Interest Rates Modeling for Insurance: Interpolation, Extrapolation and Forecasting
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Master of Science (MSc) in Actuarial Science</div>
+                            <div class="company">Institut de Science Financière et d'Assurances (ISFA)</div>
+                        </div>
+                        <div class="date">2008 - 2009</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Master of Science (MSc) - Research in Actuarial and Financial Sciences</div>
+                            <div class="company">École Centrale de Lyon</div>
+                        </div>
+                        <div class="date">September 2007 - September 2008</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="position">Master of Engineering (MEng) in Financial Engineering</div>
+                            <div class="company">École Nationale Supérieure d'Informatique et de Mathématiques Appliquées de Grenoble (ENSIMAG)</div>
+                        </div>
+                        <div class="date">2005 - 2008</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Publications & Research</h2>
+                <ul class="publications-list">
+                    <li>
+                        <strong>Multiple time series forecasting using quasi-randomized functional link neural networks</strong> - T Moudiki, F Planchet, A Cousin - Risks 6 (1), 22
+                        <span class="publication-year">2018</span>                        
+                    </li>
+                    <li>
+                        <strong>Sensibilité d’une rente viagère à l’extrapolation de la courbe de taux dans un contexte LTGA</strong> - T Moudiki - Bulletin Français d'actuariat 14 (27), 51-81
+                        <span class="publication-year">2014</span>                        
+                    </li>
+                    <li>
+                        <strong>Economic scenario generators</strong> - T Moudiki, F Planchet - Modelling in Life Insurance–A Management Perspective, 81-104
+                        <span class="publication-year">2016</span>                        
+                    </li>
+                    <li>
+                        <strong>Interest rates modeling for insurance: interpolation, extrapolation, and forecasting</strong> - T Moudiki - Université de Lyon
+                        <span class="publication-year">2018</span>                        
+                    </li>
+                    <li>
+                        <strong>Conformal Predictive Simulations for Univariate Time Series</strong> - T Moudiki - Proceedings of Machine Learning Research 266, 751-752
+                        <span class="publication-year">2025</span>
+                    </li>
+                    <li>
+                        <strong>Approximation du SRC Equity en Assurance vie dans un modèle interne</strong> - T Moudiki - Institut des actuaires
+                        <span class="publication-year">2011</span>
+                    </li>
+                    <li>
+                        Presented at <strong>International Symposium on Forecasting 2024</strong> on nnetsauce applications
+                        <span class="publication-year">2024</span>
+                    </li>
+                    <li>
+                        Presented carbon beta and Shapley values research at <strong>18th Financial Risks International Forum</strong> (Institut Louis Bachelier / Europlace Institute of Finance)
+                        <span class="publication-year">2025</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Professional Distinctions</h2>
+                
+                <div class="memberships-list">
+                    <div class="membership-item">
+                        <strong>Reviewer - NeurIPS Workshop 2025</strong><br>
+                        Learning from Time Series for Health - One of the top international conferences in machine learning
+                    </div>
+                    
+                    <div class="membership-item">
+                        <strong>Selected Reviewer - AISTATS 2026</strong><br>
+                        Leading ML conference - Selection demonstrates peer recognition in AI research
+                    </div>
+                    
+                    <div class="membership-item">
+                        <strong>French Institute of Actuaries</strong><br>
+                        Associate Member (2012-2017, 2021) - Admission requires excellence demonstrated through rigorous national examinations
+                    </div>
+                    
+                    <div class="membership-item">
+                        <strong>Société Française de Statistique (SFdS)</strong><br>
+                        Member (2019-2020)
+                    </div>
+                    
+                    <div class="membership-item">
+                        <strong>Microsoft for Startups Program</strong><br>
+                        Techtonique LLC selected in 2024 for innovation and distinction
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming & Tools</h4>
+                        <ul class="skill-list">
+                            <li>Python, R</li>
+                            <li>Machine Learning Libraries</li>
+                            <li>Statistical Computing</li>
+                            <li>Data Visualization</li>
+                            <li>Apache Spark</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Core Expertise</h4>
+                        <ul class="skill-list">
+                            <li>Machine Learning</li>
+                            <li>Time Series Forecasting</li>
+                            <li>Applied Mathematics</li>
+                            <li>Quantitative Finance</li>
+                            <li>Actuarial Science</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Specialized Areas</h4>
+                        <ul class="skill-list">
+                            <li>Financial Risk Modeling</li>
+                            <li>Climate Risk Assessment</li>
+                            <li>Neural Networks (RVFL)</li>
+                            <li>Numerical Optimization</li>
+                            <li>Computer Simulation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Licenses & Certifications</h2>
+                <ul class="skill-list">
+                    <li><strong>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</strong> - Coursera (October 2023) - Credential ID: LEE25YAV65P8</li>
+                    <li><strong>Neural Networks and Deep Learning</strong> - Coursera (October 2023) - Credential ID: Z4Q9HMCSYB9T</li>
+                    <li><strong>Structuring Machine Learning Projects</strong> - Coursera (October 2023) - Credential ID: CJKZV2G89N9F</li>
+                    <li><strong>Dev Bootcamp Wall Street NYC</strong> - Dev Bootcamp (October 2017) - Intensive coding bootcamp focused on full-stack web development and financial technology applications, providing hands-on training in modern software engineering practices for the finance industry.</li>
+                    <li><strong>DAT208x: Introduction to Python for Data Science</strong> - edX Verified Certificate (June 2017)</li>
+                    <li><strong>Introduction to Big Data with Apache Spark</strong> - edX Verified Certificate (June 2015)</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Online Presence & Resources</h2>
+                <div class="links">
+                    <a href="https://scholar.google.com/citations?user=y4ToSNIAAAAJ&hl=fr" class="link-btn" target="_blank">Google Scholar</a>
+                    <a href="https://github.com/thierrymoudiki" class="link-btn" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/thierry-moudiki/" class="link-btn" target="_blank">LinkedIn</a>
+                    <a href="https://www.researchgate.net/profile/Thierry-Moudiki" class="link-btn" target="_blank">ResearchGate</a>
+                    <a href="https://thierrymoudiki.github.io/" class="link-btn" target="_blank">Personal Website</a>
+                    <a href="https://www.techtonique.net/" class="link-btn" target="_blank">Techtonique</a>
+                    <a href="https://linktr.ee/tmoudiki" class="link-btn" target="_blank">Linktree</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+        
+        function downloadPDF() {
+            const element = document.getElementById('cv-content');
+            const opt = {
+                margin: 10,
+                filename: 'Thierry_Moudiki_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            // Hide the buttons before generating PDF
+            const btnGroup = document.querySelector('.button-group');
+            btnGroup.style.display = 'none';
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                btnGroup.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
