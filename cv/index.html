@@ -415,19 +415,166 @@
             border-color: #4da3ff;
         }
 
+        /* Page Break Control Styles */
+        .page-break-avoid {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        
+        .page-break-before {
+            page-break-before: always;
+            break-before: page;
+        }
+        
+        .page-break-after {
+            page-break-after: always;
+            break-after: page;
+        }
+        
+        .keep-together {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
         @media print {
             body {
-                background: white;
-                padding: 0;
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                font-size: 12pt !important;
+                color: black !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
-
+            
             .container {
-                box-shadow: none;
-                max-width: 100%;
+                box-shadow: none !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white !important;
             }
-
+            
+            .header {
+                padding: 30px 20px !important;
+                margin-bottom: 20px !important;
+                background: #f8f8f8 !important;
+                color: black !important;
+                border-bottom: 3px solid #000 !important;
+            }
+            
+            .content {
+                padding: 0 20px !important;
+            }
+            
             .button-group {
-                display: none;
+                display: none !important;
+            }
+            
+            /* Page break control for print */
+            .section {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+                margin-bottom: 30px !important;
+            }
+            
+            .experience-item, .education-item, .skill-category, .membership-item {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            
+            .publications-list li {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            
+            /* Adjust font sizes for print */
+            .header h1 {
+                font-size: 24pt !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .section-title {
+                font-size: 14pt !important;
+                margin-bottom: 15px !important;
+                color: black !important;
+                border-bottom-color: black !important;
+            }
+            
+            .position, .company, .description, .summary {
+                font-size: 11pt !important;
+                color: black !important;
+            }
+            
+            .date, .location {
+                font-size: 10pt !important;
+                color: #555 !important;
+            }
+            
+            /* Force black text for all elements in print */
+            body, .position, .company, .description, .summary,
+            .skill-list li, .publications-list li, .membership-item,
+            .skill-category h4 {
+                color: black !important;
+            }
+            
+            /* Fix background colors for print */
+            .skill-category, .membership-item {
+                background: #f9f9f9 !important;
+                border-color: #ddd !important;
+                border-left-color: #000 !important;
+            }
+            
+            .publication-year {
+                background: #f0f0f0 !important;
+                color: #555 !important;
+                border: 1px solid #ddd !important;
+            }
+            
+            /* Links styling for print */
+            .links {
+                display: block !important;
+                margin-top: 15px !important;
+            }
+            
+            .link-btn {
+                display: inline-block !important;
+                padding: 5px 10px !important;
+                margin: 0 8px 8px 0 !important;
+                border: 1px solid #ccc !important;
+                color: black !important;
+                text-decoration: none !important;
+                background: white !important;
+                page-break-inside: avoid !important;
+            }
+            
+            /* Remove any dark mode styling */
+            body.dark-mode .container,
+            body.dark-mode .header,
+            body.dark-mode .section-title,
+            body.dark-mode .position,
+            body.dark-mode .description,
+            body.dark-mode .skill-category,
+            body.dark-mode .membership-item {
+                background: white !important;
+                color: black !important;
+                border-color: #000 !important;
+            }
+            
+            /* Ensure links are visible in print */
+            a {
+                color: #0066cc !important;
+                text-decoration: underline !important;
+            }
+            
+            /* Fix the specific font issue for "Tutor" */
+            .experience-item:nth-child(2) .position {
+                font-family: 'Times New Roman', Times, serif !important;
+            }
+            
+            /* Add bottom margin to last item on page */
+            .section:last-child {
+                margin-bottom: 20px !important;
             }
         }
 
@@ -467,13 +614,12 @@
                 <div class="contact-item">linkedin.com/in/thierry-moudiki</div>
             </div>
             <div class="button-group">
-                <button class="btn" onclick="downloadPDF()">Download PDF</button>
                 <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
             </div>
         </div>
 
         <div class="content">
-            <section class="section">
+            <section class="section keep-together">
                 <h2 class="section-title">Summary</h2>
                 <p class="summary">
                     Senior Data Scientist, Actuary, and Researcher specializing in machine learning, time series
@@ -492,7 +638,7 @@
             <section class="section">
                 <h2 class="section-title">Professional Experience</h2>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Founder & Analytics Professional</div>
@@ -511,7 +657,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Tutor</div>
@@ -527,7 +673,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Lecturer</div>
@@ -543,7 +689,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Lecturer</div>
@@ -558,7 +704,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Postdoctoral Researcher</div>
@@ -573,7 +719,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Actuary</div>
@@ -587,7 +733,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Non-Life Reserving</div>
@@ -600,7 +746,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Actuarial Consultant</div>
@@ -613,7 +759,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Actuarial Consultant</div>
@@ -623,7 +769,7 @@
                     </div>
                 </div>
 
-                <div class="experience-item">
+                <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Risk Capital Modeling</div>
@@ -640,7 +786,7 @@
             <section class="section">
                 <h2 class="section-title">Education</h2>
 
-                <div class="education-item">
+                <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Doctor of Philosophy (PhD) in Actuarial Science</div>
@@ -655,7 +801,7 @@
                     </div>
                 </div>
 
-                <div class="education-item">
+                <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Master of Science (MSc) in Actuarial Science</div>
@@ -665,7 +811,7 @@
                     </div>
                 </div>
 
-                <div class="education-item">
+                <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Master of Science (MSc) - Research in Actuarial and Financial Sciences
@@ -676,7 +822,7 @@
                     </div>
                 </div>
 
-                <div class="education-item">
+                <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
                             <div class="position">Master of Engineering (MEng) in Financial Engineering</div>
@@ -693,42 +839,42 @@
             <section class="section">
                 <h2 class="section-title">Key Publications & Research</h2>
                 <ul class="publications-list">
-                    <li>
+                    <li class="page-break-avoid">
                         <strong>Multiple time series forecasting using quasi-randomized functional link neural
                             networks</strong> - T Moudiki, F Planchet, A Cousin - Risks 6 (1), 22
                         <span class="publication-year">2018</span>
                     </li>
-                    <li>
+                    <li class="page-break-avoid">
                         <strong>Sensibilité d’une rente viagère à l’extrapolation de la courbe de taux dans un contexte
                             LTGA</strong> - T Moudiki - Bulletin Français d'actuariat 14 (27), 51-81
                         <span class="publication-year">2014</span>
                     </li>
-                    <li>
+                    <li class="page-break-avoid">
                         <strong>Economic scenario generators</strong> - T Moudiki, F Planchet - Modelling in Life
                         Insurance–A Management Perspective, 81-104
                         <span class="publication-year">2016</span>
                     </li>
-                    <li>
+                    <li class="page-break-avoid">
                         <strong>Interest rates modeling for insurance: interpolation, extrapolation, and
                             forecasting</strong> - T Moudiki - Université de Lyon
                         <span class="publication-year">2018</span>
                     </li>
-                    <li>
+                    <li class="page-break-avoid">
                         <strong>Conformal Predictive Simulations for Univariate Time Series</strong> - T Moudiki -
                         Proceedings of Machine Learning Research 266, 751-752
                         <span class="publication-year">2025</span>
                     </li>
-                    <li>
+                    <li class="page-break-avoid">
                         <strong>Approximation du SRC Equity en Assurance vie dans un modèle interne</strong> - T Moudiki
                         - Institut des actuaires
                         <span class="publication-year">2011</span>
                     </li>
-                    <li>
+                    <li class="page-break-avoid">
                         Presented at <strong>International Symposium on Forecasting 2024</strong> on nnetsauce
                         applications
                         <span class="publication-year">2024</span>
                     </li>
-                    <li>
+                    <li class="page-break-avoid">
                         Presented carbon beta and Shapley values research at <strong>18th Financial Risks International
                             Forum</strong> (Institut Louis Bachelier / Europlace Institute of Finance)
                         <span class="publication-year">2025</span>
@@ -740,31 +886,31 @@
                 <h2 class="section-title">Professional Distinctions</h2>
 
                 <div class="memberships-list">
-                    <div class="membership-item">
+                    <div class="membership-item page-break-avoid">
                         <strong>Reviewer - <a href="https://neurips.cc/">NeurIPS Workshop 2025</a></strong><br>
                         Learning from Time Series for Health - One of the top international conferences in machine
                         learning
                     </div>
 
-                    <div class="membership-item">
+                    <div class="membership-item page-break-avoid">
                         <strong>Selected Reviewer - <a href="https://virtual.aistats.org/">AISTATS 2026</a></strong><br>
                         Leading ML conference - Selection demonstrates peer recognition in AI research
                     </div>
 
-                    <div class="membership-item">
+                    <div class="membership-item page-break-avoid">
                         <strong>Associate Member - <a href="https://www.institutdesactuaires.com/">French Institute of
                                 Actuaries</a></strong><br>
                         Associate Member (2012-2017, 2021) - Admission requires excellence demonstrated through rigorous
                         national examinations
                     </div>
 
-                    <div class="membership-item">
+                    <div class="membership-item page-break-avoid">
                         <strong>Member - <a href="https://www.sfds.fr/">Société Française de Statistique
                                 (SFdS)</a></strong><br>
                         Member (2019-2020)
                     </div>
 
-                    <div class="membership-item">
+                    <div class="membership-item page-break-avoid">
                         <strong>Selected - <a href="https://www.microsoft.com/en-us/startups">Microsoft for Startups
                                 program</a></strong><br>
                         Techtonique LLC selected in 2024 for innovation and distinction
@@ -775,7 +921,7 @@
             <section class="section">
                 <h2 class="section-title">Technical Skills & Expertise</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
+                    <div class="skill-category page-break-avoid">
                         <h4>Programming & Tools</h4>
                         <ul class="skill-list">
                             <li>Python, R</li>
@@ -786,7 +932,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-category page-break-avoid">
                         <h4>Core Expertise</h4>
                         <ul class="skill-list">
                             <li>Machine Learning</li>
@@ -797,7 +943,7 @@
                         </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-category page-break-avoid">
                         <h4>Specialized Areas</h4>
                         <ul class="skill-list">
                             <li>Financial Risk Modeling</li>
@@ -813,24 +959,24 @@
             <section class="section">
                 <h2 class="section-title">Licenses & Certifications</h2>
                 <ul class="skill-list">
-                    <li><strong>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and
+                    <li class="page-break-avoid"><strong>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and
                             Optimization</strong> - <a href="https://www.coursera.org/">Coursera</a> (October 2023) -
                         Credential ID: LEE25YAV65P8</li>
-                    <li><strong>Neural Networks and Deep Learning</strong> - <a
+                    <li class="page-break-avoid"><strong>Neural Networks and Deep Learning</strong> - <a
                             href="https://www.coursera.org/">Coursera</a> (October 2023) - Credential ID:
                         Z4Q9HMCSYB9T</li>
-                    <li><strong>Structuring Machine Learning Projects</strong> - <a
+                    <li class="page-break-avoid"><strong>Structuring Machine Learning Projects</strong> - <a
                             href="https://www.coursera.org/">Coursera</a> (October 2023) - Credential
                         ID: CJKZV2G89N9F</li>
-                    <li><strong>Dev Bootcamp Wall Street NYC</strong> - <a
+                    <li class="page-break-avoid"><strong>Dev Bootcamp Wall Street NYC</strong> - <a
                             href="https://en.wikipedia.org/wiki/Dev_Bootcamp">Dev Bootcamp</a> (October 2017) -
                         Intensive coding
                         bootcamp focused on full-stack web development and financial technology applications, providing
                         hands-on training in modern software engineering practices for the finance industry.</li>
-                    <li><strong>DAT208x: Introduction to Python for Data Science</strong> - <a
+                    <li class="page-break-avoid"><strong>DAT208x: Introduction to Python for Data Science</strong> - <a
                             href="https://www.edx.org/">edX</a> Verified Certificate
                         (June 2017)</li>
-                    <li><strong>Introduction to Big Data with Apache Spark</strong> - <a
+                    <li class="page-break-avoid"><strong>Introduction to Big Data with Apache Spark</strong> - <a
                             href="https://www.edx.org/">edX</a> Verified Certificate (June
                         2015)</li>
                 </ul>
@@ -872,22 +1018,88 @@
 
         function downloadPDF() {
             const element = document.getElementById('cv-content');
+            
+            // Store current dark mode state and force light mode for PDF generation
+            const wasDarkMode = document.body.classList.contains('dark-mode');
+            if (wasDarkMode) {
+                document.body.classList.remove('dark-mode');
+            }
+            
             const opt = {
-                margin: 10,
+                margin: [15, 15, 15, 15], // Top, Right, Bottom, Left in mm
                 filename: 'Thierry_Moudiki_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                image: { 
+                    type: 'jpeg', 
+                    quality: 1.0,
+                    compression: 'NONE'
+                },
+                html2canvas: { 
+                    scale: 2,
+                    useCORS: true,
+                    letterRendering: true,
+                    logging: false,
+                    backgroundColor: '#FFFFFF',
+                    windowWidth: 900, // Match container width
+                    allowTaint: true
+                },
+                jsPDF: { 
+                    unit: 'mm', 
+                    format: 'a4', 
+                    orientation: 'portrait',
+                    compress: false,
+                    hotfixes: ["px_scaling"]
+                },
+                pagebreak: {
+                    mode: ['css', 'legacy'],
+                    before: ['.section:nth-child(4)'], // Before Education section
+                    after: ['.section:nth-child(3)'], // After Professional Experience
+                    avoid: ['.page-break-avoid', '.keep-together', '.experience-item', '.education-item']
+                }
             };
 
             // Hide the buttons before generating PDF
             const btnGroup = document.querySelector('.button-group');
-            btnGroup.style.display = 'none';
+            if (btnGroup) {
+                btnGroup.style.display = 'none';
+            }
+            
+            // Add a temporary class for PDF generation
+            document.body.classList.add('generating-pdf');
 
             html2pdf().set(opt).from(element).save().then(() => {
-                btnGroup.style.display = 'flex';
+                // Restore button visibility
+                if (btnGroup) {
+                    btnGroup.style.display = 'flex';
+                }
+                
+                // Remove temporary class
+                document.body.classList.remove('generating-pdf');
+                
+                // Restore dark mode if it was enabled
+                if (wasDarkMode) {
+                    document.body.classList.add('dark-mode');
+                }
+            }).catch(err => {
+                console.error('PDF generation error:', err);
+                // Restore button visibility on error
+                if (btnGroup) {
+                    btnGroup.style.display = 'flex';
+                }
+                document.body.classList.remove('generating-pdf');
+                if (wasDarkMode) {
+                    document.body.classList.add('dark-mode');
+                }
             });
         }
+        
+        // Add a print-specific class when printing
+        window.addEventListener('beforeprint', () => {
+            document.body.classList.add('printing');
+        });
+        
+        window.addEventListener('afterprint', () => {
+            document.body.classList.remove('printing');
+        });
     </script>
 </body>
 
