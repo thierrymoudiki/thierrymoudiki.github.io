@@ -3,7 +3,7 @@ layout: post
 title: "Counterfactual Scenario Analysis with ahead::ridge2f"
 description: "Counterfactual Scenario Analysis with ahead::ridge2f"
 date: 2025-12-11
-categories: [R, Python]
+categories: R
 comments: true
 ---
 
