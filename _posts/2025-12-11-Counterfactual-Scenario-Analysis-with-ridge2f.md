@@ -440,8 +440,11 @@ ggplot(interval_data, aes(x = Time)) +
        subtitle = "Black points show actual values",
        y = "Insurance Quotes", x = "Time")
 ```
-    
+
+![image-title-here]({{base}}/images/2025-12-11/2025-12-11-Counterfactual-Scenario-Analysis-with-ridge2f_4_1.png){:class="img-responsive"}
+
 ![image-title-here]({{base}}/images/2025-12-11/2025-12-11-Counterfactual-Scenario-Analysis-with-ridge2f_4_0.png){:class="img-responsive"}
+
 
 
 ```R
