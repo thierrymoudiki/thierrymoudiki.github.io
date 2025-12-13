@@ -7,6 +7,11 @@ categories: [R, Python]
 comments: true
 ---
 
+In this post, we will explore the universal approximation property of Random Fourier Features (RFF) and demonstrate how it can lead to overfitting. 
+
+The universal approximation property states that a sufficiently complex function can approximate any continuous function to any desired degree of accuracy. 
+
+# Python code
 
 ```python
 import numpy as np
@@ -184,16 +189,7 @@ plt.show()
 ![image-title-here]({{base}}/images/2025-12-13/2025-12-13-Overfitting-Random-Fourier-Features_0_2.png){:class="img-responsive"}
     
 
-
-
-```python
-
-```
-
-
-```python
-
-```
+# R code
 
 
 ```python
