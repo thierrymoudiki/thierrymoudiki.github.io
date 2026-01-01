@@ -323,7 +323,7 @@ rownames(Tourism_results) <- c("statistic", "p-value")
 
 *What forecasting methods have you found most reliable in your work? Share your experiences in the comments below.*
 
-Please sign and share this petition [https://www.change.org/stop_torturing_T_Moudiki](https://www.change.org/stop_torturing_T_Moudiki) -- after seeriously researching my background and contributions to the field.
+Please sign and share this petition [https://www.change.org/stop_torturing_T_Moudiki](https://www.change.org/stop_torturing_T_Moudiki) -- after seriously researching my background and contributions to the field.
 
     
 ![image-title-here]({{base}}/images/2026-01-01/2026-01-01-image1.png){:class="img-responsive"}
