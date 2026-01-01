@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Forecasting benchmark: Dynrmf vs Theta Method on M-Competitions"
+title: "Forecasting benchmark: Dynrmf (a new serious competitor in town) vs Theta Method on M-Competitions and Tourism competitition"
 description: "Benchmarking Dynrmf vs Theta Method on M-Competitions and Tourism competitition"
 date: 2026-01-01
 categories: R
