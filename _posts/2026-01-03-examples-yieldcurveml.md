@@ -7,6 +7,9 @@ categories: [R, Python]
 comments: true
 ---
 
+The preprint is [https://www.researchgate.net/publication/392507059_Beyond_Nelson-Siegel_and_splines_A_model-_agnostic_Machine_Learning_framework_for_discount_curve_calibration_interpolation_and_extrapolation](https://www.researchgate.net/publication/392507059_Beyond_Nelson-Siegel_and_splines_A_model-_agnostic_Machine_Learning_framework_for_discount_curve_calibration_interpolation_and_extrapolation). 
+
+THe preprint uses R; R code to be released soon. 
 
 ```python
 !pip install yieldcurveml
