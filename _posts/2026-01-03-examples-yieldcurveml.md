@@ -1715,3 +1715,5 @@ if __name__ == "__main__":
       21.5 22.  22.5 23.  23.5 24.  24.5 25.  25.5 26.  26.5 27.  27.5 28.
       28.5 29.  29.5 30. ]]
 
+
+Please sign and share this petition [https://www.change.org/stop_torturing_T_Moudiki](https://www.change.org/stop_torturing_T_Moudiki) -- after seriously researching my background and contributions to the field.
