@@ -7,19 +7,27 @@ categories: [R, Forecasting]
 comments: true
 ---
 
-In quantitative finance, pricing derivatives often requires working under a **risk-neutral measure** (Q) rather than the real-world **physical measure** (P). While the Girsanov theorem provides a theoretical framework for this change of measure, practical implementation can be challenging—especially for complex models like stochastic volatility with jumps.
+In quantitative finance, pricing derivatives often requires working under a 
+**risk-neutral measure** (Q) rather than the real-world **physical measure** (P). 
+While the Girsanov theorem provides a theoretical framework for this change of 
+measure, practical implementation can be challenging—especially for complex 
+models like stochastic volatility with jumps (SVJD).
 
-This blog post demonstrates a **semi-parametric approach** that bridges classical time series modeling with risk-neutral pricing. We'll show how to:
+This blog post demonstrates a **semi-parametric approach** that bridges classical 
+time series modeling with risk-neutral pricing. We'll show how to:
 
-1. **Simulate** stock price paths under three different models (GBM, SVJD, Heston) using the physical measure
+1. **Simulate** stock price paths under three different models (GBM, SVJD, Heston) 
+using the physical measure
 2. **Extract** the risk premium using ARIMA modeling
 3. **Transform** physical paths to risk-neutral paths through residual resampling
 4. **Price** European options under the risk-neutral measure
 
 ## Models Compared
 
-- **Geometric Brownian Motion (GBM)**: The classic Black-Scholes model with constant volatility
-- **Stochastic Volatility Jump Diffusion (SVJD)**: Incorporates both stochastic volatility and price jumps
+- **Geometric Brownian Motion (GBM)**: The classic Black-Scholes model with 
+constant volatility
+- **Stochastic Volatility Jump Diffusion (SVJD)**: Incorporates both stochastic
+volatility and price jumps
 - **Heston Model**: Stochastic volatility without jumps (a special case of SVJD)
 
 ## Methodological Approach
@@ -27,15 +35,20 @@ This blog post demonstrates a **semi-parametric approach** that bridges classica
 Our semi-parametric method involves:
 
 1. **Physical Simulation**: Generate paths under the real-world measure with expected return μ
-2. **Risk Premium Extraction**: Fit ARIMA models to discounted price increments to capture serial dependence
-3. **Residual Resampling**: Use Gaussian density estimation to resample centered ARIMA residuals
-4. **Risk-Neutral Path Generation**: Combine fitted ARIMA models with resampled residuals to create martingale paths
+2. **Risk Premium Extraction**: Fit ARIMA models to discounted price increments to capture 
+serial dependence
+3. **Residual Resampling**: Use Gaussian density estimation to resample centered ARIMA 
+residuals
+4. **Risk-Neutral Path Generation**: Combine fitted ARIMA models with resampled residuals 
+to create martingale paths
 5. **Option Pricing**: Compute option prices as discounted expected payoffs under Q
 
 ## R Packages Used
 
-- **[esgtoolkit](https://github.com/Techtonique/esgtoolkit)**: For financial simulations and risk-neutral transformations
-- **[ahead](https://github.com/Techtonique/ahead)**: For time series forecasting and residual resampling
+- **[esgtoolkit](https://github.com/Techtonique/esgtoolkit)**: For financial simulations and 
+risk-neutral transformations
+- **[ahead](https://github.com/Techtonique/ahead)**: For time series forecasting and residual 
+resampling
 - **forecast** (`auto.arima`): For automatic ARIMA model selection
 
 The complete reproducible code is presented below, organized in logical sections from simulation to option pricing.
@@ -580,3 +593,5 @@ The preprint of the associated research paper can be found here:
 [https://www.researchgate.net/publication/398427354_An_ARIMA-Based_Semi-Parametric_Approach_to_Market_Price_of_Risk_estimation_and_Risk-Neutral_Pricing](https://www.researchgate.net/publication/398427354_An_ARIMA-Based_Semi-Parametric_Approach_to_Market_Price_of_Risk_estimation_and_Risk-Neutral_Pricing)
 
 ![image-title-here]({{base}}/images/2025-12-07/2025-12-07-image1.png){:class="img-responsive"}
+
+PS: It's worth mentioning that this approach can produce negative prices
