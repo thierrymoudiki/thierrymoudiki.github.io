@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GPopt for Machine Learning (hyperparameters' tuning)
+title: "GPopt for Machine Learning (hyperparameters' tuning)"
 description: "Finding the 'best' hyperparameters for machine learning models using Bayesian Optimization"
 date: 2026-01-21
 categories: Python
