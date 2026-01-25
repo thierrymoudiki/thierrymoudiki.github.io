@@ -10,6 +10,8 @@ comments: true
 
 In this post, we will explore the use generalization gap modeling for hyperparameter optimization of a LightGBM model. A surrogate model (here a kernel ridge regression model) is fit on the gap between a model's cross-validation error and test set error. Our surrogate model could then be used to predict the generalization gap for new hyperparameter combinations, and obtain various insights on the LightGBM model's ability to generalize on unseen data.
 
+More details can be found in this document [https://www.researchgate.net/publication/398667338_Beyond_Performance_Hyperparameter_Optimization_via_Direct_Generalization_Gap_Modeling](https://www.researchgate.net/publication/398667338_Beyond_Performance_Hyperparameter_Optimization_via_Direct_Generalization_Gap_Modeling).
+
 
 ```R
 install.packages("pak")
