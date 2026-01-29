@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Overfitting and scaling tests on nnetsauce.CustomRegressor"
-description: "Overfitting and scaling tests on nnetsauce.CustomRegressor"
+title: "Overfitting and scaling (on GPU T4) tests on nnetsauce.CustomRegressor"
+description: "Overfitting and scaling (on GPU T4) tests on nnetsauce.CustomRegressor"
 date: 2026-01-29
 categories: Python
 comments: true
 ---
 
-In this post, we will test the overfitting and scaling properties of nnetsauce.CustomRegressor. Tests were made on Colab GPU T4
+In this post, we will test the overfitting (if it can overfit and when it stops; if a it works well with a reasonable number of hidden features) and scaling properties of nnetsauce.CustomRegressor. Scaling tests were made on Colab with GPU T4. 
 
 **Installing packages**
 
