@@ -118,12 +118,6 @@ plot(ahead::contextridge2f(fdeaths, h = 20, lags = 15,
 attention_type = "exponential"))
 ```
 
-### Results
-
-The plot shows:
-- **Black line**: Historical AirPassengers data (1949-1960)
-- **Blue line**: 15-month ahead forecasts using attention-based context vectors
-
 ## What would make this approach effective?
 
 ### 1. **Adaptive Weighting**
