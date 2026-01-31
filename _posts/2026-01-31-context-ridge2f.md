@@ -120,8 +120,6 @@ attention_type = "exponential"))
 
 ### Results
 
-![Forecasts from ridge2](image.png)
-
 The plot shows:
 - **Black line**: Historical AirPassengers data (1949-1960)
 - **Blue line**: 15-month ahead forecasts using attention-based context vectors
