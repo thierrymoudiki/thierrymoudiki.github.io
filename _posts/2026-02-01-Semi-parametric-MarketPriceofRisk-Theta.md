@@ -7,7 +7,7 @@ categories: R
 comments: true
 ---
 
-Following [https://thierrymoudiki.github.io/blog/2025/12/07/r/forecasting/ARIMA-Pricing], I present how to use time series models as market price of risk in option pricing. `auto.arima` worked well because it enforces stationarity of residuals. This post shows that, if the chosen model can obtain stationarity of residuals, then it can be used as market price of risk.
+Following [https://thierrymoudiki.github.io/blog/2025/12/07/r/forecasting/ARIMA-Pricing](https://thierrymoudiki.github.io/blog/2025/12/07/r/forecasting/ARIMA-Pricing), I present how to use time series models as market price of risk in option pricing. `auto.arima` works well because it enforces stationarity of residuals. This post shows that, if the chosen time series forecasting model can obtain stationarity of residuals, then it can be used as market price of risk.
 
 
 
