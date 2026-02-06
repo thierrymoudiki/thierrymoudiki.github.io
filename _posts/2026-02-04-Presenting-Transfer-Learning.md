@@ -11,7 +11,7 @@ At the "Risk 2026" conference organized by the R consortium, I will be presentin
 
 [https://rconsortium.github.io/Risk_website/Abstracts.html#lightweight-transfer-learning-for-financial-forecasting-using-quasi-randomized-networks](https://rconsortium.github.io/Risk_website/Abstracts.html#lightweight-transfer-learning-for-financial-forecasting-using-quasi-randomized-networks)
 
-My previous posts on the same subjet were: 
+My previous posts on the same subject were: 
 
 - [https://thierrymoudiki.github.io/blog/2025/09/08/r/python/pretraining-ridge2f](https://thierrymoudiki.github.io/blog/2025/09/08/r/python/pretraining-ridge2f)
 - [https://thierrymoudiki.github.io/blog/2025/09/09/r/python/pretraining-ridge2f-part2](https://thierrymoudiki.github.io/blog/2025/09/09/r/python/pretraining-ridge2f-part2)
