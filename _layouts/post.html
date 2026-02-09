@@ -14,233 +14,251 @@ comments: true
 <link rel="stylesheet" href="{{base}}/css/sharing-buttons.css">
 
 <div style="width: 100%; overflow: hidden;">
-    <div style="width: 100px; float: left;"> <a href="{{base}}/blog"><img src="{{base}}/images/t-logo.png" alt="logo" /></a></div>
-    <div style="margin-left: 120px;"> <h2>{{page.title}}</h2> </div>
+  <div style="width: 100px; float: left;"> <a href="{{base}}/blog"><img src="{{base}}/images/t-logo.png"
+        alt="logo" /></a></div>
+  <div style="margin-left: 120px;">
+    <h2>{{page.title}}</h2>
+  </div>
 </div>
 
 <hr>
 
+<!-- Post's content -->
+<div class="post">
+
+  <p class="meta">{{ page.date | date_to_string }} | <a href="{{base}}/feed.xml">RSS</a> | <a
+      href="{{base}}/blog/index.html#list-posts">Back to list of posts</a> | <a onclick="myFunction()" href="#">Toggle
+      dark mode</a> | <a href="https://www.malt.fr/profile/thierrymoudiki">Hire me on Malt</a> | <a
+      href="https://fr.fiverr.com/t_moudiki?public_mode=true">Hire me on Fiverr</a> | <a
+      href="https://www.upwork.com/freelancers/~01e0d61359aed1a15d?mp_source=share">Hire me on Upwork</a>
+
+  <p style="color: darkgreen;">
+    Today, <b>give a try to <a href="https://www.techtonique.net/">Techtonique web app</a></b>, a tool designed
+    to help you make informed, data-driven decisions using Mathematics, Statistics, Machine Learning,
+    and Data Visualization.
+
+    Here is a tutorial with audio, video, code, and slides: <a
+      href="https://moudiki2.gumroad.com/l/nrhgb">https://moudiki2.gumroad.com/l/nrhgb</a>.
+
+    100 API requests are now (and forever) offered to every user every month, no matter the pricing tier.
+  </p>
+
+  <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
+  <div class="col-md-12">
+
+    <style>
+      .libutton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 7px;
+        text-align: center;
+        outline: none;
+        text-decoration: none !important;
+        color: #ffffff !important;
+        width: 200px;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #0A66C2;
+        font-family: "SF Pro Text", Helvetica, sans-serif;
+      }
+    </style>
+
+    <a class="libutton"
+      href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=thierry-moudiki"
+      target="_blank">Follow me on LinkedIn</a>
+
+    <br>
+
+    <iframe src="https://github.com/sponsors/Techtonique/button" title="Sponsor Techtonique" height="32" width="114"
+      style="border: 0; border-radius: 6px;"></iframe>
+
+    <br>
+    <br>
+
+    <span>
+      <em id="pv" class="pageviews">
+        <i class="fa-duotone fa-circle-dot"></i>
+        <span id="view-count">Loading views...</span>
+      </em>
+    </span>
+
+    <br>
+
+    <a id="increase-mailto" href="mailto:contact@example.com" class="btn-social btn-digg mailto"
+      title="Share via Email"><i class="fa fa-envelope"></i></a>
+
+    <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{site.url}}{{page.url}}"
+      target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>
+
+    <a id="increase-twitter" href="http://twitter.com/share?url={{site.url}}{{page.url}}&text=Description"
+      target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>
+
+    <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank"
+      class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>
+
+  </div>
+  <!-- add backend logic -->
+  <!-- add backend logic -->
+  <!-- add backend logic -->
+  <div style="width: 100%; overflow: hidden;">
+    <div style="width: 600px; float: left;">
+      <div id="content-mailto" style="display: none;">1</div>
+      <div id="content-linkedin" style="display: none;">1</div>
+      <div id="content-twitter" style="display: none;">1</div>
+      <div id="content-facebook" style="display: none;">1</div>
+    </div>
+    <div style="margin-left: 620px;">
+    </div>
+  </div>
+
+  <hr>
+
   <!-- Post's content -->
-  <div class="post">	
+  <div class="post-content">
 
-    <p class="meta">{{ page.date | date_to_string }} | <a href="{{base}}/feed.xml">RSS</a> | <a href="{{base}}/blog/index.html#list-posts">Back to list of posts</a> | <a onclick="myFunction()" href="#">Toggle dark mode</a> | <a href="https://www.malt.fr/profile/thierrymoudiki">Hire me on Malt</a> | <a href="https://fr.fiverr.com/t_moudiki?public_mode=true">Hire me on Fiverr</a> |  <a href="https://www.upwork.com/freelancers/~01e0d61359aed1a15d?mp_source=share">Hire me on Upwork</a>
+    {{content}}
 
-    <p style="color: darkgreen;">
-      Today, <b>give a try to <a href="https://www.techtonique.net/">Techtonique web app</a></b>, a tool designed 
-      to help you make informed, data-driven decisions using Mathematics, Statistics, Machine Learning, 
-      and Data Visualization. 
-
-      Here is a tutorial with audio, video, code, and slides: <a href="https://moudiki2.gumroad.com/l/nrhgb">https://moudiki2.gumroad.com/l/nrhgb</a>. 
-
-      100 API requests are now (and forever) offered to every user every month, no matter the pricing tier. 
-    </p>
-    
-      <!-- From https://codepen.io/codename065/pen/doyRNw/?editors=1111-->
-      <div class="col-md-12"> 
-
-      <style>
-        .libutton {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding: 7px;
-          text-align: center;
-          outline: none;
-          text-decoration: none !important;
-          color: #ffffff !important;
-          width: 200px;
-          height: 32px;
-          border-radius: 16px;
-          background-color: #0A66C2;
-          font-family: "SF Pro Text", Helvetica, sans-serif;
-        }
-      </style>        
-        
-        <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=thierry-moudiki" target="_blank">Follow me on LinkedIn</a>      
-
-        <br>
-
-        <iframe src="https://github.com/sponsors/Techtonique/button" title="Sponsor Techtonique" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>                      
-
-        <br>
-        <br>
-
-        <span>
-          <em id="pv" class="pageviews">
-            <i class="fa-duotone fa-circle-dot"></i>
-            <span id="view-count">Loading views...</span>
-          </em>
-        </span>                
-
-        <br>
-
-        <a id="increase-mailto" href="mailto:contact@example.com" class="btn-social btn-digg mailto" title="Share via Email"><i class="fa fa-envelope"></i></a>
-
-        <a id="increase-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{site.url}}{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-linkedin" title="Share on LinkedIn"></i></a>      
-
-        <a id="increase-twitter" href="http://twitter.com/share?url={{site.url}}{{page.url}}&text=Description" target="_blank" class="btn-social btn-digg"><i class="fa fa-twitter" title="Share on Twitter"></i></a>         
-
-        <a id="increase-facebook" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank" class="btn-social btn-digg"><i class="fa fa-facebook" title="Share on Facebook"></i></a>                      
-        
-      </div>
-      <!-- add backend logic -->
-      <!-- add backend logic -->
-      <!-- add backend logic -->
-      <div style="width: 100%; overflow: hidden;">        
-        <div style="width: 600px; float: left;"> 
-          <div id="content-mailto" style="display: none;">1</div>
-          <div id="content-linkedin" style="display: none;">1</div>
-          <div id="content-twitter" style="display: none;">1</div>
-          <div id="content-facebook" style="display: none;">1</div>
-        </div>
-        <div style="margin-left: 620px;">           
-        </div>        
-      </div>      
-
-    <hr>
-  
-      <!-- Post's content -->
-      <div class="post-content">
-      
-        {{content}}  
-        
-        <!-- Open to work -->
-<!--         <div>
+    <!-- Open to work -->
+    <!--         <div>
           <p>
             <b>Open to work</b> 
           </p>
           
           <img src="{{site.url}}//images/looking_for_a_job.gif" alt="job search" width="100%">
         </div>
- -->        
+ -->
 
-        <!-- Comments -->        
-                
-        {% include talkyard-comments.html %}
-        
-      </div>
-      
-      <div class="cc-license">
-        {% assign author = "T. Moudiki" %}
-        {% assign authorname = "tmoudiki" %}
-        {% assign title = page.title %}
-        {% assign date = page.date | date: "%Y-%m-%d" %}
-        {% assign otherdate = page.date | date: "%Y%m%d" %}
-        {% assign post_url = page.url %}
-        {% assign categories = page.categories | join: "/" %}
-        {% assign bibtex_key = authorname | append: otherdate %}
+    <!-- Comments -->
 
-        <strong>Citation</strong>
-        <p>For attribution, please cite this work as:</p>
-        <p><strong>{{ author }} ({{ date }}). {{ title }}. Retrieved from <a href="{{ site.url }}{{ post_url }}">{{ site.url }}{{ post_url }}</a></p>
+    {% include talkyard-comments.html %}
 
-        <strong>BibTeX citation (remove empty spaces)</strong>
-        <pre>
+  </div>
+
+  <div class="cc-license">
+    {% assign author = "T. Moudiki" %}
+    {% assign authorname = "tmoudiki" %}
+    {% assign title = page.title %}
+    {% assign date = page.date | date: "%Y-%m-%d" %}
+    {% assign otherdate = page.date | date: "%Y%m%d" %}
+    {% assign post_url = page.url %}
+    {% assign categories = page.categories | join: "/" %}
+    {% assign bibtex_key = authorname | append: otherdate %}
+
+    <strong>Citation</strong>
+    <p>For attribution, please cite this work as:</p>
+    <p><strong>{{ author }} ({{ date }}). {{ title }}. Retrieved from <a href="{{ site.url }}{{ post_url }}">{{ site.url
+          }}{{ post_url }}</a></p>
+
+    <strong>BibTeX citation (remove empty spaces)</strong>
+    <pre>
         @misc{ {{bibtex_key}},
           author = { {{author}} },
           title = { {{title}} },
           url = { {{site.url}}{{ post_url}} },
           year = { {{date | date: "%Y"}} } }
         </pre>
-      </div>
+  </div>
 
-      <div class="cc-license">
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-          <img alt="Licence Creative Commons" style="border-width:0; max-width: 100%; height: auto; width: 88px;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
-        </a><br />Under License <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>
-      </div>
+  <div class="cc-license">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+      <img alt="Licence Creative Commons" style="border-width:0; max-width: 100%; height: auto; width: 88px;"
+        src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+    </a><br />Under License <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+      Attribution 4.0 International</a>
+  </div>
 
-<br>
-<br>      
+  <br>
+  <br>
 
-<p><b>Previous publications</b></p>
+  <p><b>Previous publications</b></p>
 
-<ol reversed class="myposts">
-	{% for post in site.posts %}
-	    <li><a href="{{ post.url }}">{{ post.title}}</a>
-	    <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
-	    </li>
-	{% endfor %}
-</ol>
+  <ol reversed class="myposts">
+    {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title}}</a>
+      <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+    </li>
+    {% endfor %}
+  </ol>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
 
-<!-- add backend logic -->
-<!-- add backend logic -->
-<!-- add backend logic -->
-<script>    
-$(document).ready(function() {
-
-  var size_ini_mailto = $("#content-mailto").val();
-  var size_ini_linkedin = $("#content-linkedin").val();
-  var size_ini_twitter = $("#content-twitter").val();
-  var size_ini_facebook = $("#content-twitter").val();
-
-  $("#increase-mailto").on("click", function(event) {      
-      var size_increase = size_ini_mailto++;
-      $("#content-mailto").html(size_increase);
-  })
-
-  $("#increase-linkedin").on("click", function(event) {    
-      var size_increase = size_ini_linkedin++;
-      $("#content-linkedin").html(size_increase);
-  })
-
-  $("#increase-twitter").on("click", function(event) {      
-      var size_increase = size_ini_twitter++;
-      $("#content-twitter").html(size_increase);
-  })
-
-  $("#increase-facebook").on("click", function(event) {  
-      var size_increase = size_ini_facebook++;
-      $("#content-facebook").html(size_increase);
-  })
-
-})
-</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-<!--  <script src="{{base}}/static/js/highlight.pack.js"></script> -->
-<script>hljs.initHighlightingOnLoad();</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6715738890677216"
-     crossorigin="anonymous"></script>
-
-<!-- Increment page views -->
+  <!-- add backend logic -->
+  <!-- add backend logic -->
+  <!-- add backend logic -->
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const postPath = "{{ page.url }}"; // Jekyll variable for the post's URL
-    const apiBaseUrl = "https://page-views-d881e40d813b.herokuapp.com/"; // No trailing slash
+    $(document).ready(function () {
 
-    // Increment page views
-    fetch(`${apiBaseUrl}/increment/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ path: postPath }),
+      var size_ini_mailto = $("#content-mailto").val();
+      var size_ini_linkedin = $("#content-linkedin").val();
+      var size_ini_twitter = $("#content-twitter").val();
+      var size_ini_facebook = $("#content-twitter").val();
+
+      $("#increase-mailto").on("click", function (event) {
+        var size_increase = size_ini_mailto++;
+        $("#content-mailto").html(size_increase);
+      })
+
+      $("#increase-linkedin").on("click", function (event) {
+        var size_increase = size_ini_linkedin++;
+        $("#content-linkedin").html(size_increase);
+      })
+
+      $("#increase-twitter").on("click", function (event) {
+        var size_increase = size_ini_twitter++;
+        $("#content-twitter").html(size_increase);
+      })
+
+      $("#increase-facebook").on("click", function (event) {
+        var size_increase = size_ini_facebook++;
+        $("#content-facebook").html(size_increase);
+      })
+
     })
-      .then((response) => {
-        if (!response.ok) {
-          console.error("Failed to increment page views:", response.statusText);
-        }
-      })
-      .catch((error) => console.error("Error incrementing page views:", error));
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+  <!--  <script src="{{base}}/static/js/highlight.pack.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6715738890677216"
+    crossorigin="anonymous"></script>
 
-    // Fetch and display the current page view count
-    fetch(`${apiBaseUrl}/views/${encodeURIComponent(postPath)}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
+  <!-- Increment page views -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const postPath = "{{ page.url }}"; // Jekyll variable for the post's URL
+      const apiBaseUrl = "https://page-views-d881e40d813b.herokuapp.com"; // No trailing slash
+
+      // Increment page views
+      fetch(`${apiBaseUrl}/increment/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ path: postPath }),
       })
-      .then((data) => {
-        const viewCount = data.views || 0;
-        document.getElementById("view-count").innerText = `${viewCount} views (since 2025-04-01)`;
-      })
-      .catch((error) => {
-        console.error("Error fetching page views:", error);
-        document.getElementById("view-count").innerText = "Error loading views";
-      });
-  });
-</script>     
+        .then((response) => {
+          if (!response.ok) {
+            console.error("Failed to increment page views:", response.statusText);
+          }
+        })
+        .catch((error) => console.error("Error incrementing page views:", error));
+
+      // Fetch and display the current page view count
+      fetch(`${apiBaseUrl}/views/${encodeURIComponent(postPath)}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const viewCount = data.views || 0;
+          document.getElementById("view-count").innerText = `${viewCount} views (since 2025-04-01)`;
+        })
+        .catch((error) => {
+          console.error("Error fetching page views:", error);
+          document.getElementById("view-count").innerText = "Error loading views";
+        });
+    });
+  </script>
