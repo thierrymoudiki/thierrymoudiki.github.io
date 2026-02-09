@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ARIMA-Black-Scholes: Semi-Parametric Market price of risk for Risk-Neutral Pricing (code + preprint)"
+title: "ARIMA Pricing: Semi-Parametric Market price of risk for Risk-Neutral Pricing (code + preprint)"
 description: "The post demonstrates a semi-parametric approach using ARIMA models to extract the market price of risk from physical stock price simulations and transform them into risk-neutral paths for option pricing."
 date: 2025-12-07
 categories: [R, Forecasting]
