@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thierry Moudiki - CV</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -20,23 +16,15 @@
             padding: 20px;
             transition: background 0.3s ease, color 0.3s ease;
         }
-
-        body.dark-mode {
-            background: #1a1a1a;
-            color: #e0e0e0;
-        }
+        body.dark-mode { background: #1a1a1a; color: #e0e0e0; }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        body.dark-mode .container {
-            background: #2d2d2d;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
+        body.dark-mode .container { background: #2d2d2d; box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 
         /* ── HEADER ── */
         .header {
@@ -46,380 +34,96 @@
             border-bottom: 3px solid #000;
             text-align: center;
         }
-
-        body.dark-mode .header {
-            background: #000;
-            border-bottom-color: #444;
-        }
-
-        .header h1 {
-            font-size: 2.4em;
-            margin-bottom: 8px;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        .header .title {
-            font-size: 1em;
-            color: #b0b0b0;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 12px;
-            font-size: 0.9em;
-        }
-
-        .contact-item {
-            color: #d0d0d0;
-        }
-
-        .contact-item a {
-            color: #d0d0d0;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
+        body.dark-mode .header { background: #000; border-bottom-color: #444; }
+        .header h1 { font-size: 2.4em; margin-bottom: 8px; font-weight: 400; letter-spacing: 1px; }
+        .header .title { font-size: 1em; color: #b0b0b0; margin-bottom: 20px; font-style: italic; }
+        .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 12px; font-size: 0.9em; }
+        .contact-item { color: #d0d0d0; }
+        .contact-item a { color: #d0d0d0; text-decoration: none; }
+        .contact-item a:hover { color: #fff; text-decoration: underline; }
 
         /* ── BUTTONS ── */
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 22px;
-            flex-wrap: wrap;
-        }
-
+        .button-group { display: flex; justify-content: center; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
         .btn {
-            background: white;
-            color: #1a1a1a;
-            border: 2px solid #fff;
-            padding: 8px 20px;
-            font-size: 0.9em;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: 'Georgia', serif;
-            transition: all 0.3s;
+            background: white; color: #1a1a1a; border: 2px solid #fff;
+            padding: 8px 20px; font-size: 0.9em; font-weight: 600;
+            cursor: pointer; font-family: 'Georgia', serif; transition: all 0.3s;
         }
-
-        .btn:hover {
-            background: transparent;
-            color: white;
-        }
-
-        body.dark-mode .btn {
-            background: #2d2d2d;
-            color: #e0e0e0;
-            border-color: #666;
-        }
-
-        body.dark-mode .btn:hover {
-            background: #444;
-            border-color: #888;
-        }
+        .btn:hover { background: transparent; color: white; }
+        body.dark-mode .btn { background: #2d2d2d; color: #e0e0e0; border-color: #666; }
+        body.dark-mode .btn:hover { background: #444; border-color: #888; }
 
         /* ── LINKS ── */
-        a {
-            color: #228B22;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #2E8B57;
-            text-decoration: underline;
-        }
-
-        body.dark-mode a {
-            color: #32CD32;
-        }
-
-        body.dark-mode a:hover {
-            color: #90EE90;
-        }
+        a { color: #228B22; text-decoration: none; transition: color 0.3s; }
+        a:hover { color: #2E8B57; text-decoration: underline; }
+        body.dark-mode a { color: #32CD32; }
+        body.dark-mode a:hover { color: #90EE90; }
 
         /* ── CONTENT ── */
-        .content {
-            padding: 45px 40px;
-        }
-
-        .section {
-            margin-bottom: 36px;
-        }
+        .content { padding: 45px 40px; }
+        .section { margin-bottom: 36px; }
 
         .section-title {
-            font-size: 1.4em;
-            color: #000;
-            border-bottom: 2px solid #000;
-            padding-bottom: 6px;
-            margin-bottom: 22px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            font-size: 1.4em; color: #000;
+            border-bottom: 2px solid #000; padding-bottom: 6px;
+            margin-bottom: 22px; font-weight: 500; letter-spacing: 0.5px;
         }
+        body.dark-mode .section-title { color: #fff; border-bottom-color: #666; }
 
-        body.dark-mode .section-title {
-            color: #fff;
-            border-bottom-color: #666;
-        }
+        .summary { font-size: 1em; line-height: 1.8; color: #2d2d2d; text-align: justify; }
+        body.dark-mode .summary { color: #c0c0c0; }
 
-        .summary {
-            font-size: 1em;
-            line-height: 1.8;
-            color: #2d2d2d;
-            text-align: justify;
+        .experience-item, .education-item {
+            margin-bottom: 26px; padding-left: 18px; border-left: 2px solid #ccc;
         }
+        body.dark-mode .experience-item, body.dark-mode .education-item { border-left-color: #555; }
 
-        body.dark-mode .summary {
-            color: #c0c0c0;
-        }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; }
+        .position { font-size: 1.1em; font-weight: 600; color: #000; }
+        body.dark-mode .position { color: #fff; }
+        .company { font-size: 1em; color: #404040; font-weight: 500; font-style: italic; }
+        body.dark-mode .company { color: #b0b0b0; }
+        .date { color: #666; font-size: 0.88em; font-style: italic; }
+        body.dark-mode .date { color: #999; }
+        .location { color: #555; font-size: 0.9em; margin-top: 2px; }
+        body.dark-mode .location { color: #aaa; }
+        .description { margin-top: 6px; color: #3d3d3d; line-height: 1.6; }
+        body.dark-mode .description { color: #b0b0b0; }
 
-        .experience-item,
-        .education-item {
-            margin-bottom: 26px;
-            padding-left: 18px;
-            border-left: 2px solid #ccc;
-        }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+        .skill-category { background: #f9f9f9; padding: 18px; border: 1px solid #ddd; border-left: 4px solid #000; }
+        body.dark-mode .skill-category { background: #3a3a3a; border-color: #555; border-left-color: #888; }
+        .skill-category h4 { color: #000; margin-bottom: 10px; font-size: 1em; font-weight: 600; }
+        body.dark-mode .skill-category h4 { color: #fff; }
+        .skill-list { list-style: none; }
+        .skill-list li { padding: 4px 0; color: #3d3d3d; }
+        body.dark-mode .skill-list li { color: #b0b0b0; }
+        .skill-list li:before { content: "• "; color: #000; font-weight: bold; margin-right: 6px; }
+        body.dark-mode .skill-list li:before { color: #888; }
 
-        body.dark-mode .experience-item,
-        body.dark-mode .education-item {
-            border-left-color: #555;
-        }
+        .publications-list { list-style: none; }
+        .publications-list li { margin-bottom: 16px; padding-left: 22px; position: relative; line-height: 1.6; color: #2d2d2d; }
+        body.dark-mode .publications-list li { color: #b0b0b0; }
+        .publications-list li:before { content: "▪"; position: absolute; left: 0; color: #000; font-size: 1.1em; }
+        body.dark-mode .publications-list li:before { color: #888; }
+        .publication-year { display: inline-block; background: #f0f0f0; padding: 1px 7px; border-radius: 3px; font-size: 0.82em; margin-left: 8px; color: #555; font-weight: 500; }
+        body.dark-mode .publication-year { background: #444; color: #ccc; }
 
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 6px;
-            flex-wrap: wrap;
-        }
+        .memberships-list { display: grid; gap: 16px; }
+        .membership-item { background: #f9f9f9; padding: 16px; border: 1px solid #ddd; border-left: 4px solid #000; color: #3d3d3d; }
+        body.dark-mode .membership-item { background: #3a3a3a; border-color: #555; border-left-color: #888; color: #b0b0b0; }
+        .membership-item strong { color: #000; }
+        body.dark-mode .membership-item strong { color: #fff; }
 
-        .position {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #000;
-        }
-
-        body.dark-mode .position {
-            color: #fff;
-        }
-
-        .company {
-            font-size: 1em;
-            color: #404040;
-            font-weight: 500;
-            font-style: italic;
-        }
-
-        body.dark-mode .company {
-            color: #b0b0b0;
-        }
-
-        .date {
-            color: #666;
-            font-size: 0.88em;
-            font-style: italic;
-        }
-
-        body.dark-mode .date {
-            color: #999;
-        }
-
-        .location {
-            color: #555;
-            font-size: 0.9em;
-            margin-top: 2px;
-        }
-
-        body.dark-mode .location {
-            color: #aaa;
-        }
-
-        .description {
-            margin-top: 6px;
-            color: #3d3d3d;
-            line-height: 1.6;
-        }
-
-        body.dark-mode .description {
-            color: #b0b0b0;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-        }
-
-        .skill-category {
-            background: #f9f9f9;
-            padding: 18px;
-            border: 1px solid #ddd;
-            border-left: 4px solid #000;
-        }
-
-        body.dark-mode .skill-category {
-            background: #3a3a3a;
-            border-color: #555;
-            border-left-color: #888;
-        }
-
-        .skill-category h4 {
-            color: #000;
-            margin-bottom: 10px;
-            font-size: 1em;
-            font-weight: 600;
-        }
-
-        body.dark-mode .skill-category h4 {
-            color: #fff;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 4px 0;
-            color: #3d3d3d;
-        }
-
-        body.dark-mode .skill-list li {
-            color: #b0b0b0;
-        }
-
-        .skill-list li:before {
-            content: "• ";
-            color: #000;
-            font-weight: bold;
-            margin-right: 6px;
-        }
-
-        body.dark-mode .skill-list li:before {
-            color: #888;
-        }
-
-        .publications-list {
-            list-style: none;
-        }
-
-        .publications-list li {
-            margin-bottom: 16px;
-            padding-left: 22px;
-            position: relative;
-            line-height: 1.6;
-            color: #2d2d2d;
-        }
-
-        body.dark-mode .publications-list li {
-            color: #b0b0b0;
-        }
-
-        .publications-list li:before {
-            content: "▪";
-            position: absolute;
-            left: 0;
-            color: #000;
-            font-size: 1.1em;
-        }
-
-        body.dark-mode .publications-list li:before {
-            color: #888;
-        }
-
-        .publication-year {
-            display: inline-block;
-            background: #f0f0f0;
-            padding: 1px 7px;
-            border-radius: 3px;
-            font-size: 0.82em;
-            margin-left: 8px;
-            color: #555;
-            font-weight: 500;
-        }
-
-        body.dark-mode .publication-year {
-            background: #444;
-            color: #ccc;
-        }
-
-        .memberships-list {
-            display: grid;
-            gap: 16px;
-        }
-
-        .membership-item {
-            background: #f9f9f9;
-            padding: 16px;
-            border: 1px solid #ddd;
-            border-left: 4px solid #000;
-            color: #3d3d3d;
-        }
-
-        body.dark-mode .membership-item {
-            background: #3a3a3a;
-            border-color: #555;
-            border-left-color: #888;
-            color: #b0b0b0;
-        }
-
-        .membership-item strong {
-            color: #000;
-        }
-
-        body.dark-mode .membership-item strong {
-            color: #fff;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 16px;
-        }
-
-        .link-btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background: white;
-            color: #228B22;
-            border: 1px solid #ddd;
-            font-weight: 500;
-        }
-
-        .link-btn:hover {
-            background: #f5f5f5;
-            border-color: #228B22;
-        }
-
-        body.dark-mode .link-btn {
-            background: #3a3a3a;
-            color: #32CD32;
-            border-color: #555;
-        }
-
-        body.dark-mode .link-btn:hover {
-            background: #444;
-            border-color: #32CD32;
-        }
+        .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+        .link-btn { display: inline-block; padding: 8px 16px; background: white; color: #228B22; border: 1px solid #ddd; font-weight: 500; }
+        .link-btn:hover { background: #f5f5f5; border-color: #228B22; }
+        body.dark-mode .link-btn { background: #3a3a3a; color: #32CD32; border-color: #555; }
+        body.dark-mode .link-btn:hover { background: #444; border-color: #32CD32; }
 
         /* ── PAGE BREAK HELPERS ── */
-        .page-break-avoid {
-            page-break-inside: avoid;
-            break-inside: avoid;
-        }
-
-        .keep-together {
-            page-break-inside: avoid;
-            break-inside: avoid;
-        }
+        .page-break-avoid { page-break-inside: avoid; break-inside: avoid; }
+        .keep-together { page-break-inside: avoid; break-inside: avoid; }
 
         /* ════════════════════════════════════════════
            A4 PRINT  —  uses window.print() natively.
@@ -432,9 +136,7 @@
         }
 
         @media print {
-            html {
-                font-size: 8.5pt;
-            }
+            html { font-size: 8.5pt; }
 
             body {
                 background: white !important;
@@ -457,213 +159,90 @@
 
             /* Keep dark header for visual identity */
             .header {
-                padding: 14px 20px 12px !important;
+                padding: 10px 20px 10px !important;
                 background: #1a1a1a !important;
                 color: white !important;
                 border-bottom: 2px solid #000 !important;
                 text-align: left !important;
             }
-
-            .header h1 {
-                font-size: 15pt !important;
-                color: white !important;
-                margin-bottom: 3px !important;
-            }
-
-            .header .title {
-                font-size: 7.5pt !important;
-                color: #b0b0b0 !important;
-                margin-bottom: 6px !important;
-            }
-
-            .contact-info {
-                justify-content: flex-start !important;
-                gap: 14px !important;
-                margin-top: 5px !important;
-            }
-
-            .contact-item,
-            .contact-item a {
-                color: #c8c8c8 !important;
-                font-size: 7.5pt !important;
-            }
+            .header h1 { font-size: 15pt !important; color: white !important; margin-bottom: 3px !important; }
+            .header .title { font-size: 7.5pt !important; color: #b0b0b0 !important; margin-bottom: 6px !important; }
+            .contact-info { justify-content: flex-start !important; gap: 14px !important; margin-top: 5px !important; }
+            .contact-item, .contact-item a { color: #c8c8c8 !important; font-size: 7.5pt !important; }
 
             /* Hide buttons */
-            .button-group {
-                display: none !important;
-            }
+            .button-group { display: none !important; }
 
             /* Content */
-            .content {
-                padding: 7px 18px !important;
-            }
-
-            .section {
-                margin-bottom: 11px !important;
-            }
+            .content { padding: 7px 18px !important; }
+            .section { margin-bottom: 11px !important; }
 
             .section-title {
-                font-size: 9.5pt !important;
-                margin-bottom: 6px !important;
-                padding-bottom: 2px !important;
-                color: black !important;
+                font-size: 9.5pt !important; margin-bottom: 6px !important;
+                padding-bottom: 2px !important; color: black !important;
                 border-bottom: 1.5px solid black !important;
             }
 
-            .summary {
-                font-size: 7.5pt !important;
-                line-height: 1.4 !important;
-                color: black !important;
-            }
+            .summary { font-size: 7.5pt !important; line-height: 1.4 !important; color: black !important; }
 
-            .experience-item,
-            .education-item {
-                margin-bottom: 7px !important;
-                padding-left: 9px !important;
+            .experience-item, .education-item {
+                margin-bottom: 7px !important; padding-left: 9px !important;
                 border-left: 1.5px solid #bbb !important;
             }
-
-            .item-header {
-                margin-bottom: 2px !important;
-            }
-
-            .position {
-                font-size: 8.5pt !important;
-                color: black !important;
-            }
-
-            .company {
-                font-size: 7.5pt !important;
-                color: #2a2a2a !important;
-            }
-
-            .date,
-            .location {
-                font-size: 7pt !important;
-                color: #555 !important;
-            }
-
-            .description {
-                font-size: 7pt !important;
-                line-height: 1.35 !important;
-                color: black !important;
-                margin-top: 2px !important;
-            }
+            .item-header { margin-bottom: 2px !important; }
+            .position { font-size: 8.5pt !important; color: black !important; }
+            .company { font-size: 7.5pt !important; color: #2a2a2a !important; }
+            .date, .location { font-size: 7pt !important; color: #555 !important; }
+            .description { font-size: 7pt !important; line-height: 1.35 !important; color: black !important; margin-top: 2px !important; }
 
             /* 3-column skills grid */
-            .skills-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
-                gap: 7px !important;
-            }
-
-            .skill-category {
-                padding: 6px 8px !important;
-                background: #f7f7f7 !important;
-                border-left: 3px solid #000 !important;
-                border-color: #ddd !important;
-                border-left-color: #000 !important;
-            }
-
-            .skill-category h4 {
-                font-size: 7.5pt !important;
-                margin-bottom: 3px !important;
-                color: black !important;
-            }
-
-            .skill-list li {
-                font-size: 7pt !important;
-                padding: 1px 0 !important;
-                color: black !important;
-            }
+            .skills-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 7px !important; }
+            .skill-category { padding: 6px 8px !important; background: #f7f7f7 !important; border-left: 3px solid #000 !important; border-color: #ddd !important; border-left-color: #000 !important; }
+            .skill-category h4 { font-size: 7.5pt !important; margin-bottom: 3px !important; color: black !important; }
+            .skill-list li { font-size: 7pt !important; padding: 1px 0 !important; color: black !important; }
 
             .publications-list li {
-                font-size: 7pt !important;
-                margin-bottom: 4px !important;
-                line-height: 1.35 !important;
-                color: black !important;
+                font-size: 7pt !important; margin-bottom: 4px !important;
+                line-height: 1.35 !important; color: black !important;
             }
-
             .publication-year {
-                background: #efefef !important;
-                color: #444 !important;
-                font-size: 6.5pt !important;
-                border: 1px solid #ccc !important;
+                background: #efefef !important; color: #444 !important;
+                font-size: 6.5pt !important; border: 1px solid #ccc !important;
             }
 
-            .memberships-list {
-                gap: 4px !important;
-            }
-
+            .memberships-list { gap: 4px !important; }
             .membership-item {
-                padding: 5px 8px !important;
-                background: #f7f7f7 !important;
-                border-left: 3px solid #000 !important;
-                color: black !important;
+                padding: 5px 8px !important; background: #f7f7f7 !important;
+                border-left: 3px solid #000 !important; color: black !important;
                 font-size: 7pt !important;
             }
+            .membership-item strong { color: black !important; }
 
-            .membership-item strong {
-                color: black !important;
-            }
-
-            .links {
-                gap: 4px !important;
-                margin-top: 6px !important;
-            }
-
+            .links { gap: 4px !important; margin-top: 6px !important; }
             .link-btn {
-                padding: 2px 6px !important;
-                font-size: 6.5pt !important;
-                border: 1px solid #bbb !important;
-                color: #228B22 !important;
+                padding: 2px 6px !important; font-size: 6.5pt !important;
+                border: 1px solid #bbb !important; color: #228B22 !important;
                 background: white !important;
             }
 
             /* Link colours */
-            a {
-                color: #1a7a1a !important;
-            }
+            a { color: #1a7a1a !important; }
+            .header a, .contact-item a { color: #c8c8c8 !important; text-decoration: none !important; }
 
-            .header a,
-            .contact-item a {
-                color: #c8c8c8 !important;
-                text-decoration: none !important;
-            }
-
-            /* Break control */
-            .section {
-                page-break-inside: avoid !important;
-                break-inside: avoid !important;
-            }
-
-            .experience-item,
-            .education-item,
-            .skill-category,
-            .membership-item,
-            .publications-list li {
-                page-break-inside: avoid !important;
-                break-inside: avoid !important;
+            /* Keep summary glued to what follows — no orphan first page */
+            .section { page-break-inside: avoid !important; break-inside: avoid !important; }
+            .section-summary { page-break-after: avoid !important; break-after: avoid !important; }
+            .experience-item, .education-item, .skill-category,
+            .membership-item, .publications-list li {
+                page-break-inside: avoid !important; break-inside: avoid !important;
             }
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.9em;
-            }
-
-            .content {
-                padding: 28px 18px;
-            }
-
-            .header {
-                padding: 36px 18px 28px;
-                text-align: left;
-            }
-
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+            .header h1 { font-size: 1.9em; }
+            .content { padding: 28px 18px; }
+            .header { padding: 36px 18px 28px; text-align: left; }
+            .item-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -676,71 +255,53 @@
                 Machine Learning • Actuarial Science
             </div>
             <div class="contact-info">
-                <div class="contact-item"><a
-                        href="/cdn-cgi/l/email-protection#ed998584889f9f94c380829889848684ad8a808c8481c38e8280"><span
-                            class="__cf_email__"
-                            data-cfemail="e6928e8f8394949fc88b8993828f8d8fa6818b878f8ac885898b">[email&#160;protected]</span></a>
-                </div>
+                <div class="contact-item"><a href="/cdn-cgi/l/email-protection#ed998584889f9f94c380829889848684ad8a808c8481c38e8280"><span class="__cf_email__" data-cfemail="e6928e8f8394949fc88b8993828f8d8fa6818b878f8ac885898b">[email&#160;protected]</span></a></div>
             </div>
             <div class="contact-info">
                 <div class="contact-item"><a href="https://thierrymoudiki.github.io">thierrymoudiki.github.io</a></div>
-                <div class="contact-item"><a
-                        href="https://linkedin.com/in/thierry-moudiki">linkedin.com/in/thierry-moudiki</a></div>
+                <div class="contact-item"><a href="https://linkedin.com/in/thierry-moudiki">linkedin.com/in/thierry-moudiki</a></div>
             </div>
             <div class="button-group">
-                <button class="btn" onclick="toggleDarkMode()" data-en="Toggle Dark Mode" data-fr="Mode Sombre">Toggle
-                    Dark Mode</button>
+                <button class="btn" onclick="toggleDarkMode()" data-en="Toggle Dark Mode" data-fr="Mode Sombre">Toggle Dark Mode</button>
                 <button class="btn" onclick="toggleLang()" id="lang-btn">🇫🇷 Français</button>
-                <button class="btn" onclick="printCV()" data-en="🖨 Print / Save PDF" data-fr="🖨 Imprimer / PDF">🖨
-                    Print / Save PDF</button>
+                <button class="btn" onclick="printCV()" data-en="🖨 Print / Save PDF" data-fr="🖨 Imprimer / PDF">🖨 Print / Save PDF</button>
             </div>
         </div>
 
         <div class="content">
             <!-- SUMMARY -->
-            <section class="section keep-together">
+            <section class="section section-summary">
                 <h2 class="section-title" data-en="Summary" data-fr="Résumé">Summary</h2>
                 <p class="summary"
                     data-en="Senior Data Scientist, Actuary with 10 years of work experience, and Researcher specializing in machine learning and financial and actuarial modeling. Founder and lead of <strong>Techtonique LLC</strong> (Delaware, USA), selected for the <strong><a href='https://www.microsoft.com/en-us/startups'>Microsoft for Startups program</a></strong>. PhD from Université Lyon 1 with expertise bridging academic research, open-source software development, and practical financial applications. Creator of widely-adopted R and Python packages downloaded over <strong>1 million times</strong>, with research presented at leading international conferences including the International Symposium on Forecasting and published in peer-reviewed venues."
                     data-fr="Data Scientist senior, Actuaire avec 10 ans d'expérience professionnelle et Chercheur spécialisé en machine learning et modélisation actuarielle et financière. Fondateur et dirigeant de <strong>Techtonique LLC</strong> (Delaware, États-Unis), sélectionné pour le programme <strong><a href='https://www.microsoft.com/en-us/startups'>Microsoft for Startups</a></strong>. Doctorat de l'Université Lyon 1, avec une expertise couvrant la recherche académique, le développement de logiciels open-source et les applications financières concrètes. Créateur de packages R et Python largement adoptés, téléchargés plus d'<strong>1 million de fois</strong>, avec des travaux présentés dans les grandes conférences internationales dont le International Symposium on Forecasting, et publiés dans des revues à comité de lecture.">
-                    Senior Data Scientist, Actuary with 10 years of work experience, and Researcher specializing in
-                    machine learning and financial and actuarial modeling.
+                    Senior Data Scientist, Actuary with 10 years of work experience, and Researcher specializing in machine learning and financial and actuarial modeling.
                     Founder and lead of <strong>Techtonique LLC</strong> (Delaware, USA), selected for the
-                    <strong><a href="https://www.microsoft.com/en-us/startups">Microsoft for Startups
-                            program</a></strong>.
-                    PhD from Université Lyon 1 with expertise bridging academic research, open-source software
-                    development, and practical financial applications.
+                    <strong><a href="https://www.microsoft.com/en-us/startups">Microsoft for Startups program</a></strong>.
+                    PhD from Université Lyon 1 with expertise bridging academic research, open-source software development, and practical financial applications.
                     Creator of widely-adopted R and Python packages downloaded over <strong>1 million times</strong>,
-                    with research presented at leading international conferences including the International Symposium
-                    on Forecasting and published in peer-reviewed venues.
+                    with research presented at leading international conferences including the International Symposium on Forecasting and published in peer-reviewed venues.
                 </p>
             </section>
 
             <!-- PROFESSIONAL EXPERIENCE -->
             <section class="section">
-                <h2 class="section-title" data-en="Professional Experience" data-fr="Expérience Professionnelle">
-                    Professional Experience</h2>
+                <h2 class="section-title" data-en="Professional Experience" data-fr="Expérience Professionnelle">Professional Experience</h2>
 
                 <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Founder &amp; Analytics Professional"
-                                data-fr="Fondateur &amp; Professionnel en Analytique">Founder &amp; Analytics
-                                Professional</div>
+                            <div class="position" data-en="Founder &amp; Analytics Professional" data-fr="Fondateur &amp; Professionnel en Analytique">Founder &amp; Analytics Professional</div>
                             <div class="company">Techtonique LLC</div>
                         </div>
-                        <div class="date" data-en="September 2019 - Present" data-fr="Septembre 2019 - Présent">
-                            September 2019 - Present</div>
+                        <div class="date" data-en="September 2019 - Present" data-fr="Septembre 2019 - Présent">September 2019 - Present</div>
                     </div>
                     <div class="description"
                         data-en="Leading research and development in statistical machine learning, computer simulation, and numerical optimization. Created Techtonique web app for data-driven decision-making using Mathematics, Statistics, ML, and Data Visualization. Member of the <strong>Microsoft for Startups</strong> community. Developed widely-adopted open-source packages (&gt;1M downloads)."
                         data-fr="Pilotage de la R&amp;D en machine learning statistique, simulation informatique et optimisation numérique. Création de l'application web Techtonique pour la prise de décision basée sur les données. Membre de la communauté <strong>Microsoft for Startups</strong>. Développement de packages open-source largement adoptés (&gt;1M de téléchargements).">
-                        Leading research and development in statistical machine learning, computer simulation, and
-                        numerical optimization.
-                        Created Techtonique web app for data-driven decision-making using Mathematics, Statistics, ML,
-                        and Data Visualization.
-                        Member of the <strong>Microsoft for Startups</strong> community. Developed widely-adopted
-                        open-source packages (&gt;1M downloads).
+                        Leading research and development in statistical machine learning, computer simulation, and numerical optimization.
+                        Created Techtonique web app for data-driven decision-making using Mathematics, Statistics, ML, and Data Visualization.
+                        Member of the <strong>Microsoft for Startups</strong> community. Developed widely-adopted open-source packages (&gt;1M downloads).
                     </div>
                 </div>
 
@@ -750,15 +311,12 @@
                             <div class="position" data-en="Tutor" data-fr="Tuteur">Tutor</div>
                             <div class="company">Université Paris Dauphine - PSL</div>
                         </div>
-                        <div class="date" data-en="September 2023 - June 2024" data-fr="Septembre 2023 - Juin 2024">
-                            September 2023 - June 2024</div>
+                        <div class="date" data-en="September 2023 - June 2024" data-fr="Septembre 2023 - Juin 2024">September 2023 - June 2024</div>
                     </div>
                     <div class="description"
                         data-en="Supervised MSc student for their actuarial thesis project, providing guidance on advanced statistical methods and research methodologies. Student work on RVFLs received awards from the French Institute of Actuaries."
                         data-fr="Encadrement d'étudiant en Master pour son mémoire actuariel. Les travaux sur les RVFLs ont reçu des distinctions de l'Institut des Actuaires.">
-                        Supervised MSc student for their actuarial thesis project, providing guidance on advanced
-                        statistical methods and research methodologies. Student work on RVFLs received awards from the
-                        French Institute of Actuaries.
+                        Supervised MSc student for their actuarial thesis project, providing guidance on advanced statistical methods and research methodologies. Student work on RVFLs received awards from the French Institute of Actuaries.
                     </div>
                 </div>
 
@@ -768,16 +326,13 @@
                             <div class="position" data-en="Lecturer" data-fr="Chargé de cours">Lecturer</div>
                             <div class="company">ICN Business School</div>
                         </div>
-                        <div class="date" data-en="September 2023 - December 2023"
-                            data-fr="Septembre 2023 - Décembre 2023">September 2023 - December 2023</div>
+                        <div class="date" data-en="September 2023 - December 2023" data-fr="Septembre 2023 - Décembre 2023">September 2023 - December 2023</div>
                     </div>
-                    <div class="location" data-en="Greater Paris Metropolitan Region" data-fr="Région Île-de-France">
-                        Greater Paris Metropolitan Region</div>
+                    <div class="location" data-en="Greater Paris Metropolitan Region" data-fr="Région Île-de-France">Greater Paris Metropolitan Region</div>
                     <div class="description"
                         data-en="Taught Data Analysis to MSc final year students, covering statistical methods, machine learning techniques, and practical applications in business contexts."
                         data-fr="Enseignement de l'Analyse de Données aux étudiants de Master 2, couvrant les méthodes statistiques, le machine learning et leurs applications en contexte professionnel.">
-                        Taught Data Analysis to MSc final year students, covering statistical methods, machine learning
-                        techniques, and practical applications in business contexts.
+                        Taught Data Analysis to MSc final year students, covering statistical methods, machine learning techniques, and practical applications in business contexts.
                     </div>
                 </div>
 
@@ -787,36 +342,29 @@
                             <div class="position" data-en="Lecturer" data-fr="Chargé de cours">Lecturer</div>
                             <div class="company">Université Paris-Dauphine | Tunis</div>
                         </div>
-                        <div class="date" data-en="September 2022 - September 2023"
-                            data-fr="Septembre 2022 - Septembre 2023">September 2022 - September 2023</div>
+                        <div class="date" data-en="September 2022 - September 2023" data-fr="Septembre 2022 - Septembre 2023">September 2022 - September 2023</div>
                     </div>
-                    <div class="location" data-en="Grand Tunis Metropolitan Area" data-fr="Grand Tunis">Grand Tunis
-                        Metropolitan Area</div>
+                    <div class="location" data-en="Grand Tunis Metropolitan Area" data-fr="Grand Tunis">Grand Tunis Metropolitan Area</div>
                     <div class="description"
                         data-en="Taught Numerical Simulation in Quantitative Finance and Insurance, covering Monte Carlo methods, stochastic processes, and computational techniques."
                         data-fr="Enseignement de la Simulation Numérique en Finance Quantitative et Assurance : méthodes de Monte Carlo, processus stochastiques, techniques de calcul.">
-                        Taught Numerical Simulation in Quantitative Finance and Insurance, covering Monte Carlo methods,
-                        stochastic processes, and computational techniques.
+                        Taught Numerical Simulation in Quantitative Finance and Insurance, covering Monte Carlo methods, stochastic processes, and computational techniques.
                     </div>
                 </div>
 
                 <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Postdoctoral Researcher" data-fr="Chercheur Postdoctoral">
-                                Postdoctoral Researcher</div>
+                            <div class="position" data-en="Postdoctoral Researcher" data-fr="Chercheur Postdoctoral">Postdoctoral Researcher</div>
                             <div class="company">Université Claude Bernard Lyon 1</div>
                         </div>
-                        <div class="date" data-en="September 2018 - September 2019"
-                            data-fr="Septembre 2018 - Septembre 2019">September 2018 - September 2019</div>
+                        <div class="date" data-en="September 2018 - September 2019" data-fr="Septembre 2018 - Septembre 2019">September 2018 - September 2019</div>
                     </div>
-                    <div class="location" data-en="Lyon, Auvergne-Rhône-Alpes, France"
-                        data-fr="Lyon, Auvergne-Rhône-Alpes, France">Lyon, Auvergne-Rhône-Alpes, France</div>
+                    <div class="location" data-en="Lyon, Auvergne-Rhône-Alpes, France" data-fr="Lyon, Auvergne-Rhône-Alpes, France">Lyon, Auvergne-Rhône-Alpes, France</div>
                     <div class="description"
                         data-en="Research on excess death rates associated with specific insured populations, applying advanced statistical modeling and actuarial methods."
                         data-fr="Recherche sur les taux de surmortalité liés à des populations assurées spécifiques, par des méthodes statistiques avancées et actuarielles.">
-                        Research on excess death rates associated with specific insured populations, applying advanced
-                        statistical modeling and actuarial methods.
+                        Research on excess death rates associated with specific insured populations, applying advanced statistical modeling and actuarial methods.
                     </div>
                 </div>
 
@@ -826,12 +374,11 @@
                             <div class="position" data-en="Actuary" data-fr="Actuaire">Actuary</div>
                             <div class="company">Aviva</div>
                         </div>
-                        <div class="date" data-en="July 2015 - July 2017" data-fr="Juillet 2015 - Juillet 2017">July
-                            2015 - July 2017</div>
+                        <div class="date" data-en="July 2015 - July 2017" data-fr="Juillet 2015 - Juillet 2017">July 2015 - July 2017</div>
                     </div>
-                    <div class="location" data-en="Paris Area, France" data-fr="Région Parisienne, France">Paris Area,
-                        France</div>
-                    <div class="description" data-en="Life Actuarial Economic Capital modeling and risk assessment."
+                    <div class="location" data-en="Paris Area, France" data-fr="Région Parisienne, France">Paris Area, France</div>
+                    <div class="description"
+                        data-en="Life Actuarial Economic Capital modeling and risk assessment."
                         data-fr="Modélisation du Capital Économique en Assurance Vie et évaluation des risques.">
                         Life Actuarial Economic Capital modeling and risk assessment.
                     </div>
@@ -840,12 +387,10 @@
                 <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Non-Life Reserving" data-fr="Provisionnement Non-Vie">
-                                Non-Life Reserving</div>
+                            <div class="position" data-en="Non-Life Reserving" data-fr="Provisionnement Non-Vie">Non-Life Reserving</div>
                             <div class="company">Allianz</div>
                         </div>
-                        <div class="date" data-en="April 2015 - July 2015" data-fr="Avril 2015 - Juillet 2015">April
-                            2015 - July 2015</div>
+                        <div class="date" data-en="April 2015 - July 2015" data-fr="Avril 2015 - Juillet 2015">April 2015 - July 2015</div>
                     </div>
                     <div class="description"
                         data-en="Technical reserves calculation and validation for non-life insurance portfolios."
@@ -857,12 +402,10 @@
                 <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Actuarial Consultant" data-fr="Consultant Actuariel">
-                                Actuarial Consultant</div>
+                            <div class="position" data-en="Actuarial Consultant" data-fr="Consultant Actuariel">Actuarial Consultant</div>
                             <div class="company">Optimind Winter</div>
                         </div>
-                        <div class="date" data-en="September 2011 - February 2015"
-                            data-fr="Septembre 2011 - Février 2015">September 2011 - February 2015</div>
+                        <div class="date" data-en="September 2011 - February 2015" data-fr="Septembre 2011 - Février 2015">September 2011 - February 2015</div>
                     </div>
                     <div class="description"
                         data-en="Provided actuarial consulting services across various insurance and financial projects."
@@ -874,26 +417,23 @@
                 <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Actuarial Consultant" data-fr="Consultant Actuariel">
-                                Actuarial Consultant</div>
+                            <div class="position" data-en="Actuarial Consultant" data-fr="Consultant Actuariel">Actuarial Consultant</div>
                             <div class="company">Premium Consulting</div>
                         </div>
-                        <div class="date" data-en="January 2010 - September 2011"
-                            data-fr="Janvier 2010 - Septembre 2011">January 2010 - September 2011</div>
+                        <div class="date" data-en="January 2010 - September 2011" data-fr="Janvier 2010 - Septembre 2011">January 2010 - September 2011</div>
                     </div>
                 </div>
 
                 <div class="experience-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Risk Capital Modeling"
-                                data-fr="Modélisation du Capital de Risque">Risk Capital Modeling</div>
+                            <div class="position" data-en="Risk Capital Modeling" data-fr="Modélisation du Capital de Risque">Risk Capital Modeling</div>
                             <div class="company">Allianz Investment Management</div>
                         </div>
-                        <div class="date" data-en="April 2008 - September 2009" data-fr="Avril 2008 - Septembre 2009">
-                            April 2008 - September 2009</div>
+                        <div class="date" data-en="April 2008 - September 2009" data-fr="Avril 2008 - Septembre 2009">April 2008 - September 2009</div>
                     </div>
-                    <div class="description" data-en="Developed risk capital models for investment management."
+                    <div class="description"
+                        data-en="Developed risk capital models for investment management."
                         data-fr="Développement de modèles d'approximation du capital de risque.">
                         Developed risk capital models for investment management.
                     </div>
@@ -907,28 +447,22 @@
                 <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Doctor of Philosophy (PhD) in Actuarial Science"
-                                data-fr="Doctorat en Sciences Actuarielles">Doctor of Philosophy (PhD) in Actuarial
-                                Science</div>
-                            <div class="company">Institut de Science Financière et d'Assurances (ISFA) - Université Lyon
-                                1</div>
+                            <div class="position" data-en="Doctor of Philosophy (PhD) in Actuarial Science" data-fr="Doctorat en Sciences Actuarielles">Doctor of Philosophy (PhD) in Actuarial Science</div>
+                            <div class="company">Institut de Science Financière et d'Assurances (ISFA) - Université Lyon 1</div>
                         </div>
                         <div class="date">2015 - 2018</div>
                     </div>
                     <div class="description"
                         data-en="<strong>Dissertation:</strong> Interest Rates Modeling for Insurance: Interpolation, Extrapolation and Forecasting"
                         data-fr="<strong>Thèse :</strong> Modélisation des Taux d'Intérêt pour l'Assurance : Interpolation, Extrapolation et Prévision">
-                        <strong>Dissertation:</strong> Interest Rates Modeling for Insurance: Interpolation,
-                        Extrapolation and Forecasting
+                        <strong>Dissertation:</strong> Interest Rates Modeling for Insurance: Interpolation, Extrapolation and Forecasting
                     </div>
                 </div>
 
                 <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Master of Science (MSc) in Actuarial Science"
-                                data-fr="Master en Sciences Actuarielles">Master of Science (MSc) in Actuarial Science
-                            </div>
+                            <div class="position" data-en="Master of Science (MSc) in Actuarial Science" data-fr="Master en Sciences Actuarielles">Master of Science (MSc) in Actuarial Science</div>
                             <div class="company">Institut de Science Financière et d'Assurances (ISFA)</div>
                         </div>
                         <div class="date">2008 - 2009</div>
@@ -938,25 +472,18 @@
                 <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position"
-                                data-en="Master of Science (MSc) - Research in Actuarial and Financial Sciences"
-                                data-fr="Master Recherche en Sciences Actuarielles et Financières">Master of Science
-                                (MSc) - Research in Actuarial and Financial Sciences</div>
+                            <div class="position" data-en="Master of Science (MSc) - Research in Actuarial and Financial Sciences" data-fr="Master Recherche en Sciences Actuarielles et Financières">Master of Science (MSc) - Research in Actuarial and Financial Sciences</div>
                             <div class="company">École Centrale de Lyon</div>
                         </div>
-                        <div class="date" data-en="September 2007 - September 2008"
-                            data-fr="Septembre 2007 - Septembre 2008">September 2007 - September 2008</div>
+                        <div class="date" data-en="September 2007 - September 2008" data-fr="Septembre 2007 - Septembre 2008">September 2007 - September 2008</div>
                     </div>
                 </div>
 
                 <div class="education-item page-break-avoid">
                     <div class="item-header">
                         <div>
-                            <div class="position" data-en="Master of Engineering (MEng) in Financial Engineering"
-                                data-fr="Diplôme d'Ingénieur en Ingénierie Financière">Master of Engineering (MEng) in
-                                Financial Engineering</div>
-                            <div class="company">ENSIMAG - École Nationale Supérieure d'Informatique et de Mathématiques
-                                Appliquées de Grenoble</div>
+                            <div class="position" data-en="Master of Engineering (MEng) in Financial Engineering" data-fr="Diplôme d'Ingénieur en Ingénierie Financière">Master of Engineering (MEng) in Financial Engineering</div>
+                            <div class="company">ENSIMAG - École Nationale Supérieure d'Informatique et de Mathématiques Appliquées de Grenoble</div>
                         </div>
                         <div class="date">2005 - 2008</div>
                     </div>
@@ -965,54 +492,43 @@
 
             <!-- PUBLICATIONS -->
             <section class="section">
-                <h2 class="section-title" data-en="Key Publications &amp; Research"
-                    data-fr="Publications &amp; Recherche">Key Publications &amp; Research</h2>
+                <h2 class="section-title" data-en="Key Publications &amp; Research" data-fr="Publications &amp; Recherche">Key Publications &amp; Research</h2>
                 <ul class="publications-list">
                     <li class="page-break-avoid">
-                        <strong>Multiple time series forecasting using quasi-randomized functional link neural
-                            networks</strong> - T Moudiki, F Planchet, A Cousin - Risks 6 (1), 22
+                        <strong>Multiple time series forecasting using quasi-randomized functional link neural networks</strong> - T Moudiki, F Planchet, A Cousin - Risks 6 (1), 22
                         <span class="publication-year">2018</span>
                     </li>
                     <li class="page-break-avoid">
-                        <strong>Sensibilité d'une rente viagère à l'extrapolation de la courbe de taux dans un contexte
-                            LTGA</strong> - T Moudiki - Bulletin Français d'actuariat 14 (27), 51-81
+                        <strong>Sensibilité d'une rente viagère à l'extrapolation de la courbe de taux dans un contexte LTGA</strong> - T Moudiki - Bulletin Français d'actuariat 14 (27), 51-81
                         <span class="publication-year">2014</span>
                     </li>
                     <li class="page-break-avoid">
-                        <strong>Economic scenario generators</strong> - T Moudiki, F Planchet - Modelling in Life
-                        Insurance–A Management Perspective, 81-104
+                        <strong>Economic scenario generators</strong> - T Moudiki, F Planchet - Modelling in Life Insurance–A Management Perspective, 81-104
                         <span class="publication-year">2016</span>
                     </li>
                     <li class="page-break-avoid">
-                        <strong>Interest rates modeling for insurance: interpolation, extrapolation, and
-                            forecasting</strong> - T Moudiki - Université de Lyon
+                        <strong>Interest rates modeling for insurance: interpolation, extrapolation, and forecasting</strong> - T Moudiki - Université de Lyon
                         <span class="publication-year">2018</span>
                     </li>
                     <li class="page-break-avoid">
-                        <strong>Conformal Predictive Simulations for Univariate Time Series</strong> - T Moudiki -
-                        Proceedings of Machine Learning Research 266, 751-752
+                        <strong>Conformal Predictive Simulations for Univariate Time Series</strong> - T Moudiki - Proceedings of Machine Learning Research 266, 751-752
                         <span class="publication-year">2025</span>
                     </li>
                     <li class="page-break-avoid">
-                        <strong>Approximation du SRC Equity en Assurance vie dans un modèle interne</strong> - T Moudiki
-                        - Institut des actuaires
+                        <strong>Approximation du SRC Equity en Assurance vie dans un modèle interne</strong> - T Moudiki - Institut des actuaires
                         <span class="publication-year">2011</span>
                     </li>
                     <li class="page-break-avoid">
-                        <span
-                            data-en="Presented at <strong>International Symposium on Forecasting 2024</strong> on nnetsauce applications"
-                            data-fr="Présentation au <strong>International Symposium on Forecasting 2024</strong> sur les applications de nnetsauce">
-                            Presented at <strong>International Symposium on Forecasting 2024</strong> on nnetsauce
-                            applications
+                        <span data-en="Presented at <strong>International Symposium on Forecasting 2024</strong> on nnetsauce applications"
+                              data-fr="Présentation au <strong>International Symposium on Forecasting 2024</strong> sur les applications de nnetsauce">
+                            Presented at <strong>International Symposium on Forecasting 2024</strong> on nnetsauce applications
                         </span>
                         <span class="publication-year">2024</span>
                     </li>
                     <li class="page-break-avoid">
-                        <span
-                            data-en="Presented carbon beta and Shapley values research at <strong>18th Financial Risks International Forum</strong> (Institut Louis Bachelier / Europlace Institute of Finance)"
-                            data-fr="Présentation des recherches sur le bêta carbone et les valeurs de Shapley au <strong>18ème Forum International des Risques Financiers</strong> (Institut Louis Bachelier / Europlace Institute of Finance)">
-                            Presented carbon beta and Shapley values research at <strong>18th Financial Risks
-                                International Forum</strong> (Institut Louis Bachelier / Europlace Institute of Finance)
+                        <span data-en="Presented carbon beta and Shapley values research at <strong>18th Financial Risks International Forum</strong> (Institut Louis Bachelier / Europlace Institute of Finance)"
+                              data-fr="Présentation des recherches sur le bêta carbone et les valeurs de Shapley au <strong>18ème Forum International des Risques Financiers</strong> (Institut Louis Bachelier / Europlace Institute of Finance)">
+                            Presented carbon beta and Shapley values research at <strong>18th Financial Risks International Forum</strong> (Institut Louis Bachelier / Europlace Institute of Finance)
                         </span>
                         <span class="publication-year">2025</span>
                     </li>
@@ -1021,66 +537,62 @@
 
             <!-- DISTINCTIONS -->
             <section class="section">
-                <h2 class="section-title" data-en="Professional Distinctions" data-fr="Distinctions Professionnelles">
-                    Professional Distinctions</h2>
+                <h2 class="section-title" data-en="Professional Distinctions" data-fr="Distinctions Professionnelles">Professional Distinctions</h2>
                 <div class="memberships-list">
                     <div class="membership-item page-break-avoid">
                         <strong data-en="Reviewer - <a href='https://neurips.cc/'>NeurIPS Workshop 2025</a>"
-                            data-fr="Relecteur - <a href='https://neurips.cc/'>NeurIPS Workshop 2025</a>">
+                                data-fr="Relecteur - <a href='https://neurips.cc/'>NeurIPS Workshop 2025</a>">
                             Reviewer - <a href="https://neurips.cc/">NeurIPS Workshop 2025</a>
                         </strong><br>
                         <span data-en="One of the top international conferences in machine learning"
-                            data-fr="L'une des principales conférences internationales en machine learning">
+                              data-fr="L'une des principales conférences internationales en machine learning">
                             One of the top international conferences in machine learning
                         </span>
                     </div>
                     <div class="membership-item page-break-avoid">
                         <strong data-en="Reviewer - <a href='https://iclr.cc/'>ICLR Workshop 2026</a>"
-                            data-fr="Relecteur - <a href='https://iclr.cc/'>ICLR Workshop 2026</a>">
+                                data-fr="Relecteur - <a href='https://iclr.cc/'>ICLR Workshop 2026</a>">
                             Reviewer - <a href="https://iclr.cc/">ICLR Workshop 2026</a>
                         </strong><br>
                         <span data-en="One of the top international conferences in machine learning"
-                            data-fr="L'une des principales conférences internationales en machine learning">
+                              data-fr="L'une des principales conférences internationales en machine learning">
                             One of the top international conferences in machine learning
                         </span>
                     </div>
                     <div class="membership-item page-break-avoid">
                         <strong data-en="Selected Reviewer - <a href='https://virtual.aistats.org/'>AISTATS 2026</a>"
-                            data-fr="Relecteur Sélectionné - <a href='https://virtual.aistats.org/'>AISTATS 2026</a>">
+                                data-fr="Relecteur Sélectionné - <a href='https://virtual.aistats.org/'>AISTATS 2026</a>">
                             Selected Reviewer - <a href="https://virtual.aistats.org/">AISTATS 2026</a>
                         </strong><br>
                         <span data-en="Leading ML conference - Selection demonstrates peer recognition in AI research"
-                            data-fr="Conférence de référence en ML - La sélection témoigne de la reconnaissance par les pairs en recherche IA">
+                              data-fr="Conférence de référence en ML - La sélection témoigne de la reconnaissance par les pairs en recherche IA">
                             Leading ML conference - Selection demonstrates peer recognition in AI research
                         </span>
                     </div>
                     <div class="membership-item page-break-avoid">
-                        <strong
-                            data-en="Associate Member - <a href='https://www.institutdesactuaires.com/'>French Institute of Actuaries</a>"
-                            data-fr="Membre Associé - <a href='https://www.institutdesactuaires.com/'>Institut des Actuaires</a>">
-                            Associate Member - <a href="https://www.institutdesactuaires.com/">French Institute of
-                                Actuaries</a>
+                        <strong data-en="Associate Member - <a href='https://www.institutdesactuaires.com/'>French Institute of Actuaries</a>"
+                                data-fr="Membre Associé - <a href='https://www.institutdesactuaires.com/'>Institut des Actuaires</a>">
+                            Associate Member - <a href="https://www.institutdesactuaires.com/">French Institute of Actuaries</a>
                         </strong><br>
-                        <span data-en="Associate Member (2012-2017, 2021)" data-fr="Membre Associé (2012-2017, 2021)">
+                        <span data-en="Associate Member (2012-2017, 2021)"
+                              data-fr="Membre Associé (2012-2017, 2021)">
                             Associate Member (2012-2017, 2021)
                         </span>
                     </div>
                     <div class="membership-item page-break-avoid">
-                        <strong
-                            data-en="Member - <a href='https://www.sfds.fr/'>Société Française de Statistique (SFdS)</a>"
-                            data-fr="Membre - <a href='https://www.sfds.fr/'>Société Française de Statistique (SFdS)</a>">
+                        <strong data-en="Member - <a href='https://www.sfds.fr/'>Société Française de Statistique (SFdS)</a>"
+                                data-fr="Membre - <a href='https://www.sfds.fr/'>Société Française de Statistique (SFdS)</a>">
                             Member - <a href="https://www.sfds.fr/">Société Française de Statistique (SFdS)</a>
                         </strong><br>
                         <span data-en="Member (2019-2020)" data-fr="Membre (2019-2020)">Member (2019-2020)</span>
                     </div>
                     <div class="membership-item page-break-avoid">
-                        <strong
-                            data-en="Selected - <a href='https://www.microsoft.com/en-us/startups'>Microsoft for Startups program</a>"
-                            data-fr="Sélectionné - <a href='https://www.microsoft.com/en-us/startups'>Programme Microsoft for Startups</a>">
-                            Selected - <a href="https://www.microsoft.com/en-us/startups">Microsoft for Startups
-                                program</a>
+                        <strong data-en="Selected - <a href='https://www.microsoft.com/en-us/startups'>Microsoft for Startups program</a>"
+                                data-fr="Sélectionné - <a href='https://www.microsoft.com/en-us/startups'>Programme Microsoft for Startups</a>">
+                            Selected - <a href="https://www.microsoft.com/en-us/startups">Microsoft for Startups program</a>
                         </strong><br>
-                        <span data-en="Techtonique LLC selected in 2024" data-fr="Techtonique LLC sélectionnée en 2024">
+                        <span data-en="Techtonique LLC selected in 2024"
+                              data-fr="Techtonique LLC sélectionnée en 2024">
                             Techtonique LLC selected in 2024
                         </span>
                     </div>
@@ -1089,19 +601,16 @@
 
             <!-- SKILLS -->
             <section class="section">
-                <h2 class="section-title" data-en="Technical Skills &amp; Expertise" data-fr="Compétences Techniques">
-                    Technical Skills &amp; Expertise</h2>
+                <h2 class="section-title" data-en="Technical Skills &amp; Expertise" data-fr="Compétences Techniques">Technical Skills &amp; Expertise</h2>
                 <div class="skills-grid">
                     <div class="skill-category page-break-avoid">
-                        <h4 data-en="Programming &amp; Tools" data-fr="Langages &amp; Outils">Programming &amp; Tools
-                        </h4>
+                        <h4 data-en="Programming &amp; Tools" data-fr="Langages &amp; Outils">Programming &amp; Tools</h4>
                         <ul class="skill-list">
                             <li>Python, R</li>
                             <li>SQL</li>
                             <li>Visual Basic for Applications (VBA)</li>
                             <li>Microsoft Excel</li>
-                            <li data-en="Machine Learning Libraries" data-fr="Bibliothèques ML">Machine Learning
-                                Libraries</li>
+                            <li data-en="Machine Learning Libraries" data-fr="Bibliothèques ML">Machine Learning Libraries</li>
                             <li data-en="Statistical Computing" data-fr="Calcul Statistique">Statistical Computing</li>
                             <li data-en="Data Visualization" data-fr="Visualisation de Données">Data Visualization</li>
                             <li>Apache Spark</li>
@@ -1111,8 +620,7 @@
                         <h4 data-en="Core Expertise" data-fr="Expertise Principale">Core Expertise</h4>
                         <ul class="skill-list">
                             <li>Machine Learning</li>
-                            <li data-en="Time Series Forecasting" data-fr="Prévision de Séries Temporelles">Time Series
-                                Forecasting</li>
+                            <li data-en="Time Series Forecasting" data-fr="Prévision de Séries Temporelles">Time Series Forecasting</li>
                             <li data-en="Quantitative Finance" data-fr="Finance Quantitative">Quantitative Finance</li>
                             <li data-en="Actuarial Science" data-fr="Sciences Actuarielles">Actuarial Science</li>
                         </ul>
@@ -1120,13 +628,10 @@
                     <div class="skill-category page-break-avoid">
                         <h4 data-en="Specialized Areas" data-fr="Domaines Spécialisés">Specialized Areas</h4>
                         <ul class="skill-list">
-                            <li data-en="Financial Risk Modeling" data-fr="Modélisation du Risque Financier">Financial
-                                Risk Modeling</li>
-                            <li data-en="Climate Risk Assessment" data-fr="Évaluation du Risque Climatique">Climate Risk
-                                Assessment</li>
+                            <li data-en="Financial Risk Modeling" data-fr="Modélisation du Risque Financier">Financial Risk Modeling</li>
+                            <li data-en="Climate Risk Assessment" data-fr="Évaluation du Risque Climatique">Climate Risk Assessment</li>
                             <li>Neural Networks (RVFL)</li>
-                            <li data-en="Numerical Optimization" data-fr="Optimisation Numérique">Numerical Optimization
-                            </li>
+                            <li data-en="Numerical Optimization" data-fr="Optimisation Numérique">Numerical Optimization</li>
                             <li data-en="Computer Simulation" data-fr="Simulation Informatique">Computer Simulation</li>
                         </ul>
                     </div>
@@ -1135,46 +640,26 @@
 
             <!-- CERTIFICATIONS -->
             <section class="section">
-                <h2 class="section-title" data-en="Licenses &amp; Certifications"
-                    data-fr="Licences &amp; Certifications">Licenses &amp; Certifications</h2>
+                <h2 class="section-title" data-en="Licenses &amp; Certifications" data-fr="Licences &amp; Certifications">Licenses &amp; Certifications</h2>
                 <ul class="skill-list">
-                    <li class="page-break-avoid"><strong>Improving Deep Neural Networks: Hyperparameter Tuning,
-                            Regularization and Optimization</strong> - <a href="https://www.coursera.org/">Coursera</a>
-                        (October 2023) - Credential ID: LEE25YAV65P8</li>
-                    <li class="page-break-avoid"><strong>Neural Networks and Deep Learning</strong> - <a
-                            href="https://www.coursera.org/">Coursera</a> (October 2023) - Credential ID: Z4Q9HMCSYB9T
-                    </li>
-                    <li class="page-break-avoid"><strong>Structuring Machine Learning Projects</strong> - <a
-                            href="https://www.coursera.org/">Coursera</a> (October 2023) - Credential ID: CJKZV2G89N9F
-                    </li>
-                    <li class="page-break-avoid"><strong>Dev Bootcamp Wall Street NYC</strong> - <a
-                            href="https://en.wikipedia.org/wiki/Dev_Bootcamp">Dev Bootcamp</a> (October 2017) - <span
-                            data-en="Intensive coding bootcamp: full-stack web development (HTML, CSS, Javascript, SQL, Databases)."
-                            data-fr="Bootcamp intensif de développement web full-stack (HTML, CSS, Javascript, SQL, Bases de données).">Intensive
-                            coding bootcamp: full-stack web development (HTML, CSS, Javascript, SQL, Databases).</span>
-                    </li>
-                    <li class="page-break-avoid"><strong>DAT208x: Introduction to Python for Data Science</strong> - <a
-                            href="https://www.edx.org/">edX</a> <span data-en="Verified Certificate"
-                            data-fr="Certificat Vérifié">Verified Certificate</span> (June 2017)</li>
-                    <li class="page-break-avoid"><strong>Introduction to Big Data with Apache Spark</strong> - <a
-                            href="https://www.edx.org/">edX</a> <span data-en="Verified Certificate"
-                            data-fr="Certificat Vérifié">Verified Certificate</span> (June 2015)</li>
+                    <li class="page-break-avoid"><strong>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</strong> - <a href="https://www.coursera.org/">Coursera</a> (October 2023) - Credential ID: LEE25YAV65P8</li>
+                    <li class="page-break-avoid"><strong>Neural Networks and Deep Learning</strong> - <a href="https://www.coursera.org/">Coursera</a> (October 2023) - Credential ID: Z4Q9HMCSYB9T</li>
+                    <li class="page-break-avoid"><strong>Structuring Machine Learning Projects</strong> - <a href="https://www.coursera.org/">Coursera</a> (October 2023) - Credential ID: CJKZV2G89N9F</li>
+                    <li class="page-break-avoid"><strong>Dev Bootcamp Wall Street NYC</strong> - <a href="https://en.wikipedia.org/wiki/Dev_Bootcamp">Dev Bootcamp</a> (October 2017) - <span data-en="Intensive coding bootcamp: full-stack web development (HTML, CSS, Javascript, SQL, Databases)." data-fr="Bootcamp intensif de développement web full-stack (HTML, CSS, Javascript, SQL, Bases de données).">Intensive coding bootcamp: full-stack web development (HTML, CSS, Javascript, SQL, Databases).</span></li>
+                    <li class="page-break-avoid"><strong>DAT208x: Introduction to Python for Data Science</strong> - <a href="https://www.edx.org/">edX</a> <span data-en="Verified Certificate" data-fr="Certificat Vérifié">Verified Certificate</span> (June 2017)</li>
+                    <li class="page-break-avoid"><strong>Introduction to Big Data with Apache Spark</strong> - <a href="https://www.edx.org/">edX</a> <span data-en="Verified Certificate" data-fr="Certificat Vérifié">Verified Certificate</span> (June 2015)</li>
                 </ul>
             </section>
 
             <!-- ONLINE PRESENCE -->
             <section class="section">
-                <h2 class="section-title" data-en="Online Presence &amp; Resources"
-                    data-fr="Présence en Ligne &amp; Ressources">Online Presence &amp; Resources</h2>
+                <h2 class="section-title" data-en="Online Presence &amp; Resources" data-fr="Présence en Ligne &amp; Ressources">Online Presence &amp; Resources</h2>
                 <div class="links">
-                    <a href="https://scholar.google.com/citations?user=y4ToSNIAAAAJ&hl=fr" class="link-btn"
-                        target="_blank">Google Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=y4ToSNIAAAAJ&hl=fr" class="link-btn" target="_blank">Google Scholar</a>
                     <a href="https://github.com/thierrymoudiki" class="link-btn" target="_blank">GitHub</a>
                     <a href="https://www.linkedin.com/in/thierry-moudiki/" class="link-btn" target="_blank">LinkedIn</a>
-                    <a href="https://www.researchgate.net/profile/Thierry-Moudiki" class="link-btn"
-                        target="_blank">ResearchGate</a>
-                    <a href="https://thierrymoudiki.github.io/" class="link-btn" target="_blank"
-                        data-en="Personal Website" data-fr="Site Personnel">Personal Website</a>
+                    <a href="https://www.researchgate.net/profile/Thierry-Moudiki" class="link-btn" target="_blank">ResearchGate</a>
+                    <a href="https://thierrymoudiki.github.io/" class="link-btn" target="_blank" data-en="Personal Website" data-fr="Site Personnel">Personal Website</a>
                     <a href="https://github.com/Techtonique" class="link-btn" target="_blank">Techtonique</a>
                     <a href="https://linktr.ee/tmoudiki" class="link-btn" target="_blank">Linktree</a>
                 </div>
@@ -1182,8 +667,7 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // ── Dark mode ──
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
@@ -1220,5 +704,4 @@
         }
     </script>
 </body>
-
 </html>
