@@ -2,7 +2,7 @@
 layout: post
 title: "My Presentation at Risk 2026: Lightweight Transfer Learning for Financial Forecasting"
 description: "My Presentation at Risk 2026: Lightweight Transfer Learning for Financial Forecasting"
-date: 2026-02-04
+date: 2026-03-01
 categories: R
 comments: true
 ---
