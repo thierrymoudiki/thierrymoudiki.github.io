@@ -7,6 +7,8 @@ categories: [R, Forecasting]
 comments: true
 ---
 
+**Update 2026-03-13:** ARIMA is only used as a filter to remove the risk premium from the physical paths. It is not used to price the options. 
+
 In quantitative finance, pricing derivatives often requires working under a 
 **risk-neutral measure** (Q) rather than the real-world **physical measure** (P). 
 While the Girsanov theorem provides a theoretical framework for this change of 
@@ -39,8 +41,7 @@ Our semi-parametric method involves:
 serial dependence
 3. **Residual Resampling**: Use Gaussian density estimation to resample centered ARIMA 
 residuals
-4. **Risk-Neutral Path Generation**: Combine fitted ARIMA models with resampled residuals 
-to create martingale paths
+4. **Risk-Neutral Path Generation**: ~~Combine fitted ARIMA models with resampled residuals~~ Generate new paths by cumulatively summing the resampled centered residuals (starting from S0), then multiply by e^(rt) to return to price space
 5. **Option Pricing**: Compute option prices as discounted expected payoffs under Q
 
 ## R Packages Used
@@ -63,7 +64,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## ----1-simulate-SVJD, cache=TRUE-----------------------------------------------
 # ARIMA-Black-Scholes: Semi-Parametric Risk-Neutral Pricing
 # T. Moudiki
-# 2025-12-04
+# 2025-03-13
 
 library(esgtoolkit)
 library(forecast)
@@ -115,7 +116,7 @@ terminal_prices_physical_GBM <- sim_GBM[nrow(sim_GBM), ]
 cat("Mean terminal price:", mean(terminal_prices_physical_GBM), "\n")
 cat("Std terminal price:", sd(terminal_prices_physical_GBM), "\n")
 cat("Expected under P:", S0 * exp(mu * maturity), "\n\n")
- 
+
 cat("Physical measure statistics (SVJD):\n")
 terminal_prices_physical_SVJD <- sim_SVJD[nrow(sim_SVJD), ]
 cat("Mean terminal price:", mean(terminal_prices_physical_SVJD), "\n")
@@ -290,19 +291,19 @@ for (i in 1:min(5, n_paths)) {
 
 # Box-Ljung tests
 pvalues_GBM <- sapply(1:ncol(centered_arima_residuals_GBM), 
-                  function(i) Box.test(centered_arima_residuals_GBM[,i])$p.value)
+                      function(i) Box.test(centered_arima_residuals_GBM[,i])$p.value)
 cat("\nBox-Ljung test p-values (GBM):\n")
 cat("Mean p-value:", mean(pvalues_GBM), "\n")
 cat("Proportion > 0.05:", mean(pvalues_GBM > 0.05), "\n")
 
 pvalues_SVJD <- sapply(1:ncol(centered_arima_residuals_SVJD), 
-                  function(i) Box.test(centered_arima_residuals_SVJD[,i])$p.value)
+                       function(i) Box.test(centered_arima_residuals_SVJD[,i])$p.value)
 cat("\nBox-Ljung test p-values (SVJD):\n")
 cat("Mean p-value:", mean(pvalues_SVJD), "\n")
 cat("Proportion > 0.05:", mean(pvalues_SVJD > 0.05), "\n")
 
 pvalues_Heston <- sapply(1:ncol(centered_arima_residuals_Heston), 
-                  function(i) Box.test(centered_arima_residuals_Heston[,i])$p.value)
+                         function(i) Box.test(centered_arima_residuals_Heston[,i])$p.value)
 cat("\nBox-Ljung test p-values (Heston):\n")
 cat("Mean p-value:", mean(pvalues_Heston), "\n")
 cat("Proportion > 0.05:", mean(pvalues_Heston > 0.05), "\n")
@@ -350,9 +351,7 @@ for (i in 1:n_paths) {
   discounted_path <- matrix(0, nrow = n_periods, ncol = n_sim_per_path)
   discounted_path[1, ] <- S0
   
-  increments <- matrix(scale(fitted_increments, center = TRUE, 
-                             scale = FALSE)[,1], nrow = n_periods - 1, ncol = n_sim_per_path) + 
-                resampled_residuals[1:(n_periods - 1), ]
+  increments <- resampled_residuals[1:(n_periods - 1), ]
   
   discounted_path[-1, ] <- S0 + apply(increments, 2, cumsum)
   S_tilde_price <- discounted_path * discount_factor
@@ -369,9 +368,7 @@ for (i in 1:n_paths) {
   discounted_path <- matrix(0, nrow = n_periods, ncol = n_sim_per_path)
   discounted_path[1, ] <- S0
   
-  increments <- matrix(scale(fitted_increments, center = TRUE, 
-                             scale = FALSE)[,1], nrow = n_periods - 1, ncol = n_sim_per_path) + 
-                resampled_residuals[1:(n_periods - 1), ]
+  increments <- resampled_residuals[1:(n_periods - 1), ]
   
   discounted_path[-1, ] <- S0 + apply(increments, 2, cumsum)
   S_tilde_price <- discounted_path * discount_factor
@@ -388,9 +385,7 @@ for (i in 1:n_paths) {
   discounted_path <- matrix(0, nrow = n_periods, ncol = n_sim_per_path)
   discounted_path[1, ] <- S0
   
-  increments <- matrix(scale(fitted_increments, center = TRUE, 
-                             scale = FALSE)[,1], nrow = n_periods - 1, ncol = n_sim_per_path) + 
-                resampled_residuals[1:(n_periods - 1), ]
+  increments <- resampled_residuals[1:(n_periods - 1), ]
   
   discounted_path[-1, ] <- S0 + apply(increments, 2, cumsum)
   S_tilde_price <- discounted_path * discount_factor
@@ -418,11 +413,11 @@ S_tilde_ts_Heston <- ts(S_tilde_combined_Heston, start = start(sim_Heston),
 # Visualize risk-neutral paths
 par(mfrow=c(1,3))
 esgtoolkit::esgplotbands(S_tilde_ts_GBM, 
-                        main="Risk-Neutral Paths - GBM")
+                         main="Risk-Neutral Paths - GBM")
 esgtoolkit::esgplotbands(S_tilde_ts_SVJD, 
-                        main="Risk-Neutral Paths - SVJD")
+                         main="Risk-Neutral Paths - SVJD")
 esgtoolkit::esgplotbands(S_tilde_ts_Heston, 
-                        main="Risk-Neutral Paths - Heston")
+                         main="Risk-Neutral Paths - Heston")
 
 # Sample plots
 par(mfrow=c(1,3))
@@ -527,13 +522,13 @@ par(mfrow=c(1,1))
 cat("\n=== OPTION PRICING ===\n\n")
 
 bs_price <- function(S, K, r, sigma, T, q = 0) {
-
+  
   d1 <- (log(S / K) + (r - q + 0.5 * sigma^2) * T) / (sigma * sqrt(T))
   d2 <- d1 - sigma * sqrt(T)
-
+  
   call <- S * exp(-q * T) * pnorm(d1) - K * exp(-r * T) * pnorm(d2)
   put  <- K * exp(-r * T) * pnorm(-d2) - S * exp(-q * T) * pnorm(-d1)
-
+  
   list(call = call, put = put)
 }
 

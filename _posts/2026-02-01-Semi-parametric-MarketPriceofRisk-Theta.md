@@ -7,7 +7,10 @@ categories: R
 comments: true
 ---
 
-Following [https://thierrymoudiki.github.io/blog/2025/12/07/r/forecasting/ARIMA-Pricing](https://thierrymoudiki.github.io/blog/2025/12/07/r/forecasting/ARIMA-Pricing), I present how to use time series models as market price of risk in option pricing. `auto.arima` works well because it enforces stationarity of residuals. This post shows that, if the chosen time series forecasting model can obtain stationarity of residuals, then it can be used as market price of risk.
+**Update 2026-03-13:** ARIMA is only used as a filter to remove the risk premium from the physical paths. It is not used to price the options. Something to always check with the approach is that the residuals are not autocorrelated. 
+
+
+Following [https://thierrymoudiki.github.io/blog/2025/12/07/r/forecasting/ARIMA-Pricing](https://thierrymoudiki.github.io/blog/2025/12/07/r/forecasting/ARIMA-Pricing), I present how to use time series models as market price of risk in option pricing. `auto.arima` works well because it enforces stationarity of residuals. This post shows that, **if the chosen time series forecasting model can obtain stationarity of residuals** (it must be the case), then it can be used as market price of risk.
 
 
 
@@ -295,9 +298,7 @@ for (i in 1:n_paths) {
   discounted_path <- matrix(0, nrow = n_periods, ncol = n_sim_per_path)
   discounted_path[1, ] <- S0
 
-  increments <- matrix(scale(fitted_increments, center = TRUE,
-                             scale = FALSE)[,1], nrow = n_periods - 1, ncol = n_sim_per_path) +
-    resampled_residuals[1:(n_periods - 1), ]
+  increments <- resampled_residuals[1:(n_periods - 1), ]
 
   discounted_path[-1, ] <- S0 + apply(increments, 2, cumsum)
   S_tilde_price <- discounted_path * discount_factor
@@ -314,9 +315,7 @@ for (i in 1:n_paths) {
   discounted_path <- matrix(0, nrow = n_periods, ncol = n_sim_per_path)
   discounted_path[1, ] <- S0
 
-  increments <- matrix(scale(fitted_increments, center = TRUE,
-                             scale = FALSE)[,1], nrow = n_periods - 1, ncol = n_sim_per_path) +
-    resampled_residuals[1:(n_periods - 1), ]
+  increments <- resampled_residuals[1:(n_periods - 1), ]
 
   discounted_path[-1, ] <- S0 + apply(increments, 2, cumsum)
   S_tilde_price <- discounted_path * discount_factor
@@ -333,9 +332,7 @@ for (i in 1:n_paths) {
   discounted_path <- matrix(0, nrow = n_periods, ncol = n_sim_per_path)
   discounted_path[1, ] <- S0
 
-  increments <- matrix(scale(fitted_increments, center = TRUE,
-                             scale = FALSE)[,1], nrow = n_periods - 1, ncol = n_sim_per_path) +
-    resampled_residuals[1:(n_periods - 1), ]
+  increments <- resampled_residuals[1:(n_periods - 1), ]
 
   discounted_path[-1, ] <- S0 + apply(increments, 2, cumsum)
   S_tilde_price <- discounted_path * discount_factor
