@@ -15,65 +15,65 @@ After thinking about it more, here's a condensed version of the previous posts, 
 
 Let
 
-- \(S_t\) = asset price  
-- \(r\) = risk-free rate  
-- \(T\) = maturity  
+- $$S_t$$ = asset price  
+- $$r$$ = risk-free rate  
+- $$T$$ = maturity  
 
 Define the **discounted price process**
 
-\[
+$$
 D_t = e^{-rt} S_t
-\]
+$$
 
-Under the no-arbitrage principle (Fundamental Theorem of Asset Pricing), there exists a probability measure \(Q\) such that
+Under the no-arbitrage principle (Fundamental Theorem of Asset Pricing), there exists a probability measure $$Q$$ such that
 
-\[
+$$
 E_Q[D_t \mid \mathcal{F}_{t-1}] = D_{t-1}
-\]
+$$
 
-so \(D_t\) is a **martingale**.
+so $$D_t$$ is a **martingale**.
 
 ## 2. Empirical innovation extraction
 
-Given simulated or observed price paths \(S_t\), compute
+Given simulated or observed price paths $$S_t$$, compute
 
-\[
+$$
 D_t = e^{-rt} S_t
-\]
+$$
 
 Define increments
 
-\[
+$$
 \Delta D_t = D_t - D_{t-1}
-\]
+$$
 
 Fit a time-series filter
 
-\[
+$$
 \Delta D_t = f(\Delta D_{t-1}, \ldots, \Delta D_{t-p}) + \varepsilon_t
-\]
+$$
 
 where
 
-\[
+$$
 E[\varepsilon_t] = 0
-\]
+$$
 
 ## 3. Bootstrap innovation distribution
 
 Let
 
-\[
+$$
 \{\varepsilon_1, \ldots, \varepsilon_T\}
-\]
+$$
 
 be the empirical innovations.
 
 Generate bootstrap resamples
 
-\[
+$$
 \varepsilon_t^{(i)}, \quad i = 1, \ldots, N
-\]
+$$
 
 using stationary bootstrap. These sequences define the **innovation law**.
 
@@ -81,69 +81,69 @@ using stationary bootstrap. These sequences define the **innovation law**.
 
 Define the discounted process recursively:
 
-\[
+$$
 D_0 = S_0
-\]
+$$
 
-\[
+$$
 D_t = D_{t-1} + \varepsilon_t
-\]
+$$
 
 which implies
 
-\[
+$$
 D_t = S_0 + \sum_{i=1}^{t} \varepsilon_i
-\]
+$$
 
 Since
 
-\[
+$$
 E[\varepsilon_t] = 0
-\]
+$$
 
 we obtain
 
-\[
+$$
 E[D_t] = E[S_0 + \sum_{i=1}^{t} \varepsilon_i] = S_0 + \sum_{i=1}^{t} E[\varepsilon_i] = S_0
-\]
+$$
 
 
 ## 5. Risk-neutral price process
 
 Recover the price process
 
-\[
+$$
 S_t = e^{rt} D_t
-\]
+$$
 
 Then
 
-\[
+$$
 E[e^{-rt} S_t] = S_0
-\]
+$$
 
 which satisfies the **risk-neutral condition**.
 
 ## 6. Monte Carlo pricing
 
-For payoff \(H(S_T)\), the derivative price is
+For payoff $$H(S_T)$$, the derivative price is
 
-\[
+$$
 V_0 = e^{-rT} E_Q[H(S_T)]
-\]
+$$
 
 Estimated by Monte Carlo:
 
-\[
+$$
 V_0 \approx e^{-rT} \frac{1}{N}
 \sum_{i=1}^{N} H(S_T^{(i)})
-\]
+$$
 
 Example (European call):
 
-\[
+$$
 C_0 = e^{-rT} E_Q[\max(S_T - K, 0)]
-\]
+$$
 
 Here's the R code for the whole process:
 
