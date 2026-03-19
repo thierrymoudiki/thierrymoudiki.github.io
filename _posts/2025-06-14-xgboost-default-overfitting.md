@@ -22,7 +22,7 @@ In this post, we'll explore an intriguing comparison between XGBoost's balanced 
 Let's dive into the implementation and analysis.
 
 ```python
-!pip install genbooster
+!pip install git+https://github.com/Techtonique/genbooster.git
 !pip install nnetsauce
 ```
 
