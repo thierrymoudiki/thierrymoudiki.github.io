@@ -7,7 +7,7 @@ categories: R
 comments: true
 ---
 
-Following [the post on exact Shapley values](https://thierrymoudiki.github.io/blog/2026/03/08/r/exact-shapley-dynrmf) for time series explainability, this post illustrates an example of how to use sensitivity analysis  to explain time-series forecasts, based on the `ahead::dynrmf` model and external regressors. What is **sensitivity analysis** in this context? It's about evaluating the impact of changes in the external regressors on the time-series forecast.
+Following [the post on exact Shapley values](https://thierrymoudiki.github.io/blog/2026/03/08/r/exact-shapley-dynrmf) for time series explainability, this post illustrates an example of how to use sensitivity analysis  to explain time series forecasts, based on the `ahead::dynrmf` model and external regressors. What is **sensitivity analysis** in this context? It's about evaluating the impact of changes in the external regressors on the time series forecast.
 
 
 The post uses the [`ahead::dynrmf_sensi`](https://docs.techtonique.net/ahead/reference/dynrmf_sensi.html) function to compute the sensitivities, and the [`ahead::plot_dynrmf_sensitivity`](https://docs.techtonique.net/ahead/reference/plot_dynrmf_sensitivity.html) function to plot the results.
