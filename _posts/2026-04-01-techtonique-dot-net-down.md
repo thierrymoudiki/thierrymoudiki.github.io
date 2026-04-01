@@ -9,7 +9,7 @@ comments: true
 
 **IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
 
-[https://www.techtonique.net](https://www.techtonique.net) contained an API for machine learning tasks (classification, regression, survival analysis, forecasting etc.).
+[https://www.techtonique.net](https://www.techtonique.net) contained an language-agnostic API for machine learning tasks (classification, regression, survival analysis, forecasting etc.).
 
 As a result, do not buy the Gumroad tutorial then. 
 
