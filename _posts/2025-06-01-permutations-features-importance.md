@@ -7,6 +7,9 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
+**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+
+
 **Feature importance** is a crucial aspect of machine learning model interpretation, helping us understand which features contribute most to a model's predictions. In this blog post, we'll explore two popular methods for computing feature importance using techtonique.net's API:
 
 1. **Permutation Importance**: This method measures how much a model's performance decreases when a feature is randomly shuffled. It's model-agnostic and provides a straightforward way to understand feature impact.

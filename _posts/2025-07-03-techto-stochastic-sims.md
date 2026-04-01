@@ -7,6 +7,9 @@ categories: [R, Python]
 comments: true
 ---
 
+**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+
+
 `=TECHTO_SIMULATION` in Excel is based on R and Python code from the [Techtonique](https://github.com/Techtonique) project's SIMULATION functions.
 
 Here's a unified way to use `=TECHTO_SIMULATION` directly and easily in Excel with xlwings Lite:

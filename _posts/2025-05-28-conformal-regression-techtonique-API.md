@@ -7,6 +7,9 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
+**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+
+
 This blog post demonstrates how to use the machine learning **conformal** regression (higher-quality prediction intervals, see [https://conformalpredictionintro.github.io/](https://conformalpredictionintro.github.io/)) [REST API](https://www.techtonique.net/about) provided by [techtonique.net](https://www.techtonique.net) (the latest updates are in the new [the API's blog](https://www.techtonique.net/blog)) using two different methods:
 
 1. **curl** - For command-line users and shell scripts

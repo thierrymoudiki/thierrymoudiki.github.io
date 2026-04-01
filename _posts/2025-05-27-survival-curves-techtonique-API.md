@@ -7,6 +7,9 @@ categories: [R, Python]
 comments: true
 ---
 
+**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+
+
 Survival analysis is a statistical method used to analyze the expected duration of time until one or more events happen, such as death in biological organisms and failure in mechanical systems. This type of analysis is particularly useful in medical research, engineering, and social sciences.
 
 In this tutorial, we'll explore how to perform survival analysis using the Techtonique API. We'll work with two datasets:
