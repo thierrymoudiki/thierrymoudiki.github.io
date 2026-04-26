@@ -2547,5 +2547,5 @@ In Colab:
 <a target="_blank" href="https://colab.research.google.com/github/thierrymoudiki/2026-04-26-survival_benchmark/blob/main/2026_04_26_survival_benchmark_expanded.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg"
        alt="Open In Colab"
-       style="height:16px; vertical-align:middle;">
+       style="max-width: 100%; height: auto; width: 120px;">
 </a>
