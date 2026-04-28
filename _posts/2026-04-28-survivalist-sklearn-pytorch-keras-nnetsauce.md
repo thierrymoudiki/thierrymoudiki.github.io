@@ -1,85 +1,58 @@
 ---
 layout: post
-title: "survivalist: Probabilistic model-agnostic survival analysis using scikit-learn, glmnet, xgboost, lightgbm, pytorch, keras, nnetsauce and mlsauce" 
-description: "Survival analysis is used to predict the time until an event of interest occurs. In this post, I show how to use scikit-learn, glmnet, xgboost, pytorch, keras, and nnetsauce for probabilistic survival analysis"
-date: 2024-12-15
+title: "Survival analysis with sklearn, glmnet, keras, pytorch, lightgbm, xgboost, nnetsauce, mlsauce Part 2"
+date: 2026-04-28
 categories: Python
 comments: true
 ---
 
-**Remark:** This post was updated on 2026-04-28 with up-to-date packages. See [2026-04-28's post](https://thierrymoudiki.github.io/blog/index.html#list-posts). 
+This is Part 2 of the 2024-12-15 post, with up-to-date packages.
 
-**Survival analysis** is a group of Statistical/Machine Learning (ML) methods for predicting the **time until an event of interest occurs**. Examples of events include (link to notebook at the end): 
+# Survival analysis with sklearn, glmnet, keras, pytorch, lightgbm, xgboost, nnetsauce, mlsauce
 
-- death 
-- failure
-- recovery
-- default
-- etc.
+<a target="_blank" href="https://colab.research.google.com/github/thierrymoudiki/2026-04-26-survival_benchmark/blob/main/2026_04_26_survivalist_sklearn_pytorch_keras_nnetsauce.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; height: auto; width: 120px;"/>
+</a>
 
-And the event of interest can be anything that has a duration: 
-
-- the time until a machine breaks down 
-- the time until a customer buys a product 
-- the time until a patient dies
-- etc. 
-
-The event can be **censored**, meaning that it has'nt occurred for some subjects at the time of analysis. 
-
-In this post, I show how to use `scikit-learn`, `glmnet`, `xgboost`, `lightgbm`, `pytorch`, `keras`, `nnetsauce` and `mlsauce` in conjuction with Python package [`survivalist`](https://github.com/Techtonique/survivalist) for probabilistic survival analysis. The probabilistic part is based on **conformal prediction and Bayesian inference**, and graphics represent the out-of-sample ML survival function vs Empirical Kaplan-Meier survival function (with confidence intervals).
-
-A link to the corresponding notebook can be found at the end of this post.
-
-# Contents
-
-- [Contents](#contents)
-- [0 - Installation](#0---installation)
-- [1 - using `scikit-learn` with conformal prediction](#1---using-scikit-learn-with-conformal-prediction)
-- [2 - using `nnetsauce`](#2---using-nnetsauce)
-  - [2 - 1 with conformal prediction](#2---1-with-conformal-prediction)
-  - [2 - 2 with Bayesian Inference](#2---2-with-bayesian-inference)
-- [3 - using `glmnet`](#3---using-glmnet)
-- [4 - using `pytorch`](#4---using-pytorch)
-- [5 - Using keras (through `scikeras`)](#5---using-keras-through-scikeras)
-- [6 - using `xgboost`](#6---using-xgboost)
-- [7 - using `lightgbm`](#7---using-lightgbm)
-- [8 - using Generic Boosting (`mlsauce`)](#8---using-generic-boosting-mlsauce)
-
-
-# 0 - Installation
-
-```python
-!pip uninstall -y survivalist
-```
 
 ```python
 !pip install survivalist --upgrade --no-cache-dir
 ```
 
+
 ```python
 !pip install glmnetforpython --verbose --upgrade --no-cache-dir
 ```
+
 
 ```python
 !pip install nnetsauce --verbose --upgrade --no-cache-dir
 ```
 
+
 ```python
 !pip install scikeras
 ```
+
 
 ```python
 !pip install xgboost --upgrade --no-cache-dir
 !pip install lightgbm --upgrade --no-cache-dir
 ```
 
+
+
+
+
 ```python
-!pip install git+https://github.com/Techtonique/mlsauce.git --verbose
+!pip install mlsauce --verbose
 ```
+
 
 ```python
 import numpy as np
 ```
+
 
 ```python
 import pandas as pd
@@ -148,6 +121,10 @@ from time import time
 import pandas as pd
 ```
 
+    /usr/local/lib/python3.12/dist-packages/sklearn/utils/deprecation.py:71: FutureWarning: Class PassiveAggressiveRegressor is deprecated; this is deprecated in version 1.8 and will be removed in 1.10. Use `SGDRegressor(loss='epsilon_insensitive', penalty=None, learning_rate='pa1', eta0 = 1.0)` instead.
+      warnings.warn(msg, category=FutureWarning)
+
+
 # 1 - using `scikit-learn` with conformal prediction
 
 
@@ -163,9 +140,11 @@ km = kaplan_meier_estimator(event_status, event_time,
                             conf_type="log-log")
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=RidgeCV(), type_pi="bootstrap")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -176,13 +155,28 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:09<00:00, 10.54it/s]
-    100%|██████████| 100/100 [00:10<00:00,  9.61it/s]
+    100%|██████████| 100/100 [00:11<00:00,  8.90it/s]
+    100%|██████████| 100/100 [00:04<00:00, 20.60it/s]
+
+
+    Time to fit PIRandomForestRegressor:  16.17304039001465
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_13_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_13_2.png){:class="img-responsive"}
     
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_13_3.png){:class="img-responsive"}
+    
+
+
+
+
+
 
 ```python
 X, y = load_gbsg2()
@@ -196,9 +190,11 @@ km = kaplan_meier_estimator(event_status, event_time,
                             conf_type="log-log")
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=RidgeCV(), type_pi="kde")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 
 for fn in surv_funcs.mean:
@@ -210,13 +206,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:02<00:00, 42.51it/s]
-    100%|██████████| 100/100 [00:02<00:00, 42.67it/s]
+    100%|██████████| 100/100 [00:02<00:00, 34.45it/s]
+    100%|██████████| 100/100 [00:02<00:00, 46.93it/s]
+
+
+    Time to fit PIRandomForestRegressor:  5.094623327255249
 
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_14_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_15_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_15_3.png){:class="img-responsive"}
     
 
 
@@ -233,9 +238,11 @@ km = kaplan_meier_estimator(event_status, event_time,
                             conf_type="log-log")
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=RidgeCV(), type_pi="kde")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -246,12 +253,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:02<00:00, 44.45it/s]
-    100%|██████████| 100/100 [00:02<00:00, 35.99it/s]
+    100%|██████████| 100/100 [00:01<00:00, 59.56it/s]
+    100%|██████████| 100/100 [00:01<00:00, 58.55it/s]
+
+
+    Time to fit PIRandomForestRegressor:  3.4469754695892334
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_15_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_16_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_16_3.png){:class="img-responsive"}
     
 
 
@@ -268,9 +285,11 @@ km = kaplan_meier_estimator(event_status, event_time,
                             conf_type="log-log")
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=RidgeCV(), type_pi="ecdf")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -281,12 +300,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:01<00:00, 51.44it/s]
-    100%|██████████| 100/100 [00:01<00:00, 51.30it/s]
+    100%|██████████| 100/100 [00:01<00:00, 59.25it/s]
+    100%|██████████| 100/100 [00:02<00:00, 49.04it/s]
+
+
+    Time to fit PIRandomForestRegressor:  3.786191940307617
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_16_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_17_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_17_3.png){:class="img-responsive"}
     
 
 
@@ -303,10 +332,11 @@ km = kaplan_meier_estimator(event_status, event_time,
                             conf_type="log-log")
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=RidgeCV(), type_pi="kde")
 
-
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -317,12 +347,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:01<00:00, 51.20it/s]
-    100%|██████████| 100/100 [00:01<00:00, 51.52it/s]
+    100%|██████████| 100/100 [00:02<00:00, 46.29it/s]
+    100%|██████████| 100/100 [00:01<00:00, 58.42it/s]
+
+
+    Time to fit PIRandomForestRegressor:  3.9259252548217773
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_17_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_18_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_18_3.png){:class="img-responsive"}
     
 
 
@@ -346,9 +386,11 @@ km = kaplan_meier_estimator(event_status, event_time,
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=ns.CustomRegressor(RidgeCV()),
                                                                type_pi="bootstrap")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -359,12 +401,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:42<00:00,  2.35it/s]
-    100%|██████████| 100/100 [00:40<00:00,  2.46it/s]
+    100%|██████████| 100/100 [00:36<00:00,  2.75it/s]
+    100%|██████████| 100/100 [00:51<00:00,  1.96it/s]
+
+
+    Time to fit PIRandomForestRegressor:  87.83672404289246
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_21_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_22_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_22_3.png){:class="img-responsive"}
     
 
 
@@ -382,9 +434,11 @@ km = kaplan_meier_estimator(event_status, event_time,
                             conf_type="log-log")
 estimator = PISurvivalCustom(regr=ns.CustomRegressor(RidgeCV()), type_pi="kde")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -394,8 +448,19 @@ for fn in surv_funcs.mean:
     plt.ylim(0, 1)
     plt.show()
 ```
+
+    Time to fit PIRandomForestRegressor:  0.6711692810058594
+
+
+
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_22_1.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_23_1.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_23_2.png){:class="img-responsive"}
     
 
 
@@ -413,9 +478,11 @@ km = kaplan_meier_estimator(event_status, event_time,
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=ns.CustomRegressor(RidgeCV()),
                                                                type_pi="kde")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 
 for fn in surv_funcs.mean:
@@ -427,12 +494,24 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:22<00:00,  4.48it/s]
-    100%|██████████| 100/100 [00:21<00:00,  4.71it/s]
+    100%|██████████| 100/100 [00:21<00:00,  4.68it/s]
+    100%|██████████| 100/100 [00:19<00:00,  5.17it/s]
+
+
+    Time to fit PIRandomForestRegressor:  41.195496559143066
+
+
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_23_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_24_2.png){:class="img-responsive"}
     
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_24_3.png){:class="img-responsive"}
+    
+
 
 
 ```python
@@ -448,9 +527,11 @@ km = kaplan_meier_estimator(event_status, event_time,
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=ns.CustomRegressor(RidgeCV()),
                                                                type_pi="kde")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -461,12 +542,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:17<00:00,  5.88it/s]
-    100%|██████████| 100/100 [00:18<00:00,  5.42it/s]
+    100%|██████████| 100/100 [00:15<00:00,  6.58it/s]
+    100%|██████████| 100/100 [00:16<00:00,  6.13it/s]
+
+
+    Time to fit PIRandomForestRegressor:  31.901167631149292
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_24_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_25_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_25_3.png){:class="img-responsive"}
     
 
 
@@ -484,9 +575,11 @@ km = kaplan_meier_estimator(event_status, event_time,
 estimator = PISurvivalCustom(regr=ns.CustomRegressor(RandomForestRegressor()),
                              type_pi="bootstrap")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -496,8 +589,19 @@ for fn in surv_funcs.mean:
     plt.ylim(0, 1)
     plt.show()
 ```
+
+    Time to fit PIRandomForestRegressor:  3.839787006378174
+
+
+
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_25_1.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_26_1.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_26_2.png){:class="img-responsive"}
     
 
 
@@ -515,10 +619,11 @@ km = kaplan_meier_estimator(event_status, event_time,
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=ns.CustomRegressor(RidgeCV()),
                                                                type_pi="ecdf")
 
-
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -529,12 +634,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:16<00:00,  5.95it/s]
-    100%|██████████| 100/100 [00:17<00:00,  5.79it/s]
+    100%|██████████| 100/100 [00:16<00:00,  5.93it/s]
+    100%|██████████| 100/100 [00:15<00:00,  6.35it/s]
+
+
+    Time to fit PIRandomForestRegressor:  33.034319162368774
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_26_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_27_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_27_3.png){:class="img-responsive"}
     
 
 
@@ -552,9 +667,11 @@ km = kaplan_meier_estimator(event_status, event_time,
 estimator = PISurvivalCustom(regr=ns.CustomRegressor(RandomForestRegressor()),
                              type_pi="ecdf")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -564,8 +681,19 @@ for fn in surv_funcs.mean:
     plt.ylim(0, 1)
     plt.show()
 ```
+
+    Time to fit PIRandomForestRegressor:  4.180232763290405
+
+
+
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_27_1.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_28_1.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_28_2.png){:class="img-responsive"}
     
 
 
@@ -583,9 +711,11 @@ km = kaplan_meier_estimator(event_status, event_time,
 estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=ns.CustomRegressor(RidgeCV()),
                                                                type_pi="kde")
 
+start = time()
 estimator.fit(X_train, y_train)
+print("Time to fit PIRandomForestRegressor: ", time() - start)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -596,12 +726,22 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:27<00:00,  3.69it/s]
-    100%|██████████| 100/100 [00:16<00:00,  6.04it/s]
+    100%|██████████| 100/100 [00:16<00:00,  6.19it/s]
+    100%|██████████| 100/100 [00:15<00:00,  6.26it/s]
+
+
+    Time to fit PIRandomForestRegressor:  32.65510678291321
+
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_28_2.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_29_2.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_29_3.png){:class="img-responsive"}
     
 
 
@@ -660,17 +800,17 @@ estimator3.fit(X_train, y_train)
 print("Time to fit ARDRegression: ", time() - start)
 
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[0:1,:], return_std=True)
-surv_funcs2 = estimator2.predict_survival_function(X_test.iloc[0:1,:], return_std=True)
-surv_funcs3 = estimator3.predict_survival_function(X_test.iloc[0:1,:], return_std=True)
+surv_funcs = estimator.predict_survival_function(X_test.iloc[0:2,:], return_std=True)
+surv_funcs2 = estimator2.predict_survival_function(X_test.iloc[0:2,:], return_std=True)
+surv_funcs3 = estimator3.predict_survival_function(X_test.iloc[0:2,:], return_std=True)
 ```
 
     
     
      BayesianRidge ------------------
-    Time to fit BayesianRidge:  0.17850041389465332
-    Time to fit GaussianProcessRegressor:  0.4104886054992676
-    Time to fit ARDRegression:  0.5052413940429688
+    Time to fit BayesianRidge:  0.34748315811157227
+    Time to fit GaussianProcessRegressor:  0.5891196727752686
+    Time to fit ARDRegression:  0.6887409687042236
 
 
 
@@ -695,7 +835,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_32_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_33_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_33_1.png){:class="img-responsive"}
     
 
 
@@ -712,7 +858,13 @@ for fn in surv_funcs2.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_33_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_34_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_34_1.png){:class="img-responsive"}
     
 
 
@@ -729,7 +881,13 @@ for fn in surv_funcs3.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_34_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_35_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_35_1.png){:class="img-responsive"}
     
 
 
@@ -751,7 +909,7 @@ estimator = PISurvivalCustom(regr=ns.CustomRegressor(glmnet.GLMNet(lambdau=1000)
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -764,7 +922,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_36_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_37_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_37_1.png){:class="img-responsive"}
     
 
 
@@ -775,7 +939,7 @@ estimator = PIComponentwiseGenGradientBoostingSurvivalAnalysis(regr=ns.CustomReg
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -786,14 +950,23 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-    100%|██████████| 100/100 [00:36<00:00,  2.71it/s]
-    100%|██████████| 100/100 [00:40<00:00,  2.49it/s]
+    100%|██████████| 100/100 [00:36<00:00,  2.75it/s]
+    100%|██████████| 100/100 [00:39<00:00,  2.56it/s]
 
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_37_1.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_38_1.png){:class="img-responsive"}
     
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_38_2.png){:class="img-responsive"}
+    
+
+
+
 
 
 # 4 - using `pytorch`
@@ -901,7 +1074,7 @@ estimator = PISurvivalCustom(regr=MLPRegressorTorch(input_size=X_train.shape[1]+
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -914,7 +1087,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_40_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_42_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_42_1.png){:class="img-responsive"}
     
 
 
@@ -946,7 +1125,7 @@ estimator = PISurvivalCustom(regr=MLPRegressorTorch(input_size=X_train.shape[1]+
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -959,7 +1138,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_41_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_43_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_43_1.png){:class="img-responsive"}
     
 
 
@@ -1017,7 +1202,7 @@ estimator = PISurvivalCustom(regr=reg,
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1027,9 +1212,25 @@ for fn in surv_funcs.mean:
     plt.ylim(0, 1)
     plt.show()
 ```
+
+    WARNING:tensorflow:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7a2a4afe5760> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+    WARNING:tensorflow:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7a2a4afe5760> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+    WARNING:tensorflow:5 out of the last 9 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x7a2a4ab86840> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+    WARNING:tensorflow:6 out of the last 11 calls to <function TensorFlowTrainer._make_function.<locals>.multi_step_on_iterator at 0x7a2a4a9f6b60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+
+
+
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_44_1.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_46_1.png){:class="img-responsive"}
     
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_46_2.png){:class="img-responsive"}
+    
+
+
 
 ```python
 X, y = load_whas500()
@@ -1054,7 +1255,7 @@ estimator = PISurvivalCustom(regr=reg,
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1067,16 +1268,20 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_45_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_47_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_47_1.png){:class="img-responsive"}
     
 
 
 # 6 - using `xgboost`
 
 
-```python
 
-```
 
 
 ```python
@@ -1104,7 +1309,7 @@ estimator = PISurvivalCustom(regr=xgb.XGBRegressor(),
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1117,7 +1322,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_48_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_50_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_50_1.png){:class="img-responsive"}
     
 
 
@@ -1145,7 +1356,7 @@ estimator = PISurvivalCustom(regr=xgb.XGBRegressor(),
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1158,16 +1369,20 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_49_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_51_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_51_1.png){:class="img-responsive"}
     
 
 
 # 7 - using `lightgbm`
 
 
-```python
 
-```
 
 
 ```python
@@ -1193,7 +1408,7 @@ estimator = PISurvivalCustom(regr=lgb.LGBMRegressor(verbose=-1,
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1206,7 +1421,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_52_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_54_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_54_1.png){:class="img-responsive"}
     
 
 
@@ -1235,7 +1456,7 @@ estimator = PISurvivalCustom(regr=lgb.LGBMRegressor(verbose=-1,
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1248,7 +1469,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_53_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_55_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_55_1.png){:class="img-responsive"}
     
 
 
@@ -1267,9 +1494,7 @@ regr_ridge = ms.GenericBoostingRegressor(ms.RidgeRegressor(reg_lambda=1e3),
 ```
 
 
-```python
 
-```
 
 
 ```python
@@ -1292,7 +1517,7 @@ estimator = PISurvivalCustom(regr=regr_ridge,
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1305,7 +1530,13 @@ for fn in surv_funcs.mean:
 
 
     
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_58_0.png){:class="img-responsive"}          
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_60_0.png){:class="img-responsive"}
+    
+
+
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_60_1.png){:class="img-responsive"}
     
 
 
@@ -1333,7 +1564,7 @@ estimator = PISurvivalCustom(regr=regr_ridge,
 
 estimator.fit(X_train, y_train)
 
-surv_funcs = estimator.predict_survival_function(X_test.iloc[:1])
+surv_funcs = estimator.predict_survival_function(X_test.iloc[:2])
 
 for fn in surv_funcs.mean:
     plt.step(fn.x, fn(fn.x), where="post")
@@ -1344,9 +1575,14 @@ for fn in surv_funcs.mean:
     plt.show()
 ```
 
-![png]({{base}}/images/2024-12-15/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce_59_0.png){:class="img-responsive"}          
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_61_0.png){:class="img-responsive"}
+    
 
 
-<a target="_blank" href="https://colab.research.google.com/github/Techtonique/survivalist/blob/main/survivalist/demo/2024-12-15-survivalist-sklearn-pytorch-keras-nnetsauce.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+
+    
+![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_61_1.png){:class="img-responsive"}
+    
+
