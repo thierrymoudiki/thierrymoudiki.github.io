@@ -1586,3 +1586,4 @@ for fn in surv_funcs.mean:
 ![image-title-here]({{base}}/images/2026-04-28/2026-04-28-survivalist-sklearn-pytorch-keras-nnetsauce_61_1.png){:class="img-responsive"}
     
 
+There are a few cases where the prediction intervals do not contain the mean curve. This is something that I'll have to investigate further.
