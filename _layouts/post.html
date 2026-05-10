@@ -216,7 +216,7 @@ comments: true
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const postPath = "{{ page.url }}"; // Jekyll variable for the post's URL
-      const apiBaseUrl = "https://page-views-d881e40d813b.herokuapp.com"; // No trailing slash
+      const apiBaseUrl = "https://web-production-4d5cc4.up.railway.app"; // No trailing slash
 
       // Increment page views
       fetch(`${apiBaseUrl}/increment/`, {
@@ -243,7 +243,7 @@ comments: true
         })
         .then((data) => {
           const viewCount = data.views || 0;
-          document.getElementById("view-count").innerText = `${viewCount} views (since 2026-02-09)`;
+          document.getElementById("view-count").innerText = `${viewCount} views (since 2026-05-10)`;
         })
         .catch((error) => {
           console.error("Error fetching page views:", error);
