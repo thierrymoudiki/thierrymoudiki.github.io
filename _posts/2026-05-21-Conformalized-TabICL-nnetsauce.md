@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Conformalized TabICL: Prediction Intervals for a Pretrained Transformer for a State-Of-The-Art Tabular Foundation Model in Python and R"
+title: "Conformalized TabICL: Prediction Intervals for a State-Of-The-Art Tabular Foundation Model in Python and R"
 description: "Prediction Intervals for Tabular Regression in Python and R via Conformalized TabICL; comparison with RidgeCV"
 date: 2026-05-21
 categories: [R, Python]
