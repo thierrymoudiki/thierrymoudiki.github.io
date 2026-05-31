@@ -7,7 +7,7 @@ categories: [R, Python]
 comments: true
 ---
 
-**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+~~**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**~~
 
 
 In today's data-driven world, machine learning classification tasks are ubiquitous across various domains. While building and deploying machine learning models can be complex, APIs provide a convenient way to leverage powerful classification capabilities without the need for extensive setup or infrastructure.

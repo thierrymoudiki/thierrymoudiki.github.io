@@ -7,7 +7,7 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
-**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+~~**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**~~
 
 
 **Feature importance** is a crucial aspect of machine learning model interpretation, helping us understand which features contribute most to a model's predictions. In this blog post, we'll explore two popular methods for computing feature importance using techtonique.net's API:

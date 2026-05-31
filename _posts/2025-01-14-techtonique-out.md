@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Techtonique is out! (with a tutorial in various programming languages and formats)"
+title: "Techtonique is released! (with a tutorial in various programming languages and formats)"
 description: "A platform for making informed, data-driven decisions using Mathematics, Statistics, Machine Learning, and Data Visualization"
 date: 2025-01-14
 categories: [R, Forecasting, Python, misc, Techtonique]
 comments: true
 ---
 
-**[Techtonique](https://www.techtonique.net) has now been released, with 3 different pricing tiers (including a free one)**. 
+~~**[Techtonique](https://www.techtonique.net) has now been released, with 3 different pricing tiers (including a free one)**.~~
 
 As a reminder, **the tool is designed to help you make informed, data-driven decisions using Mathematics, Statistics, Machine Learning, and Data Visualization**. Experiencing issues for signing-in or anything else? Simply send an email to [support@techtonique.net](mailto:support@techtonique.net). 
 

@@ -7,7 +7,9 @@ categories: [R, Python, Techtonique]
 comments: true
 ---
 
-**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+Update on May 31, 2026: The website is working again. You can access it at [https://www.techtonique.net](https://www.techtonique.net).
+
+~~**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**~~
 
 [https://www.techtonique.net](https://www.techtonique.net) contained an language-agnostic API for machine learning tasks (classification, regression, survival analysis, forecasting etc.).
 

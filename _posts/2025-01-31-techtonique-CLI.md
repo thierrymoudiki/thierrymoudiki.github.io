@@ -7,7 +7,7 @@ categories: [Python, R, techtonique]
 comments: true
 ---
 
-**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+~~**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**~~
 
 There is a new **Command Line Interface** (CLI) for [Techtonique](https://www.techtonique.net)'s [API](https://www.techtonique.net/docs), working on all operating systems (Windows, MacOS, Linux). For more details, on how to install it, see [https://github.com/Techtonique/cli](https://github.com/Techtonique/cli). Here are a few examples (there are more in the [README](https://github.com/Techtonique/cli/blob/main/README.md)).
 

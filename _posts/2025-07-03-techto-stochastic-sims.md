@@ -7,7 +7,7 @@ categories: [R, Python]
 comments: true
 ---
 
-**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**
+~~**IMPORTANT: The website [https://www.techtonique.net](https://www.techtonique.net) is down until further notice.**~~
 
 
 `=TECHTO_SIMULATION` in Excel is based on R and Python code from the [Techtonique](https://github.com/Techtonique) project's SIMULATION functions.
