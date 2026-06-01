@@ -374,4 +374,4 @@ if __name__ == "__main__":
 
 ![image-title-here]({{base}}/images/2025-06-09/2025-06-09-image1.gif){:class="img-responsive"}    
 
-PS: Do not use models ending with `CV` for time series forecasting, as they are not designed for that (they are for tabular data, and use cross-validation which is not suitable for time series). The API will still run the request, but the results may not be good. For time series forecasting, it is better to use models like `Ridge`, `RandomForestRegressor`, `GradientBoostingRegressor` etc.
+PS: Do not use models ending with `CV` for time series forecasting, as they are not designed for that (they are for tabular data, and use a cross-validation which is not suitable for time series). The API will still run the request, but the results may not be good. For time series forecasting, it is better to use models like `Ridge`, `RandomForestRegressor`, `GradientBoostingRegressor` etc.
