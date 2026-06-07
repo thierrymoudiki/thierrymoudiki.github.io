@@ -10,12 +10,12 @@ comments: true
 In this post, we compare [split conformal prediction](https://en.wikipedia.org/wiki/Conformal_prediction)
 across several predictive models, using [R package mlS3](https://cran.r-project.org/web/packages/mlS3/index.html).
 
-The results are deliberately thought-provoking, though limited to one dataset, so treat them
+**The results are deliberately thought-provoking**, though limited to one dataset, so treat them
 as a starting point rather than a general verdict (I [noticed something similar before](https://thierrymoudiki.github.io/blog/2026/05/21/r/python/Conformalized-TabICL-nnetsauce)...):
 Linear regression, albeit generally misspecified, requires no hyperparameter search, produces
 a fully interpretable white-box model, and under split conformal prediction achieves coverage
-statistically indistinguishable from that of gradient boosting ensembles. The residual gap in
-Winkler score — approximately 5 units, or 19% relative to LightGBM (see Section 2) — reflects
+_statistically indistinguishable_ from that of gradient boosting ensembles. The residual gap in
+[Winkler score](https://otexts.com/fpp3/distaccuracy.html#winkler-score) — approximately 5 units, or 19% relative to LightGBM (see Section 2) — reflects
 the cost of a wider predictive interval, not a coverage failure. In enterprise settings where
 auditability, regulatory traceability, speed, and operational reproducibility carry weight
 alongside predictive performance, this trade-off would'nt be a concession but indeed, a considered
