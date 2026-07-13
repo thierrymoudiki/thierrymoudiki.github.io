@@ -497,17 +497,6 @@ print(p7b)
 
     
 ![image-title-here]({{base}}/images/2026-06-07/2026-06-07-conformalization-helps-weak-models_4_6.png){:class="img-responsive"}
-    
-
-
-    Warning message:
-    “[1m[22mRemoved 5 rows containing missing values or values outside the scale range
-    (`geom_line()`).”
-    Warning message:
-    “[1m[22mRemoved 5 rows containing missing values or values outside the scale range
-    (`geom_point()`).”
-
-
 
     
 ![image-title-here]({{base}}/images/2026-06-07/2026-06-07-conformalization-helps-weak-models_4_8.png){:class="img-responsive"}
