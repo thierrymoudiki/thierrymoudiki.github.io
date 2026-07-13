@@ -12,7 +12,7 @@ comments: true
 
 Gradient boosting machines are accurate but usually opaque: to explain a prediction you rely on a *post hoc* method (SHAP, LIME, permutation importance) that approximates the model after the fact. This blog post works with a booster (`cybooster`) that is interpretable *by construction* instead. Because of the choice of weak learners.
 
-Each boosting round fits a randomized-neural-network "weak learner": a random projection of a column-subsample of the features through a nonlinear activation (ReLU, tanh, sigmoid, ...), optionally concatenated with the raw features via a direct link, with a linear model (e.g. Ridge) fit on the current residuals. Because every hidden unit's transformation is known in closed form, so is its derivative -- which means feature attributions don't need to be estimated numerically:
+Each boosting round fits a randomized-neural-network "weak learner": a random projection of a column-subsample of the features through a nonlinear activation (ReLU, tanh, sigmoid, ...), optionally concatenated with the raw features via a direct link, with a linear model (e.g. Ridge) fit on the current residuals (could be any regressor, but the natively interpretable one is a linear one). Because every hidden unit's transformation is known in closed form, so is its derivative -- which means feature attributions don't need to be estimated numerically:
 
 - **Sensitivities** (`dF/dx`) -- the pointwise gradient of the ensemble's output with respect to each input, summed analytically across boosting rounds.
 - **Integrated Gradients** -- exact, closed-form, baseline-relative attributions (no numerical quadrature), obtained via the secant/mean-value form of each activation so that attributions sum exactly to `F(x) - F(baseline)`.
