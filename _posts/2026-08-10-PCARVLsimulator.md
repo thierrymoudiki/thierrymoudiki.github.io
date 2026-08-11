@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "'PCARVFLSimulator': a GAN-like tabular data synthesizer built from PCA scores, a Random Vector Functional-Link network, and bootstrap residuals"
-description: "A lightweight, GAN-like tabular data synthesizer that swaps the adversarial training loop for PCA, a Random Vector Functional-Link network, and bootstrap residuals."
+title: "'PCARVFLSimulator': a GAN-like tabular data synthesizer built from PCA scores, a Random Vector Functional-Link network, and residuals bootstrapping"
+description: "A lightweight, GAN-like tabular data synthesizer that swaps the adversarial training loop for PCA, a Random Vector Functional-Link network, and residuals bootstrapping."
 date: 2026-08-10
 categories: Python
 comments: true
