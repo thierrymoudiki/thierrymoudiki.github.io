@@ -107,8 +107,8 @@ instead of adversarially.
 ## 1.4 Tuning with Optuna
 
 Optuna searches over the number of random hidden nodes
-($n_{\text{nodes}} \in [50, 1000]$, log-scale) and the ridge penalty
-($\alpha \in [10^{-5}, 10]$, log-scale), minimizing a distributional
+($$n_{\text{nodes}} \in [50, 1000]$$, log-scale) and the ridge penalty
+($$\alpha \in [10^{-5}, 10]$$, log-scale), minimizing a distributional
 distance — biased MMD² by default, or the energy distance — between a
 held-out slice of real data and a batch of samples generated the same
 way `sample()` would generate them.
