@@ -34,7 +34,7 @@ for each one.
 
 ## 1.1 Standardize, then find a latent space with PCA
 
-Given real data $Y \in \mathbb{R}^{n \times d}$, the simulator first
+Given real data $$Y \in \mathbb{R}^{n \times d}$$, the simulator first
 (optionally, and by default) standardizes it,
 
 $$
@@ -49,12 +49,12 @@ $$
 Z = Y_s V_{1:k},
 $$
 
-where $V_{1:k}$ collects the top $k$ principal directions. The number
-of components $k$ is chosen automatically as the smallest $k$ such that
+where $$V_{1:k}$$ collects the top $k$ principal directions. The number
+of components $$k$$ is chosen automatically as the smallest $k$ such that
 the cumulative explained variance ratio exceeds a threshold (95% by
 default), or can be set manually.
 
-## 1.2 Learn $Z \to Y_s$ with an RVFL network
+## 1.2 Learn $$Z \to Y_s$$ with an RVFL network
 
 An RVFL network maps the low-dimensional latent code back to the
 (standardized) feature space using a *fixed*, randomly drawn hidden
@@ -66,7 +66,7 @@ H = \phi(Z W + b), \qquad
 \hat Y_s = \Phi \beta,
 $$
 
-with $W$ and $b$ drawn once from a standard normal distribution and
+with $$W$$ and $$b$$ drawn once from a standard normal distribution and
 frozen, $\phi$ an activation (`tanh` by default), $[\,Z \mid H\,]$ the
 direct-link augmentation (skip connection) concatenating the raw input
 with the random features, and $\beta$ obtained in closed form by ridge
@@ -76,13 +76,13 @@ $$
 \beta = (\Phi^\top \Phi + \alpha I)^{-1} \Phi^\top Y_s .
 $$
 
-Because $\beta$ solves a linear system, there is no backpropagation and
+Because $$\beta$$ solves a linear system, there is no backpropagation and
 no training loop — fitting the RVFL layer is a single matrix solve.
 
 ## 1.3 Bootstrap the residuals to restore variability
 
-A purely deterministic $\hat Y_s = \Phi\beta$ would collapse every
-sample sharing a latent code $Z$ onto the same point, so the training
+A purely deterministic $$\hat Y_s = \Phi\beta$$ would collapse every
+sample sharing a latent code $$Z$$ onto the same point, so the training
 residuals
 
 $$
@@ -90,9 +90,9 @@ $$
 $$
 
 are stored and bootstrapped back in at sampling time. To draw a
-synthetic row: pick a training latent code $z_i$ at random (with
-replacement), predict $\hat y_i = \phi(z_i W + b)\beta$-style output
-through the fitted RVFL, add a bootstrapped residual $\varepsilon_j$,
+synthetic row: pick a training latent code $$z_i$$ at random (with
+replacement), predict $$\hat y_i = \phi(z_i W + b)\beta$$-style output
+through the fitted RVFL, add a bootstrapped residual $$\varepsilon_j$$,
 and invert the standardization:
 
 $$
