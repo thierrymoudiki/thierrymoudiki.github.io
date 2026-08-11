@@ -67,9 +67,9 @@ H = \phi(Z W + b), \qquad
 $$
 
 with $$W$$ and $$b$$ drawn once from a standard normal distribution and
-frozen, $\phi$ an activation (`tanh` by default), $[\,Z \mid H\,]$ the
+frozen, $$\phi$$ an activation (`tanh` by default), $$[\,Z \mid H\,]$$ the
 direct-link augmentation (skip connection) concatenating the raw input
-with the random features, and $\beta$ obtained in closed form by ridge
+with the random features, and $$\beta$$ obtained in closed form by ridge
 regression:
 
 $$
