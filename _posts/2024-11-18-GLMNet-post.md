@@ -7,6 +7,8 @@ categories: [Python, R]
 comments: true
 ---
 
+**Update 2026-08-15:** This post is about [https://github.com/thierrymoudiki/glmnetforpython](https://github.com/thierrymoudiki/glmnetforpython), and another implementation is now available at [https://github.com/jonathan-taylor/glmstar](https://github.com/jonathan-taylor/glmstar). 
+
 During the past few weeks, I've been adapting a Python version of the ([seemingly abandoned?](https://github.com/bbalasub1/glmnet_python)) official Stanford GLMNet Python package. Don't try to build a programming interface on it yet, as it's still **"moving"**.
 
 GLMNet implements the entire [lasso or elastic-net](https://glmnet.stanford.edu/articles/glmnet.html) regularization path for `linear` regression, `logistic` and `multinomial` regression models, `poisson` regression and the `cox` model. My implementation is faithful to the R Fortran-based one, but:
