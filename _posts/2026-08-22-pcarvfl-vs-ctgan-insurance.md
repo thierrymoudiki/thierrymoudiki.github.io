@@ -1,17 +1,15 @@
 ---
 layout: post
-title: "pcarvfl vs ctgan insurance"
+title: "PCARVFL vs CTGAN for synthetic tabular data generation on an insurance pricing dataset"
+description: "This notebook applies PCARVFLSimulator (from the Python package synthe) — a GAN-like tabular data synthesizer built from PCA scores, a Random Vector Functional-Link (RVFL) network, and residual bootstrapping — to the French Motor Third-Party Liability (freMTPL2) data found in PNM0792/auto-insurance-pricing, and compares it against CTGAN, a GAN architecture purpose-built for tabular data."
 date: 2026-08-22
-categories: [R, Python]
+categories: Python
 comments: true
 ---
 
-
-# PCARVFLSimulator vs CTGAN on the `auto-insurance-pricing` dataset
-
 This notebook applies [`PCARVFLSimulator`](https://thierrymoudiki.github.io/blog/2026/08/10/python/PCARVLsimulator)
 (from the Python package [`synthe`](https://github.com/Techtonique/synthe)) — a GAN-*like*
-tabular data synthesizer built from PCA scores, a Random Vector Functional-Link (RVFL) network,
+tabular data synthesizer built from PCA scores, a Random Vector Functional-Link (RVFL) network, 
 and residual bootstrapping — to the French Motor Third-Party Liability (freMTPL2) data found in
 [`PNM0792/auto-insurance-pricing`](https://github.com/PNM0792/auto-insurance-pricing/tree/main/automobile/data),
 and compares it against [CTGAN](https://github.com/sdv-dev/CTGAN), a GAN architecture purpose-built
@@ -958,7 +956,3 @@ energy distance, moment matching, correlation-structure preservation, and the ra
 KS sweep — while fitting roughly **10–15x faster** than CTGAN (seconds vs ~1 minute at this
 sample size; the gap would grow further on the full 678k-row file).
 
-
-```python
-
-```
