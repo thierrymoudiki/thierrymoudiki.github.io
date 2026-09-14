@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Model-agnostic prediction intervals in Python and R: does nnetsauce's `QuantileRegressor` hold up?"
-description: "Point predictions tell you what a model *thinks* will happen. They don't tell you how much to trust that number. nnetsauce's `QuantileRegressor` takes any sklearn-compatible regressor and turns it into a full quantile machine by optimizing an offset around its point predictions to minimize the pinball (quantile) loss."
+title: "Model-agnostic prediction intervals in Python and R: does nnetsauce's QuantileRegressor hold up?"
+description: "Point predictions tell you what a model *thinks* will happen. They don't tell you how much to trust that number. nnetsauce's QuantileRegressor takes any sklearn-compatible regressor and turns it into a full quantile machine by optimizing an offset around its point predictions to minimize the pinball (quantile) loss."
 date: 2026-09-14
 categories: [R, Python]
 comments: true
