@@ -22,6 +22,8 @@ make install                # Polars into venv/, dplyr into .uvr/library/
 make dev                    # starts http://localhost:3000 and opens your browser
 ```
 
+The repository's README file is also informative and contains a few more details about the pipeline. 
+
 ![image-title-here]({{base}}/images/2026-09-27/2026-09-27-image1.png){:class="img-responsive"}
     
 
