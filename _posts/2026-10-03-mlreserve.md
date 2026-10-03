@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "mlreserve: machine-learning loss reserving on 'real-world' triangles (based on a 'ChainLadder' fork)"
-description: "This post presents a function `mlReserve()` for machine-learning loss reserving on 'real-world' triangles, based on a fork of the 'ChainLadder' package. It includes two experiments, each scored against a known true reserve: (A) Two triangles from an individual-claims simulator (Wang & Wuthrich), embedded below: chain ladder vs mlReserve, in detail; (B) A mini-benchmark on freshly simulated triangles from a simpler aggregate generator, with tunable distortions."
+description: "This post presents a function `mlReserve()` for machine-learning loss reserving on 'real-world' triangles, based on a fork of the 'ChainLadder' package. It includes two experiments, each scored against a known true reserve: (A) Two triangles from an individual-claims simulator (Wang & Wüthrich), embedded below: chain ladder vs mlReserve, in detail; (B) A mini-benchmark on freshly simulated triangles from a simpler aggregate generator, with tunable distortions."
 date: 2026-10-03
 categories: R
 comments: true
