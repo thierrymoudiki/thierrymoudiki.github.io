@@ -143,11 +143,7 @@ $$\mathrm{relRMSE}_b(m) = \Bigl(\tfrac{1}{|b|}\sum_{k\in b} e_k(m)^2\Bigr)^{1/2}
 
 over the four blocks: two simulated scenarios with 20 triangles each, plus the two Wang & Wüthrich triangles.
 
-We keep the top $$K = 5$$ models
-
-$$\widehat{\mathcal{M}} = \operatorname*{arg\,top\text{-}K}_{m \in \mathcal{M}}\ \mathrm{Score}(m;\ \mathcal{D}_{\text{sel}}),$$
-
-**using the true reserves of the very triangles we report on.** For the selected models,
+We keep the top $$K = 5$$ models **using the true reserves of the very triangles we report on.** For the selected models,
 $$\mathrm{Score}(\hat m;\mathcal{D}_{\text{sel}})$$ is an optimistically biased estimate of the risk, because
 $$\mathbb{E}\bigl[\min_m \widehat{\mathrm{Score}}(m)\bigr] \le \min_m \mathbb{E}\bigl[\widehat{\mathrm{Score}}(m)\bigr]$$.
 Section 3.4 re-scores $$\widehat{\mathcal{M}}$$ on $$\mathcal{D}_{\text{fresh}}$$, new seeds from the **same** generator.
