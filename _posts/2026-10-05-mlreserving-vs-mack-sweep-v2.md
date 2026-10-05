@@ -29,23 +29,23 @@ Section 2 makes the two distortions visible, Section 3 runs the model sweep.
 
 ### 1.1 Notation
 
-A run-off triangle has accident (origin) years $i = 1,\dots,n$ and development years $j = 1,\dots,n$, with $n = 10$.
+A run-off triangle has accident (origin) years $$i = 1,\dots,n$$ and development years $$j = 1,\dots,n$$, with $$n = 10$$.
 
-The **calendar period** of cell $(i,j)$ is
+The **calendar period** of cell $$(i,j)$$ is
 
 $$t = i + j - 1 .$$
 
-Let $X_{ij}$ be the **incremental** payment of accident year $i$ in development year $j$, and
-$C_{ij} = \sum_{k \le j} X_{ik}$ the cumulative payment. Only cells with $t \le n$ are observed:
+Let $$X_{ij}$$ be the **incremental** payment of accident year $$i$$ in development year $$j$$, and
+$$C_{ij} = \sum_{k \le j} X_{ik}$$ the cumulative payment. Only cells with $$t \le n$$ are observed:
 
 $$\mathcal{D} = \{X_{ij} : i + j - 1 \le n\} \quad \text{(upper triangle)}, \qquad
 \mathcal{F} = \{(i,j) : i + j - 1 > n\} \quad \text{(future cells)}.$$
 
-The **true reserve** of accident year $i$ and the total reserve are
+The **true reserve** of accident year $$i$$ and the total reserve are
 
 $$R_i = \sum_{j:\,(i,j)\in\mathcal{F}} X_{ij}, \qquad R = \sum_{i=2}^{n} R_i .$$
 
-Because we simulate the full $n \times n$ square, $R$ is known exactly for every triangle (no tail beyond $j = n$).
+Because we simulate the full $$n \times n$$ square, $$R$$ is known exactly for every triangle (no tail beyond $$j = n$$).
 
 ### 1.2 Data-generating process (aggregate simulator)
 
@@ -57,36 +57,36 @@ $$\boxed{\;\mu_{ij} \;=\; U_i \cdot \pi_{ij} \cdot I_{t}\;}, \qquad t = i+j-1 .$
 
 $$U_i = 50\,000\,\bigl(1 + 0.03\,(i-1)\bigr)\,e^{\varepsilon_i}, \qquad \varepsilon_i \overset{iid}{\sim} \mathcal{N}(0,\,0.05^2).$$
 
-**Payment pattern and settlement speed-up.** The payment delay of a claim from accident year $i$ is
-$\mathrm{Gamma}(\kappa = 2,\ \theta_i = m_i/\kappa)$, with mean delay $m_i$ (in years). Development year $j$ collects
-the payments falling in $(j-1, j]$:
+**Payment pattern and settlement speed-up.** The payment delay of a claim from accident year $$i$$ is
+$$\mathrm{Gamma}(\kappa = 2,\ \theta_i = m_i/\kappa)$$, with mean delay $$m_i$$ (in years). Development year $$j$$ collects
+the payments falling in $$(j-1, j]$$:
 
 $$\pi_{ij} = G_i(j) - G_i(j-1), \qquad G_i = \text{c.d.f. of } \mathrm{Gamma}(2,\ m_i/2).$$
 
-The **speed-up** shortens the mean delay linearly for accident years after $i_0 = 4$:
+The **speed-up** shortens the mean delay linearly for accident years after $$i_0 = 4$$:
 
 $$m_i \;=\; m_0\Bigl(1 - s\,\Bigl(\tfrac{i - i_0}{\,n - i_0\,}\Bigr)_{+}\Bigr), \qquad m_0 = 3,\ \ i_0 = 4,\ \ (x)_+ = \max(x,0).$$
 
-So accident years 1–4 share the same pattern, and the mean delay then falls linearly to $m_0(1-s)$ for the
-latest year: with $s = 0.3$, from 3 years to 2.1 years. (Truncating at $j = n$ drops at most about 1% of the mass,
+So accident years 1–4 share the same pattern, and the mean delay then falls linearly to $$m_0(1-s)$$ for the
+latest year: with $$s = 0.3$$, from 3 years to 2.1 years. (Truncating at $$j = n$$ drops at most about 1% of the mass,
 for the slowest years.)
 
-**Calendar-year inflation.** A 2% per period trend up to calendar period $\tau = 7$, then growth at rate $g$:
+**Calendar-year inflation.** A 2% per period trend up to calendar period $$\tau = 7$$, then growth at rate $$g$$:
 
 $$I_t = \exp\bigl(0.02\,\min(t, \tau) \;+\; g\,(t - \tau)_{+}\bigr), \qquad \tau = 7 .$$
 
-With $g = 0.02$ this is a plain 2% trend. With $g = 0.08$ there is a **kink at $t = 7$**. Only three observed
-diagonals ($t = 8, 9, 10$) carry the higher rate, while every future diagonal ($t = 11,\dots,19$) does,
-up to $I_{19}/I_{19}^{(g=0.02)} = e^{0.06 \times 12} \approx 2.05$.
+With $$g = 0.02$$ this is a plain 2% trend. With $$g = 0.08$$ there is a **kink at $$t = 7$$**. Only three observed
+diagonals ($$t = 8, 9, 10$$) carry the higher rate, while every future diagonal ($$t = 11,\dots,19$$) does,
+up to $$I_{19}/I_{19}^{(g=0.02)} = e^{0.06 \times 12} \approx 2.05$$.
 
-**Noise (over-dispersed Poisson).** With dispersion $\varphi = 5$,
+**Noise (over-dispersed Poisson).** With dispersion $$\varphi = 5$$,
 
 $$X_{ij} = \varphi\, N_{ij}, \qquad N_{ij} \sim \mathrm{Poisson}(\mu_{ij}/\varphi)
 \quad\Longrightarrow\quad \mathbb{E}[X_{ij}] = \mu_{ij}, \quad \mathrm{Var}[X_{ij}] = \varphi\,\mu_{ij}.$$
 
 **Scenarios.**
 
-| Scenario | speed-up $s$ | post-$\tau$ inflation $g$ |
+| Scenario | speed-up $$s$$ | post-$$\tau$$ inflation $$g$$ |
 |---|---|---|
 | Baseline (control, used for illustration only) | 0 | 0.02 |
 | Inflation only (illustration only) | 0 | 0.08 |
@@ -103,17 +103,17 @@ The Chain-Ladder estimates volume-weighted age-to-age factors from the observed 
 $$\hat f_j = \frac{\sum_{i=1}^{n-j} C_{i,j+1}}{\sum_{i=1}^{n-j} C_{ij}}, \qquad
 \hat C_{in} = C_{i,n+1-i}\prod_{j=n+1-i}^{n-1}\hat f_j, \qquad \hat R_i^{\,CL} = \hat C_{in} - C_{i,n+1-i},$$
 
-and is unbiased when the expected development ratio $\mathbb{E}[C_{i,j+1}]/\mathbb{E}[C_{ij}]$ **does not depend on $i$**.
+and is unbiased when the expected development ratio $$\mathbb{E}[C_{i,j+1}]/\mathbb{E}[C_{ij}]$$ **does not depend on $$i$$**.
 Under our DGP (ignoring noise),
 
 $$\frac{\mathbb{E}[C_{i,j+1}]}{\mathbb{E}[C_{ij}]}
 = \frac{\sum_{k\le j+1}\pi_{ik}\,I_{i+k-1}}{\sum_{k\le j}\pi_{ik}\,I_{i+k-1}} .$$
 
-* **Baseline** ($s=0$, constant 2% trend). $\pi_{ik}$ does not depend on $i$, and
-  $I_{i+k-1} = e^{0.02(i-1)}e^{0.02k}$ is separable, so the $i$-terms cancel and the Chain-Ladder is exactly right in expectation.
-* **Speed-up.** $\pi_{ik}$ depends on $i$. Recent accident years are *more developed* at a given age than the
-  older years the factors $\hat f_j$ are estimated from. Applying those slow factors to fast years **overstates** the reserve.
-* **Inflation kink.** $I_{i+k-1}$ is no longer separable in $(i,k)$. Future diagonals grow at $g$, while the
+* **Baseline** ($$s=0$$, constant 2% trend). $$\pi_{ik}$$ does not depend on $$i$$, and
+  $$I_{i+k-1} = e^{0.02(i-1)}e^{0.02k}$$ is separable, so the $$i$$-terms cancel and the Chain-Ladder is exactly right in expectation.
+* **Speed-up.** $$\pi_{ik}$$ depends on $$i$$. Recent accident years are *more developed* at a given age than the
+  older years the factors $$\hat f_j$$ are estimated from. Applying those slow factors to fast years **overstates** the reserve.
+* **Inflation kink.** $$I_{i+k-1}$$ is no longer separable in $$(i,k)$$. Future diagonals grow at $$g$$, while the
   factors mostly reflect the 2% regime. On its own this **understates** the reserve, so it partly offsets the speed-up.
 
 ### 1.4 The machine-learning reserving model
@@ -124,33 +124,33 @@ $$Y_{ij} = \operatorname{asinh}(X_{ij}) = f(\mathbf{x}_{ij}) + \epsilon_{ij}, \q
 
 with either
 
-* `[log]` features: $\mathbf{x}_{ij} = (\log i,\ \log j)$, standardised; or
-* `[onehot]` features: $\mathbf{x}_{ij} = (\mathbf{e}_i,\ \mathbf{e}_j)$, one-hot origin and development dummies.
+* `[log]` features: $$\mathbf{x}_{ij} = (\log i,\ \log j)$$, standardised; or
+* `[onehot]` features: $$\mathbf{x}_{ij} = (\mathbf{e}_i,\ \mathbf{e}_j)$$, one-hot origin and development dummies.
 
-No calendar feature is used. Any regressor $\hat f$ gives a reserve by back-transforming the predictions of the future cells:
+No calendar feature is used. Any regressor $$\hat f$$ gives a reserve by back-transforming the predictions of the future cells:
 
 $$\hat R_i = \sum_{j:\,(i,j)\in\mathcal{F}} \sinh\bigl(\hat f(\mathbf{x}_{ij})\bigr), \qquad \hat R = \sum_i \hat R_i .$$
 
 
 ### 1.5 Evaluation and the selection step
 
-For each triangle $k$ we record the **relative error** of the total reserve, $e_k = \hat R_k / R_k - 1$.
+For each triangle $$k$$ we record the **relative error** of the total reserve, $$e_k = \hat R_k / R_k - 1$$.
 
-For a block $b$ of triangles (a scenario, or a single Wang & Wüthrich triangle),
+For a block $$b$$ of triangles (a scenario, or a single Wang & Wüthrich triangle),
 
 $$\mathrm{relRMSE}_b(m) = \Bigl(\tfrac{1}{|b|}\sum_{k\in b} e_k(m)^2\Bigr)^{1/2},
 \qquad \mathrm{Score}(m) = \tfrac{1}{4}\sum_{b} \mathrm{relRMSE}_b(m),$$
 
 over the four blocks: two simulated scenarios with 20 triangles each, plus the two Wang & Wüthrich triangles.
 
-We keep the top $K = 5$ models
+We keep the top $$K = 5$$ models
 
 $$\widehat{\mathcal{M}} = \operatorname*{arg\,top\text{-}K}_{m \in \mathcal{M}}\ \mathrm{Score}(m;\ \mathcal{D}_{\text{sel}}),$$
 
 **using the true reserves of the very triangles we report on.** For the selected models,
-$\mathrm{Score}(\hat m;\mathcal{D}_{\text{sel}})$ is an optimistically biased estimate of the risk, because
-$\mathbb{E}\bigl[\min_m \widehat{\mathrm{Score}}(m)\bigr] \le \min_m \mathbb{E}\bigl[\widehat{\mathrm{Score}}(m)\bigr]$.
-Section 3.4 re-scores $\widehat{\mathcal{M}}$ on $\mathcal{D}_{\text{fresh}}$, new seeds from the **same** generator.
+$$\mathrm{Score}(\hat m;\mathcal{D}_{\text{sel}})$$ is an optimistically biased estimate of the risk, because
+$$\mathbb{E}\bigl[\min_m \widehat{\mathrm{Score}}(m)\bigr] \le \min_m \mathbb{E}\bigl[\widehat{\mathrm{Score}}(m)\bigr]$$.
+Section 3.4 re-scores $$\widehat{\mathcal{M}}$$ on $$\mathcal{D}_{\text{fresh}}$$, new seeds from the **same** generator.
 
 ## 0. Setup
 
@@ -221,7 +221,7 @@ SCEN_COLOURS = {"Baseline": "#8a8a8a", "Inflation only": "#7a4fd6",
 
 ### Data-generating process
 
-`dgp_components` returns the deterministic pieces of Section 1.2: $m_i$, $\pi_{ij}$, $I_t$ and $\mu_{ij}$, with $\varepsilon_i = 0$.
+`dgp_components` returns the deterministic pieces of Section 1.2: $$m_i$$, $$\pi_{ij}$$, $$I_t$$ and $$\mu_{ij}$$, with $$\varepsilon_i = 0$$.
 `simulate_case` adds the lognormal ultimate noise and the over-dispersed Poisson noise.
 
 
@@ -280,9 +280,9 @@ def simulate_case(seed, speedup=0.3, inflation=0.08, phi=PHI):
 
 ### 2.1 Settlement speed-up: payment delays and patterns
 
-Left: the delay density $\mathrm{Gamma}(2, m_i/2)$ for the slowest and fastest accident years.
-Middle: the mean delay $m_i$ by accident year.
-Right: the cumulative share paid, $G_i(j)$, by development year. Each curve is an accident year, and darker means more recent.
+Left: the delay density $$\mathrm{Gamma}(2, m_i/2)$$ for the slowest and fastest accident years.
+Middle: the mean delay $$m_i$$ by accident year.
+Right: the cumulative share paid, $$G_i(j)$$, by development year. Each curve is an accident year, and darker means more recent.
 Recent years under speed-up are further along at every age. The Chain-Ladder averages the old, slow curves.
 
 
@@ -334,10 +334,10 @@ print(pd.DataFrame(cum[[0, -1], :2], index=["AY 1", "AY 10"], columns=["j=1", "j
     AY 10  0.247  0.568
 
 
-### 2.2 Calendar-year inflation: the index $I_t$
+### 2.2 Calendar-year inflation: the index $$I_t$$
 
-The shaded area is the future (calendar periods $t > n$), where the reserve sits. With $g = 0.08$ the kink at
-$\tau = 7$ leaves only three observed diagonals in the new regime. The right panel is the ratio of the two indices,
+The shaded area is the future (calendar periods $$t > n$$), where the reserve sits. With $$g = 0.08$$ the kink at
+$$\tau = 7$$ leaves only three observed diagonals in the new regime. The right panel is the ratio of the two indices,
 which is the extra loading that inflation puts on each calendar period.
 
 
@@ -372,7 +372,7 @@ fig.tight_layout(); plt.show()
 
 ### 2.3 Where each distortion hits the triangle
 
-Each heatmap shows $\log\bigl(\mu_{ij}^{\text{scenario}} / \mu_{ij}^{\text{baseline}}\bigr)$ cell by cell.
+Each heatmap shows $$\log\bigl(\mu_{ij}^{\text{scenario}} / \mu_{ij}^{\text{baseline}}\bigr)$$ cell by cell.
 Blue means less expected payment than the baseline and red means more. The staircase marks the boundary between
 the observed upper triangle and the future cells.
 
@@ -414,8 +414,8 @@ plt.show()
 
 ### 2.4 What this does to the Chain-Ladder, without noise
 
-We feed the *expected* triangle $\mu_{ij}$ (no noise, $\varepsilon_i = 0$) to the chain-ladder formulas of Section 1.3
-and compare the resulting reserve with the true expected reserve $\sum_{(i,j)\in\mathcal F}\mu_{ij}$.
+We feed the *expected* triangle $$\mu_{ij}$$ (no noise, $$\varepsilon_i = 0$$) to the chain-ladder formulas of Section 1.3
+and compare the resulting reserve with the true expected reserve $$\sum_{(i,j)\in\mathcal F}\mu_{ij}$$.
 This isolates the **structural bias** of Chain-Ladder in each scenario. In the baseline the ratio is exactly 1, as Section 1.3 predicts.
 
 
@@ -456,7 +456,7 @@ fig.tight_layout(); plt.show()
 
 ### 2.5 From expectations to simulated triangles: the spread of the truth and of Mack
 
-With noise added, each scenario gives a *distribution* of true total reserves $R$ over seeds. Below, for the
+With noise added, each scenario gives a *distribution* of true total reserves $$R$$ over seeds. Below, for the
 20 selection seeds of each benchmark scenario, are the true total reserves (black) and the Mack estimates (orange).
 The gap between the two clouds is the chain-ladder bias, and it is much larger than the seed-to-seed noise.
 
@@ -512,7 +512,7 @@ print(f"selection set: {len(select_cases)} triangles, fresh set: {len(fresh_case
 
 ### 3.2 Candidates and scoring
 
-Every scikit-learn regressor that builds with default arguments, under both feature sets $\times$ `[log]`, `[onehot]`.
+Every scikit-learn regressor that builds with default arguments, under both feature sets $$\times$$ `[log]`, `[onehot]`.
 Wrappers and multi-output-only estimators are excluded. A pair that errors or returns a non-finite reserve on any
 triangle is dropped. Residuals are taken in-sample (`residual_source="in_sample"`); only point estimates are needed here.
 
@@ -998,12 +998,12 @@ fig.tight_layout(); plt.show()
   multiplicative origin × development structure that the Chain-Ladder shares with linear models.
 * **What the fresh-seed check shows.** The scores of the picks barely move on new seeds, so the selection is not
   overfitting individual seeds. **It is not evidence that the selection generalises.** The fresh triangles come from the
-  same generator with the same $s$, $g$, $\tau$ and $i_0$. Selecting on the truth tuned the model choice to *these*
+  same generator with the same $$s$$, $$g$$, $$\tau$$ and $$i_0$$. Selecting on the truth tuned the model choice to *these*
   distortions. A fair test would change the data-generating process: no distortion (the Baseline), a slow-down
-  ($s < 0$), a different $\tau$, or the individual-claims simulator with other settings.
+  ($$s < 0$$), a different $$\tau$$, or the individual-claims simulator with other settings.
 * **Where the picks still miss.** In the boxplot of Section 3.4, the learners over-reserve under speed-up alone and
   *under*-reserve once inflation is added. None of them sees a calendar feature, so the future
-  growth of $I_t$ (Section 2.2) is extrapolated from the development pattern rather than modelled. The selected models
+  growth of $$I_t$$ (Section 2.2) is extrapolated from the development pattern rather than modelled. The selected models
   look good partly because the two errors roughly cancel in the score.
-* **Fragile pairs.** Some linear models on `[onehot]` features (e.g. `Lars`) blow up after the $\sinh$ back-transform,
+* **Fragile pairs.** Some linear models on `[onehot]` features (e.g. `Lars`) blow up after the $$\sinh$$ back-transform,
   with near-singular fits giving astronomically large reserves. Clip or exclude them before averaging ranks.
