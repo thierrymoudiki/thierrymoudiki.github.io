@@ -7,7 +7,7 @@ categories: R
 comments: true
 ---
 
-In version 0.39.0 of the `ahead` package, the `conformalize()` function has been updated to include a new parameter called `split_prob`. This parameter allows users to specify the proportion of the data that should be used for calibration when constructing conformal prediction intervals.
+In version 0.39.0 of the [`ahead`](https://github.com/Techtonique/ahead) package, the `conformalize()` function has been updated to include a new parameter called `split_prob`. This parameter allows users to specify the proportion of the data that should be used for calibration when constructing conformal prediction intervals.
 
 # 0 - Install packages
 
