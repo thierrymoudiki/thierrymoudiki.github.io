@@ -7,7 +7,7 @@ categories: [R, Python]
 comments: true
 ---
 
-Claude was the copilot for this post about my Techtonique python package [mlreserving](https://github.com/Techtonique/mlreserving), and yes, **we're cooked** :) (no, actually, we'll have to be very smart, competent, and creative).  
+Claude was the copilot for this post about my Techtonique python package [mlreserving](https://github.com/Techtonique/mlreserving), and yes, **we're cooked** (no, actually, we'll have to be very smart, competent, and creative).  
 
 This post is a follow-up to ['mlreserve: machine-learning loss reserving on 'real-world' triangles (based on a 'ChainLadder' fork)'](https://thierrymoudiki.github.io/blog/2026/10/03/r/mlreserve), with better explanations of what's being done; a better description of the experimental setting.
 
