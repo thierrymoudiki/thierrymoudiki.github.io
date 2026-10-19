@@ -155,19 +155,6 @@ Section 3.4 re-scores $$\widehat{\mathcal{M}}$$ on $$\mathcal{D}_{\text{fresh}}$
 %pip install -q mlreserving chainladder scikit-learn matplotlib joblib scipy pandas
 ```
 
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m79.5/79.5 kB[0m [31m1.0 MB/s[0m eta [36m0:00:00[0m
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.3/2.3 MB[0m [31m28.5 MB/s[0m eta [36m0:00:00[0m
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.8/10.8 MB[0m [31m43.2 MB/s[0m eta [36m0:00:00[0m
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m155.3/155.3 kB[0m [31m5.2 MB/s[0m eta [36m0:00:00[0m
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m257.5/257.5 kB[0m [31m11.7 MB/s[0m eta [36m0:00:00[0m
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4.9/4.9 MB[0m [31m37.9 MB/s[0m eta [36m0:00:00[0m
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m86.2/86.2 kB[0m [31m5.0 MB/s[0m eta [36m0:00:00[0m
-    [2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m800.1/800.1 kB[0m [31m15.8 MB/s[0m eta [36m0:00:00[0m
-    [?25h[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-    google-colab 1.0.0 requires pandas==2.2.3, but you have pandas 3.0.6 which is incompatible.[0m[31m
-    [0m
-
-
 ```python
 import os
 import time
