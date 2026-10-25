@@ -2,7 +2,7 @@
 layout: post
 title: "caretS3 and ahead for Tabular and Time Series Machine Learning"
 description: "Exploring the integration of caretS3 and ahead for tabular and time series machine learning tasks."
-date: 2026-10-2
+date: 2026-10-25
 categories: R 
 comments: true
 ---
