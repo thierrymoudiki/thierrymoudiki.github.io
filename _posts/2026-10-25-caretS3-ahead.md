@@ -19,13 +19,6 @@ comments: true
 remotes::install_github("thierrymoudiki/caretS3")
 ```
 
-    Using GitHub PAT from the git credential store.Skipping install of 'caretS3' from a github remote, the SHA1 (4ed6d37f) has not changed since last install.
-      Use `force = TRUE` to force installationUsing GitHub PAT from the git credential store.Skipping install of 'ahead' from a github remote, the SHA1 (5de21d88) has not changed since last install.
-      Use `force = TRUE` to force installationLoading required package: MatrixLoaded glmnet 4.1-10randomForest 4.7-1.2Type rfNews() to see new features/changes/bug fixes.Registered S3 method overwritten by 'quantmod':
-      method            from
-      as.zoo.data.frame zoo 
-
-
 ### `caretS3::caretS3` Tabular Machine Learning
 
 
