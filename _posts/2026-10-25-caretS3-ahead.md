@@ -38,6 +38,7 @@ remotes::install_github("thierrymoudiki/caretS3")
  y_test <- y_reg[-idx_reg]
 
  mod <- caretS3::caretS3(X_train, y_train, method = "glmnet")
+ print(predict(mod, X_test))
 ```
 
     Registered S3 method overwritten by 'future':
