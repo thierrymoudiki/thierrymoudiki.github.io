@@ -34,4 +34,3 @@ for (i in seq_len(n_models))
 close(pb)
 ```
 
-![image-title-here]({{base}}/images/2026-10-25/2026-10-25-caretS3-ahead_6_0.png){:class="img-responsive"}
