@@ -8,8 +8,7 @@ comments: true
 ---
 
 Every scikit-learn regressor (minus an exclusion list) is used as the base
-learner of genbooster and of `mlsauce.GenericBoosting*`, with identical settings
-and **no tuning**, on scikit-learn's bundled `load_*` datasets:
+learner of [`genbooster`](https://github.com/Techtonique/genbooster) and of [`mlsauce.GenericBoosting*`](https://github.com/Techtonique/mlsauce), with identical settings and **no tuning**, on scikit-learn's bundled `load_*` datasets:
 
 - **Regression** (`BoosterRegressor` vs `GenericBoostingRegressor`): `load_diabetes`
   — test RMSE, MAE, time.
