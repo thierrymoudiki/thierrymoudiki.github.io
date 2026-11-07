@@ -7,7 +7,7 @@ categories: R
 comments: true
 ---
 
-`ahead::ctxthetaf` has no more contextual information about the time series, but it still works, and can still be used notably with `caretS3` (a `caret` derivative introduced in [https://thierrymoudiki.github.io/blog/2026/10/25/r/caretS3-ahead](https://thierrymoudiki.github.io/blog/2026/10/25/r/caretS3-ahead)) to forecast time series data. The following code demonstrates how to use `caretS3` models for time series forecasting with `ahead::ctxthetaf`.
+[`ahead::ctxthetaf`](https://techtonique.r-universe.dev/ahead/doc/manual.html#ctxthetaf) has no more contextual information about the time series, but it still works, and can still be used notably with `caretS3` (a `caret` derivative introduced in [https://thierrymoudiki.github.io/blog/2026/10/25/r/caretS3-ahead](https://thierrymoudiki.github.io/blog/2026/10/25/r/caretS3-ahead)) to forecast time series data. The following code demonstrates how to use `caretS3` models for time series forecasting with `ahead::ctxthetaf`.
 
 ```R
 list_models <- caret::modelLookup()[caret::modelLookup()[,"forReg"]==TRUE, 1]
